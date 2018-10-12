@@ -1,0 +1,33 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+When we implement the Runnable interface, we must define the method;A. run().;B. start().;C. init().;D. main().;A. run().
+A class can be converted to a thread by implementing the interface ____________.;B. Runnable.;A. Thread.;C. Start.;D. Yield.;B. Runnable.
+ Which of the following statement is false?;B. The yield() method should be enclosed in try ... catch block.;A. The sleep() method should be enclosed in try ... catch block.;C. A thread can be temporarily suspended from running by using the wait() method.;D. A suspended thread using suspend() method can be revived using the resume() method.;B. The yield() method should be enclosed in try ... catch block.
+What method must be implemented by all threads?;A. run() method;B. call() method;C. super() method;D. none of the above;A. run() method
+What is the default thread at the time of starting the program?;A. Main Thread.;B. Thread Group.;C. Child Thread.;D. Thread Pool.;A. Main Thread.
+"What is the unit for 1000 in the below statement? 
+ob.sleep(1000)";A. Long milliseconds.;B. Double milliseconds.;C. Int milliseconds.;D. Float milliseconds.;A. Long milliseconds.
+Which of the following is  true?;(c)     A finally block is executed whether an exception is thrown or not.;(a)     A finally block is executed before the catch block but after the try block.;(b)     A finally block is executed, only after the catch block is executed.;(d)     A finally block is executed, only if an exception occurs.;(c)     A finally block is executed whether an exception is thrown or not.
+Which of the following statements about Java Threads is  correct?;(d)     Ready, running and sleeping are three states that a thread can be in during its life   cycle;(a)     Java threads don’t allow parts of a program to be executed in parallel;(b)     Java is a single-threaded language;c)     Java’s garbage collector runs as a high priority thread;(d)     Ready, running and sleeping are three states that a thread can be in during its life   cycle
+Which of the following events will cause a thread to die?;(d)     Execution of the run( ) method ends;(a)     The method sleep( ) is called;(b)     The method wait( ) is called;(c)     Execution of the start( ) method ends;(d)     Execution of the run( ) method ends
+Which of the following method is a static in java.lang.Thread?;"(b)
+sleep(long)
+";"(a)
+run()
+";"(b)
+sleep(long)
+";"(c)
+start()
+";"(d)
+join()
+"
+Which of the following is  not true  for a java thread?;"(a)
+The run method calls start method
+";"(a)
+The run method calls start method
+";"(b)
+The start method calls run method
+";"(c)
+Runnable interface contains only run method
+";"(d)
+The run method is overridden to contain the functionality of the application
+"

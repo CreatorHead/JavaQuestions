@@ -1,0 +1,485 @@
+question,correct answer,wrong answer 1,wrong answer 2,wrong answer 3,wrong answer 4,Difficulty level,Section,Important
+"void start() {  
+    A a = new A();  /* line 2*/
+    B b = new B(); 
+    a.s(b);  
+    b = null; /* Line 5 */
+    a = null;  /* Line 6 */
+    System.out.println(""start completed""); /* Line 7 */
+} 
+  When is the B object, created in line 3, eligible for garbage collection?",There is no way to be absolutely certain.,after line 5,after line 6,after line 7,There is no way to be absolutely certain.,,,
+"{
+        HappyGarbage01 h = new HappyGarbage01(); 
+        h.methodA(); /* Line 6 */
+    } 
+    Object methodA() 
+    {
+        Object obj1 = new Object(); 
+        Object [] obj2 = new Object[1]; 
+        obj2[0] = obj1; 
+        obj1 = null; 
+        return obj2[0]; 
+    } 
+}
+{
+        HappyGarbage01 h = new HappyGarbage01(); 
+        h.methodA(); /* Line 6 */
+    } 
+    Object methodA() 
+    {
+        Object obj1 = new Object(); 
+        Object [] obj2 = new Object[1]; 
+        obj2[0] = obj1; 
+        obj1 = null; 
+        return obj2[0]; 
+    } 
+}
+Where will be the most chance of the garbage collector being invoked?
+",Garbage collector never invoked in methodA(),After line 9,After line 9,After line 9,Garbage collector never invoked in methodA(),,,
+"class Bar { } 
+class Test 
+{  
+    Bar doBar() 
+    {
+        Bar b = new Bar(); /* Line 6 */
+        return b; /* Line 7 */
+    } 
+    public static void main (String args[]) 
+    { 
+        Test t = new Test();  /* Line 11 */
+        Bar newBar = t.doBar();  /* Line 12 */
+        System.out.println(""newBar""); 
+        newBar = new Bar(); /* Line 14 */
+        System.out.println(""finishing""); /* Line 15 */
+    } 
+}
+At what point is the Bar object, created on line 6, eligible for garbage collection?
+",after line 14,after line 12,after line 14,after line 14,"after line 15, when main() completes",,,
+"class Test 
+{  
+    private Demo d; 
+    void start() 
+    {  
+        d = new Demo(); 
+        this.takeDemo(d); /* Line 7 */
+    } /* Line 8 */
+    void takeDemo(Demo demo) 
+    { 
+        demo = null;  
+        demo = new Demo(); 
+    } 
+}
+When is the Demo object eligible for garbage collection?
+",When the instance running this code is made eligible for garbage collection.,After the start() method completes,After line 8,After line 7,When the instance running this code is made eligible for garbage collection.,,,
+"public class X 
+{
+    public static void main(String [] args) 
+    {
+        X x = new X();
+        X x2 = m1(x); /* Line 6 */
+        X x4 = new X();
+        x2 = x4; /* Line 8 */
+        doComplexStuff();
+    }
+    static X m1(X mx) 
+    {
+        mx = new X();
+        return mx;
+    }
+}
+After line 8 runs. how many objects are eligible for garbage collection?
+
+",1,2,0,3,1,,,
+"public Object m() 
+{  
+    Object o = new Float(3.14F); 
+    Object [] oa = new Object[l];
+    oa[0] = o; /* Line 5 */
+    o = null;  /* Line 6 */
+    oa[0] = null; /* Line 7 */
+    return o; /* Line 8 */
+}
+
+When is the Float object, created in line 3, eligible for garbage collection?
+",just after line 7,just after line 8,just after line 6,just after line 5,just after line 7,,,
+"class X2 
+{
+    public X2 x;
+    public static void main(String [] args) 
+    {
+        X2 x2 = new X2();  /* Line 6 */
+        X2 x3 = new X2();  /* Line 7 */
+        x2.x = x3;
+        x3.x = x2;
+        x2 = new X2();
+        x3 = x2; /* Line 11 */
+        doComplexStuff();
+    }
+}
+after line 11 runs, how many objects are eligible for garbage collection?",2,1,6,4,2,,,
+"
+What allows the programmer to destroy an object x?
+",Only the garbage collection system can destroy an object.,Runtime.getRuntime().gc(),x.finalize(),Only the garbage collection system can destroy an object.,x.delete(),,,
+"
+Which statement is true?
+A. Programs will not run out of memory.
+B. Objects that will never again be used are eligible for garbage collection.
+C. Objects that are referred to by other objects will never be garbage collected.
+D. Objects that can be reached from a live thread will never be garbage collected.
+
+
+
+
+
+
+
+
+
+
+
+
+",Objects that can be reached from a live thread will never be garbage collected.,Objects that will never again be used are eligible for garbage collection.,Objects that will never again be used are eligible for garbage collection.,Programs will not run out of memory.,Objects that can be reached from a live thread will never be garbage collected.,,,
+"
+
+
+
+Which statement is true?
+A.
+All objects that are eligible for garbage collection will be garbage collected by the garbage collector.
+B.
+Objects with at least one reference will never be garbage collected.
+C.
+Objects from a class with the finalize() method overridden will never be garbage collected.
+D.
+Objects instantiated within anonymous inner classes are placed in the garbage collectible heap.
+
+
+
+
+
+
+
+",Objects instantiated within anonymous inner classes are placed in the garbage collectible heap.,All objects that are eligible for garbage collection will be garbage collected by the garbage collector.,Objects with at least one reference will never be garbage collected,Objects from a class with the finalize() method overridden will never be garbage collected.,Objects instantiated within anonymous inner classes are placed in the garbage collectible heap.,,,
+"Which statement is true?
+A.
+Memory is reclaimed by calling Runtime.gc().
+B.
+Objects are not collected if they are accessible from live threads.
+C.
+An OutOfMemory error is only thrown if a single block of memory cannot be found that is large enough for a particular requirement.
+D.
+Objects that have finalize() methods always have their finalize() methods called before the program ends.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+",Objects are not collected if they are accessible from live threads.,Objects are not collected if they are accessible from live threads.,Objects are not collected if they are accessible from live threads.,Objects are not collected if they are accessible from live threads.,An OutOfMemory error is only thrown if a single block of memory cannot be found that is large enough for a particular requirement.,,,
+"Which statement is true?
+A.
+Calling Runtime.gc() will cause eligible objects to be garbage collected.
+B.
+The garbage collector uses a mark and sweep algorithm.
+C.
+If an object can be accessed from a live thread, it can't be garbage collected.
+D.
+If object 1 refers to object 2, then object 2 can't be garbage collected.
+
+","If an object can be accessed from a live thread, it can't be garbage collected.","If an object can be accessed from a live thread, it can't be garbage collected.","If object 1 refers to object 2, then object 2 can't be garbage collected.",The garbage collector uses a mark and sweep algorithm.,Calling Runtime.gc() will cause eligible objects to be garbage collected.,,,
+"void start() {  
+    A a = new A(); 
+    B b = new B(); 
+    a.s(b);  
+    b = null; /* Line 5 */
+    a = null;  /* Line 6 */
+    System.out.println(""start completed""); /* Line 7 */
+} 
+When is the B object, created in line 3, eligible for garbage collection?
+",There is no way to be absolutely certain,after line 7,after line 5,after line 6,There is no way to be absolutely certain.,,,
+"Which statement is true?
+
+A. Programs will not run out of memory.
+B.Objects that will never again be used are eligible for garbage collection.
+C. Objects that are referred to by other objects will never be garbage collected.
+D. Objects that can be reached from a live thread will never be garbage collected.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+",Objects that can be reached from a live thread will never be garbage collected,Programs will not run out of memory,Programs will not run out of memory,Objects that are referred to by other objects will never be garbage collected.,Objects that are referred to by other objects will never be garbage collected.,,,
+Where an object of a class get stored?,A. Heap,B. Stack,C. Disk,D. File,A.    Heap,,,
+Garbage collection in Java is,  Memory occupied by objects with no reference is automatically reclaimed for deletion.,Java deletes all unused java files on the system.,Java deletes all unused java files on the system.,Java deletes all unused java files on the system.,Memory occupied by objects with no reference is automatically reclaimed for deletion.,,,
+"
+public class demo {
+
+ public static void main(String[] args) throws InterruptedException
+    {
+        String str = new String(""yms"");
+        str = null; 
+        System.gc(); 
+        Thread.sleep(1000); 
+        System.out.println(""end of main"");
+    }
+    @Override
+    protected void finalize() 
+    {
+        System.out.println(""finalize method called"");
+    }
+}
+",end of main,end of main,yms,finalize method called,end of main,,,
+"
+public class Run {
+
+  public static void main(String[] args) throws InterruptedException
+     {
+   Run t = new Run();
+         t = null; 
+         System.gc(); 
+         Thread.sleep(1000); 
+         System.out.println(""end main"");
+     }
+  
+     @Override
+     protected void finalize() 
+     {
+         System.out.println(""finalize method called"");
+         System.out.println(10/0);
+     }
+      
+ }
+","finalize method called
+end main",end main,finalize method called,finalize method called,Error ,,,
+"
+public class Run {
+
+ static Run t ;
+    static int count =0;
+     
+    public static void main(String[] args) throws InterruptedException
+    {
+     Run t1 = new Run();
+        t1 = null; // line 12
+        System.gc(); // line 15
+        Thread.sleep(1000); 
+        t = null; // line 21
+        System.gc(); // line 24
+        Thread.sleep(1000); 
+        System.out.println(""finalize method called ""+count+"" times"");
+         
+    }
+     
+    @Override
+    protected void finalize() 
+    { 
+        count++;
+        t = this; // line 38
+    }
+}
+",finalize method called 1 times,finalize method called 1 times,end main,finalize method called 3 times,Error ,,,
+"
+public class Run {
+
+ public static void main(String[] args)
+    {
+        // How many objects are eligible for 
+        // garbage collection after this line?
+        m1();  // Line 5
+    }
+ 
+    static void m1() 
+    {
+     Run t1 = new Run();
+     Run t2 = new Run();
+    } 
+}
+",2,3,1,0,4,,,
+"class X2 
+{
+    public X2 x;
+    public static void main(String [] args) 
+    {
+        X2 x2 = new X2();  /* Line 6 */
+        X2 x3 = new X2();  /* Line 7 */
+        x2.x = x3;
+        x3.x = x2;
+        x2 = new X2();
+        x3 = x2; /* Line 11 */
+        doComplexStuff();
+    }
+}
+after line 11 runs, how many objects are eligible for garbage collection?
+",2,2,1,3,0,,,
+What allows the programmer to destroy an object x?,Only the garbage collection system can destroy an object. ,Runtime.getRuntime().gc() ,x.delete() ,delete(),x.finalize() ,,,
+"class Test 
+{  
+    private Demo d; 
+    void start() 
+    {  
+        d = new Demo(); 
+        this.takeDemo(d); /* Line 7 */
+    } /* Line 8 */
+    void takeDemo(Demo demo) 
+    { 
+        demo = null;  
+        demo = new Demo(); 
+    } 
+}
+When is the Demo object eligible for garbage collection?
+",When the instance running this code is made eligible for garbage collection,When the instance running this code is made eligible for garbage collection,When the instance running this code is not  eligible for garbage collection,Rumtime error,complie time error,,,
+"class Bar { } 
+class Test 
+{  
+    Bar doBar() 
+    {
+        Bar b = new Bar(); /* Line 6 */
+        return b; /* Line 7 */
+    } 
+    public static void main (String args[]) 
+    { 
+        Test t = new Test();  /* Line 11 */
+        Bar newBar = t.doBar();  /* Line 12 */
+        System.out.println(""newBar""); 
+        newBar = new Bar(); /* Line 14 */
+        System.out.println(""finishing""); /* Line 15 */
+    } 
+}
+At what point is the Bar object, created on line 6, eligible for garbage collection?
+
+",after line 14 ,after line 14 ,after line 11,after line 12,after line 15,,,
+ How can you force garbage collection of an object?,Garbage collection cannot be forced.,Call System.gc().,Call System.gc() passing in a reference to the object to be garbage collected.,Call Runtime.gc().,Garbage collection cannot be forced.,,,
+" class Test implements Cloneable
+{
+    int a;
+    int b;
+ 
+    // Parameterized constructor
+    Test(int a, int b)
+    {
+        this.a = a;
+        this.b = b;
+    }
+ 
+    // Method that calls clone()
+    Test cloning()
+    {
+        try
+        {
+            return (Test) super.clone();
+        }
+        catch(CloneNotSupportedException e)
+        {
+            System.out.println(""CloneNotSupportedException is caught"");
+            return this;
+        }
+    }
+}
+ 
+class demo
+{
+    public static void main(String args[])
+    {
+        Test obj1 = new Test(1, 2);
+        Test obj2 = obj1.cloning();
+        obj1.a = 3;
+        obj1.b = 4;
+        System.out.println(""Object2 is a clone of object1"");
+        System.out.println(""obj1.a = "" + obj1.a + "" obj1.b = "" + obj1.b);
+        System.out.println(""obj2.a = "" + obj2.a + "" obj2.b = "" + obj2.b);
+    }
+}
+","Object2 is a clone of object1
+obj1.a = 3 obj1.b = 4
+obj2.a = 1 obj2.b = 2
+
+","Object2 is a clone of object1
+obj1.a = 3 obj1.b = 4
+obj2.a = 1 obj2.b = 2
+","Object2 is a clone of object1
+obj1.a = 3 obj1.b = 5
+obj2.a = 1 obj2.b = 66
+","Object2 is a clone of object1
+obj1.a = 30 obj1.b = 40
+obj2.a = 10 obj2.b = 20
+",complie time error,,,
+"class Test
+{
+    int x, y;
+    Test()
+    {
+        x = 10;
+        y = 20;
+    }
+}
+ 
+// Driver Class
+class Main
+{
+    public static void main(String[] args)
+    {
+         Test ob1 = new Test();
+ 
+         System.out.println(ob1.x + "" "" + ob1.y);
+ 
+         // Creating a new reference variable ob2
+         // pointing to same address as ob1
+         Test ob2 = ob1;
+ 
+         // Any change made in ob2 will be reflected
+         // in ob1
+         ob2.x = 100;
+ 
+         System.out.println(ob1.x+"" ""+ob1.y);
+         System.out.println(ob2.x+"" ""+ob2.y);
+    }
+}
+
+","10 20
+100 20
+100 20
+","10 20
+100 20
+100 20
+","1 2
+101 201
+102 202
+","11 22
+1 20
+100 20
+","10 20
+100 20
+
+",,,

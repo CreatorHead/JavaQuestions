@@ -1,0 +1,43 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+"You execute the code below in an empty directory. What is the result? 
+File f1 = new File (""dirname"");
+F ile f2 = new File (f1, ""filename"");";C. A new file called filename is created in the current working directory.;A. A new directory called dirname is created in the current working directory.;B. A new directory called dirname is created in the current working directory.;D. No directory is created, and no file is created.;C. A new file called filename is created in the current working directory.
+How do you create a Reader object from an InputStream object?;C. Create an InputStreamReader object, passing the InputStream object as an argument to the InputStreamReader constructor.;A. Use the static createReader( ) method of InputStream class.;B. Use the static createReader( ) method of Reader class.;D. Create an OutputStreamReader object, passing the InputStream object as an argument to the OutputStreamReader constructor.;C. Create an InputStreamReader object, passing the InputStream object as an argument to the InputStreamReader constructor.
+How can you change the current working directory using an instance of the File class called FileName?;D. The File class does not support directly changing the current directory.;"A. FileName.chdir(""DirName"").";"B. FileName.cd(""DirName"").";"C. FileName.cwd(""DirName"").";D. The File class does not support directly changing the current directory.
+Which of the following has a method names flush( )?;(b) Output Stream;(a)     Input stream;(b) Output Stream;(c)     Reader stream;(d) Input reader stream
+What is the fundamental unit of information of writer streams?;(a)     Characters;(a)     Characters;(b) Bytes;(c)     Files;(d) Records
+File class is included in which package?;(a)     java.io package;(a)     java.io package;(b) java.lang package;(c)     java.util.package.;(d) java.net.package
+URL stands for;(d) Uniform resource locator;(a)     Universal reader locator;(b) Universal reform loader;(c)     Uniform resource loader;(d) Uniform resource locator
+How to declare a class which has fields that are  not  serializable?;"(d)
+Transient.
+";"(a)
+Public
+";"(b)
+Private
+";"(c)
+Protected
+";"(d)
+Transient.
+"
+Which of the following is a character stream?;"(d)
+FileReader
+";"(a)
+FileInputStream
+";"(b)
+DataInputStream
+";"(c)
+BufferedInputStream
+";"(d)
+FileReader
+"
+Which of the following stream is/are used to handle primitive data types?;"(b)
+DataInputStream
+";"(a)
+DataOutputStream
+";"(b)
+DataInputStream
+";"(c)
+ObjectOutputStream
+";"(d)
+ObjectWriter
+"

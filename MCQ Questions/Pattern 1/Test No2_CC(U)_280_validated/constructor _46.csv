@@ -1,0 +1,273 @@
+question,correct answer,wrong answer 1,wrong answer 2,wrong answer 3,wrong answer 4
+Does Constructor creates the object ?,no,yes,sometimes,no,none of the above
+Can constructors be synchronized in Java ?,"no
+
+",no,yes,sometimes,none of the above
+Are constructors inherited? Can a subclass call the parent's class constructor? When?,"No constructors are not inherited, 
+They are called by using super() keyword",yes they can be inherited,"No constructors are not inherited, 
+They are called by using super() keyword",all the above,none of the above
+Difference between object instantiation and constructor ?,"Object Creation is the process to create the object in memory and returning its handler
+Initialization is the process of setting the initial / default values to the members.",object creation and initializaion both are same,,Both done at the same time whenever object is created,"Object Creation is the process to create the object in memory and returning its handler
+Initialization is the process of setting the initial / default values to the members."
+"public class Car extends Vehicle {        
+      int x;  
+        
+      Car(int y){  
+            x = 5;  
+      }  
+        
+      Car(){  
+            this(5);  
+            super();  
+        }  
+}",error ,error,exception,no output,none of the above
+"public class BuggyBread {  
+
+      private int x;  
+
+      private BuggyBread(int x){  
+            x = x;  
+      };  
+
+      public static void main(String[] args){  
+            BuggyBread buggybread = new BuggyBread(5);  
+            System.out.println(buggybread.x);  
+           }  
+}  ",0,1,x,0,none of the above
+"The following code is an example of  
+public class Car extends Vehicle{  
+      int x;  
+
+      Car(int y){  
+            x = 5;  
+      }  
+
+      Car(){  
+            this(5);  
+        }
+
+
+
+  ",constructor overloading,constructor ovveriding,method overloading,method overriding,constructor overloading
+"What is the problem with this code ?  
+
+public class Car extends Vehicle{        
+      int x;  
+        
+      Car(int y){  
+            x = 5;  
+      }  
+        
+      Car(){  
+            this(5);  
+            super();  
+      }  
+"," error: call to super must be first
+ Statement in constructor","warning:call to super must be first
+ Statement in constructor","Exception call to super must be first
+ Statement in constructor","Error call to super must be first
+ Statement in constructor",none of the above
+"What is the problem with this code ?  
+
+public class Car extends Vehicle{  
+      int x;  
+
+      Car(int y){  
+            x = 5;  
+      }  
+
+      Car(){  
+            super();  
+            this.x = 5;  
+         }  
+}",,,,,
+  Which of the following is false about Constructors ?,b. A no argument constructor is provided by the compiler if we declare only constructors with arguments.,a. Constructor can be overloaded,b. A no argument constructor is provided by the compiler if we declare only constructors with arguments.,"c. Constructors shouldn't have any return types , not even void.","d. If super is not explicitly called, still super() is intrinsically added by the compiler.
+"
+" class BuggyBread {
+
+private int x;
+private int y;
+
+BuggyBread(int x,int y){};
+
+public static void main(String[] args){
+BuggyBread buggybread = new BuggyBread();
+System.out.println(buggybread.x);
+}
+}  ","Error:
+",exception,error,warning,none of the above
+"What is the problem with following code ?  
+
+public class Car extends Vehicle{  
+      int x;  
+
+      void Car(int y){  
+            x = 5;  
+      }  
+
+      void Car(){  
+            this(5);  
+         }  
+    }
+","call to this must be first 
+Statement in constructor","call to Car must be first
+ Statement in constructor","call to syper must be first 
+Statement in constructor","call to this must be first 
+statement in class",All of the above
+How can we create objects if we make the constructor private ?,public static factory method,public static factory method,pivate static factory method,protected static factory method,All of the above
+"What is a default constructor ?
+","Constructor provided by
+ Java if no constructor is declared","Constructor without 
+Parameters declared by user
+","Constructor provided by 
+Java if no constructor is declared","Constructor with 
+Empty body",All of the above
+Will Compiler creates a default no argument constructor if we specify only multi argument constructor ?,no,,,,
+  Can we overload constructors ?,yes,no,maybe,yes,All of the above
+"  What will be the output of following code ?  
+
+public class BuggyBread {  
+
+      private int x;  
+      private Integer y;  
+
+      private BuggyBread(int x,int y){};  
+
+      public static void main(String[] args){  
+            BuggyBread buggybread = new BuggyBread(1,2);  
+            System.out.println(buggybread.x);  
+      }  ",0,1,2,"1,2",0
+Difference between Class#getInstance() and new operator ?," new operator is used to create objects, 
+to create  object at runtime, 
+ We use newInstance() method
+
+",Both used to create an object,we cant create object other than new operator,"newInstance() used to 
+Invoke construcors"," new operator is used to create objects, 
+to create  object at runtime, 
+ We use newInstance() method
+
+"
+"  Can we create an object if a Class doesn't have any constructor
+ ( not even the default provided by constructor ) ?",no,yes,maybe,sometimes,none of the above
+Does every class needs to have one non parameterized constructor ?,no,maybe,no,yes,none of the above
+"In a case where there are no instance variables 
+What does the default constructor initialize?",,,,,
+Is it advisable to set the member variables through constructors instead of setting them through setters ?,"All the above
+.","If you want your class to be immutable, you'll have to use constructor parameters.","
+If you want your class to be deserializable by relection based (de)serializers,", You will need a default constructor and setters.,All of the above
+"What will happen if we have our own constructor but 
+Only initialize some of the member elements ?","we have to initialize that members
+ At the time of decleration,",error,exception,previously initialized value,"we have to initialize that members
+ At the time of decleration,"
+Does Constructor returns the reference of the newly created object ?,no,yes,maybe,no,none of the above
+  Why doesn't Java even allow void return types for Constructors ?,it doesn't return any value,it returns toString,it returns referance of an object,it doesn't return any value,none of the above
+Is a method name same as Class name permissible in Java ?,"yes,with valid return type we its
+ Permissible for method but its not a good practice,
+",no,"yes,with valid return type we its
+ Permissible for method but its not a good practice,
+",Error no return type,none of the above
+Why do we use a copy constructor ?,"
+Copy constructor is used to create copies of an object.",to get return type for constructor,no we cant,to copy the values in object class,none of the above
+Is it mandatory to have a default constructor ?,no,yes,maybe,must be param constructor,All of the above
+Is it a good Design practice to call methods from a constructor ?,"no,beacause objects are not
+ compleately initialized.",yes its a good practice,no it wont work,"no,beacause objects are not
+ compleately initialized.",to override constructor
+Can a constructor have a private access specifier ?,yes. ,no,possible,error ,none of the above
+What is the use of constructors in Java ?,to initialize the instance of the class.,to get return type for constructor,to create an object,to override the object class,to initialize the instance of the class.
+Does all methods need to have a return type ? Is it applicable to constructors too ?,"all methods must have return type
+ But constructors dont have one",yes it returns an object of super class,no its give warning and error,we dont require one its a waste of memory,"all methods must have return type
+ But constructors dont have one"
+"What is the difference between the 2 methods in Java ?
+
+Class BuggyBread {
+
+BuggyBread(){
+}
+void BuggyBread(){
+  }  ","  constrctor and  method in 
+Class BuggyBread",both are methods of that class,both are constructors,both are methods,"  constrctor and  method in 
+Class BuggyBread"
+"Is this constructor overloading ?
+
+What is the difference between the 2 methods in Java ?
+
+Class BuggyBread {
+
+BuggyBread(){
+  }
+void BuggyBread(int x){
+  }
+",no,yes,maybe,both returns object,no
+"Can we call a constructor explicitly , just like a method ?",yes. ,no,returns null,it doesn't return any value,yes
+Can we call a constructor for an object twice ?,yes,maybe,error,yes,none of the above
+"What will be the output upon executing main method
+
+public class Graph {
+      private static Multimap<Integer,Integer> adjacentDirectedNodesMap = ArrayListMultimap.create();
+      
+      Graph(){
+            adjacentDirectedNodesMap.put(1, 2);
+            adjacentDirectedNodesMap.put(1, 3);
+            adjacentDirectedNodesMap.put(1, 4);
+            adjacentDirectedNodesMap.put(3, 5);
+            adjacentDirectedNodesMap.put(4, 5);
+      }
+      
+      public static void main(String[] args){
+            ArrayList visited = new ArrayList();
+            
+            Integer startNode = 1;
+            
+            for(Integer adjacentNodes: adjacentDirectedNodesMap.get(startNode)){
+                        System.out.println(adjacentNodes);
+            }
+        }        
+",,,,,
+How do you know if a method is a constructor ?,"method has returntype,constructor doesn't",both returns object,both returns null,"method has returntype,constructor doesn't",All of the above
+Can we instantiate the object of derived class if parent constructor is private ?,no,yes,possible,maybe,no
+Can you create an object without using new operator  in Java?,yes,no,yes,maybe,All of the above
+Can we call sub class constructor from super class constructor?,yes,no,maybe,possible,none of the above
+What happens if you keep return type for a constructor?,"then it is treated as a method
+ Not a Constructor.",error,exception,no,All of the above
+"class SuperClass
+{
+        public SuperClass()
+        {
+                System.out.println(""Super Class Constructor"");
+        }
+}
+  
+class SubClass extends SuperClass
+{
+        public SubClass()
+        {
+                System.out.println(""Sub Class Constructor"");
+        }
+  
+        void method()
+        {
+                this();         
+  
+                super();       
+        }
+}
+",error,exception,warning,error,All of the above
+"class MyClass
+{
+        private static MyClass object = null;
+  
+        private MyClass()
+        {
+                //private constructor
+        }
+  
+        public MyClass getObject()
+        {
+                if(object == null)
+                {
+                        object = new MyClass();     
+                }
+  
+                return object;
+        }
+}",,,,,

@@ -1,0 +1,6 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+Which of the following statements is  true?;"(c) Static member classes can contain non-static methods.
+";"(a) Non-static member classes must have either default or public accessibility
+";"(b) All nested classes can declare static member classes
+";(c) Static member classes can contain non-static methods.;"(d) All nested classes can be declared static
+"

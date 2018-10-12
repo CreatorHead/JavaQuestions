@@ -1,0 +1,44 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+"In this example class_var = new classname ( ); the class name followed by parentheses specifies the _________ for the class.";B. constructor.;A. destructor.;C. variables.;D. memory.;B. constructor.
+Constructor will have the same name as ______________.;A. class.;B. function.;C. file.;D. package.;A. class.
+A constructor;d)  (a), (b) and (c) above.;(a)      Must have the same name as the class it is declared within.;(b)      Is used to create objects.;(c)      May be declared private;d)  (a), (b) and (c) above.
+In a class definition, the special method provided to be called to create an instance of that class is known as a/an;(c)   Constructor;(a)   Interpreter;(b)   Destructor;(c)   Constructor;(d)   Object
+Given a class named student, which of the following is a valid constructor declaration for the class?;(a) Student (student s)   {   };(b) Student student ( ) {   };(c) Private final student ( ) {   };(d) Void student (   )   {     };
+Given a class named Book, which one of these is a valid constructor declaration for the class?;"(a) Book(Book b) { }
+";(a) Book(Book b) { };"(b) Book Book() { }
+";"(c) private final Book() { }
+";"(d) void Book() { }
+"
+Which of the following statement is  not true?;"(b)
+At least one constructor must always be defined explicitly
+";"(a)
+A default no-arg constructor is provided automatically if no constructors are explicitly declared in the class
+";"(b)
+At least one constructor must always be defined explicitly
+";"(c)
+Constructors do not have a return type, not even void
+";"(d)
+Constructors must have the same name as the class itself
+"
+Which one of these is a valid constructor declaration for the class named student?;"(a)
+Student(student   b) { }
+";"(a)
+Student(student   b) { }
+";"(b)
+Student   Student() { }
+";"(c)
+private final   Student[] { }
+";"(d)
+void Student() { }
+"
+Which of the following is  not true  for a constructor?;"(d)
+A constructor can be declared abstract
+";"(a)
+A constructor is used to initialize an object
+";"(b)
+A default constructor takes no parameter
+";"(c)
+A constructor can be overloaded
+";"(d)
+A constructor can be declared abstract
+"

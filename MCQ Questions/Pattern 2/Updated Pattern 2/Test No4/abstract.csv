@@ -1,0 +1,88 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+"Suppose A is an abstract class ,B is a concrete subclass of A, and both A and B have an default constructor. Which of the following is correct? 
+a) A a = new A(); 
+b)A a = new B(); 
+c) B b = new A(); 
+d) B b = new B();";B. Both b & d.;A. Both a & b.;C. Both b & c.;D. Both a & c.;B. Both b & d.
+Which of the following declares an abstract method in an abstract Java class?;"B. public abstract void method();.";"A. public abstract method();.";"C. public void method(){ };.";"D. private abstract void method(){ };.";"B. public abstract void method();."
+Which of these keywords are used to define an abstract class?.;B. abstract;A. abst;C. Abstract;D. abstract class;B. abstract
+Which of these is not a correct statement?.;C. Abstract class can be initiated by new operator.;A. Every class containing abstract method must be declared abstract.;B. Abstract class defines only the structure of the class not its implementation.;D. Abstract class can be inherited.;C. Abstract class can be initiated by new operator.
+________ class must be implemented in order to create the object.;A. abstract.;B. final;C. public;D. none;A. abstract.
+Which one of the following is  not true?;(c)     An abstract class cannot have non-abstract methods.;(a)     A class containing abstract methods is called an abstract class.;(b)     Abstract methods should be implemented in the derived class.;(d)     A class must be qualified as ‘abstract’ class, if it contains one abstract method.;(c)     An abstract class cannot have non-abstract methods.
+An abstract data type typically comprises a …………… and a set of ……………... respectively.;(a)Data representation, operations.;(a)Data representation, operations.;(b)   Database, operations;(c)   Data representation, objects;(d)   Control structure, operations
+"Consider the following statements:
+I. A class can be declared as both abstract and final.
+II. A class declared as final can be extended by defining a sub-class.
+III. Resolving calls to methods dynamically at run-time is called late binding.
+IV. The class  Object  defined by Java need not be a super class of all other classes.
+Identify the  correct  statement from the following:";(a) Only (III) above.;(a) Only (III) above.;(b)   Both (III) and (IV) above;c)   Both (I) and (III) above;(d)   Both (II) and (IV) above
+In Java, declaring a class abstract is useful;(b)     When it doesn't make sense to have objects of that class;(a)     To prevent developers from further extending the class;(b)     When it doesn't make sense to have objects of that class;(c)     When default implementations of some methods are not desirable;(d)     To force developers to extend the class not to use its capabilities
+Which one of the following class definitions is a valid definition of a class that cannot be instantiated?;"(c) abstract class Ghost
+             {
+                           void haunt() { };          
+             }
+";"(a) class Ghost
+             {
+                           abstract void haunt();      
+             }
+";"(b) abstract class Ghost
+             {
+                           void haunt();    
+             }
+";"(c) abstract class Ghost
+             {
+                           void haunt() { };          
+             }
+";"(d) static class Ghost
+             {
+                           abstract haunt();
+             }
+"
+"Given the following source code, which comment line can be uncommented without introducing errors?
+abstract class MyClass
+{
+     abstract void f();
+     final void g() {}
+// final void h() {}             // (1)
+     protected static int i;
+     private int j;
+}
+final class MyOtherClass extends MyClass
+{
+// MyOtherClass(int n) { m = n; }   //(2)
+     public static void main(String[] args)
+     {
+             MyClass mc = new MyOtherClass();
+     }
+     void f() { }
+     void h() { }
+// void k() { i++; }           // (3)
+// void l() { j++; }             // (4)
+     int m;
+}";"(c) (3)
+";"(a) (1)
+";"(b) (2)
+";"(c) (3)
+";"(d) (4)
+"
+Which of the following statements is  true?;"(a) The subclass of a non-abstract class can be declared abstract
+";"(a) The subclass of a non-abstract class can be declared abstract
+";"(b) All the members of the superclass are inherited by the subclass
+";"(c) A final class can be abstract
+";"(d) A class in which all the members are declared private, cannot be declared public
+"
+"Which of the following statements about abstract methods/classes in Java is/are  true?
+I.         An abstract class cannot be instantiated.
+II.         Constructors cannot be abstract.
+III.       A subclass of an abstract class must defined the abstract methods.
+IV.     Static methods may be declared abstract.";"(a)
+Both (I) and (II) above
+";"(a)
+Both (I) and (II) above
+";"(b)
+(I), (II) and (III) above
+";"(c)
+Only (I) above
+";"(d)
+Only (II) above
+"

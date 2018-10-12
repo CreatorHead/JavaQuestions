@@ -1,0 +1,197 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+Which of the following statements are true?;D. Unicode characters are all 16-bits.;A. UTF characters are all 8-bits.;B. UTF characters are all 16-bits.;C. UTF characters are all 24-bits.;D. Unicode characters are all 16-bits.
+ A / An ________ variable is shared by all instances of the class. It exists even before an object is created.;D. static;A. instance;B. abstract;C. interface;D. static
+The type long can be used to store values in the following range:;C.-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 ;A.-2,147,483,648 to 2,147,483, 647 ;B. -264 to 264.;D. -232 to 232 – 1.;C.-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 
+ If not assigned a value, a variable of type char has the following default value:;B. \u0000'.;A. \uffff'.;"C. "" "" (space).";D. '\u0001'.;B. \u0000'.
+DataInput is ________________.;A. an interface that defines methods to read primitive data types.;B. an abstract class defined in java.io.;C. a class we can use to read primitive data types.;D. an interface that defines methods to open files.;A. an interface that defines methods to read primitive data types.
+Which of the following is NOT an example of a data type?;B. public.;A. int.;C. double;D. void.;B. public.
+The following is an example of a boolean expression;C. cause == bYes.;A. x = 6.;"B. m1.setText(""Hello."").";D. 70.;C. cause == bYes.
+The data type for numbers such as 3.14159 is _________.;A. double.;B. int.;C. real.;D. String.;A. double.
+"Given the following statement:
+huey.setDouble(8.0*32.2+1.0);
+What must be the data type of huey?.";D. double.;A. int.;B. float;C. String;D. double.
+"What are the constants defined by Byte, Short, Integer and Long? 
+1. MAX_VALUE, 
+2.MIN_VALUE
+3. TYPE.";C. 1, 2, 3.;A. 1, 2.;B. 2, 3.;D. 1, 3.;C. 1, 2, 3.
+When you divide a number of type double by zero then the result will be __________.;B. NaN.;A. zero.;C. unpredictable.;D. in-determinant from;B. NaN.
+What is the number of bytes used by Java primitive long?;D. 8.;A. The number of bytes is compiler dependent.;B. 2.;C. 4.;D. 8.
+"What is the output of the following program?
+class example{
+         public static void main(String args[]){
+                  int j;
+                 Do{
+                            J++;
+                 } while(j <0);  
+                 System.out.println(j);
+         }
+}";A. The program does not compile as j is not initialized.;B. The program compiles but does not run.;C. The program compiles and runs but does not print anything.;D. The program prints 0.;A. The program does not compile as j is not initialized.
+Integers are whole values ________ numbers.;A. signed.;B. unsigned.;C. model.;D. Byte.;A. signed.
+Single characters are represented through ______ type.;B. char.;A. String.;C. array.;D. nothing.;B. char.
+Numbers with fractional are called __________.;B. float.;A. double.;C. int.;D. long.;B. float.
+Single character in java is called _____literals.;A. char.;B. String.;C. java.;D. compile.;A. char.
+The ______ refers to the validity of a variable.;A. scope.;B. variable.;C. float.;D. method.;A. scope.
+___________ value cannot be updated.;B. final.;A. end.;C. static.;D. view.;B. final.
+The default value of a static integer   variable of a class in Java is,;(a) 0;(b) 1    ;(c) Garbage value  ; (d) Null  ;(a) 0
+Which of the following variable declaration would NOT compile in a java program?;"a) int 1_var;.";"(b)   int VAR;";"(c)   int var1;";"d)   int var_1;";"a) int 1_var;."
+Identify, from among the following, the  incorrect  variable name(s).;(c)   2ndName;(a)   _theButton;(b)   my2ndFont.;(c)   2ndName;(d)   CurrentWeatherStateofplanet
+In Java, a character constant’s value is its integer value in the ………………………character set.;(b)   Unicode;(a)   EBCDIC;(b)   Unicode;  (c)   ASCI;(d)   Binary
+"Consider the following variable declarations:
+          int i;
+         float j;
+         boolean k;
+Which of the following is  correct  initialization?";"(b) i = 1; j = 1.0f; k = true;";"(a) i = 1; j = 1.0; k = true;";"(b) i = 1; j = 1.0f; k = true;";"(c) i = 1; j = 1.0f; k = “true”;";"(d) i = 1; j = 1.0; k = “true”;"
+Which of the following is the  correct  expression of character 4?;"(d)
+‘4’
+";"(a)
+4
+";"(b)
+“4”
+";"(c)
+‘\0004’
+";"(d)
+‘4’
+"
+How many bytes a Java character uses for storing?;"(b)
+Two bytes
+";"(a)
+One byte
+";"(b)
+Two bytes
+";"(c)
+Three bytes
+";"(d)
+Four bytes
+"
+"Which of the following assignment statement(s) is/are  correct?
+I.         char c = 'd';
+II.         char c = 100;
+III.       char c = ""d"";
+IV.     char c = ""100"";";"(c)
+Both (I) and (II) above
+";"(a)
+Only (I) above
+";"(b)
+Only (II) above
+";"(c)
+Both (I) and (II) above
+";"(d)
+Both (II) and (III) above
+"
+Which of the following is legal valid variable name?;"(d)
+timeOfDay
+";"(a)
+1num
+
+";"(b)
+#twenty
+
+";"(c)
+@one
+";"(d)
+timeOfDay
+"
+What is the bit size of int in java?;"(c)
+32
+";"(a)
+8
+";"(b)
+16
+";"(c)
+32
+";"(d)
+64
+"
+The type long can be used to store values in the following range:;"(a)
+-263 to 263-1
+";"(a)
+-263 to 263-1
+";"(b)
+-231 to 231-1
+";"(c)
+-264 to 264
+";"(d)
+-232 to 232-1
+"
+"Which of the following is/are  not  hexadecimal numbers?
+I.         999.
+II.         (hex)23.
+III.       0x556.
+IV.     0x1F2.";"(a)
+Both (I) and (II) above
+";"(a)
+Both (I) and (II) above
+";"(b)
+Only (I) above
+";"(c)
+Only (III) above
+";"(d)
+(I), (II) and (III) above
+"
+"Select the invalid assignment statement(s) from the following:
+I.         Float x = 238.88;
+II.         Double y = 0x443;
+III.       int n = (int) true;
+IV.     long m =778645;";"(a)
+Both (I) and (III) above
+";"(a)
+Both (I) and (III) above
+";"(b)
+Only (II) above
+";"(c)
+Both (II) and (IV) above
+";"(d)
+Both (I) and (II) above
+"
+"Which of the following expressions will produce errors upon compilation?
+I.         boolean a = (boolean) 1;
+II.         boolean b = (false && true);
+III.       float y = 22.3;
+IV.     int x = (25 | 125)";"(a)
+Both (I) and (III) above
+";"(a)
+Both (I) and (III) above
+";"(b)
+Only (I) above
+";"(c)
+(I), (III) and (IV) above
+";"(d)
+(I), (II) and (IV) above
+"
+"Which of the following will produce an error?
+I.                   byte a1 = 2, a2 = 4, a3;
+II.                 short s = 16;
+III.               a2 = s;
+IV.             a3 = a1 * a2;";"(a)
+Both (III) and (IV) above
+";"(a)
+Both (III) and (IV) above
+";"(b)
+Only (II) above
+";"(c)
+Only (III) above
+";"(d)
+Only (IV) above
+"
+Which of the following is  not  a valid Java identifier?;"(a)
+my Value
+";"(a)
+my Value
+";"(b)
+$_AAA1
+";"(c)
+width
+";"(d)
+m_x
+"
+What is the size of the Short integer type in terms of bits?;"(b)
+16
+";"(a)
+8
+";"(b)
+16
+";"(c)
+32
+";"(d)
+64
+"

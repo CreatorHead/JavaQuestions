@@ -1,0 +1,71 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+The methods wait() and notify() are defined in?;B. java.lang.Object.;A. java.lang.String.;C. java.lang.Runnable.;D. java.lang.Thread.;B. java.lang.Object.
+An array of type Object, which may have_______ type of different classes objects.;A. different.;B. same.;C. only one;D. common.;A. different.
+"Analyze the following code:
+public class Test {
+     public static void main(String[] args) {
+         String s = new String(""Welcome to Java"");
+         Object o = s;
+         String d = (String)o;
+     }
+}";"(d)
+s, o, and d reference the same String object
+";"(a)
+When assigning s to o in Object o = s, a new object is created
+";"(b)
+When casting o to s in String d = (String)o, a new object is created
+";"(c)
+When casting o to s in String d = (String)o, the contents of o is changed
+";"(d)
+s, o, and d reference the same String object
+"
+Which of the following statement is  not  defined in the Object class?;"(a)
+sleep(long milliseconds)
+";"(a)
+sleep(long milliseconds)
+";"(b)
+wait()
+";"(c)
+notify()
+";"(d)
+notifyAll()
+"
+"class Point {
+                         int x,y;
+                         Point (int x, int y) {  
+                                       this.x = x;
+                                       this.y = y;      
+                         }
+                         public String toString() {
+                                         return “Point[“ +x+ “,” +y+ “]”;
+                         } }
+     class toStringDemo {
+                   public static void main (String args[]) {
+                               Point p = new Point (10,20);
+                               System.out.println(“p=“ +p);}
+                         }
+What is the output of the following code?";"(a)
+p = Point[10,20]
+";"(a)
+p = Point[10,20]
+";"(b)
+p = Point[20,20]
+";"(c)
+p = Point[20,10]
+";"(d)
+p = Point[11,20]
+"
+"String s1 = “Hello”;
+String s2 = “Hello”;
+System.out.println(s1 + “equals” + s2 + “->” + s1.equals(s2));
+What is the output of the following code?";"(d)
+Hello equals Hello -> true
+";"(a)
+Hello equals Hello -> 0
+";"(b)
+Hello equals Hello -> 1
+";"(c)
+Hello equals Hello -> false
+";"(d)
+Hello equals Hello -> true
+"

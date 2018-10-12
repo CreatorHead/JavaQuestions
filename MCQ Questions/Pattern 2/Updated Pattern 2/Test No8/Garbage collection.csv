@@ -1,0 +1,21 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+Before doing garbage collection , _____ method is called .;B. finalize().;A. main().;C. final().;D. collect().;B. finalize().
+finalize( ) is only called just prior to _________.;C. garbage collection.;A. initialization.;B. runtime.;D. destruction.;C. garbage collection.
+Java's garbage collector runs as a ______ priority thread waiting for _______ priority threads to relinquish the processor. Choose the correct sequence.;A. high, low.;B. high, high.;C. low, low.;D. low, high.;A. high, low.
+What is the priority of the Garbage collector thread of jdk?;A. Low-Priority.;B. Highest Priority.;C. Medium Priority.;D. Decided At Runtime.;A. Low-Priority.
+Which of the following helps in garbage collection?;C. Finalize.;A. Final.;B. Finally.;D. Finalizer.;C. Finalize.
+What is garbage collection in the context of Java?;(c)     When all references to an object are gone, the memory used by the object is automatically reclaimed.;(a)     The operating system periodically deletes all the java files available on the system.;(b)     Any package imported in a program and not used is automatically deleted.;(c)     When all references to an object are gone, the memory used by the object is automatically reclaimed.;(d)     The JVM checks the output of any Java program and deletes anything that doesn't make sense.
+The java run time system automatically calls this method while garbage collection.;(b)   finalize();(a)   finalizer();(b)   finalize();(c)   finally();(d)   finalized()
+____ are automatically called when an object is destroyed.;C. finalize().;A. collectGarbage().;B. Destructor().;D. final().;C. finalize().
+What is garbage collection in the context of Java?;(c)     When all references to an object are gone, the memory used by the object is automatically reclaimed.;(a)     The operating system periodically deletes all of the java files available on the system.;(b)     Any package imported in a program and not used is automatically deleted.;(c)     When all references to an object are gone, the memory used by the object is automatically reclaimed.;(d)     The JVM checks the output of any Java program and deletes anything that doesn't make sense.
+Which of the following statements are true regarding the finalize( ) method?;(d)     The finalize ( ) method can be overloaded;(a)     The finalize ( ) method must be declared with protected accessibility;(b)     The compiler will fail to compile the code that explicitly tries to call the finalize( ) method;(c)     The body of the finalize ( ) method can only access other objects that are eligible for garbage collection;(d)     The finalize ( ) method can be overloaded
+Which statement is  true?;"(d) If object obj1 can access object obj2 that is eligible for garbage collection, then obj1 is also eligible for garbage collection.
+";"(a) Objects can be explicitly destroyed using the keyword delete
+";"(b) An object will be garbage collected immediately after it becomes unreachable
+";"(c) If object obj1 is accessible from object obj2, and object obj2 is accessible from obj1, then obj1 and obj2 are not eligible for garbage collection
+";(d) If object obj1 can access object obj2 that is eligible for garbage collection, then obj1 is also eligible for garbage collection.
+Which statement is  true?;"(b) All objects have a finalize() method
+";"(a) If an exception is thrown during the execution of the finalize() method of an eligible object, then the exception is ignored and the object is destroyed
+";(b) All objects have a finalize() method;"(c) Objects can be destroyed by explicitly calling the finalize() method
+";"(d) The finalize() method can be declared with any accessibility
+"

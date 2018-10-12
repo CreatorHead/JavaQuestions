@@ -1,0 +1,140 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+Which of these data type can be used for a method having a return statement in it?.;D. All of the mentioned.;A. void.;B. int.;C. float.;D. All of the mentioned.
+Which of these is the method which is executed first before execution of any other thing takes place in a program?.;C. static method.;A. main method.;B. finalize method.;D. private method.;C. static method.
+ What is the default return type to main() __________.;A. void.;B. double.;C. float.;D. int.;A. void.
+ A function is: _________________.;An entity that receives inputs and outputs.;B. A way of storing values.;C. A sequence of characters enclosed by quotes.;D. A kind of computer.;An entity that receives inputs and outputs.
+"Methods declared as static have several restrictions:
+1) They can only call other static methods.
+2) They must only access static data.
+3) They cannot refer to this or super in any way
+Which of these are true?";D. 1, 2 and 3.;A. 1 and 2.;B. 1 and 3.;C. 2 and 3.;D. 1, 2 and 3.
+What is the use of valueOf( ) method?;D. It converts string to float value.;A. It converts data from its internal format into a human-readable form.;B. It converts integer value to string.;C. It converts string to int value.;D. It converts string to float value.
+When a method calls itseif, it is called __________.;A. recursion.;B. distance.;C. display.;D. problem.;A. recursion.
+"What is the output of the following program:
+public class testmeth
+{
+            static int i = 1;
+            public static void main(String args[])
+            {
+                    System.out.println(i+” , “);
+                    m(i);
+                    System.out.println(i);
+             }
+             public static void m(int i)
+             {
+                    i += 2;                                                            
+             }
+}";(c)   1 , 1;(a)   1 , 3;(b)   3 , 1;(d)   1 , 0;(c)   1 , 1
+"Consider the two methods (within the same class)
+                 public static int foo(int a, String s)
+                 {
+                     s = ""Yellow"";
+                     a=a+2;
+                     return a;
+                 }
+                 public static void bar()
+                 {
+                     int a=3;
+                     String s = ""Blue"";
+                     a = foo(a,s);
+                     System.out.println(""a=""+a+"" s=""+s);
+                 }
+                 public static void main(String args[])
+                 {
+                       bar();
+                 }
+What is printed on execution of these methods?";(d) a = 5 s = Blue;(a)   a = 3 s = Blue;(b)   a = 5 s = Yellow;(c)   a = 3 s = Yellow;(d) a = 5 s = Blue
+Which one of these is a valid method declaration?;"(b) void method2()
+";"(a) void method1
+";(b) void method2();"(c) void method3(void)
+";"(d) method4()
+"
+"Analyze the following code.
+public class Test {
+       public static void main(String[] args) {
+                System.out.println(max(1, 2));
+       }
+        Public static double max(int num1, double num2) {
+                 System.out.println(""max(int, double) is invoked"");
+                 if (num1 > num2) return num1;
+                 else return num2;
+        }
+           public static double max(double num1, int num2) {
+                      System.out.println(""max(double, int) is invoked"");
+                       if (num1 > num2) return num1;
+                        else return num2;
+       }
+}";"(b) The program cannot compile because the compiler cannot determine which max method should be invoked
+";"(a) The program cannot compile because you cannot have the print statement in a non-void method
+";(b) The program cannot compile because the compiler cannot determine which max method should be invoked;"(c) The program runs and prints 2 followed by ""max(int, double)"" is invoked
+";"(d) The program runs and prints 2 followed by ""max(double, int)"" is invoked
+"
+"Analyze the following code:
+public class Test {
+public static void main(String[] args) {
+   int[] oldList = {1, 2, 3, 4, 5};
+   reverse(oldList);
+for (int i = 0; i < oldList.length; i++)
+   System.out.print(oldList[i] + "" "");
+}
+public static void reverse(int[] list) {
+   int[] newList = new int[list.length];
+   for (int i = 0; i < list.length; i++)
+       newList[i] = list[list.length - 1 - i];
+list = newList;
+}
+}";"(a) The program displays 1 2 3 4 5
+";"(a) The program displays 1 2 3 4 5
+";(b) The program displays 1 2 3 4 5 and then raises an ArrayIndexOutOfBoundsException;"(c) The program displays 5 4 3 2 1
+";"(d) The program displays 5 4 3 2 1 and then raises an ArrayIndexOutOfBoundsException
+"
+"public class PassPrimitiveByValue {
+public static void main(String[] args) {          
+int x = 3;          
+//invoke passMethod() with x as argument
+passMethod(x);
+// print x to see if its value has changed
+System.out.println(""After invoking passMethod, x = "" + x);          
+}
+// change parameter in passMethod()
+public static void passMethod(int p) {
+p = 10;
+}
+}
+What is the output of the above program?";"(b)
+3
+";"(a)
+10
+";"(b)
+3
+";"(c)
+garbage value
+";"(d)
+4
+"
+"Given below is the syntax of the method declaration in java.
+Syntax: modifier returnType MethodName (parameter List)  {
+                       statement(s);
+}
+Which defines the Signature of the method?";"(d)
+returntype, methodname and parameter list
+";"(a)
+modifier
+";"(b)
+modifier, returntype
+";"(c)
+return type, method name
+";"(d)
+returntype, methodname and parameter list
+"
+What modifier is to be used If you wish to declare that you want   to no longer allow subclasses to override your variables or methods?;"(c)
+Final
+";"(a)
+Finally
+";"(b)
+Abstract
+";"(c)
+Final
+";"(d)
+Synchronized
+"

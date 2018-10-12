@@ -1,0 +1,187 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+ Which of these is correct way of calling a constructor having no parameters, of superclass A by subclass B?.;"D. super();.";"A. super(void);.";"B. superclass.();.";"C. super.A();.";"D. super();."
+super keyword can be used to _____.;C. both a and b.;A. call super class constructor.;B. access super class member;D. none of the above;C. both a and b.
+ Overloaded methods ___.;A. are a group of methods with the same name.;B. have the same number and type of arguments.;C. make life simpler for programmer.;D. may fail unexpectedly due to stress.;A. are a group of methods with the same name.
+___ keyword is used to refer to the current object.;B. this.;A. super.;C. new.;D. volatile.;B. this.
+When a class is declared as final , then ____.;A. It can not be inherited;B. It must be inherited;C. Its object can not be created;D. none of these;A. It can not be inherited
+When method is overridden , then by subclass object which class method is called _____.;A. super class.;B. subclass.;C. both.;D. none;A. super class.
+"Given the following code:
+     Class Base { int x = 10; }
+     class Derived extends Base{ int x = 20; }
+     Base b = new Base(); 
+     Derived d = new Derived ();
+     Base bd = new Derived(); 
+The statement 
+     System.out.println(b.x + "" "" + d.x + "" "" + bd.x);
+will produce the output";D. 10 20 10.;A. 10 20 20.;B. 20 10 20.;C. 20 20 10.;D. 10 20 10.
+The term _____________ refers to a class's direct ancestor or to any of its ascendant classes.;B. super class.;A. sub class.;C. class hierarchy.;D. class instance.;B. super class.
+ Method overloading is one of the way that Java supports ____________.;D. polymorphism.;A. encapsulation.;B. class.;C. inheritence.;D. polymorphism.
+Does a class inherit the constructors of its super class?;C. Always No;A. Yes;B. Sometimes Yes;D. Sometimes no;C. Always No
+The class that inherits is called a __________.;B. subclass.;A. superclass.;C. instance class.;D. instantiate class.;B. subclass.
+A subclass is also called as ____________.;C. derived class.;A. inner class.;B. nested class.;D. hidden class.;C. derived class.
+Inheritance allows _______ of sub classes.;A. creation.;B. updation.;C. view.;D. display.;A. creation.
+Multiple inheritance means,;(a)     one class inheriting from more super classes;(b)     more classes inheriting from one super class;(c)     more classes inheriting from more super classes;(d)     None of the above;(a)     one class inheriting from more super classes
+To prevent any method from overriding, we declare the method as,;(c)   final  ;(a)   static    ;(b)   const;(d)   abstract  ;(c)   final  
+An overloaded method consists of,;(d)     Both (a) and (b) above;(a)     The same method name with different types of parameters;(b)     The same method name with different number of parameters;(c)     The same method name and same number and type of parameters with different return type;(d)     Both (a) and (b) above
+In object-oriented programming, the process by which one object acquires the properties of another object is called;(d)   Inheritance;(a)   Encapsulation;(b)   Polymorphism;(c)   Overloading;(d)   Inheritance
+Re-implementing an inherited method in a sub class to perform a different task from the parent class is called;(b) Overriding;(a)   Binding;(b) Overriding;(c)   Hiding;(d)   Coupling
+In object oriented programming new classes can be defined by extending existing classes.       This is an example of:; (d)   Inheritance;(a) Encapsulation; (b)   Interface;(c) Composition; (d)   Inheritance
+Which of the following does not belong: If a class inherits from some other   class, it should;(c)     Over-ride all the methods of its parent class;(a)     Make use of the parent class's capabilities;(b)     Over-ride or add the minimum to accomplish the derived class' purpose;(c)     Over-ride all the methods of its parent class;"(d)     Make sure the result ""IS-A-KIND-OF"" its base class"
+Object oriented inheritance models the;"(a)     ""is a kind of"" relationship";"(a)     ""is a kind of"" relationship";"(b)     ""has a"" relationship";"(c)     ""want to be"" relationship";(d)     inheritance does not describe any kind of relationship between classes
+Which one of the following class definitions is a valid definition of a class that cannot be extended?;"(a) final class Link { }.
+";(a) final class Link { }.;"(b) abstract class Link { }
+
+";(c) native class Link { };"(d) static class Link { }
+"
+Which of the following statements is  true?;"(b) Every java object has a public method named equals
+";"(a) Inheritance defines a has-a relationship between a superclass and its subclasses
+";"(b) Every java object has a public method named equals
+";"(c) Every java object has a public method named length
+";(d) A class can extend any number of other classes
+"Which is the first line that will cause compilation to fail in the following program?
+class MyClass
+{
+     public static void main(String[] args)
+     {
+                   MyClass a;
+                   MySubclass b;
+
+                   a = new MyClass();                     //(1)
+                   b = new MySubclass();   //(2)
+
+                   a = b;                                                     //(3)
+                   b = a;                                                     //(4)
+                   a = new MySubclass();   //(5)
+     }
+}
+class MySubclass extends MyClass
+{
+}";"(d) Line labeled (4)
+";"(a) Line labeled (1)
+";"(b) Line labeled (2)
+";"(c) Line labeled (3)
+";"(d) Line labeled (4)
+"
+"Given the following class definitions and the reference declarations, what can be said about the statement y = (Sub) x?
+// Class definitions:
+class Super { }
+class Sub extends Super { }
+
+//Reference declarations
+// . . .
+     Super x;
+     Sub y;
+// . . .";"(b) Legal at compile time, but might be illegal at runtime
+";"(a) Illegal at compile time
+";"(b) Legal at compile time, but might be illegal at runtime
+";"(c) Definitely legal at runtime, but the (Sub) cast is not strictly needed
+";"(d) Definitely legal at runtime, and the (Sub) cast is needed
+"
+"Suppose a method signature looks like this:
+public static void Check(char c, Funny f) { ... }
+Which one of the following calls to method Check() could possibly be syntactically valid?";"(c)
+Check(sweat(a[3]), x);
+";"(a)
+Check(""a"", x);
+";"(b)
+Check(97, x);
+";"(c)
+Check(sweat(a[3]), x);
+";"(d)
+Check(char q, Funny p);
+"
+Which of the following statement is  false?;(a) To access a method of an object we write <method>.<object>.;(a) To access a method of an object we write <method>.<object>.;"(b)
+Methods in the same class that have the same name but different signatures are called overloaded methods
+";"(c)
+An instance of a class is an object in object-oriented programming
+";"(d)
+When methods are executed, they are loaded onto the program stack in RAM
+"
+"What is the correct order of defining a Class?
+1.       The name of the class's parent (super class), if any, preceded by the keyword extends. A class can only extend (subclass) one parent.
+2.       The class name, with the initial letter capitalized by convention.
+3.       Modifiers such as public, private, and a number of others that you will encounter later.
+4.       The class body, surrounded by braces, {}.
+5.       A comma-separated list of interfaces implemented by the class, if any, preceded by the keyword implements. A class can implement more than one interface.";"(c)
+3,2,1,5,4
+";"(a)
+3,1,2,5,4
+";"(b)
+1,2,3,5,4
+";"(c)
+3,2,1,5,4
+";"(d)
+5,1,2,3,4
+"
+Which of the following is  true  for method overriding?;"(a)
+A method in the subclass that has the same name, same arguments and same return type as a method in the super class is orverridden
+";"(a)
+A method in the subclass that has the same name, same arguments and same return type as a method in the super class is orverridden
+";"(b)
+An overridden method advocates for inheritance in OOP
+";"(c)
+It is not possible to access the method which is overridden in a subclass
+";"(d)
+Overridden method in java is called virtual function
+"
+The  extends  keyword creates a new;"(b)
+Subclass
+";"(a)
+Instance
+";"(b)
+Subclass
+";"(c)
+Baseclass
+";"(d)
+Superclass
+"
+If ClassA extends ClassB, then;"(b)
+ClassB  is a base class
+";"(a)
+ClassA  is a superclass
+";"(b)
+ClassB  is a base class
+";"(c)
+ClassB  is a subclass
+";"(d)
+ClassB  is a derived class
+"
+"Given the code below:
+class A {
+public void print() { System.out.println(""hi""); }
+}
+class B extends A {
+public void print() { System.out.println(""bye""); }
+}
+What does each of the following code samples do:
+A a = new B();
+a.print();";"(c)
+Prints “bye”
+";"(a)
+Prints nothing
+";"(b)
+Prints “hi”
+";"(c)
+Prints “bye”
+";"(d)
+The code does not compile, the compiler returns a type error
+"
+"Given the code below:
+class A {
+  public void print() { System.out.println(""hi""); }
+}
+class B extends A {
+   public void print() { System.out.println(""bye""); }
+}
+B b = new A();
+b.print();";"(d)
+The  code does not compile, the compiler returns a type error
+";"(a)
+Prints nothing
+";"(b)
+Prints “hi”
+";"(c)
+Prints “bye”
+";"(d)
+The  code does not compile, the compiler returns a type error
+"

@@ -1,0 +1,65 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Aaswer 4
+Which of these keywords is used to define packages in Java?,;C. package.;A. pkg;B. Pkg.;D. Package.;C. package.
+Which of these is a mechanism for naming and visibility control of a class and its content?.;B. Packages.;A. Object.;C. Interfaces.;D. None of the Mentioned.;B. Packages.
+Which of the following is correct way of importing an entire package named as pkg?.;C. import pkg.*.;A. import pkg.;B. Import pkg.;D. Import pkg.*;C. import pkg.*.
+Which of the following classes are not available in the java.lang package?;A. Stack.;B. Object.;C. Math.;D. String.;A. Stack.
+________ are stored in hierarchical manner.;A. packages.;B. interfaces.;C. classes.;D. Threads.;A. packages.
+"After the following code fragment, what is the value in a?
+String s; int a;
+s = ""Foolish boy.""; 
+A = s.indexOf(""fool"");";A. -1.;B. 0.;C. 4.;D. random value.;A. -1.
+Package is a collection of __________.;A. classes.;B. variables.;C. functions.;D. concept.;A. classes.
+ ___________ is a collection of classes.;A. package.;B. variable.;C. class.;D. exception.;A. package.
+"Consider the following statements about Java packages:
+I. Packages don’t provide a mechanism to partition all class names into more manageable chunks.
+II. Packages provide a visibility control mechanism.
+III. One of the important properties of a package is that all classes defined inside a package is accessible by code outside that package.
+IV. The .class files for classes declared to be part of a package can be stored in multiple directories.
+Which of them is  correct?";(b)   Only (II) above;(a)   Only (I) above;(b)   Only (II) above;(c)   Only (III) above;(d)   Only (IV) above
+A package is a collection of;(d)     Classes and interfaces;(a)     Classes;(b) Interfaces;(c) Editing tools;(d)     Classes and interfaces
+"Given the following definition of a class, which fields are accessible from outside the package com.corporation.project?
+package com.corporation.project;
+public class MyClass
+{
+             int i;
+             public int j;
+             protected int k;
+             private int l;
+}
+Select the  correct  answer.";(b) Field j is accessible in all classes in other packages;(a)Field i is accessible in all classes in other packages;"(b) Field j is accessible in all classes in other packages
+";"(c) Field k is accessible in all classes in other packages
+";(d) Field l is accessible in all classes in other packages
+What is Math.rint(3.5)?;"(d) 4.0
+";"(a) 3.0
+";"(b) 3
+";"(c) 4
+";"(d) 4.0
+"
+"Which of the following classes are available in the java.lang package?
+I.                   Stack.
+II.                 Object.
+III.               Math.
+IV.             String.
+V.               StringBuffer.
+Choose the correct option from the following:";"(a)
+(II), (III), (IV) and (V) above
+";"(a)
+(II), (III), (IV) and (V) above
+";"(b)
+(II), (III) and (IV) above
+";"(c)
+(II), (IV) and (V) above
+";"(d)
+(III), (IV) and (V) above
+"
+Which of the following package is automatically imported to your program file?;"(d)
+java.lang
+";"(a)
+java.util
+";"(b)
+java.io
+";"(c)
+java.net
+";"(d)
+java.lang
+"

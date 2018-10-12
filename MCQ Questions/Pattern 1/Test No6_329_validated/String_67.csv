@@ -1,0 +1,447 @@
+question,correct answer,wrong answer 1,wrong answer 2,wrong answer 3,wrong answer 4,Difficulty level,Section,Important
+ Which of these class is superclass of String and StringBuffer class?,java.lang,java.util,java.lang,ArrayList,None of the mentioned,,,
+"2.  Which of these operators can be used to concatenate two or more String objects?
+a) +
+b) +=
+c) &
+d) ||
+",A,A,B,C,D,,,
+Which of these method of class String is used to obtain length of String object?,length(),lengthof(),Sizeof(),get(),length(),,,
+"Which of these method of class String is used to extract a single character from a String object?
+
+",charAt(),CHARAT(),chatat(),charAt(),ChatAt(),,,
+Which of these constructors is used to create an empty String object?,String(),String(void),String(0),None of the mentioned,String(),,,
+Which of these is an correct statement?,StringBuffer class is used to store string in a buffer for later use,"String objects are immutable, they cannot be changed",String object can point to some other reference of String variable,StringBuffer class is used to store string in a buffer for later use,None of the mentioned,,,
+Which of these method of class String is used to extract more than one character at a time a String object?,getBytes(),GetByte(),giveByte(),Give Bytes(),getBytes(),,,
+Which of these methods is an alternative to getChars() that stores the characters in an array of bytes?,getBytes(),getBytes(),GetByte(),giveByte(),Give Bytes(),,,
+"class Run{
+
+ public static void main(String args[])
+ {
+  char chars[] = {'a', 'b', 'c'};
+  String s = new String(chars);
+  System.out.println(s);
+ }
+}
+","abc
+",abc,ABC,"{'a', 'b', 'c'}",None of the mentioned,,,
+"class Run{
+ public static void main(String args[])
+ {
+  int ascii[] = { 65, 66, 67, 68};
+  String s = new String(ascii, 1, 3);
+  System.out.println(s);
+ }
+}
+",BCD,ABC,BCD,CDA,ABCD,,,
+"class Run{
+ public static void main(String args[])
+ {
+  int a[] = { 'A', 67, 68};
+  String s = new String(a, 1, 3);
+  System.out.println(s);
+ }
+}
+",String index out of range,BCD,ABC,ABCD,None of the mentioned,,,
+"class Run{
+ public static void main(String args[])
+ {
+  char chars[] = {'a', 'b', 'c'};
+  String s = new String(chars);
+  String s1 = ""abcd"";
+  int len1 = s1.length();
+  int len2 = s.length();
+  System.out.println(len1 + "" "" + len2);
+ }
+}
+",4 3,0,0 3,3 4,4 3,,,
+"class Run{
+ public static void main(String args[])
+ {
+  char chars[] = {'a', 'b', 'c','d'};
+  String s = new String(chars);
+  String s1 = ""YMS"";
+  int Slen1 = s1.length();
+  int Slen2 = s.length();
+  System.out.println(Slen1 + "" "" + Slen2);
+ }
+}
+",3 4,3 4,0 3,4 4,None of the mentioned,,,
+"class Run{
+ public static void main(String args[])
+ {
+  char chars[] = {'a', 'b', 'c','d'};
+  String s = new String(chars);
+  String s1 = ""YMS"";
+  int Slen1 = s1.length();
+  int Slen2 = s.length();
+  System.out.println(Slen1 + "" "" + Slen2);
+ }
+}
+",String associated with obj1,TRUE,FALSE,String associated with obj1,Compilation Error,,,
+"class Run{
+ Integer i;
+ int x;
+ public Run(int y) 
+ {
+  x = i+y;
+  System.out.println(x);
+ }
+ public static void main(String[] args) 
+ {
+  new Run (new Integer(4));
+ }
+}","A NullPointerException occurs at runtime
+",A NullPointerException occurs at runtime,The value “4” is printed at the command line,Compilation fails because of an error in line,    An IllegalStateException occurs at runtime,,,
+Which of these methods can be used to convert all characters in a String into a character array?,both toCharArray() & getChars(),charAt(),both getChars() & charAt(),both toCharArray() & getChars(),all of the mentioned,,,
+"class Run{
+ public static void main(String args[])
+ { 
+  String c = ""Hello YMS"";
+  int start = 2;
+  int end = 9;
+  char s[]=new char[end-start];
+  c.getChars(start,end,s,0);
+  System.out.println(s);
+ }
+}
+",llo YMS,llo YMS,llo Y,YMS,llo,,,
+"class Run{
+ public static void main(String args[])
+ { 
+  String c = ""Hello i love java"";
+  int start = 5;
+  int end = 66;
+  char s[]=new char[end-start];
+  c.getChars(start,end,s,0);
+  System.out.println(s);
+ }
+}
+",String index out of range,String index out of range,hello,llo ,llo I,,,
+"class Run{
+ public static void main(String args[])
+ {
+  String a = ""hello i love java"";
+  System.out.println(a.indexOf('i')+"" ""+a.indexOf('o') +"" ""+a.lastIndexOf('i')+"" ""+a.lastIndexOf('o'));
+ }
+}
+",6 4 6 9,5 4 5 9,7 8 8 9,4 3 6 9,6 4 6 9,,,
+"class Run{
+ public static void main(String args[])
+ {
+  char c[]={'a', '1', 'b' ,' ' ,'A' , '0'};
+  for (int i = 0; i < 5; ++i)
+  {
+   if(Character.isDigit(c[i]))
+    System.out.println(c[i]+"" is a digit"");
+   if(Character.isWhitespace(c[i]))
+    System.out.println(c[i]+"" is a Whitespace character"");
+   if(Character.isUpperCase(c[i]))
+    System.out.println(c[i]+"" is an Upper case Letter"");
+   if(Character.isLowerCase(c[i]))
+    System.out.println(c[i]+"" is a lower case Letter"");
+   i=i+3;
+  }
+ }
+}
+","a is a lower case Letter
+A is an Upper case Letter
+","a is a lower case Letter
+A is an Upper case Letter
+",a is a lower case Letter,"
+A is an Upper case Letter
+",Compilation Error,,,
+"class Run{
+ public static void main(String args[])
+ {
+  char ch;
+  ch = ""HELLO YMS"".charAt(1);
+  System.out.println(ch);
+ }
+}
+",E,E,YMS,MS,HELLO,,,
+Which of these method of class String is used to compare two String objects for their equality?,equals(),equals(),Equals(),isequal(),Isequal(),,,
+Which of these methods is used to compare a specific region inside a string with another specific region in another string?, regionMatch(), regionMatch(),RegionMatches(),regionMatches(),None of the mentioned,,,
+Which of these method of class String is used to check weather a given object starts with a particular string literal?,ends(),startsWith(),endsWith(),Starts(),ends(),,,
+What is the value returned by unction compareTo() if the invoking string is less than the string compared?,value less than zero,value less than zero,zero,value greater than zero,none of the mentioned,,,
+Which of these data type value is returned by equals() method of String class?,boolean,char,int,boolean,all of the mentioned,,,
+"class Run{
+ public static void main(String args[])
+ { 
+  String c = ""Hello i love java"";
+  boolean var;
+  var = c.startsWith(""hello"");
+  System.out.println(var);
+ }
+}
+",FALSE,FALSE,TRUE,0,1,,,
+"class Run{
+ public static void main(String args[])
+ { 
+  String s1 = ""Hello i love java"";
+  String s2 = new String(s1);
+  System.out.println((s1 == s2) + "" "" + s1.equals(s2));
+ }
+}
+",false true,false ,false true,0,1,,,
+" In the below code, which code fragment should be inserted at line 3 so that the output will be: “123abc 123abc”?
+ 1 StringBuilder sb1 = new StringBuilder(""123"");
+ 2 String s1 = ""123"";
+ 3  // insert code here
+ 4 System.out.println(sb1 + "" "" + s1);
+",sb1.concat(“abc”); s1.append(“abc”);,sb1.append(“abc”); s1.append(“abc”);,sb1.append(“abc”); s1.concat(“abc”);,sb1.concat(“abc”); s1.append(“abc”);,sb1.concat(“abc”); s1.append(“abc”);,,,
+"class Run{
+ public static void main(String args[])
+ {
+  String chars[] = {""a"", ""b"", ""c"", ""a"", ""c""};
+  for (int i = 0; i < chars.length; ++i)
+   for (int j = i + 1; j < chars.length; ++j)
+    if(chars[i].compareTo(chars[j]) == 0)
+     System.out.print(chars[j]); 
+ }
+}
+",ac,ac,bc,ab,ca,,,
+Which of these method of class String is used to extract a substring from a String object?,substring(),substring(),Substring(),Substring(),None of the mentioned,,,
+"What will s2 contain after following lines of code?
+ String s1 = ""one"";
+String s2 = s1.concat(""two"")
+a) one
+",onetwo,one,two,onetwo,twoone,,,
+Which of these method of class String is used to remove leading and trailing whitespaces?,trim(),startsWith(),trim(),Trim(),doTrim(),,,
+What is the value returned by function compareTo() if the invoking string is greater than the string compared?,value greater than zero,zero,value less than zero,value greater than zero,none of the mentioned,,,
+Which of the following statement is correct?,replace() method replaces all occurrences of one character in invoking string with another character,replace() method replaces all occurrences of one character in invoking string with another character,replace() method replaces only first occurances of a character in invoking string with another character,replace() method replaces all the characters in invoking string with another character,replace() replace() method replaces last occurrence of a character in invoking string with another character,,,
+"class Run{
+ public static void main(String args[])
+ { 
+  String c = ""  Hello YMS  "";
+  String s = c.trim();
+  System.out.println(""\""""+s+""\"""");
+ }
+}
+",Hello YMS,Hello YMS,“”Hello YMS””,Hello yms,HELLO,,,
+"class Run{
+ public static void main(String args[])
+ { 
+  String s1 = ""YMS"";
+  String s2 = s1.replace('Y','l');
+  System.out.println(s2);
+ }
+}
+",lMS,lMS,yssm,Yms,None of the mentioned,,,
+"class Run{
+ public static void main(String args[])
+ {
+  String s1 = ""Hello World"";
+  String s2 = s1.substring(0 , 4);
+  System.out.println(s2);
+ }
+}
+",Hell,Hell,Hello,Worl,World,,,
+"class Run{
+ public static void main(String args[])
+ {             String s = ""Hello World"";
+ int i = s.indexOf('o');
+ int j = s.lastIndexOf('l');
+ System.out.print(i + "" "" + j);
+ }
+}
+",4 9,4 9,5 9,5 8,4 8,,,
+ Which of these class is used to create an object whose character sequence is mutable?,None of the mentioned,String(),StringBuffer(),Both of the mentioned,None of the mentioned,,,
+Which of these method of class StringBuffer is used to concatenate the string representation to the end of invoking string?,append(),concat(),append(),join(),concatenate(),,,
+Which of these method of class StringBuffer is used to find the length of current character sequence?,length(),Length(),capacity(),Capacity(),length(),,,
+" What is the string contained in s after following lines of code?
+StringBuffer s new StringBuffer(“Hello”);
+s.deleteCharAt(0);
+",ello,Hell,Hel,llo,ello,,,
+Which of the following statement is correct?,,,,,,,,
+"Which of the following statement is correct?
+a) reverse() method reverses all characters
+b) reverseall() method reverses all characters
+c) replace() method replaces first occurrence of a character in invoking string with another character
+d) replace() method replaces last occurrence of a character in invoking string with another character
+",reverse() method reverses all characters,reverse() method reverses all characters,reverseall() method reverses all characters,replace() method replaces first occurrence of a character in invoking string with another character,replace() method replaces last occurrence of a character in invoking string with another character,,,
+"class Run{
+ public static void main(String args[])
+ { 
+  StringBuffer c = new StringBuffer(""YMS"");
+  StringBuffer c1 = new StringBuffer("" HELLO"");
+  c.append(c1);
+  System.out.println(c);
+ }
+}",YMS HELLO,YMS HELLO,HELLO YMS,HELLOYMS,YMS,,,
+"class Run{
+ public static void main(String args[])
+ { 
+  StringBuffer s1 = new StringBuffer(""HELLO YMS"");
+  StringBuffer s2 = s1.reverse();
+  System.out.println(s2);
+ }
+}
+",SMY OLLEH,SMY OLLEH, OLLEHSMY , OLLEH,SMY ,,,
+"class Run{
+ public static void main(String args[])
+ {
+  char c[]={'A', '1', 'b' ,' ' ,'a' , '0'};
+  for (int i = 0; i < 5; ++i)
+  {
+   i++; 
+   if(Character.isDigit(c[i]))
+    System.out.println(c[i]+"" is a digit"");
+   if(Character.isWhitespace(c[i]))
+    System.out.println(c[i]+"" is a Whitespace character"");
+   if(Character.isUpperCase(c[i]))
+    System.out.println(c[i]+"" is an Upper case Letter"");
+   if(Character.isLowerCase(c[i]))
+    System.out.println(c[i]+"" is a lower case Letter"");
+   i++;
+  }
+ }
+}
+","1 is a digit
+a is a lower case Letter
+","1 is a digit
+a is a lower case Letter
+
+","b is a lower case Letter
+is White space character
+","a is a lower case Letter
+0 is a digit
+","Non of the above
+",,,
+"what is the output?
+StringBuffer s1 = ""one"";
+StringBuffer s2 = s1.append(""two"")
+",onetwo,one,two,onetwo,twoone,,,
+Which of these method of class StringBuffer is used to reverse sequence of characters?,reverse(),reverseall(),Reverse(),reverseAll(),reverse(),,,
+Which of the following are incorrect form of StringBuffer class constructor?,"StringBuffer(int size , String str)","StringBuffer(int size , String str)",StringBuffer(String str),StringBuffer(int size),StringBuffer(),,,
+"class Run{
+ public static void main(String args[])
+ { 
+  StringBuffer c = new StringBuffer(""Hello"");
+  System.out.println(c.length());
+ }
+}
+",5,6,56,66,None of the mentioned,,,
+"class Run{
+ public static void main(String args[])
+ { 
+  StringBuffer s1 = new StringBuffer(""Hello"");
+  s1.setCharAt(1,'x');
+  System.out.println(s1);
+ }
+}
+",Hxllo,Hxllo,Hello,Hexlo,xello,,,
+"class Run{
+ public static void main(String args[])
+ {
+  StringBuffer s1 = new StringBuffer(""Hello World"");
+  s1.insert(6 , ""Good "");
+  System.out.println(s1);
+ }
+}
+",Hello Good World,Hello Good World,HelloGoodWorld,HellGoodoWorld, HellGood oWorld,,,
+"class Run{
+ public static void main(String args[]){
+  String s1 = new String(""Hello"");
+  String s2 = new String(""Hellow"");
+  System.out.println(s1 = s2);
+ }
+}
+",Hellow,Hellow,"HellowHellow
+","Hellow  Hellow
+",None of the mentioned,,,
+"class Run{
+ public static void main(String args[]){
+  String str1 = new String(""OKAY"");
+  String str2 = new String(str1);
+  System.out.println(str1 == str2);
+ }
+}
+",false ,0,false ,1,TRUE,,,
+"class Run{
+ public static void main(String args[]){
+  String s1 = ""java"";
+  String s2 = ""java"";
+  System.out.println(s1.equals(s2));
+  System.out.println(s1 == s2); 
+ }
+}","true
+true
+","true
+true
+","true
+false
+",FALSE,TRUE,,,
+"class Run{
+ public static void main(String args[]){  
+  String s1 = ""SITHA"";
+  String s2 = ""RAMA"";
+  System.out.println(s1.charAt(0) > s2.charAt(0));
+ }
+}","true
+",false ,TRUE,1,0,,,
+"class Run{
+ public static void main(String args[]){ 
+  String x = ""hellow"";
+  int y = 9;
+  System.out.println(x += y);
+ } 
+}
+",hellow9,hellow9,hellow,Compilation error,runtime error,,,
+"class Run{
+    public static void main(String args[]){
+ String str1 = ""one"";
+ String str2 = ""two"";
+ System.out.println(str1.concat(str2));
+    }
+}
+",onetwo,onetwo,"one
+",two,1,,,
+"class Run{
+ public static void main (String[] args){ 
+  String test = ""a1b2c3""; 
+  String[] tokens = test.split(""\\d""); 
+  for(String s: tokens) 
+   System.out.print(s); 
+ } 
+}
+",abc,abc,a1b2c3,a1b1c3,None of the mentioned,,,
+"class Run{
+ public static void main(String args[]){
+  String s = ""what"";
+  StringBuffer sb = new StringBuffer(""what"");
+  System.out.print(sb.equals(s)+"",""+s.equals(sb));
+ }
+}","false,false",FALSE,TRUE,true false,None of the mentioned,,,
+"class Run{
+ public static void main(String args[]){
+  Object myObj = new String[]{""one"", ""two"", ""three""};
+  {
+   for(String s : (String[])myObj) 
+    System.out.print(s + ""."");
+  }
+ }
+}
+",one.two.three.,one.two.three.,one.two.two.,one.one.three.,three,,,
+"class Run{
+ public static void main(String args[]){
+  String str = null;
+  if(str.length() == 0){
+   System.out.print(""1"");
+  }
+  else if(str == null){
+   System.out.print(""2"");
+  }
+  else{
+   System.out.print(""3"");
+  }
+ }
+}
+",NullPointerException,NullPointerException,0,1,None of the mentioned,,,
+"Which of the following statements are incorrect?
+a) String is a class
+b) Strings in java are mutable
+c) Every string is an object of class String
+d) Java defines a peer class of String, called StringBuffer, which allows string to be altered
+",Strings in java are mutable,Strings in java are mutable,Every string is an object of class String,"Java defines a peer class of String, called StringBuffer, which allows string to be altered",String is a class,,,
+Is String a keyword in java?,No,N0,Yes,,,,,

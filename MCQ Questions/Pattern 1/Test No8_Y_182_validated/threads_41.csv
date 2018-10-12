@@ -1,0 +1,808 @@
+question,correct answer,wrong answer 1,wrong answer 2,wrong answer 3,wrong answer 4,Difficulty level,Section,Important
+"
+What is the name of the method used to start a thread execution?
+A.
+init();
+B.
+start();
+C.
+run();
+D.
+resume();
+
+",start();,start();,init();,run();,resume();,,,
+"Which two are valid constructors for Thread?
+1. Thread(Runnable r, String name)
+2. Thread()
+3. Thread(int priority)
+4. Thread(Runnable r, ThreadGroup g)
+5. Thread(Runnable r, int priority)
+","1 and 2
+",1 and 2,1 and 3,2 and 5,2 and 4,,,
+"Which three are methods of the Object class?
+1. notify();
+2. notifyAll();
+3. isInterrupted();
+4. synchronized();
+5. interrupt();
+6. wait(long msecs);
+7. sleep(long msecs);
+8. yield();
+","1,2,6","1,2,4","1,2,6","2,4,5","1,2,3",,,
+"class X implements Runnable 
+{ 
+    public static void main(String args[]) 
+    {
+        /* Missing code? */
+    } 
+    public void run() {} 
+}
+Which of the following line of code is suitable to start a thread ?
+",X run = new X(); Thread t = new Thread(run); t.start();,X run = new X(); Thread t = new Thread(run); t.start();,Thread t = new Thread(X);,Thread t = new Thread(X); t.start();,Thread t = new Thread(); x.run();,,,
+"
+Which cannot directly cause a thread to stop executing?
+A.
+Calling the SetPriority() method on a Thread object.
+B.
+Calling the wait() method on an object.
+C.
+Calling notify() method on an object.
+D.
+Calling read() method on an InputStream object.
+
+",Calling notify() method on an object.,Calling notify() method on an object.,Calling the SetPriority() method on a Thread object,Calling the wait() method on an object.,Calling read() method on an InputStream object,,,
+"Which two of the following methods are defined in class Thread?
+1. start()
+2. wait()
+3. notify()
+4. run()
+5. terminate()
+",1 and 4,2 and 1,2 and 3,1  and 4,3 and 4,,,
+"
+Which three guarantee that a thread will leave the running state?
+1. yield()
+2. wait()
+3. notify()
+4. notifyAll()
+5. sleep(1000)
+6. aLiveThread.join()
+7. Thread.killThread()
+","2, 5 and 6","2, 5 and 6","1,2,3","2,4,6","1,2,5",,,
+"Which of the following will directly stop the execution of a Thread?
+A.
+wait()
+B.
+notify()
+C.
+notifyall()
+D.
+exits synchronized code
+
+",wait(),wait(),notify(),notifyAll(),exits synchronized code,,,
+"
+Which method must be defined by a class implementing the java.lang.Runnable interface?
+A.
+void run()
+B.
+public void run()
+C.
+public void start()
+D.
+void run(int priority)
+
+",public void run(),public void run(),public void start(),void run(int priority),void run(),,,
+"Which will contain the body of the thread?
+A.
+run();
+B.
+start();
+C.
+stop();
+D.
+main();
+
+Which will contain the body of the thread?
+A.
+run();
+B.
+start();
+C.
+stop();
+D.
+main();
+
+",run();,stop();,start();,main();,run();,,,
+"Which method registers a thread in a thread scheduler?
+A.
+run();
+B.
+construct();
+C.
+start();
+D.
+register();
+
+",start();,start();,register(),construct();,run();,,,
+"Assume the following method is properly synchronized and called from a thread A on an object B:
+wait(2000);
+After calling this method, when will the thread A become a candidate to get another turn at the CPU?
+A.
+After thread A is notified, or after two seconds.
+B.
+After the lock on B is released, or after two seconds.
+C.
+Two seconds after thread A is notified.
+D.
+Two seconds after lock B is released.
+
+","After thread A is notified, or after two seconds.","After thread A is notified, or after two seconds.","After the lock on B is released, or after two seconds.",Two seconds after thread A is notified.,Two seconds after lock B is released.,,,
+"Which of the following will not directly cause a thread to stop?
+A.
+notify()
+B.
+wait()
+C.
+InputStream access
+D.
+sleep()
+
+",notify(),notify(),wait(),sleep(),InputStream access,,,
+"Which class or interface defines the wait(), notify(),and notifyAll() methods?
+A.
+Object
+B.
+Thread
+C.
+Runnable
+D.
+Class
+
+",Object,Object,Thread ,Class,Runnable,,,
+"public class MyRunnable implements Runnable 
+{
+    public void run() 
+    {
+        // some code here
+    }
+}
+which of these will create and start this thread?
+A.
+new Runnable(MyRunnable).start();
+B.
+new Thread(MyRunnable).run();
+C.
+new Thread(new MyRunnable()).start();
+D.
+new MyRunnable().start();
+
+",new Thread(new MyRunnable()).start();,new Runnable(MyRunnable).start();,new Thread(new MyRunnable()).start();,new Thread(MyRunnable).run();,new MyRunnable().start();,,,
+"What will be the output of the program?
+class MyThread extends Thread 
+{
+    MyThread() 
+    {
+        System.out.print("" MyThread"");
+    }
+    public void run() 
+    {
+        System.out.print("" bar"");
+    }
+    public void run(String s) 
+    {
+        System.out.println("" baz"");
+    }
+}
+public class TestThreads 
+{
+    public static void main (String [] args) 
+    {
+        Thread t = new MyThread() 
+        {
+            public void run() 
+            {
+                System.out.println("" foo"");
+            }
+        };
+        t.start();
+    }
+}
+",MyThread foo,MyThread foo,foo,MyThread bar,foo bar,,,
+"What will be the output of the program?
+class MyThread extends Thread 
+{
+    public static void main(String [] args) 
+    {
+        MyThread t = new MyThread();
+        t.start();
+        System.out.print(""one. "");
+        t.start();
+        System.out.print(""two. "");
+    }
+    public void run() 
+    {
+        System.out.print(""Thread "");
+    }
+}
+",An exception occurs at runtime.,Compilation fails,An exception occurs at runtime.,"It prints ""Thread one. Thread two.""",The output cannot be determined.,,,
+"class MyThread extends Thread 
+{ 
+    MyThread() {} 
+    MyThread(Runnable r) {super(r); } 
+    public void run() 
+    { 
+        System.out.print(""Inside Thread "");
+    } 
+} 
+class MyRunnable implements Runnable 
+{ 
+    public void run() 
+    { 
+        System.out.print("" Inside Runnable""); 
+    } 
+} 
+class Test 
+{  
+    public static void main(String[] args) 
+    { 
+        new MyThread().start(); 
+        new MyThread(new MyRunnable()).start(); 
+    } 
+}
+","Prints ""Inside Thread Inside Thread""",Throws exception at runtime,"Prints ""Inside Thread Inside Runnable""","Prints ""Inside Thread Inside Thread""",Does not compile,,,
+"What will be the output of the program?
+class s1 implements Runnable 
+{ 
+    int x = 0, y = 0; 
+    int addX() {x++; return x;} 
+    int addY() {y++; return y;} 
+    public void run() { 
+    for(int i = 0; i < 10; i++) 
+        System.out.println(addX() + "" "" + addY()); 
+} 
+    public static void main(String args[]) 
+    { 
+        s1 run1 = new s1(); 
+        s1 run2 = new s1(); 
+        Thread t1 = new Thread(run1); 
+        Thread t2 = new Thread(run2); 
+        t1.start(); 
+        t2.start(); 
+    } 
+}
+",Will print but not exactly in an order (e.g: 1 1 2 2 1 1 3 3...),Will print in this order: 1 1 2 2 3 3 4 4 5 5…,Will print in this order: 1 1 2 2 3 3 4 4 5 5...,Compile time Error: There is no start() method,Will print but not exactly in an order (e.g: 1 1 2 2 1 1 3 3...),,,
+"What will be the output of the program?
+public class YMS implements Runnable 
+{ 
+    private int x; 
+    private int y; 
+
+    public static void main(String [] args) 
+    { 
+        YMS that = new YMS(); 
+        (new Thread(that)).start( ); /* Line 8 */
+        (new Thread(that)).start( ); /* Line 9 */
+    } 
+    public synchronized void run( ) /* Line 11 */
+    { 
+        for (;;) /* Line 13 */
+        { 
+            x++; 
+            y++; 
+            System.out.println(""x = "" + x + ""y = "" + y); 
+        } 
+    } 
+}
+","The program prints pairs of values 
+for x and y that are always the same on
+ the same line (for example, ""x=1, y=1"". 
+In addition, each value appears once
+ (for example, ""x=1, y=1"" followed by ""x=2, y=2"")","The program prints pairs of values for x and y 
+that might not always be the same on the same line 
+(for example, ""x=2, y=1"")","The program prints pairs of values 
+for x and y that are always the same on
+ the same line (for example, ""x=1, y=1"". 
+In addition, each value appears once
+ (for example, ""x=1, y=1"" followed by ""x=2, y=2"")",Errors at lines 8 and 9 cause compilation to fail.,An error at line 11 causes compilation to fail,,,
+"What will be the output of the program?
+class s1 extends Thread
+{ 
+    public void run() 
+    { 
+        for(int i = 0; i < 3; i++) 
+        { 
+            System.out.println(""A""); 
+            System.out.println(""B""); 
+        } 
+    } 
+} 
+class Test120 extends Thread 
+{ 
+    public void run() 
+    { 
+        for(int i = 0; i < 3; i++) 
+        { 
+            System.out.println(""C""); 
+            System.out.println(""D""); 
+        } 
+    } 
+    public static void main(String args[]) 
+        { 
+        s1 t1 = new s1(); 
+        Test120 t2 = new Test120(); 
+        t1.start(); 
+        t2.start(); 
+    } 
+}
+",Will print but not be able to predict the Order,Will print but not be able to predict the Order,Will print in this order ABCD...ABCD...,Will print in this order AB CD AB…,Compile time Error There is no start() method,,,
+"What will be the output of the program?
+class s implements Runnable 
+{ 
+    int x, y; 
+    public void run() 
+    { 
+        for(int i = 0; i < 1000; i++) 
+            synchronized(this) 
+            { 
+                x = 12; 
+                y = 12; 
+            } 
+        System.out.print(x + "" "" + y + "" ""); 
+    } 
+    public static void main(String args[]) 
+    { 
+        s run = new s(); 
+        Thread t1 = new Thread(run); 
+        Thread t2 = new Thread(run); 
+        t1.start(); 
+        t2.start(); 
+    } 
+}
+
+
+",It print 12 12 12 12,DeadLock,Compilation Error,Cannot determine output,It print 12 12 12 12,,,
+"
+What will be the output of the program?
+
+public class ThreadDemo 
+{ 
+    private int count = 1; 
+    public synchronized void doSomething() 
+    { 
+        for (int i = 0; i < 10; i++) 
+            System.out.println(count++); 
+    } 
+    public static void main(String[] args) 
+    { 
+        ThreadDemo demo = new ThreadDemo(); 
+        Thread a1 = new A(demo); 
+        Thread a2 = new A(demo); 
+        a1.start(); 
+        a2.start(); 
+    } 
+} 
+class A extends Thread 
+{ 
+    ThreadDemo demo; 
+    public A(ThreadDemo td) 
+    { 
+        demo = td; 
+    } 
+    public void run() 
+    { 
+        demo.doSomething(); 
+    } 
+}
+",It will print the numbers 1 to 20 sequentially,It will print the numbers 0 to 19 sequentially,It will print the numbers 1 to 20 sequentially,"It will print the numbers 1 to 20, but the order cannot be determined",The code will not compile.,,,
+"What will be the output of the program?
+public class WaitTest 
+{
+    public static void main(String [] args) 
+    {
+        System.out.print(""1 "");
+        synchronized(args)
+        {
+            System.out.print(""2 "");
+            try 
+            {
+                    args.wait(); /* Line 11 */
+            }
+            catch(InterruptedException e){ }
+        }
+        System.out.print(""3 "");
+    }
+}
+",1  2,1  2,1  3,1  2  3,It fails to compile because the IllegalMonitorStateException of wait() is not dealt with in line 11.,,,
+"What will be the output of the program?
+public class SyncTest 
+{
+    public static void main (String [] args) 
+    {
+        Thread t = new Thread() 
+        {
+            Foo f = new Foo();
+            public void run() 
+            {
+                f.increase(20);
+            }
+        };
+    t.start();
+    }
+}
+class Foo 
+{
+    private int data = 23;
+    public void increase(int amt) 
+    {
+        int x = data;
+        data = x + amt;
+    }
+}
+and assuming that data must be protected from corruption,
+ what if anything can you add to the preceding code to ensure the integrity of data?
+",Synchronize the increase() method,The existing code will cause a runtime exception.,Synchronize the increase() method,Wrap a synchronize(this) around the call to f.increase().,Synchronize the run method.,,,
+"What will be the output of the program?
+class Happy extends Thread 
+{ 
+    final StringBuffer sb1 = new StringBuffer(); 
+    final StringBuffer sb2 = new StringBuffer(); 
+
+    public static void main(String args[]) 
+    { 
+        final Happy h = new Happy(); 
+
+        new Thread() 
+        { 
+            public void run() 
+            { 
+                synchronized(this) 
+                { 
+                    h.sb1.append(""A""); 
+                    h.sb2.append(""B""); 
+                    System.out.println(h.sb1); 
+                    System.out.println(h.sb2); 
+                } 
+            } 
+        }.start(); 
+
+        new Thread() 
+        { 
+            public void run() 
+            { 
+                synchronized(this) 
+                { 
+                    h.sb1.append(""D""); 
+                    h.sb2.append(""C""); 
+                    System.out.println(h.sb2); 
+                    System.out.println(h.sb1); 
+                } 
+            } 
+        }.start(); 
+    } 
+}
+",Output determined by the underlying platform,ABBCAD,Output determined by the underlying platform,CDADACB,ABBCADC,,,
+"class Test 
+{
+    public static void main(String [] args) 
+    {
+        printAll(args);
+    }
+
+    public static void printAll(String[] lines) 
+    {
+        for(int i = 0; i < lines.length; i++)
+        {
+            System.out.println(lines[i]);
+            Thread.currentThread().sleep(1000);
+        }
+    }
+}
+the static method Thread.currentThread() returns a reference to
+ the currently executing Thread object. What is the result of this code?
+",This code will not compile,This code will not compile,"Each String in the array lines will output, and there is
+ no guarantee there will be a pause because currentThread()
+ may not retrieve this thread.","Each String in the array lines will output, 
+with no pause in between because this method is not executed in a Thread","Each String in the array lines will output, with no pause in between because 
+this method is not executed in a Thread",,,
+"What will be the output of the program?
+class MyThread extends Thread 
+{
+    public static void main(String [] args) 
+    {
+        MyThread t = new MyThread(); /* Line 5 */
+        t.run();  /* Line 6 */
+    }
+
+    public void run() 
+    {
+        for(int i=1; i < 3; ++i) 
+        {
+            System.out.print(i + "".."");
+        }
+    }
+}
+",1..2..,1..2..,This code will not compile due to line 6.,This code will not compile due to line 5,1..2..3..,,,
+"What will be the output of the program?
+class Test 
+{ 
+static final StringBuffer sb1 = new StringBuffer(); 
+static final StringBuffer sb2 = new StringBuffer(); 
+public static void main(String args[]) 
+{ 
+    new Thread() 
+    { 
+        public void run() 
+        { 
+            synchronized(sb1) 
+            { 
+                sb1.append(""A""); 
+                sb2.append(""B""); 
+            } 
+        } 
+    }.start(); 
+
+    new Thread() 
+    { 
+        public void run() 
+        { 
+            synchronized(sb1) 
+            { 
+                sb1.append(""C""); 
+                sb2.append(""D""); 
+            } 
+        } 
+    }.start(); /* Line 28 */
+
+    System.out.println (sb1 + "" "" + sb2); 
+    } 
+}
+",Cannot be determined.,Cannot be determined.,main() will finish before starting threads.,main() will finish in the middle of one thread.,main() will finish in the middle of one thread.,,,
+"
+What will be the output of the program?
+public class ThreadTest extends Thread 
+{ 
+    public void run() 
+    { 
+        System.out.println(""In run""); 
+        yield(); 
+        System.out.println(""Leaving run""); 
+    } 
+    public static void main(String []argv) 
+    { 
+        (new ThreadTest()).start(); 
+    } 
+}
+","The text ""In run"" followed by ""Leaving run"" will be displayed",The code fails to compile in the main() method,"The text ""In run"" followed by ""Leaving run"" will be displayed",The code fails to compile in the run() method,"Only the text ""In run"" will be displayed",,,
+"What will be the output of the program?
+public class Test implements Runnable 
+{ 
+    private int x; 
+    private int y; 
+
+    public static void main(String args[]) 
+    {
+        Test107 that = new Test107(); 
+        (new Thread(that)).start(); 
+        (new Thread(that)).start(); 
+    } 
+    public synchronized void run() 
+    {
+        for(int i = 0; i < 10; i++) 
+        { 
+            x++; 
+            y++; 
+            System.out.println(""x = "" + x + "", y = "" + y); /* Line 17 */
+        } 
+    } 
+} 
+","Will print in this order:
+ x = 1 y = 1 x = 2 y = 2 x = 3 y = 3 x = 4 y = 4 x = 5 y = 5…
+ but the output will be produced by first one thread then the other. 
+This is guaranteed by the synchronised code.",Compilation error,"Will print in this order:
+ x = 1 y = 1 x = 2 y = 2 x = 3 y = 3 x = 4 y = 4 x = 5 y = 5…
+ but the output will be produced by first one thread then the other. 
+This is guaranteed by the synchronised code.","Will print in this order: x = 1 y = 1 x = 2 y = 2 x = 3 y = 3 x = 4 y = 4 x = 5 y = 5... 
+but the output will be produced by both threads running simultaneously.",,,,
+"What will be the output of the program?
+public class Test 
+{
+    public static void main (String [] args) 
+    {
+        final Foo f = new Foo();
+        Thread t = new Thread(new Runnable() 
+        {
+            public void run() 
+            {
+                f.doStuff();
+            }
+        });
+        Thread g = new Thread() 
+        {
+            public void run() 
+            {
+                f.doStuff();
+            }
+        };
+        t.start();
+        g.start();
+    }
+}
+class Foo 
+{
+    int x = 5;
+    public void doStuff() 
+    {
+        if (x < 10) 
+        {
+            // nothing to do
+            try 
+            {
+                wait();
+                } catch(InterruptedException ex) { }
+        } 
+        else 
+        {
+            System.out.println(""x is "" + x++);
+            if (x >= 10) 
+            {
+                notify();
+            }
+        }
+    }
+}
+",An exception occurs at runtime.,An exception occurs at runtime.,The code will not compile because of some other error in class Test.,The code will not compile because of an error on notify(); of class Foo.,"It prints ""x is 5 x is 6"".",,,
+"What will be the output of the program?
+class MyThread extends Thread 
+{
+    public static void main(String [] args) 
+    {
+        MyThread t = new MyThread();
+        Thread x = new Thread(t);
+        x.start(); /* Line 7 */
+    }
+    public void run() 
+    {
+        for(int i = 0; i < 3; ++i) 
+        {
+            System.out.print(i + "".."");
+        }
+    }
+}
+",0..1..2..,0..1..2..,0..1..2..3..,1..2..3..,Compilation fails.,,,
+"
+Which statement is true?
+A.
+A static method cannot be synchronized.
+B.
+If a class has synchronized code, multiple threads can still access the nonsynchronized code.
+C.
+Variables can be protected from concurrent access problems by marking them with the synchronizedkeyword.
+D.
+When a thread sleeps, it releases its locks.
+
+","If a class has synchronized code, multiple threads
+ can still access the nonsynchronized code.",A static method cannot be synchronized.,"If a class has synchronized code, multiple threads
+ can still access the nonsynchronized code.","Variables can be protected from concurrent access problems 
+by marking them with the synchronizedkeyword..","When a thread sleeps, it releases its locks",,,
+"Which two can be used to create a new Thread?
+1.  Extend java.lang.Thread and override the run() method.
+2. Extend java.lang.Runnable and override the start() method.
+3.  Implement java.lang.Thread and implement the run() method.
+4. Implement java.lang.Runnable and implement the run() method.
+5. Implement java.lang.Thread and implement the start() method.
+","1 and 4
+","2 ,3,4",1 and 4,3 and 5,4 and 5,,,
+"
+Which statement is true?
+A.
+If only one thread is blocked in the wait method of an object, and another thread executes the modify on that same object, then the first thread immediately resumes execution.
+B.
+If a thread is blocked in the wait method of an object, and another thread executes the notify method on the same object, it is still possible that the first thread might never resume execution.
+C.
+If a thread is blocked in the wait method of an object, and another thread executes the notify method on the same object, then the first thread definitely resumes execution as a direct and sole consequence of the notify call.
+D.
+If two threads are blocked in the wait method of one object, and another thread executes the notify method on the same object, then the first thread that executed the wait call first definitely resumes execution as a direct and sole consequence of the notify call.
+
+","
+B.
+If a thread is blocked in the wait method of an object, and another thread executes the notify method on the same object, it is still possible that the first thread might never resume execution.
+
+
+","
+
+D.
+If two threads are blocked in the wait method of one object, and another thread executes the notify method on the same object, then the first thread that executed the wait call first definitely resumes execution as a direct and sole consequence of the notify call.
+
+","
+A.
+If only one thread is blocked in the wait method of an object, and another thread executes the modify on that same object, then the first thread immediately resumes execution.
+
+","
+
+C.
+If a thread is blocked in the wait method of an object, and another thread executes the notify method on the same object, then the first thread definitely resumes execution as a direct and sole consequence of the notify call.
+
+
+","
+
+B.
+If a thread is blocked in the wait method of an object, and another thread executes the notify method on the same object, it is still possible that the first thread might never resume execution.
+
+",,,
+"Which two statements are true?
+1. Deadlock will not occur if wait()/notify() is used
+2. A thread will resume execution as soon as its sleep duration expires.
+3. Synchronization can prevent two objects from being accessed by the same thread.
+4. The wait() method is overloaded to accept a duration.
+5. The notify() method is overloaded to accept a duration.
+6. Both wait() and notify() must be called from a synchronized context.
+",4 and 6 ,5 and 6,2 and 3,4 and 6,1 and 6,,,
+"The following block of code creates a Thread using a Runnable target:
+Runnable target = new MyRunnable();
+Thread myThread = new Thread(target);
+Which of the following classes can be used to create the target, so that the preceding code compiles correctly?
+A.
+public class MyRunnable extends Runnable{public void run(){}}
+B.
+public class MyRunnable extends Object{public void run(){}}
+C.
+public class MyRunnable implements Runnable{public void run(){}}
+D.
+public class MyRunnable implements Runnable{void run(){}}
+
+",public class MyRunnable implements Runnable{public void run(){}},public class MyRunnable implements Runnable{public void run(){}},public class MyRunnable extends Object{public void run(){}},public class MyRunnable extends Runnable{public void run(){}},public class MyRunnable implements Runnable{void run(){}},,,
+"Which statement is true?
+A.
+The notifyAll() method must be called from a synchronized context.
+B.
+To call wait(), an object must own the lock on the thread.
+C.
+The notify() method is defined in class java.lang.Thread.
+D.
+The notify() method causes a thread to immediately release its locks.
+
+","
+A.
+The notifyAll() method must be called from a synchronized context.
+ method causes a thread to immediately release its locks.
+
+","
+D.
+The notify() method causes a thread to immediately release its locks.
+
+","
+B.
+To call wait(), an object must own the lock on the thread.
+","
+A.
+The notifyAll() method must be called from a synchronized context.
+
+
+","
+C.
+The notify() method is defined in class java.lang.Thread.
+
+",,,
+"What will be the output of the program?
+
+public class Run {
+    public static void main(String [] args) 
+     {
+         System.out.print(""1 "");
+         synchronized(args)
+         {
+             System.out.print(""22 "");
+             System.out.print(""1 "");
+             try 
+             {
+                     args.wait(); /* Line 11 */
+             }
+             catch(InterruptedException e){ }
+         }
+         System.out.print(""3 "");
+     }
+ }
+",1  22 1,1  22 1,1  3,1  22  3,It fails to compile because the IllegalMonitorStateException of wait() is not dealt with in line 11.,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,

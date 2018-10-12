@@ -1,0 +1,67 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answers 4;answer;3,wrong;answer;4,Difficulty;level,Section,Important
+Who is considered as the creator of JAVA ?;c) James Gosling ;a) Dennis Richie ;b) Ken Thompson ;d) Bjarne Stroupstrup;c) James Gosling ;;;;;
+Which of the following statements about the Java language is true?;c) Java supports only Object Oriented Programming approach;a) Java supports only Procedural Oriented Programming approach;b) Both Procedural and Object Oriented Programming are supported in Java;d)None of the Above;c) Java supports only Object Oriented Programming approach;;;;;
+JVM stands for? ;b) Java Virtual Machine;a) Java Verified Machine;c) Java Very large Machine ;d) Java Very small machine;b) Java Virtual Machine;;;;;
+JRE stands for?;c) Java Runtime Environment;a) Java Realtime Environment;b) Java Rapid Enterprise;d) None of the above;c) Java Runtime Environment;;;;;
+Java source files are compiled and converted to;c) Bytecode;a) Object code;b) machine code;d) executable file;c) Bytecode;;;;;
+JVM is  ___________for bytecode.;b)  an interpreter;a) a compiler;c) assembler;d) None of the above;b)  an interpreter;;;;;
+What is the size of int data type in java?;c) 4 bytes ;a) 1 bytes ;b)  2 bytes;d) 8 bytes;c) 4 bytes ;;;;;
+Which is a valid float literal?;d) 1.23f;a) 1.23 ;b) 2 ;c) 1.23d;d) 1.23f;;;;;
+What is the numerical range of a char in Java?;d) 0 to 65535;a) -128 to 127 ;b) 0 to 256;c) 0 to 32767;d) 0 to 65535;;;;;
+Which of these coding types is used for data type char in Java?;c) UNICODE;a) ASCII;b) ISO-LATIN-1; d) None of the mentioned;c) UNICODE;;;;;
+Which of these values can a boolean variable contain?;a) True & False;b) 0 & 1;c) Any integer value;d) Both a & b;a) True & False;;;;;
+Which one of the following is a valid identifier in java?;a) x1;b) 1x;c) $x;d) x  1;a) x1;;;;;
+Which one is the short circuit AND operator?;b) && ;a) &;c) |;d) ||;b) && ;;;;;
+Which operator is used to implement unsigned right shift of an integer?;d) >>> ;a) <<;b)  >>;c) <<< ;d) >>> ;;;;;
+Which one of the following is a jump statement in java?;c) break;a) goto;b) jump;d) if;c) break;;;;;
+Which of these operators is used to allocate memory to array variable in Java?;c) new ;a) malloc;b) alloc;d) new malloc;c) new ;;;;;
+"What is the output of this program?
+
+	 class increment {
+       		 public static void main(String args[]) 
+	        	{        
+       		      	int g = 3;
+             		System.out.print(++g * 8);
+        		} ";c) 32;a) 25 ;b) 24;d) 33;c) 32;;;;;
+Which of the following loops will execute the body of loop even when condition controlling the loop is initially false?;a) do-while;b) while;c) for;d) None of the mentioned;a) do-while;;;;;
+Which of these is an incorrect array declaration?;d) int arr[] = int [5] new;"a) int arr[] = new int[5];";"b) int [] arr = new int[5];";"c) int arr[];
+    arr = new int[5];";d) int arr[] = int [5] new;;;;;
+Which of these selection statements test only for equality?;b) switch;a) if;c) Both a & b;d) None of the mentioned;b) switch;;;;;
+Which of these are selection statements in Java?;a) if ;b) for;c)  continue ;d) all of these;a) if ;;;;;
+Which of these jump statements can skip processing remainder of code in its body for a particular iteration?;d) continue;a) break;b) return;c) exit ;d) continue;;;;;
+What is the value of the expression 2 & 3 ?;a) 2;b) 3;c) 6;d) 5;a) 2;;;;;
+The bitwise XOR operator is denoted by;d) ^;a)&;b)   |;c)   ~;d) ^;;;;;
+What is the value of the expression 8 << 2 ?;b) 32;a) 2 ;c) 16 ;d) 5;b) 32;;;;;
+The keyword used to create a constant variable;c) final ;a) const;b) static;d) none of these;c) final ;;;;;
+"What is stored in the object obj in following lines of code?  box obj;";b) NULL;a) Memory address of allocated memory of object.;c) Any arbitrary pointer;d) Garbage;b) NULL;;;;;
+Variables declared with in a class are called ;c) instance variable ;a) Identifier;b) local variable;d) global variable;c) instance variable ;;;;;
+Variables declared within a method or block are called; b) local variable;a) Static variable;c) instance variable;d) global variable; b) local variable;;;;;
+Defining methods with same name and different no. of parameters are called;b) method overloading;a) Method overriding ;c)   Dynamic method dispatch;d) none of the above ;b) method overloading;;;;;
+Which operator is used by Java run time implementations to free the memory of an object when it is no longer needed?;d) None of the mentioned.;a) delete;b) free ;c) new ;d) None of the mentioned.;;;;;
+A primitive data type can be passed as an argument into a method;a) By value;b) by reference;c)  both a & b;d) none of these;a) By value;;;;;
+Which of the following is not a primitive data types?;B. String.;A. Byte.;C. Integer.;D. Float.;B. String.;;;;;
+What is the range of the char type?;D. 0 to 215-1.;C. 0 to 216-1.;B. 0 to 215.;A. 0 to 216.;D. 0 to 215-1.;;;;;
+Literals in java must be preceded by which of these?;D. both a & b.;A. L.;B. l.;C. D.;D. both a & b.;;;;;
+______ can appear anywhere in the body of a java method.;B. declaration.;A. definition.;C. determine.;D. package.;B. declaration.;;;;;
+______ must be the first non comment statement in the file.;A. package.;B. class.;C. object.;D. declaration.;A. package.;;;;;
+What will be the result of the expression 13 & 25?;C. 9.;A. 38.;B. 25.;D. 12.;C. 9.;;;;;
+What will be result of expression 9 | 9?;C. 9.;A. 1.;B. 18.;D. 12.;C. 9.;;;;;
+ _________ Operators are overloaded for string objects?;B. +, =.;A. -, +.;C. <<, >>.;D. ++, --.;B. +, =.;;;;;
+If an expression contains double, int, float, long, then whole expression will promoted into which of these data types?.;C. double.;A. long;C. double.;D. Float.;C. double.;;;;;
+________ is valid for if statement?;B. A Boolean expression.;A. An integer expression.;C. A character expression.;D. A legal expression.;B. A Boolean expression.;;;;;
+________ statement is valid for array declaration.;"C. float number [];.";"A. int number ();.";"B. float number ();.";"D. count Int [];.";"C. float number [];.";;;;;
+What is the output of relational operators?.;B. boolean.;A. integer.;C. character.;D. double.;B. boolean.;;;;;
+Which of these operators can skip evaluating right hand operand?.;D. &&.;A. !.;B. |.;C. &.;D. &&.;;;;;
+Which of the following denotes a javadoc comment?;C. /**.;A. //#.;B. /*.;C. /**.;C. /**.;;;;;
+Java programs perform I/O through _______.;C. streams.;A. i/o methods.;B. i/o package.;D. compiler.;C. streams.;;;;;
+ In java a _______ is a sequence of characters.;A. String.;B. arrayChar.;C. groupChar.;D. collection.;A. String.;;;;;
+Java is designed for _______ environment of the internet.;C. distributed.;A. development.;B. deducting.;D. web design.;C. distributed.;;;;;
+The ________ connects classes and objects.;A. dot.;B. super.;C. new.;D. variable.;A. dot.;;;;;
+The ________ statement is used to terminate a statement sequence.;A. break.;B. switch.;C. continue.;D. wait.;A. break.;;;;;
+Multidimensional arrays are actually __________.;C. arrays of arrays.;A. arrays of element.;B. arrays and variable.;D. arrays of Square.;C. arrays of arrays.;;;;;
+______ statement in java is multiway branch statement.;D. switch.;A. declaration.;B. case.;C. multi.;D. switch.;;;;;
+ ____ operators which concatenates two strings.;A. +.;B. ++.;C. -.;D. ++, ++.;A. +.;;;;;
+A java program can be run in any computer running under any ________.;A. operating system.;B. interface system.;C. machine system.;D. moral system.;A. operating system.;;;;;
+ A java program must contain a______ method.;B. main.;A. user defined.;C. local.;D. return.;B. main.;;;;;
+ _________ operator is used to create an array.;A. new .;B. public.;C. key.;D. main.;A. new .;;;;;
+What is byte code in the context of Java?;A. The type of code generated by a Java compiler.;B. The type of code generated by a Java Virtual Machine.;C. It is another name for a Java source file.;D. It is the code written within the instance methods of a class.;A. The type of code generated by a Java compiler.;;;;;

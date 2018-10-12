@@ -1,0 +1,38 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+Which statement is  not true  in java language?;(b)     A private member of a class cannot be accessed by the methods of the same class.;(a)     A public member of a class can be accessed in all the packages.;(c)     A private member of a class cannot be accessed from its derived class;(d)     A protected member of a class can be accessed from its derived class.;(b)     A private member of a class cannot be accessed by the methods of the same class.
+A protected member can be accessed in,;(c)   a non-subclass of different package (d)   a subclass of different package;(a)     The same method name with different types of parameters;(b)     The same method name with different number of parameters;(c)   a non-subclass of different package (d)   a subclass of different package;(d)     Both (a) and (b) above
+A method within a class is only accessible by classes that are defined within the same package as the class of the method. Which one of the following is used to enforce such restriction?;(d)     Do not declare the method with any accessibility modifiers;(a)     Declare the method with the keyword public;(b)     Declare the method with the keyword private;(c)     Declare the method with the keyword protected;(d)     Do not declare the method with any accessibility modifiers
+How restrictive is the default accessibility compared to public, protected, and private accessibility?;"(c) More restrictive than protected, but less restrictive than private
+";"(a) Less restrictive than public
+";"(b) More restrictive than public, but less restrictive than protected
+";"(c) More restrictive than protected, but less restrictive than private
+";"(d) More restrictive than private
+"
+Which statement is  true  about accessibility of members?;"(b) Private members can only be accessed by code from within the class of the member
+";"(a) Private members are always accessible from within the same package
+";"(b) Private members can only be accessed by code from within the class of the member
+";"(c) A member with default accessibility can be accessed by any subclass of the class in which it is defined
+";"(d) Private members cannot be accessed at all
+"
+Which keyword can protect a class in a package from accessibility by the classes outside the package?;"(a)
+don't use any keyword at all (make it default)
+";"(a)
+don't use any keyword at all (make it default)
+";"(b)
+Private
+";"(c)
+Protected
+";"(d)
+final
+"
+We would like to make a member of a class visible in all subclasses regardless of what package they are in. Which one of the following keywords would achieve this?;"(d)
+Public        
+";"(a)
+Private or protected
+";"(b)
+Private
+";"(c)
+Protected
+";"(d)
+Public        
+"

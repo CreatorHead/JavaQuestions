@@ -1,0 +1,1456 @@
+questions Exceptions test6,correct answer,wrong answer 1,wrong answer 2,wrong answer 3,wrong answer 4
+When does Exceptions in Java arises in code sequence?,Run Time,Compilation Time,Run Time,Can Occur Any Time,none of the above
+Which of these keywords is not a part of exception handling?,thrown,thrown,try,finally,catch
+Which of these keywords must be used to monitor for exceptions?,try,thrown,finally,try,catch
+ÿ Which of these keywords must be used to handle the exception thrown by try block in some rational manner?,catch,try,catch,finally,throws
+Which of these keywords is used to manually throw an exception?,throw,try,finally,throw,catch
+" class exception_handling
+    {
+        public static void main(String args[])
+        {
+            try
+            {
+                System.out.print(""Hello"" + "" "" + 1 / 0);
+            }
+            catch(ArithmeticException e)
+            {
+                System.out.print(""World"");              
+            }
+          }
+    }  ",world,hello,helloworld,world,none of the above
+"class exception_handling
+    {
+        public static void main(String args[])
+        {
+            try   
+           {
+                int a, b;
+                b = 0;
+                a = 5 / b;
+                System.out.print(""A"");
+            }
+            catch(ArithmeticException e)
+            {
+                System.out.print(""B"");          
+            }
+           }
+    }",B,A,B,Compile time error,Runtime Error
+"class exception_handling
+    {
+        public static void main(String args[])
+        {
+            try
+            {
+                int a, b;
+                b = 0;
+                a = 5 / b;
+                System.out.print(""A"");
+            }
+            catch(ArithmeticException e)
+            {
+                System.out.print(""B"");          
+            }
+            finally
+            {
+                System.out.print(""C"");
+            }
+          }
+    }",BC,BC,A,B,AC
+" class exception_handling
+    {
+        public static void main(String args[])
+        {
+            try
+            {
+                int i, sum;
+                sum = 10;
+                for (i = -1; i < 3 ;++i)
+                    sum = (sum / i);
+            }
+            catch(ArithmeticException e)
+            {
+                  System.out.print(""0"");          
+            }
+            System.out.print(sum);
+        }
+    }  ",Compilation Error,0,5,Runtime Error,Compilation Error
+" class exception_handling
+    {
+        public static void main(String args[])
+        {
+            try
+            {
+                int i, sum;
+                sum = 10;
+                for (i = -1; i < 3 ;++i)
+                {
+                    sum = (sum / i);
+                System.out.print(i);
+                }
+            }
+            catch(ArithmeticException e)
+            {           
+                System.out.print(""0"");
+            }  
+        }
+    }",-10,-1,-101,-10,0
+ Which of the following keywords is used for throwing exception manually?,throw,try,throw,throws,catch
+ÿ Which of the following classes can catch all exceptions which cannot be caught?,Error,RuntimeException,CompiletimeException,ParentException,Error
+Which of the following is a super class of all exception type classes?,Throwable,RuntimeExceptions,Catchable,String,Throwable
+Which of the following operators is used to generate instance of an exception which can be thrown,new,thrown,new,alloc,malloc
+"Which of the following keyword is used by calling function to handle
+Exception thrown by called function?",throws,thrown,throws,try,catch
+Which of the following handles the exception when catch is not used?,default handler,default handler,finally,throw handler,java run time system
+Which part of code gets executed whether exception is caught or not?,finally,throws,try,catch,finally
+Which of the following should be true of the object thrown by a thrown statement?,Should be assignable to Throwable type,Should be assignable to String type,Should be assignable to Throwable type,Should be assignable to Exception type,Should be assignable to Error type
+ÿ What exception thrown by parseInt() method?,NumberFormatException,NumberFormatException,ArithmeticException,ClassNotFoundException,NullPointerException
+"At run time, error is recoverable.",FALSE,TRUE,FALSE,1,0
+Which of these is a super class of all exceptional type classes?,Throwable,String,RuntimeExceptions,Throwable,Cachable
+ÿ Which of these class is related to all the exceptions that can be caught by using catch?,All of the mentioned,error,Exception,RuntimeExecption,All of the mentioned
+Which of these class is related to all the exceptions that cannot be caught?,Error,Exception,RunTimeExecption,Error,All of the mentioned
+Which of these handles the exception when no catch is used?,Default handler,finally,throw handler,Java run time system,Default handler
+Which of these keywords is used to manually throw an exception?,throw,try,catch,throw,finally
+"class exception_handling
+    {
+        public static void main(String args[])
+        {
+            try
+            {
+                System.out.print(""Hello"" + "" "" + 1 / 0);
+            }
+            finally
+            {
+                System.out.print(""World"");              
+            }
+          }
+    }  ",First Exception then World,hello,World,First Exception then World,Compilation Error
+" class exception_handling
+    {
+        public static void main(String args[])
+        {
+            try
+            {
+                int a, b;
+                b = 0;
+                a = 5 / b;
+                System.out.print(""A"");
+            }
+            catch(ArithmeticException e)
+            {
+                System.out.print(""B"");          
+             }
+         }
+    }
+",B,A,B,Compilation Error,Runtime Error
+"
+ class exception_handling
+    {
+        public static void main(String args[])
+        {
+            try
+            {
+                int a[] = {1, 2,3 , 4, 5};
+                for (int i = 0; i < 7; ++i)
+                    System.out.print(a[i]);
+            }
+            catch(ArrayIndexOutOfBoundsException e)
+            {
+                System.out.print(""0"");          
+             }
+         }
+    }",123450,12345,1234500,123450,Compilation Error
+"  class exception_handling
+    {
+        public static void main(String args[])
+        {
+            try
+            {
+                int i, sum;
+                sum = 10;
+                for (i = -1; i < 3 ;++i)
+                    sum = (sum / i);
+            }
+            catch(ArithmeticException e)
+            {
+                 System.out.print(""0"");          
+            }
+            System.out.print(sum);
+        }
+    }",Compilation Error,5,0,Runtime Error,Compilation Error
+"
+class exception_handling
+    {
+        public static void main(String args[])
+        {
+            try
+            {
+                int a[] = {1, 2,3 , 4, 5};
+                for (int i = 0; i < 5; ++i)
+                    System.out.print(a[i]);
+                int x = 1/0;
+            }
+            catch(ArrayIndexOutOfBoundsException e)
+            {
+                System.out.print(""A"");          
+            }
+            catch(ArithmeticException e)
+            {           
+                System.out.print(""B"");
+            }
+        }
+    }",12345B,12345A,12345B,12345,Compilation Error
+Which of these keywords is used to generate an exception explicitly?,throw,throws,try,catch,throw
+Which of these class is related to all the exceptions that are explicitly thrown?,Throwable,Throwable,throw,Exception,All of the mentioned
+"ÿ Which of these operator is used to generate an instance of an exception than can
+Be thrown by using throw?",new,malloc,alloc,new,thrown
+Which of these handles the exception when no catch is used?,Default handler,finally,ThrowHandler,Java run time system,Default handler
+"ÿ Which of these keywords is used to by the calling function to guard against the
+Exception that is thrown by called function?",throws,try,throw,catch,throws
+"class exception_handling
+    {
+        public static void main(String args[])
+        {
+            try
+            {
+                int a = args.length;
+                int b = 10 / a;
+                System.out.print(a);
+                try
+                {
+                    if (a == 1)
+                        a = a / a - a;
+                    if (a == 2)
+                    {
+                        int []c = {1};
+                        c[8] = 9;
+                    }
+                }
+                  catch (ArrayIndexOutOfBoundException e)
+                {
+                    System.out.println(""TypeA"");
+                  }
+                catch (ArithmeticException e)
+                {
+                    System.out.println(""TypeB"");
+                }
+            }
+        }
+    }",compile time error,TypeA,TypeB,0 TypeB,compile time error
+"class exception_handling
+    {
+        public static void main(String args[])
+        {
+            try
+            {
+                System.out.print(""A"");
+                throw new NullPointerException (""Hello"");
+            }
+            catch(ArithmeticException e)
+                  {
+                System.out.print(""B"");          
+            }
+        }
+    }
+",RunTimeException,A,B,Hello,RunTimeException
+"class exception_handling
+    {
+        static void throwexception() throws ArithmeticException
+        {        
+            System.out.print(""0"");
+            throw new ArithmeticException (""Exception"");
+        }
+        public static void main(String args[])
+        {
+            try
+            {
+                throwexception();
+            }
+            catch (ArithmeticException e)
+            {
+                System.out.println(""A"");
+            }
+        }
+    }",0A,A,0,0A,Exception
+"public class San
+ {  
+    public static void main(String[] args)
+    {
+        try
+        {
+            return;
+        }
+        finally
+        {
+                System.out.println( ""Finally"" );
+        }
+    }
+}",Finally,Compilation fails,The code runs with no output,Finally,An exception is thrown at runtime
+"public class San
+{
+    public static void main(String args[])
+    {
+        try
+        {
+            System.out.print(""Hello world "");
+        }
+        finally
+        {
+               System.out.println(""Finally executing "");
+        }
+    }
+}
+",Hello world Finally executing,The program will not compile because no exceptions are specified,The program will not compile because no catch clauses are specified,HelloWorld,Hello world Finally executing
+ÿ Which of these clause will be executed even if no exceptions are found?,Finally,try,throws,throw,finally
+ÿ A single try block must be followed by which of these?,finally & catch,finally,catch,finally & catch,none of the above
+Which of these packages contain all the Java?s built in exceptions?,java.lang,java.io,java.lang,java.net,java.util
+Which of these exceptions handles the divide by zero error?,ArithmeticException,MathException,IllegalAccessException,IllegarException,ArithmeticException
+Which of these exceptions will occur if we try to access the index of an array beyond its length?,ArrayIndexOutOfBoundsException,ArrayIndexOutOfBoundsException,ArithmeticException,ArrayException,ArrayIndexException
+"class exception_handling
+    {
+        public static void main(String args[])
+        {
+            try
+            {
+                int a = args.length;
+                int b = 10 / a;
+                System.out.print(a);
+            }
+            catch (ArithmeticException e)
+            {
+                    System.out.println(""1"");
+            }
+        }
+    }",1,0,1,Compilation Error,RunTimeerror
+" class exception_handling
+    {
+        public static void main(String args[])
+        {
+            try
+               {
+                throw new NullPointerException (""Hello"");
+            }
+            catch(ArithmeticException e)
+            {
+                System.out.print(""B"");          
+            }
+        }
+    }",RunTimeError,A,B,Runtime Error,Compilation Error
+" class exception_handling
+    {
+            static void throwexception() throws ArithmeticException
+            {        
+                System.out.print(""0"");
+                throw new ArithmeticException (""Exception"");
+            }
+            public static void main(String args[])
+            {
+               try
+               {
+                throwexception();
+               }
+               catch (ArithmeticException e)
+               {
+                    System.out.println(""A"");
+                 }
+            }
+    }",0A,0,A,0A,Exception
+"class exception_handling
+        {
+            public static void main(String args[])
+            {
+                try
+                {
+                    int a = 1;
+                    int b = 10 / a;
+                    try
+                    {
+                         if (a == 1)
+                             a = a / a - a;
+                         if (a == 2)
+                         {
+                             int c[] = {1};
+                             c[8] = 9;
+                         }
+                    }
+                    finally
+                    {
+                        System.out.print(""A"");
+                    }
+                }
+                catch (Exception e)
+                  {
+                        System.out.println(""B"");
+                }
+            }
+        }",A,B,AB,A,none of the above
+" class exception_handling
+    {
+        public static void main(String args[])
+        {
+            try
+            {
+                int a = args.length;
+                int b = 10 / a;
+                System.out.print(a);
+                try
+                {
+                     if (a == 1)
+                         a = a / a - a;
+                     if (a == 2)
+                     {
+                         int []c = {1};
+                         c[8] = 9;
+                     }
+                }
+                catch (ArrayIndexOutOfBoundException e)
+                {
+                    System.out.println(""TypeA"");
+                }
+            catch (ArithmeticException e)
+            {
+                    System.out.println(""TypeB"");
+            }
+        }
+    }",Compilation Error,TypeA,TypeB,Runtime Error,Compilation Error
+What is the use of try & catch?,All of the mentioned,It allows us to manually handle the exception,It allows to fix errors,It prevents automatic terminating of the program in cases when an exception occurs,All of the mentioned
+Which of these keywords are used for the block to be examined for exceptions?,try,throws,catch,try,check
+Which of these keywords are used for the block to handle the exceptions generated by try block?,catch,try,catch,throw,check
+Which of these keywords are used for generating an exception manually?,throw,try,catch,catch,throw
+Which of these statements is incorrect?,try need not to be followed by anything,try block need not to be followed by catch block,try block can be followed by finally block instead of catch block,try can be followed by both catch and finally block,try need not to be followed by anything
+"class Output
+    {
+        public static void main(String args[])
+        {
+           try
+           {
+               int a = 0;
+               int b = 5;
+               int c = b / a;
+               System.out.print(""Hello"");
+           }
+           catch(Exception e)
+           {
+               System.out.print(""World"");
+           }
+        }
+    }",World,hello,helloworld,World,none of the above
+"class Output
+    {
+        public static void main(String args[])
+        {
+           try
+           {
+               int a = 0;
+               int b = 5;
+               int c = a / b;
+               System.out.print(""Hello"");
+           }
+           catch(Exception e)
+           {
+               System.out.print(""World"");
+           }
+        }
+    }
+",Hello,World,Hello,HelloWorld,Compilation Error
+"  class Output
+    {
+        public static void main(String args[])
+        {
+           try
+           {
+               int a = 0;
+               int b = 5;
+               int c = b / a;
+               System.out.print(""Hello"");
+           }
+        }
+    }",Compilation Error,hello,World,HelloWorld,Compilation Error
+"class Output
+    {
+        public static void main(String args[])
+        {
+           try
+           {
+               int a = 0;
+               int b = 5;
+               int c = a / b;
+               System.out.print(""Hello"");
+           }
+           finally
+           {
+               System.out.print(""World"");
+           }
+        }
+    }
+",HelloWorld,hello,World,HelloWorld,none of the above
+"class Output
+    {
+        public static void main(String args[])
+        {
+           try
+           {
+               int a = 0;
+               int b = 5;
+               int c = b / a;
+               System.out.print(""Hello"");
+           }
+           catch(Exception e)
+           {
+               System.out.print(""World"");
+           }
+           finally
+           {
+               System.out.print(""World"");
+           }
+        }
+    }",WorldWorld,hello,World,WorldWorld,HelloWorld
+ÿ Which of these classes is used to define exceptions?,Exception,Trowable,Abstract,Exception,System
+"
+Which of these methods return description of an exception?",getMessage(),obtainException(),obtainDescription(),getException(),getMessage()
+ÿ Which of these methods is used to print stack trace?,printStackTrace(),printStackTrace(),obtainStackTrace(),getStackTrace(),displayStackTrace()
+Which of these methods return localized description of an exception?,getLocalizedMessage(),etMessage(),getLocalizedMessage(), printLocalizedMessage(),obtainLocalizedMessage()
+Which of these classes is super class of Exception class?,Throwable,System,Runtime,Class,Throwable
+"class Myexception extends Exception
+    {
+        int detail;
+        Myexception(int a)
+        {
+            detail = a;
+        }
+        public String toString()
+        {
+            return ""detail"";
+        }
+     }
+    class Output
+    {
+        static void compute (int a) throws Myexception
+        {
+              throw new Myexception(a);   
+        }
+        public static void main(String args[])
+        {
+            try
+             {
+                compute(3);
+            }
+           catch(Myexception e)
+           {
+               System.out.print(""Exception"");
+           }
+        }
+    }",Exception,3,0,Exception,RunTimeerror
+"Can we keep other statements in between try, catch and finally blocks?
+try
+{
+ÿ ÿ ÿ ÿ // Statements to be monitored for exceptions
+}
+ÿ ÿ
+//You can't keep statements here
+ÿ ÿ
+catch(Exception ex)
+{
+ÿ ÿ ÿ ÿ //Cathcing the exceptions here
+}
+ÿ ÿ
+//You can't keep statements here
+ÿ ÿ
+finally
+{
+ÿ ÿ ÿ ÿ // This block is always executed
+}
+",No,Yes,No,0,1
+Can we write only try block without catch andÿ finally blocks?,No,Yes,No,1,0
+"What is unreachable catch block error?
+
+
+public class ExceptionHandling
+{
+ÿ ÿ ÿ ÿ public static void main(String[] args)
+ÿ ÿ ÿ ÿ {
+ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ try
+ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ {
+ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ int i = Integer.parseInt(""yms"");ÿ ÿ  
+ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ }
+ÿ ÿ
+ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ catch(Exception ex)
+ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ {
+ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ System.out.println(""This block handles all exception types"");
+ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ }
+ÿ ÿ
+ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ catch(NumberFormatException ex)
+ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ {
+ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ
+ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ }
+ÿ ÿ ÿ ÿ }
+}
+","error: exception NumberFormatException
+ Has already been caught",error:Exception has already been caught,error:IntParseException,error: exception NumberFormatException Has already been caught,none of the above
+What are run time exceptions in java. Give example? .,all of the above,ArrayIndexOutOfBoundException,StackOverflowError,ClassCastException,all of the above
+"which type of exception ..?
+
+class Main {
+ÿ ÿ ÿ public static void main(String args[]) {
+ÿ ÿ ÿ ÿ ÿ ÿ int x = 0;
+ÿ  ÿ ÿ ÿ ÿ ÿ int y = 10;
+ÿ ÿ ÿ ÿ ÿ   ÿ int z = y/x;
+ÿ ÿ }
+}
+","java.lang.ArithmeticException:
+Unchecked Exception",CheckedException,UncheckedException,No Exception,none of the above
+Can we keep the statements after finally block If the control is returning from the finally block itself?,No,Yes,No,all of the above,none of the above
+Does finally block get executed If either try or catch blocks are returning the control?,yes,Yes,No,,
+Can we throw an exception manually?,yes,no,yes,,
+"What are the legal combinations of try, catch and finally blocks?",All of the mentioned,"a)
+try
+{
+ÿ ÿ ÿ ÿ //try block
+}
+catch(Exception ex)
+{
+ÿ ÿ ÿ ÿ //catch block
+}
+","b)
+try
+{
+ÿ ÿ ÿ ÿ //try block
+}
+finally
+{
+ÿ ÿ ÿ ÿ //finally block
+}","c)
+try
+{
+ÿ ÿ ÿ ÿ //try block
+}
+catch(Exception ex)
+{
+ÿ ÿ ÿ ÿ //catch block
+}
+finally
+{
+ÿ ÿ ÿ ÿ //finally block
+}",All of the mentioned
+examples of checked exceptions?,All of the mentioned,ClassNotFoundException,SQLException,IOException,All of the mentioned
+unchecked exceptions?,All of the mentioned,NullPointerException,ArrayIndexOutOfBoundsException,NumberFormatException,Al of the mentioned
+"which type of exception? For below programs
+class A
+{
+    static String s;
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+       System.out.println(A.s.length());
+    }
+}
+",java.lang.NullPointerException,java.lang.Exception,java.lang.FileNotFoundException,java.lang.NullPointerException,none of the above
+"public class MainClass
+{
+    public static void main(String[] args)
+    {
+       String s[] = new String[] {""ZERO"", ""ONE"", ""TWO"", ""THREE"", ""FOUR""};
+        
+       System.out.println(s[5]);   
+        
+       System.out.println(s[-1]);  
+    }
+}
+",ArrayIndexOutOfBoundsException,NullPointerException,FileNotFoundException,NullPointerException,ArrayIndexOutOfBoundsException
+"
+package pack1;
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+       int i = Integer.parseInt(""abc"");
+    }
+}
+",java.lang.NumberFormatException,java.lang.NullPointerException,java.lang.FileNotFoundException,java.lang.NullPointerException,java.lang.NumberFormatException
+"package pack1;
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+       try
+       {
+           Class.forName(""oracle.jdbc.driver.OracleDriver"");
+       }
+       catch (ClassNotFoundException e)
+       {
+           e.printStackTrace();
+       }
+    }
+}
+",java.lang.ClassNotFoundException,java.lang.ClassNotFoundException,java.lang.NullPointerException,java.lang.FileNotFoundException,java.lang.ClassNotFoundException
+"package pack1;
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+       int i = 10/0;
+        
+       System.out.println(i);
+    }
+}
+",java.lang.ArithmeticException,java.lang.ClassNotFoundException,java.lang.ArithmeticException,java.lang.ClassNotFoundException,none of the above
+"import java.sql.*;
+  
+public class MainClass
+{
+    static
+    {
+        try
+        {
+            Class.forName(""oracle.jdbc.driver.OracleDriver"");
+        }
+        catch (ClassNotFoundException e)
+        {
+            System.out.println(""Unable To Load The Driver class"");
+        }
+    }
+  
+    public static void main(String[] args)
+    {
+        Connection con = null;
+              
+        String URL = ""jdbc:oracle:thin:@localhost:1521:XE"";
+  
+        String username = ""username"";
+  
+        String password = ""password"";
+  
+        try
+        {
+            con = DriverManager.getConnection(URL, username, password);
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+    }
+}
+",java.sql.SQLException,java.sql.SQLException,java.lang.ClassNotFoundException,java.lang.NullPointerException,java.lang.FileNotFoundException
+"package pack1;
+ 
+class A
+{
+     
+}
+ 
+class B extends A
+{
+     
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+       A a = new A();
+        
+       B b = (B)a;
+    }
+}
+",java.lang.ClassCastException,java.sql.SQLException,java.lang.FileNotFoundException,java.lang.ClassCastException,none of the above
+"package pack1;
+ 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+       String filePath = ""C:\\Users\\Bablad\\Desktop\\Open.txt"";
+        
+       BufferedReader reader = null;
+        
+       try
+       {
+           reader = new BufferedReader(new FileReader(filePath));           
+       }
+       catch (FileNotFoundException e)
+       {
+           e.printStackTrace();
+       }
+       finally
+       {
+           try
+           {
+               if(reader != null)
+               {
+                   reader.close();
+               }
+           }
+           catch (IOException e)
+           {
+               e.printStackTrace();
+           }
+       }
+    }
+}
+",java.io.IOException,java.lang.ClassNotFoundException,java.lang.ClassFoundException,java.io.IOException,none of the above
+"public class MainClass
+{
+    public static void main(String[] args)
+    {
+        Thread t = new Thread()
+        {
+            public void run()
+            {
+                try
+                {
+                    Thread.sleep(10000);   //Thread sleeps for 10s
+                }
+                catch (InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        };
+         
+        t.start();
+         
+        try
+        {
+            Thread.sleep(3000);   //main thread sleeping for 3s
+        }
+        catch (InterruptedException e)
+        {
+            e.printStackTrace();
+        }
+         
+        t.interrupt();    //interrupting thread t
+    }
+}
+
+",java.lang.InterruptedException,java.sql.SQLException,java.lang.ClassNotFoundException,java.lang.FileNotFoundException,java.lang.InterruptedException
+"public class MainClass
+{
+    static void methodOne()
+    {
+        methodTwo();
+    }
+     
+    static void methodTwo()
+    {
+        methodOne();
+    }
+     
+    public static void main(String[] args)
+    {
+        methodOne();
+    }
+}
+
+",java.lang.StackOverflowError,java.sql.SQLException,java.lang.ClassCastException,java.lang.ClassCastException,java.lang.StackOverflowError
+"class A
+{
+  
+}
+  
+public class B
+{
+    public static void main(String[] args)
+    {
+        A a = new A();
+    }
+}
+
+",java.lang.NoClassDefFoundError,java.lang.NoClassFoundError,java.lang.NoClassDefFoundError,java.io.IOException,none of the above
+"public class YMS
+{
+    public static void main(String[] args)
+    {
+        Class.forName(""Class name ""); 
+ 
+    }
+}
+
+",Checked exceptions,Unchecked eception,Checked exceptions,Unresolved exception,none of the above
+"class Main {
+   public static void main(String args[]) {
+      int x = 0;
+      int y = 10;
+      int z = y/x;
+  }
+}
+",ArithmeticException,NumericException,NumberException,ArithmeticException,none of the above
+"class YMS
+{
+    public static void main(String args[])
+    {
+        try {
+            int a = 30, b = 0;
+            int c = a/b; 
+            System.out.println (""Result = "" + c);
+        }
+        catch(Exception e) {
+            System.out.println (""HI "");
+        }
+    }
+}
+",ArithmeticException,NumericException,ArithmeticException,NumberException,all of the above
+"Class  YMS
+{
+    public static void main(String args[])
+    {
+        try {
+            String a = null; //null value
+            System.out.println(a.charAt(0));
+        } catch(Exception e) {
+            System.out.println(""which Exception ?)
+    }
+}
+",NullPointerException,NullPointerException,ArithmeticException,NumericException,none of the above
+"class YMS
+{
+    public static void main(String args[])
+    {
+        try {
+            String a = ""This is like chipping "";
+            char c = a.charAt(24);
+            System.out.println(c);
+        }
+        catch(Exception e) {
+            System.out.println(""which Exception ?)
+        }
+    }
+}
+",StringIndexOutOfBound,NullPointerException,NumericException,StringIndexOutOfBound,none of the above
+" class YMS {
+ 
+    public static void main(String args[])  {
+        try {
+ 
+            
+            File file = new File(""E://file.txt"");
+ 
+            FileReader fr = new FileReader(file);
+        } catch (Exception e) {
+           System.out.println(""File does not exist"");
+        }
+    }
+}
+",FileNotFoundException,StringIndexOutOfBound,NullPointerException,ArithmeticException,FileNotFoundException
+"
+class  YMS
+{
+    public static void main(String args[])
+    {
+        try {
+            
+            int num = Integer.parseInt (""YMS"") ;
+ 
+            System.out.println(num);
+        } catch(Exception e) {
+            System.out.println(""exception"");
+        }
+    }
+}
+",NumberFormatException,ArithameticException,NullPointerException,FileNotFoundException,none of the above
+"Class YMS
+{
+    public static void main(String args[])
+    {
+        try{
+            int a[] = new int[5];
+            a[6] = 9;
+                      
+        }
+        catch(Exception e){
+            System.out.println (""Exception"");
+        }
+    }
+}
+",ArrayIndexOutOfBoundsException,ArithameticException,NumberFormatException,ArrayIndexOutOfBoundsException,none of the above
+"class Main {
+   public static void main(String args[]) {
+      try {
+         throw 10;
+      }
+      catch(int e) {
+         System.out.println(""Got the  Exception "" + e);
+      }
+  }
+}
+","GOT THE EXCEPTION  10
+GOT THE EXCEPTION  0
+","
+
+GOT THE EXCEPTION  0
+GOT THE EXCEPTION  10
+
+","GOT THE EXCEPTION  0
+GOT THE EXCEPTION  0","GOT THE EXCEPTION  10
+GOT THE EXCEPTION  0",none of the above
+"class Test extends Exception { }
+  
+class Main {
+   public static void main(String args[]) {
+      try {
+         throw new Test();
+      }
+      catch(Test t) {
+         System.out.println(""Got the Test Exception"");
+      }
+      finally {
+         System.out.println(""Inside finally block "");
+      }
+  }
+}
+",Got the Test Exception,Got the Test Exception,NullPointerException,Inside finally block,Inside finally block
+"class Base extends Exception {}
+class Derived extends Base  {}
+ 
+public class Main {
+  public static void main(String args[]) {
+   // some other stuff
+   try {
+       // Some monitored code
+       throw new Derived();
+    }
+    catch(Base b)     {
+       System.out.println(""Caught base class exception"");
+    }
+    catch(Derived d)  {
+       System.out.println(""Caught derived class exception"");
+    }
+  }
+}
+",Caught base class exceptioN,Caught base class exceptioN,Caught derived class exception,"Compiler Error because
+ derived is not throwable",Compiler Error because base class exception is caught before derived class
+"class Test
+{
+    public static void main (String[] args)
+    {
+        try
+        {
+            int a = 0;
+            System.out.println (""a = "" + a + ""\n"");
+            int b = 20 / a;
+            System.out.println (""b = "" + b);
+        }
+ 
+        catch(ArithmeticException e)
+        {
+            System.out.println (""Divide by zero error"");
+        }
+ 
+        finally
+        {
+            System.out.println (""inside the finally block"");
+        }
+    }
+}
+","a = 0
+Divide by zero error
+inside the finally block
+",Compile erroR,"a = 0
+Divide by zero error
+inside the finally block
+",A=0,inside the finally block
+"class Test
+{
+    public static void main(String[] args)
+    {
+        try
+        {
+            int a[]= {1, 2, 3, 4};
+            for (int i = 1; i <= 4; i++)
+            {
+                System.out.println (""a["" + i + ""]="" + a[i] + ""\n"");
+            }
+        }
+         
+        catch (Exception e)
+        {
+            System.out.println (""error = "" + e);
+        }
+         
+        catch (ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println (""ArrayIndexOutOfBoundsException"");
+        }
+    }
+}
+",Compiler error,Compiler error,RUNTIME ERROR,ArrayIndexOutOfBoundsException,Error Code is printed
+"class Test
+{
+    String str = ""a"";
+ 
+    void A()
+    {
+        try
+        {
+            str +=""b"";
+            B();
+        }
+        catch (Exception e)
+        {
+            str += ""c"";
+        }
+    }
+ 
+    void B() throws Exception
+    {
+        try
+        {
+            str += ""d"";
+            C();
+        }
+        catch(Exception e)
+        {
+            throw new Exception();
+        }
+        finally
+        {
+            str += ""e"";
+        }
+ 
+        str += ""f"";
+ 
+    }
+     
+    void C() throws Exception
+    {
+        throw new Exception();
+    }
+ 
+    void display()
+    {
+        System.out.println(str);
+    }
+ 
+    public static void main(String[] args)
+    {
+        Test object = new Test();
+        object.A();
+        object.display();
+    }
+ 
+}
+
+",abdec,abcde,abecd,abdec,cedab
+"class Test
+{   int count = 0;
+ 
+    void A() throws Exception
+    {
+        try
+        {
+            count++;
+             
+            try
+            {
+                count++;
+ 
+                try
+                {
+                    count++;
+                    throw new Exception();
+ 
+                }
+                 
+                catch(Exception ex)
+                {
+                    count++;
+                    throw new Exception();
+                }
+            }
+             
+            catch(Exception ex)
+            {
+                count++;
+            }
+        }
+         
+        catch(Exception ex)
+        {
+            count++;
+        }
+ 
+    }
+ 
+    void display()
+    {
+        System.out.println(count);
+    }
+ 
+    public static void main(String[] args) throws Exception
+    {
+        Test obj = new Test();
+        obj.A();
+        obj.display();
+    }
+}
+",5,0,5,6,none of the above
+Types of exceptions in Java programming are,Both A & B,1. Checked exception,2. unchecked exception,3. Both A & B,none of the above
+Checked exception caught at,1. compile time,1. compile time,2. run time,3. Both at compile and run time,4. None
+Unchecked exception caught at,2. run time,1. compile time,2. run time,3. Both at compile and run time,4. None
+"What exception can occur in the below java program if we access 5 element in the array that does not exist?
+public class TException {
+ 
+ 
+ 
+public static void main(String[] args) {
+ 
+ 
+ 
+try {
+ 
+ 
+ 
+int a[] = { 5, 10, 15, 20 };
+ 
+
+ 
+System.out.println(""Element :"" + a[4]);
+ 
+}
+ 
+finally{}
+ 
+ 
+ 
+}
+ 
+ 
+ 
+}
+ 
+",1. ArrayIndexOutOfBoundsException,1. ArrayIndexOutOfBoundsException,2. ArithmeticException,3. NullPointerException,none of the above
+Which is the super class of all java exceptions classes?,3. Throwable,RuntimeException, Throwable,4. IOException,all of the above
+Direct subclass of Throwable in Java,Both A & C,Exception, Error,Both A & C,None
+un-checked(runtime) exception in java is/are,All Of the Above,1. ArrayIndexOutOfBoundsException,2. ArithmeticException,ÿÿ NullPointerException,All Of the Above
+"In below java program, which exception will occur?
+
+public static void main(String[] args) {
+ 
+    
+ 
+     FileReader file = new FileReader(""test.txt"");        
+ 
+      
+ 
+    }
+",3. FileNotFoundException at runtime,3. FileNotFoundException at runtime,"
+NullPointerException at compile time
+",ÿ FileNotFoundException at compiler time,3. FileNotFoundException at runtime
+"What is the output for the below code ?
+
+public class SuperClass {
+        public int doIt(String str, Integer... data)throws ArrayIndexOutOfBoundsException{
+                String signature = ""(String, Integer[])"";
+                System.out.println(str + ""  "" + signature);
+                return 1;
+        } 
+
+}
+",Compile with error,"Overridden: hello (String, Integer[])","hello (String, Integer[])",This code throws an Exception at Runtime,Compile with error
+"What is the result of executing the following code, using the parameters 0 and 3 ?
+
+public void divide(int a, int b) {
+        try {
+                int c = a / b;
+        } catch (Exception e) {
+                System.out.print(""Exception "");
+        } finally {
+                System.out.println(""Finally"");
+}
+
+",Compile with error,Prints out: Exception Finally,Prints out: Finally,Prints out: Exception,Compile with error
+Which of the below statement is true about Error?,Correct answer is : A and C,A)An Error is a subclass of Throwable,B)An Error is a subclass of Exception,C)Error indicates serious problems that a reasonable application should not try to catch.,D)An Error is a subclass of IOException
+Which of the following is type of RuntimeException?,B)ArrayIndexOutOfBoundsException,A)IOException,B)ArrayIndexOutOfBoundsException,C)Exception,D)Error
+exception paper2 starts,,,,,
+ It is usually understood that a compiled program is error free and will always????? successfully,execute,complete,execute,perform,accomplish
+In few cases a compiled program can?????.. While it its executing,terminate,terminate ,finish,dismiss,discharge
+"The ?? in a program results in an abnormal execution and it may lead to abnormal termination
+ and it may lead to abnormal termination of the program.",Exception,error,Exception,message,mistake
+An??? is an indication of a problem that occurs during a program?s execution. ,Exception,inaccuracy,error,ÿÿ e-fault,Exception
+An exception usually signals an??? ,error,Exception,threads,inaccuracy,error
+"Although exceptions occur infrequently, one has to be careful in handing such cases while writing the???. .",code,Exception,error,code,e-fault
+"???.handling allows a program to continue executing as if no problem had been encountered or
+ it may notify the user of the problem before terminating in an uncontrolled manner.",Exception,error,e-fault,threads,Exception
+"There are few standard??? available in java, a technique to guarantee that a particular block
+ of code will always be executed, even if exceptions are present in our program.",Exception,Errors,e-fault,execute,Exception
+"ÿÿÿÿÿ In java, all kinds of error conditions are called ???.. .",Exception,Exception,Errors,execute,e-fault
+ÿÿÿÿÿ Error can be broadly classified into??? categories.,two,three,four,two,five
+ÿÿÿÿÿ ????.is type of error produced in java programs.,Both of the Above,Compile-time errors,Run-time   errors ,Both of the Above,none of the above
+ A compiler is used to convert?? code into object code.,source,home,Beginning,source,program
+" If there is a syntax error in the program, a compilation error is displayed and?.. file is not created.",.class,.source,.byte,.class,.obj
+ Examples of some common syntax errors are missing like a?.. .,all of the above,semicolon, use of undeclared variable,wrong spellings of identifier or keyword,All of the Above
+" The java??? suggests in an output, the type of error, along with the line number where
+ the error has occurred.",compiler,Interpretor,decoder,translator,compiler
+" Compile-time??.. are usually the mistake of a programmer and it does not
+ allow the program to compile unless they are solved.",errors,Exception,programs,methods,errors
+" In  the  field  of  computer  Science,  ?Exit  code?  or ?Exit status? indicates 
+whether the command or a??. executed successfully or not.",program,Exception,error,e-fault,program
+Code?? indicates that the command executed successfully.,0,0,1,10,-1
+Code????.. indicates that some problem occurred while executing the command. ,1,-1,0,10,1
+"If there are no syntax errors in the source code then the program
+ will compile successfully and will get a??.. file.",.class,.obj,.java,.dat,.class
+"The array ???? citylist [ ] = {?Ahmedabad?, ?Baroda?, ?Rajkot?, ?Surat?};? 
+contains name of four different cities.",String,boolean,int,long,String
+" for each type of exception, there are corresponding??.. classes in java.",Exceptions,error,programs,methods,Exceptions
+the ??.. contains a hierarchy of classes dealing with various exceptions.,Both of the Above,java.lang.Package,java.io.Package,Both of the Above,none of the above
+"An attempt to access the array element with an index value that is outside 
+the range of array uses??. Exception class. (a) ",ArrayIndexOutOfBoundsException,ArithameticException,FileNotFoundException,NullPointerException,ArrayIndexOutOfBoundsException
+An attempt to divide any number be 0 uses ??.. exception class.,ArithmeticException,ArrayIndexOutOfBoundsException,ArithameticException,NullPointerException,FileNotFoundException
+An attempt to access a non-existing file uses ??.. exception class.,FileNotFoundException,ArrayIndexOutOfBoundsException,ArithameticException,FileNotFoundException,None of the above
+ An attempt to use null in a case where an object is required uses??.. exception class.,NullPointeException,ArithmeticException,FileNotFoundException,PrinterIOException,NullPointeException
+An attempt to convert string to a number type uses??.Exception class.,NumberFormatException,NullPointeException,NumberFormatException,FileNotFoundException,none of the above
+An I/O error has occurred while printing uses ???. ,PrinterIOException,NumberFormatException,NullPointeException,FileNotFoundException,PrinterIOException
+ What is the full form of JVM ?,Java Virtual Machine, What is the full form of JVM ?,Java   Virtual   Method,Java   Virtual   Method,Java   Virtual   Manner
+An??? is an error condition.,Exception,error,e-fault,exclusion,Exception
+????.handling is an object-oriented technique for managing errors.,Exception,(a) Allowance,error,Exception,e-fault
+" While performing exception handling, one has to try to ensure that the program does not?
+???. abruptly nor does it generate unexpected.
+",Terminate,Terminate,Discharge,dismiss,Flush
+Java uses keywords like??? to write an exception handler,all of the above,try,catch,finally,all of the above
+" The keywords??? are used in the presence of exceptions, these keywords represent block of statements.",all of the above,try,catch,finally,all of the above
+A???.. contains the code that may give rise to one or more ,Try block,Try block,catch block,finally ,all of the above
+"
+ A???. contains the code that is intended to handle exceptions of a particular type that were 
+created in the associated try block.
+",catch block,Try block,finally,catch block,finally block
+" A???.. is always executed before the program ends, regarding of whether any exceptions 
+are generated in the try block or not.",finally block,Try block,finally block,catch block,none of the above
+The??.. Statement contains a block of statement within the braces.,try,catch,try,finally,none of the above
+ A???.. block may give rise to one or more exceptions.,try,try,catch,finally,finally-try
+The code between a try block creates a??? exception.,one or more than one,double,one or more than one,single,none of these
+ The??? must immediately follow the try block.,catch block,catch block,Try block,finally,all of the above
+???? contains the code that is to be created to handle an exception.,catch block,Try block,finally block,catch block,catch
+The ???.is an exception handler.,catch block,Try block,catch block,finally,all of the above
+For a  ????try  block  there  can  be  one  or  more  catch  blocks.,single,single,double,triple,none of the above
+ A catch block consists of the keyword catch followed by a single????..,parameter,parameter,operator,method,block
+The catch code to handle exception has to be written between.,parentheses,codes,parentheses,blocks,all of the above
+The??.. identifies the type of exception that the block is to deal with.,parameters,codes,blocks,parentheses,parameters
+Java supports??.. types of exceptions,various,single,various,multiple,none of the above
+"Any  program  which  tries  to  access  array  element  by specifying index position 
+that is outside the range leads to an?. .",exception,illegal message,illegal message,error,exception
+"When above kind of exception occurs, an object of type ???? is created and is thrown. ",ArrayIndexOutOfBoundsException,ArithmeticException,ArithmeticException,Both A nd B,ArrayIndexOutOfBoundsException
+" A corresponding ???? handles the above exception and does not allow 
+the program to terminate unexpectedly.",catch block,catch block,try block,finally,none of the above
+The catch block contains a????to object ?eobj?which is created and thrown by the try block.,reference,memory,space,cell,referance
+In a single program???exceptions can occur.,multiple,single,multiple,once,twice
+"if a particular file has to be uploaded to a remote computer, it may lead to????distinct exceptions.",two,one,two,three,four
+" If a particular file has to be uploaded to a remote computer, 
+and exception may occur if the file is not present in the?????.", computer,network,internet,computer,System
+"if a particular file has to be uploaded to a remote computer, another 
+exception mayo occur if the computer is not connected to the??????",network,computer,system,internet,network
+There is a provision in java to support????? exceptions,multiple,single,multiple,various ,some
+The code that generates exception should be written within the??????,Try block,try,catch,finally,try block
+ There can be multiple????? to handle each type of exception separately,catch blocks,try blocks,catch blocks,finally block,none of the above
+The last???? can handle any type of exception.,catch block,try block,finally block,catch block,All of the Above
+"The?????? catch block, must be the last block when there are multiple catch blocks.",Default,first,second,default,multiple
+" While writing the program, the order of the specific catch blocks does not matter but the??
+???? block has to be placed at the end of all catch blocks.
+",Default,first,second,default,multiple
+"???? try blocks can be nested together, but care must be taken to write a
+ corresponding catch block for each try block.",multiple,single,various,multiple,some
+The ????? is generally used to clean up to end of executing a try block.,finally block,try block,catch block,try catch block,none of the above
+" A????? is used when the programmer wants to be sure that some particular code
+ is to be run, no matter what exceptions are thrown within the associated try block.",finally block,try block,catch block,try catch block,finally block
+" A???? is always executed, regardless of whether or not exceptions are thrown during the 
+execution of the associated try block.",finally block,try block ,catch block,try catch block,finally block
+" A??? is widely used if a file needs to be closed or a critical resource is to be released
+ at the completion of the program.",finally block,try block,catch block,try catch block,finally block
+ Each of block must always be followed by at least????? that is either a catch block or a finally block.,one block,one block,two block,three block,none of the above
+" However, in the presence of???? the program executes the statements
+ within the finally block before it gets terminated.",finally block,try catch block,catch block,try block,finally block
+" A???? is associated with a particular try block and it must be located immediately following
+ any catch blocks for the corresponding try block.",finally  block,finally block,try block,catch block,try catch block
+" If these are no ???????, then the finally block can be positioned immediately after the try block.",catch block,try block,catch block,try catch block,finally block
+" If the finally block or catch blocks are not positioned correctly, then the program willnot ??
+?????
+",(a) compile,compile,interpret,translate,decode
+ The??????? keyword is used to explicitly throw an Exception object.,throw,throws,throwable,throw,try
+" For example, an object of???????? was created when one tries to perform a divide by zero operation.",ArithmeticException,(a) ArrayIndexOutOfBoundException ,ArithmeticException,FileNotFoundException,none of the above
+ Java does provide mechanism to create an ?????? object and throw it explicitly.,Exception,error,throws,Exception,illusion
+" The object that one throws, must be of type java.lang. ???????? otherwise a compile error occurs.",(a) Throwable,Throw,Throws,Throwables,Throwable
+The syntax to throw an  exception  object is ???????,throw exception_object;,throws exception_object;,throw exception_object;,throws exception_object,throws exception_object
+"when a ???????? statement is encountered, a search for matching catch block begins.",Throw,Throws,Throwable,Thrown,Throw
+ Any subsequent statements in the????????? are not executed.,try or catch block,try block,catch block,finally block,try or catch block
+"There are????????? alternative approaches to handle, when an exception occurs in method
+ or a constructor.",two,one,two,three,none of the above
+"A?..clause can be used in a method declaration or constructor declaration to inform that the code
+ within the constructor or method may throw an Exception.",throws,throw,throws,thrown,all of the above
+"When a????? or a method that can throw exceptions is written to its caller, it is useful
+ to document that fact.",constructor,variable,Objects,Operator,Constructor
+The???????? keyword is used with the declaration of method.,throws,throw,thrown,throws,Throwed
+ A???????? can throw multiple exceptions.,method,variable,operator,method,operator
+Each type of??????? that a method can throw must be start in the method header.,Exception,Defination,variable,member,Exception
+??????allows creating own exception classes according to application-specific exceptions,Java,PHP,JAVA,C++,C
+??..does not provide built-in exception classes for application specific exceptions.,java,PHP,Java,C++,C
+ User-defined exceptions can be created by creating a subclass of???????????. Class.,Exception,Decleration,Method,Input,Exception
+" If the ????????? accepts data from the keyboard, it is advisable to execute the program 
+at command prompt.",program,Application,Method,Program,Compiler
+A  good program must always handle??????? rather than the program being terminated abruptly.,Exceptions,Decleration,Inputs,execute,Execptions
+Advantage of using exception-handling in java programs is???..,All of These,"(a) it allows maintaining normal flow of program. In the absence of exception handling, the flow of program is disturbed.",(b) it allows writing separate error handling code from the normal code.,(c) error types can be grouped an differentiated within the program,All of these
+Advantage of using exception-handling in java programs is???????,both (a) and (b),(a) assertion can be used to debug the program before deploying it to the clients.,(b) it provides an easy mechanism to log various run-time error while executing the program. ,both (a) and (b),none of these
+Which  of  the  following  is  the  correct  syntax  in  a  user  defined  exception  ?  ,catch(InvalidMarksException eobj),catch(InvalidMarksException eobj),catch(ArithmeticException eobj),catch (ArrayIndexOutOfBounds e),all of these
+A throws clause can be used in the following manner:,(d) none of these,(a) Method_Modifiers method_Name ([arameters) throws Exception list. . .{???? // body of the method?????},"(b) Method_Modifiers return_type method_Name(parameters) throws Exception list . . .{??
+??//body of the method???}
+",(c) return_type method_Name (parameters) throws Exception list. . .{???// body of the method??},(d) none of these
+ A method header can be like ??????,"performDivison() throws Arithmetic Exception, ArrayIndexOutOfBoundsException { . . . .
+.//body of the method ??} 
+","(a) performDivision throws Arithmetic Exception. ArrayIndexOutOfBoundsException { . . . .
+.//body of the method ??}
+","(b) performDivision() throws Arithmetic Exception, ArrayIndex ArrayIndexOutOfBoundsException","(c) performDivison() throws  Arithmetic  Exception,  {  .  .  .  .  .//body  of  the  method  ??} ","performDivison() throws Arithmetic Exception, ArrayIndexOutOfBoundsException { . . . .
+.//body of the method ??} 
+"
+ The statement ?throw myobject;??????????,Throws the exception object explicitly,(a) Throws the exception object implicitly,Throws The object implicitly,Throws The object implicitly and explicitely,Throws the exception object explicitly
+Which of these keywords  must  be used to monitor for exceptions ?  ,try,try,catch,try-catch,finally
+"The finally block is executed when an exception is thrown, even if no catch
+matches it. Choose the correct option.",TRUE,FALSE,TRUE,,
+ Exceptions can be caught or re-thrown to a calling method. Choose the correct option. ,TRUE,TRUE,FALSE,,
+Choose the correct option.,TRUE,FALSE,TRUE,,
+ Which of these keywords is not a part of exception handling ?,Thrown,Try,catch,Thrown,Throws
+" Which of the following is true about try/catch blocks in java ?
+
+I. All try/catch blocks must have a finally block.
+II. A try/catch block is limited to two or less catch blocks.
+III. Barring the java virtual machine from exiting, the finally block will always be executed.", (I) and (III), (I) and (III),(I) only,(I|) only,(I) and (II)
+"What will be the output of the program ? public class Test
+{
+public static void main(String [ ] args)
+{
+ 
+try
+{
+
+}
+Finally
+{
+
+}
+}
+}
+
+",finally,compilation fails,error,The code runs with no output,finally
+The key words used with exception handling are,"try, catch, finally","(a) generate, handled, conclude","generate, catch, finally","throw, catch, conclude","try, catch, finally"
+"What  happen  behind  the  code  
+ int   a=50/0   ? ",Object of exception class thrown ,Object of exception class thrown ,Error in Code,Error message,None of these
+"When an array is accessed beyond the array size , ?? exception in thrown.",(b) Array Index Out Of Bounds Exception,(a) Array ElementOut Of Limit,(b) Array Index Out Of Bounds Exception,Array Index Out Of Bounds,Array ElementOut Of Bounds
+" What is the output of this program ? class exception_handling{
+Public static void main(String args [ ]) 
+Try {
+int a, b; 
+b = 0;
+a = 5 / b;
+ System.out.print(?A?);
+ } Catch(ArithmeticException e) {
+System.out.print(?B?);
+}
+",B,A,B,Compilation Error,RunTimeerror
+"Which of the following is the most important to know if you want to be able
+ to use a method to its full potential?",The type of Exceptions the method throws,(a) The method?s return type ,(b) The type of arguments the method requires,The number of statements within the method,The type of Exceptions the method throws

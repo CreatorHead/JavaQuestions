@@ -1,0 +1,1492 @@
+question,correct answer,wrong answer 1,wrong answer 2,wrong answer 3,wrong answer 4,Difficulty level,Section,Important
+1. Which of these keyword must be used to inherit a class?,extends,super, this,extent,extends,,,
+"Which of these keywords is used to refer to member of 
+base class from a sub class?",super,upper, super,this,"none of the
+ mentioned",,,
+" A class member declared protected becomes member 
+of subclass of which type?",private member,public member,private member,protected member,static member,,,
+Which of these is correct way of inheriting class A by class B?,class B extends A {},class B + class A {},class B inherits class A {},class B extends A {},class B extends class A {},,,
+5. Which two classes use the Shape class correctly?,"public abstract class Circle extends Shape 
+11.    {
+12.     private int radius;
+13.    }
+………………………………………………………………………………..
+public class Circle extends Shape 
+25.    {
+26.     private int radius;
+27.     public void draw()
+28.     {
+29.      /* code here */
+30.     }
+31.    }
+","public class Circle implements Shape 
+7.    {
+8.     private int radius;
+9.    }
+","public abstract class Circle extends Shape 
+11.    {
+12.     private int radius;
+13.    }
+","public class Circle extends Shape 
+15.    {
+16.    private int radius;
+17.    public void draw();
+18.    }
+","public class Circle extends Shape 
+25.    {
+26.     private int radius;
+27.     public void draw()
+28.     {
+29.      /* code here */
+30.     }
+31.    }
+
+",,,
+"What is the output of this program?
+1.     class A 
+2.     {
+3.         int i;
+4.         void display() 
+5.         {
+6.             System.out.println(i);
+7.         }
+8.     }    
+9.     class B extends A 
+10.     {
+11.         int j;
+12.         void display() 
+13.         {
+14.             System.out.println(j);
+15.         }
+16.     }    
+17.     class inheritance_demo 
+18.     {
+19.         public static void main(String args[])
+20.         {
+21.             B obj = new B();
+22.             obj.i=1;
+23.             obj.j=2;   
+24.             obj.display();     
+25.         }
+26.    }
+",2,0,1,2,4,,,
+"1. class A 
+2.     {
+3.         int i;
+4.     }    
+5.     class B extends A 
+6.     {
+7.         int j;
+8.         void display() 
+9.         {
+10.             super.i = j + 1;
+11.             System.out.println(j + "" "" + i);
+12.         }
+13.     }    
+14.     class inheritance 
+15.     {
+16.         public static void main(String args[])
+17.         {
+18.             B obj = new B();
+19.             obj.i=1;
+20.             obj.j=2;   
+21.             obj.display();     
+22.         }
+23.    }
+","2,3","2,2","3,2","2,3","3,3",,,
+"1. class A 
+2.     {
+3.         public int i;
+4.         private int j;
+5.     }    
+6.     class B extends A 
+7.     {
+8.         void display() 
+9.         {
+10.             super.j = super.i + 1;
+11.             System.out.println(super.i + "" "" + super.j);
+12.         }
+13.     }    
+14.     class inheritance 
+15.     {
+16.         public static void main(String args[])
+17.         {
+18.             B obj = new B();
+19.             obj.i=1;
+20.             obj.j=2;   
+21.             obj.display();     
+22.         }
+23.    }
+",Compilation Error,"1,2","
+2,3
+","0,0","1,3",,,
+"class A 
+2.     {
+3.         public int i;
+4.         public int j;
+5.         A() 
+6.         {
+7.             i = 1;
+8.             j = 2;
+9.  }
+10.     }    
+11.     class B extends A 
+12.     {
+13.         int a;
+14.         B() 
+15.         {
+16.             super();
+17.         } 
+18.     }    
+19.     class super_use 
+20.     {
+21.         public static void main(String args[])
+22.         {
+23.             B obj = new B();
+24.             System.out.println(obj.i + "" "" + obj.j)     
+25.         }
+26.    }
+","1,2","0,0","Compilation Error
+
+","1,2","2,1",,,
+"1. class A 
+2.     {
+3.         public int i;
+4.         protected int j;
+5.     }    
+6.     class B extends A 
+7.     {
+8.         int j;
+9.         void display() 
+10.         {
+11.             super.j = 3;
+12.             System.out.println(i + "" "" + j);
+13.         }
+14.     }    
+15.     class Output 
+16.     {
+17.         public static void main(String args[])
+18.         {
+19.             B obj = new B();
+20.             obj.i=1;
+21.             obj.j=2;   
+22.             obj.display();     
+23.         }
+24.    }
+","1,2","1,3","0,0","1,2","1,0",,,
+What is not type of inheritance,Double inheritance,Single inheritance,Hierarchical inheritance,Double inheritance,Multiple inheritance,,,
+All classes in Java are inherited from which class?,java.lang.Object,java.lang.class,java.class.inherited,java.class.object,java.lang.Object,,,
+"Using which of the following, multiple inheritance in Java can 
+be implemented?",Multithreading,Interfaces,Multithreading,Protected methods,Private methods,,,
+"In order to restrict a variable of a class from inheriting to sub 
+class, how variable should be declared",Private,Protected,Private,Public,Static,,,
+"If super class and sub class have same variable name
+ which keyword should be used to use super class?",super,super, this,upper,classname,,,
+Static members are not inherited to sub class.,FALSE,FALSE,TRUE,,,,,
+"Which of the following is used for implementing
+ inheritance through interface?",implements,inherited,using,extends,implements,,,
+. Which of the following is used for implementing inheritance through class?,extends,inherited,extends,using,implements,,,
+What would be the result if class extends two interfaces and both have method with same name and signature?,Compile time error,Runtime error,Compile time error,Code runs successfully,First called method is executed successfully,,,
+Does Java support multiple level inheritance?,TRUE,TRUE,FALSE,,,,,
+"class Base {
+    public void show() {
+       System.out.println(""Base::show() called"");
+    }
+}
+  
+class Derived extends Base {
+    public void show() {
+       System.out.println(""Derived::show() called"");
+    }
+}
+  
+public class Main {
+    public static void main(String[] args) {
+        Base b = new Derived();;
+        b.show();
+    }
+}
+",Derived::show() called,Base::show() called,Derived::show() called,Compile Time Error,Non of these,,,
+"class Base {
+    final public void show() {
+       System.out.println(""Base::show() called"");
+    }
+}
+  
+class Derived extends Base {
+    public void show() {
+       System.out.println(""Derived::show() called"");
+    }
+}
+  
+class Main {
+    public static void main(String[] args) {
+        Base b = new Derived();;
+        b.show();
+    }
+}
+",Compiler Error,Base::show() called,Compiler Error,Derived::show() called,Runtimr error,,,
+"class Base {
+    public static void show() {
+       System.out.println(""Base::show() called"");
+    }
+}
+  
+class Derived extends Base {
+    public static void show() {
+       System.out.println(""Derived::show() called"");
+    }
+}
+  
+class Main {
+    public static void main(String[] args) {
+        Base b = new Derived();;
+        b.show();
+    }
+}
+",Base::show() called,Base::show() called,Compile Time Error,Derived::show() called,Runtime error,,,
+Which of the following is true about inheritance in Java?,"1,2 and 4",Private methods are final.,"Protected members are accessible within a package and  inherited classes outside the package.
+","Protected methods
+ are final.","We cannot override private
+ methods. ",,,
+"Output of following Java program?
+class Base {
+    public void Print() {
+        System.out.println(""Base"");
+    }         
+}
+ 
+class Derived extends Base {    
+    public void Print() {
+        System.out.println(""Derived"");
+    }
+}
+ 
+class Main{
+    public static void DoPrint( Base o ) {
+        o.Print();   
+    }
+    public static void main(String[] args) {
+        Base x = new Base();
+        Base y = new Derived();
+        Derived z = new Derived();
+        DoPrint(x);
+        DoPrint(y);
+        DoPrint(z);
+    }
+}
+class Base {
+    public void Print() {
+        System.out.println(""Base"");
+    }         
+}
+ 
+class Derived extends Base {    
+    public void Print() {
+        System.out.println(""Derived"");
+    }
+}
+ 
+class Main{
+    public static void DoPrint( Base o ) {
+        o.Print();   
+    }
+    public static void main(String[] args) {
+        Base x = new Base();
+        Base y = new Derived();
+        Derived z = new Derived();
+        DoPrint(x);
+        DoPrint(y);
+        DoPrint(z);
+    }
+}
+
+","Base
+Derived
+Derived
+","Base
+Derived
+Derived
+","
+Derived
+Base
+Derived
+","Base
+Derived
+Derived
+Base
+",Compilation error,,,
+"Predict the output of following program. Note that fun()
+ is public in base and private in derived.
+class Base {
+    public void foo() { System.out.println(""Base""); }
+}
+  
+class Derived extends Base {
+    private void foo() { System.out.println(""Derived""); } 
+}
+  
+public class Main {
+    public static void main(String args[]) {
+        Base b = new Derived();
+b.foo();
+    }
+} 
+",Compiler Error,Compiler Error,Derived,"
+
+Base",Non of these,,,
+Which of the following is true about inheritance in Java,"1,2 and 3","In Java all classes inherit 
+from the Object class
+ directly or indirectly","Multiple inheritance is
+ not allowed in Java","Unlike C++, there is 
+nothing like type of 
+inheritance in Java
+ where we can specify
+ whether the 
+inheritance is protected, 
+public or private..",Non of these,,,
+"Predict the output of following Java Program
+// filename Main.java
+class Grandparent {
+    public void Print() {
+        System.out.println(""Grandparent's Print()"");
+    }
+}
+  
+class Parent extends Grandparent {
+    public void Print() {
+        System.out.println(""Parent's Print()"");
+    }
+}
+  
+class Child extends Parent {
+    public void Print() {
+        super.super.Print(); 
+        System.out.println(""Child's Print()"");
+    }
+}
+  
+public class Main {
+    public static void main(String[] args) {
+        Child c = new Child();
+        c.Print();
+    }
+}
+
+","Compiler Error in 
+super.super.Print()",Runs succesfully,Exception,"Compiler Error in 
+super.super.Print()",Non of these,,,
+"final class Complex {
+ 
+    private final double re;
+    private final double im;
+ 
+    public Complex(double re, double im) {
+        this.re = re;
+        this.im = im;
+    }
+ 
+    public String toString() {
+        return ""("" + re + "" + "" + im + ""i)"";
+    }
+}
+ 
+class Main {
+  public static void main(String args[])
+  {
+       Complex c = new Complex(10, 15);
+       System.out.println(""Complex number is "" + c);
+  }         
+}","Complex number 
+is (10.0 + 15.0i)",Exception,"Complex number 
+is (10.0 + 15.0i)",Compilatio error,Non of the above,,,
+ Which inheritance in java programming is not supported," Multiple inheritance 
+using classes","Multiple inheritance 
+using classes","Multiple inheritance
+ using interfaces", Multilevel inheritance,Single inheritance,,,
+What is subclass in java?," A subclass is a
+ class that extends 
+another class","Multiple inheritance
+ using interfaces",Multilevel inheritance," A subclass is a
+ class that extends 
+another class",  Single inheritance,,,
+"If class B is subclassed from class A then which is
+ the correct syntax",  class B extends A{},   class B:A{}, class B extends A{},class B extends class A{},class B implements A{},,,
+Order of execution of constructors in Java Inheritance is, Base to derived class,Base to derived class, Derived to base class, Random order,none,,,
+"class X
+{
+    //Class X Members
+}
+ 
+class Y
+{
+    //Class Y Members
+}
+ 
+class Z extends X, Y
+{
+    //Class Z Members
+}
+",Copilation error,Compiler Error,Runs Succesfully,Exception,none,,,
+"class A
+{
+    int i = 10;
+}
+ 
+class B extends A
+{
+    int i = 20;
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        A a = new B();
+ 
+        System.out.println(a.i);
+    }
+}
+",20,20,10,Compilation error,none,,,
+"class A
+{
+    {
+        System.out.println(1);
+    }
+}
+ 
+class B extends A
+{
+    {
+        System.out.println(2);
+    }
+}
+ 
+class C extends B
+{
+    {
+        System.out.println(3);
+    }
+}","1
+2
+3","1
+
+","1
+2
+3",3,2,,,
+Can a class extend itself?,No,Yes,No,,,,,
+"class A
+{
+String s = ""Class A"";
+}
+ 
+class B extends A
+{
+    String s = ""Class B"";
+ 
+    {
+        System.out.println(super.s);
+    }
+}
+ 
+class C extends B
+{
+    String s = ""Class C"";
+ 
+    {
+        System.out.println(super.s);
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        C c = new C();
+ 
+        System.out.println(c.s);
+    }
+}
+","Class A
+Class B
+Class C",Class B ,Class A,"Class A
+Class B
+Class C",none,,,
+"class A
+{
+    static
+    {
+        System.out.println(""THIRD"");
+    }
+}
+ 
+class B extends A
+{
+    static
+    {
+        System.out.println(""SECOND"");
+    }
+}
+ 
+class C extends B
+{
+    static
+    {
+        System.out.println(""FIRST"");
+    }
+}
+","THIRD
+SECOND
+FIRST","THIRD
+SECOND
+FIRST",THIRD,SECOND,FIRST,,,
+"class A
+{
+    public A()
+    {
+        System.out.println(""Class A Constructor"");
+    }
+}
+ 
+class B extends A
+{
+    public B()
+    {
+        System.out.println(""Class B Constructor"");
+    }
+}
+ 
+class C extends B
+{
+    public C()
+    {
+        System.out.println(""Class C Constructor"");
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        C c = new C();
+    }
+}
+","Class A Constructor
+Class B Constructor
+Class C Constructor",Class C Constructor,"Compilation Error
+
+",Exception,"Class A Constructor
+Class B Constructor
+Class C Constructor",,,
+"class X
+{
+    static void staticMethod()
+    {
+        System.out.println(""Class X"");
+    }
+}
+ 
+class Y extends X
+{
+    static void staticMethod()
+    {
+        System.out.println(""Class Y"");
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        Y.staticMethod();
+    }
+}
+",Class Y,Class Y,"Class X
+Class Y",Class X,none,,,
+"class X
+{
+    public X(int i)
+    {
+        System.out.println(1);
+    }
+}
+ 
+class Y extends X
+{
+    public Y()
+    {
+        System.out.println(2);
+    }
+}
+",Compilation Error,Compiler Error,Exception,Runs succesfully,none,,,
+"public class A
+{
+    public A()
+    {
+        System.out.println(1);
+ 
+        super();
+         System.out.println(2);
+    }
+}
+
+",Compilation Error,Compiler Error,Exception,Runs succesfully,none,,,
+"public class A
+{
+    public A(int i)
+    {
+ 
+    }
+}
+ 
+class B extends A
+{
+ 
+}
+",Compilation Error,Exception,Runs succesfully,Compiler Error,none,,,
+"Can you find out the error in the below code?
+public class A
+{
+    public A()
+    {
+        super();
+ 
+        this(10);
+    }
+ 
+    public A(int i)
+    {
+        System.out.println(i);
+    }
+}
+",Compilation Error,Exception,Runs succesfully,Compilation Error,none,,,
+"What will be the output of this program?
+class M
+{
+    static
+    {
+        System.out.println('A');
+    }
+ 
+    {
+        System.out.println('B');
+    }
+ 
+    public M()
+    {
+        System.out.println('C');
+    }
+}
+ 
+class N extends M
+{
+    static
+    {
+        System.out.println('D');
+    }
+ 
+    {
+        System.out.println('E');
+    }
+ 
+    public N()
+    {
+        System.out.println('F');
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        N n = new N();
+    }
+}
+","A
+D
+B
+C
+E
+F
+","A
+B
+C
+D
+E
+F","A
+D
+B
+C
+E
+F
+","A
+B
+D
+C
+E
+F
+",none,,,
+"class M
+{
+    int i;
+ 
+    public M(int i)
+    {
+        this.i = i--;
+    }
+}
+ 
+class N extends M
+{
+    public N(int i)
+    {
+        super(++i);
+ 
+        System.out.println(i);
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        N n = new N(26);
+    }
+}
+",27,26,25,27,none,,,
+"class M
+{
+    int i = 51;
+ 
+    public M(int j)
+    {
+        System.out.println(i);
+ 
+        this.i = j * 10;
+    }
+}
+ 
+class N extends M
+{
+    public N(int j)
+    {
+        super(j);
+ 
+        System.out.println(i);
+ 
+        this.i = j * 20;
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        N n = new N(26);
+ 
+        System.out.println(n.i);
+    }
+}
+
+","51
+240
+480","51
+240
+480",480,"51
+480
+480",none,,,
+"class X
+{
+    private int m = 48;
+}
+ 
+class Y extends X
+{
+    void methodOfY()
+    {
+        System.out.println(m);
+    }
+}
+",Compilation error,Exception,Runs Succesfully,48,Compilation error,,,
+"class X
+{
+    int m = 1111;
+ 
+    {
+m = m++;
+ 
+        System.out.println(m);
+    }
+}
+ 
+class Y extends X
+{
+    {
+        System.out.println(methodOfY());
+    }
+ 
+    int methodOfY()
+    {
+        return m-- + --m;
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        Y y = new Y();
+    }
+}
+","1111
+2220
+","1112
+2222","1111
+2220
+","1111
+2221",none,,,
+"class A
+{
+static String s = ""AAA"";
+ 
+    static
+    {
+        s = s + ""BBB"";
+    }
+ 
+    {
+        s = ""AAABBB"";
+    }
+}
+ 
+class B extends A
+{
+    static
+    {
+        s = s + ""BBBAAA"";
+    }
+ 
+    {
+        System.out.println(s);
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        B b = new B();
+    }
+}
+",AAABBB,AAABBB,AAABBBBBBAAA,AAABBBAAA,NONE,,,
+"class X
+{
+    int i = 101010;
+ 
+    public X()
+    {
+        i = i++ + i-- - i;
+    }
+ 
+    static int staticMethod(int i)
+    {
+        return --i;
+    }
+}
+ 
+class Y extends X
+{
+    public Y()
+    {
+        System.out.println(staticMethod(i));
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        Y y = new Y();
+    }
+}
+
+",101009,101009,101010,101011,none,,,
+"What happens if both super class and sub class have a field with 
+same name?","Runs Succesfully
+(Priority given based 
+on object we create)",Compiler Error,Exception,Runs Succesfully,none,,,
+"class A
+{
+    void A()
+    {
+        System.out.println(1);
+    }
+}
+ 
+class B extends A
+{
+    void B()
+    {
+        A();
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        new B().B();
+    }
+}
+",1,1,"Compilation Error
+
+",Exception,none,,,
+"How do you prevent a field or a method of any class
+ from inheriting to sub classes?",Using AccessSpecifiers,Using AccessSpecifiers,Through Interface,Through inheritence,Using abstract class,,,
+"class A
+{
+    int i = 1212;
+}
+ 
+class B extends A
+{
+    A a;
+ 
+    public B(A a)
+    {
+        this.a = a;
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        A a = new A();
+ 
+        B b = new B(a);
+ 
+        System.out.println(a.i);
+ 
+        System.out.println(b.i);
+ 
+        System.out.println(b.a.i);
+ 
+        b.a.i = 2121;
+ 
+        System.out.println(""--------"");
+ 
+        System.out.println(a.i);
+ 
+        System.out.println(b.i);
+    }
+}
+
+","1212
+1212
+1212
+--------
+2121
+1212","1212
+1212
+1212
+--------
+2121
+1212","1212
+1212
+1212
+--------
+2121
+2121","1212
+1212
+1212
+--------
+1212
+1212",Error,,,
+Does java supports multiple inheritance,Doesnot Supports,Doesnot Supports,Supports,,,,,
+"class ClassOne
+{
+     static int i, j = 191919;
+     {
+         --i;
+     }
+ 
+     {
+         j++;
+     }
+}
+ 
+public class ClassTwo extends ClassOne
+{
+    static
+    {
+        i++;
+    }
+ 
+    static
+    {
+        --j;
+    }
+ 
+    public static void main(String[] args)
+    {
+        System.out.println(i);
+ 
+        System.out.println(j);
+    }
+}
+","1
+191918
+","1
+191918
+","0
+191919","0
+0",none,,,
+"Does the fields with default visibility inherited to sub
+ classes outside the package?",No,No,yes,,,,,
+Constructors are also inherited to sub classes. True or false?,FALSE,TRUE,FALSE,,,,,
+"class A
+{
+    int[] a = new int[5];
+ 
+    {
+        a[0] = 10;
+    }
+}
+ 
+public class MainClass extends A
+{
+    {
+        a = new int[5];
+    }
+ 
+    {
+        System.out.println(a[0]);
+    }
+ 
+    public static void main(String[] args)
+    {
+        MainClass main = new MainClass();
+    }
+}
+",0,0,10,Compiler error,none,,,
+"class A
+{
+    int methodOfA(int i)
+    {
+        i /= 10;
+ 
+        return i;
+    }
+}
+
+","200
+","200
+",Error,Exception,none,,,
+"class A
+{
+    static int i;
+ 
+    static
+    {
+        i++;
+    }
+
+    {
+        ++i;
+    }
+}
+ 
+class B extends A
+{
+    static
+    {
+        --i;
+    }
+ 
+    {
+        i--;
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        System.out.println(new B().i);
+    }
+}
+
+",0,1,2,3,0,,,
+"Can a class be extended by 
+more than one classes?",Yes,No,Yes,,,,,
+"public class MainClass
+{
+    public MainClass(int i, int j)
+    {
+        System.out.println(method(i, j));
+    }
+     
+    int method(int i, int j)
+    {
+        return i++ + ++j;
+    }
+     
+    public static void main(String[] args) 
+    {
+        MainClass main = new MainClass(10, 20);
+    }
+}
+",31,32,30,31,none,,,
+"class X
+{
+    static
+    {
+        Y.methodOfY();
+    }
+}
+ 
+class Y extends X
+{
+static void methodOfY()
+    {
+        System.out.println(""Hi...."");
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        Y.methodOfY();
+    }
+}
+","Hi....
+Hi....","Hi....
+Hi....",Hi….,"hi....
+Hi....","hi....
+hi....",,,
+"class ClassOne
+{
+    static int i = 111;
+     
+    int j = 222;
+     
+    {
+        i = i++ - ++j;
+    }
+}
+ 
+class ClassTwo extends ClassOne
+{
+    {
+        j = i-- + --j;
+    }
+public static void main(String[] args)
+    {
+  ClassTwo c=new ClassTwo();
+  System.out.println(c.i);
+    }
+}
+",-133,-133,111,110,133,,,
+"When you instantiate a sub
+ class, super class constructor
+ will be also executed.
+ True or False?",TRUE,TRUE,FALSE,,,,,
+"class One
+{
+    int x = 2121;
+}
+ 
+class Two
+{
+    int x = 1212;
+     
+    {
+        System.out.println(x);
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        Two two = new Two();
+    }
+}
+",1212,1212,2121,both A and B,none,,,
+"class ClassOne
+{
+     static int i, j = 191919;
+ 
+     {
+         --i;
+     }
+ 
+     {
+         j++;
+     }
+}
+ 
+public class ClassTwo extends ClassOne
+{
+    static
+    {
+        i++;
+    }
+ 
+    static
+    {
+        --j;
+    }
+ 
+    public static void main(String[] args)
+    {
+        System.out.println(i);
+ 
+        System.out.println(j);
+    }
+}
+",1 and 191918,1 and 191918,0 and 0,1 and -1,0 and 191919,,,
+"Does the fields with default
+ visibility inherited to sub
+ classes outside the package?",No,Yes,No,,,,,
+"Constructors cannot be 
+inherited to sub classes. 
+True or false?",TRUE,TRUE,FALSE,,,,,
+"class A
+{
+    int[] a = new int[5];
+ 
+    {
+        a[0] = 10;
+    }
+}
+ 
+public class MainClass extends A
+{
+    {
+        a = new int[5];
+        a[0] = 10;
+
+    }
+ 
+    {
+        System.out.println(a[0]);
+    }
+ 
+    public static void main(String[] args)
+    {
+        MainClass main = new MainClass();
+    }
+}
+
+",10,0,1,10,none,,,
+"Can a class extend more than
+ one class?",No,Yes,No,,,,,
+"public class MainClass
+{
+    public MainClass(int i, int j)
+    {
+        System.out.println(method(i, j));
+    }
+     
+    int method(int i, int j)
+    {
+        return i++ + ++i;
+    }
+     
+    public static void main(String[] args) 
+    {
+        MainClass main = new MainClass(10, 20);
+    }
+}
+","class is written correctly.
+ Output will be 22","class is written correctly.
+ Output will be 31.",none,Compilation error,"class is written correctly.
+ Output will be 22",,,
+"In Java, a class can extend
+ multiple other classes.",FALSE,FALSE,TRUE,Sometimes ,None of the above ,,,
+"A sub class can inherit private
+ members of the parent class.
+",False ,TRUE,False ,Sometimes ,None of the above ,,,
+"In Java, A subclass can,
+ however, inherit the
+members of its superclass 
+that are not private.",TRUE,TRUE,False ,both A and B,None of the above ,,,
+"A superclass method can
+ be overridden in a subclass 
+to declare an appropriate
+ implementation for the subclass",TRUE,TRUE,False ,"Depends on the 
+implementation",None of the above ,,,
+What is a superclass?,parent class ,child class ,derived class ,declared class ,parent class ,,,
+What is a subclass in java?,both B and C,parent class ,child class,derived class ,both B and C,,,
+"The first task of any subclass 
+constructor is to call
+ its_________________________ 
+either explic- itly or implicitly,
+ to ensure that the instance
+ variables inherited from the
+ superclass are initialized properly",direct superclass’s constructor ,Init() method,Start() method,Garbage Collector,direct superclass’s constructor ,,,
+Usage of java super Keyword,all of the above ,"super is used to refer
+ immediate parent class
+ instance variable","super() is used to invoke
+ immediate parent class
+ constructor. ","super is used to invoke
+ immediate parent 
+class method.",all of the above ,None of the above ,,
+A subclass can explicitly invoke a constructor of its superclass by using the superclass constructor call syntax __________________________,super(),super ,super(),superlative(),parent(),,,
+_____________ is a form of software reusability in which new classes acquire the members of existing classes and embellish those classes with new capabilities., both a and b above, creating a subclass,inheritance ,both a and b above,None of the above ,,,
+A superclass’s ___________________ members can be accessed in the superclass declaration and in subclass declarations., a and c above,public ,private ,protected ,a and c above,,,
+"Can a subclass' member be 
+overridden?",No ,Yes ,No ,"Only with a caveate 
+in the superclass",None of the above ,,,
+"What restriction is there on 
+using the super reference in
+ a constructor?",It must be used in the first statement of the subclass' constructor,"It can only be used 
+in the parent's constructor. ",Only one child class can use it. ,It must be used in the last statement of the subclass' constructor,It must be used in the first statement of the subclass' constructor,,,
+Does a subclass inherit both member variables and methods?,Yes—both are inherited - but not those identified as private,No—only member variables are inherited.,No—only methods are inherited. ,Yes—both are inherited - but not those identified as private,Yes—but only one or the other are inherited. ,,,
+"A class Car and its subclass Yugo both have a method run() as part of their class definition. What will the following code do? 
+Yugo junker = new Yugo() ;
+junker.show();
+",The show() method defined in Yugo will be called. ,The show() method defined in Yugo will be called. ,The show() method defined in Car will be called,The compiler will complain that run() has been defined twice,Overloading will be used to pick which run() is called. ,,,
+"To inherit a class, which of these keyword must be used ?",extends ,extends ,expands ,extent ,super ,,,
+Which of these keywords is used to refer to member of base class from a sub class?,super ,this ,super ,upper ,None of the above ,,,
+A declared protected class member becomes member of which type in the subclass?,protected member ,static member ,public member ,protected member ,private member ,,,
+Which of these is correct way of inheriting class A by class B?,class B extends A {} ,class B extends A {} ,class B extends class A {} ,class A extends B {} ,class B + class A {} ,,,
+Which of the following statements are false?,both C and D,private members of class can only be accessed by other members of the class,protected members of a class can be inherited by a sub class,"protected members of a class can be inherited by a sub class, and become private members of the sub class. ","private members of class can be inherited by a sub class, and become protected members in sub class. 
+
+",,,
+Can a constructor be inherited?,constructor cannot be inherited ,A constructor can be inherited ,A public constructor can be inherited ,A protected constructor can be inherited ,constructor cannot be inherited ,,,
+What is Inheritance?,When one object acquires all the properties and behaviour of another object of another class. ,one object acquires all the behaviours of another object of another class. ,"one object acquires all the methods of another object of another class. 
+
+",When one object acquires all the properties and behaviour of another object of another class. ,none,,,
+"Which class can not be subclassed in java
+ a) end class 
+",final class ,final class ,end class ,Object class ,parent class ,,,
+Which class is the class every other class is derived from?,Object class ,derivation class ,Object class ,parent class,Beginningclass ,,,
+"Can a subclass ""hide"" the superclass version of a method with the same name?",Yes if it is overriden ,No ,Yes if it is overloaded,Yes if it is overriden ,none of the above ,,,
+Class B extends A. Both have a method with the same name but with different calling signatures The method is,overloaded ,overridden ,overloaded ,both of the above ,none of the above ,,,
+"Given a parent class and a subclass, which of the following is true?"," Because of single inheritance, the subclass can have no subclasses","Because of single inheritance, the subclass can have no subclasses","Because of single inheritance, the subclass can have only one parent. ","Because of single inheritance, the subclass can have only one child classes. ","Because of single inheritance, the subclass can have no siblings",,,
+"
+What type of inheritance does Java have? ",single inheritance,double inheritance,single inheritance,multiple inheritance,class inheritance,,,
+"Say that there are three classes: Computer, AppleComputer, and IBMComputer. What are the likely relationships between these classes? ","Computer is the superclass, AppleComputer and IBMComputer are subclasses of Computer.","Computer is the superclass, AppleComputer and IBMComputer are subclasses of Computer.",". IBMComputer is the superclass, AppleComputer and Computer are subclasses of IBMComputer","Computer, AppleComputer and IBMComputer are sibling classes.","Computer is a superclass, AppleComputer is a subclasses of Computer, and IBMComputer is a sublclas of AppleComputer",,,
+How many objects of a given class can there be in a program? ,As many as the program needs.,One per defined class.,One per constructor definition,As many as the program needs.,"One per main() method.
+
+",,,
+Which of the following is correct syntax for defining a new class Jolt based on the superclass SoftDrink?,class Jolt extends SoftDrink { //additional definitions go here },class Jolt extends SoftDrink { //additional definitions go here },class Jolt isa SoftDrink { //additional definitions go here },class Jolt implements SoftDrink { //additional definitions go here }," c. class Jolt defines SoftDrink { //additional definitions go here }
+
+",,,
+Which of the following is NOT an advantage to using inheritance?,Enhancements to a base class will automatically be applied to derived classes.,Enhancements to a base class will automatically be applied to derived classes.,Code that is shared between classes needs to be written only once.,Similar classes can be made to behave consistently,One big superclass can be used instead of many little classes,,,
+Which among the following defines single level inheritance?,One derived class inherits from one base class,One base class derives another class,One derived class inherits from one base class,One base class inherits from one derived class,One derived class derives from another derived class,,,
+"If class A and class B are derived from class C and class D, then ________________",Those are 2 pairs of single inheritance,Those are 2 pairs of single inheritance,That is multilevel inheritance,Those is enclosing class,Those are all independent classes,,,
+"If single inheritance is used, program will contain ________________",At most 2 classes,At least 2 classes,At most 2 classes,Exactly 2 classes,At most 4 classes,,,
+Single level inheritance supports _____________ inheritance,Run time,Compile time,Multiple inheritance,Language independency,Run time,,,
+"If single level inheritance is used and an abstract class is created with some undefined functions, can its derived class also skip some definitions?","No, the derived class must implement those methods","No, the derived class must implement those methods","Yes, always possible","Yes, possible if only one undefined function","No, at least 2 undefined functions must be there",,,
+Which among the following is false for single level inheritance?,There can be more than 2 independent classes involved in single inheritance,There can be more than 2 classes in program to implement single inheritance,There can be exactly 2 classes to implement single inheritance in a program,There can be more than 2 independent classes involved in single inheritance,The derived class must implement all the abstract method if single inheritance is used,,,
+Which concept will result in derived class with more features (consider maximum 3 classes)?,Multiple inheritance,Multiple inheritance,Single inheritance,Multilevel inheritance,Hierarchical inheritance,,,
+Which language doesn’t support single level inheritance?,All languages support it,Java,C++,Kotlin,All languages support it,,,
+"class A
+{  
+ float sal=40000;  
+}  
+class B extends A
+{  
+ int salBonus=10000;  
+ public static void main(String args[])
+ {  
+  B p=new B();  
+  System.out.println(""B salary is:""+p.sal);  
+  System.out.println(""Bonus of B is:""+p.salBonus);  
+ }  
+}
+","B salary is: 4000.0
+Bonus of B is: 10000
+","B salary is: 4000.0
+Bonus of B is: 10000
+","Compilation Error
+
+",Exception,none,,,
+Single level inheritance will be best for___________,Inheriting a class which can print all the calculation results,Inheriting a class which performs all the calculations,Inheriting a class which can perform and print all calculations,Inheriting a class which can print all the calculation results,Inheriting all the classes for different calculations,,,
+Which constructor will be called first from the classes involved in single inheritance from object of derived class?,Base class constructor,Base class constructor,Derived class constructor,Both class constructors at a time,Run time error,,,
+"If base class contains 2 nested classes, will it be possible to implement single level inheritance?","Yes, always","Yes, always","Yes, only if derived class also have nested classes","No, it will use more than 2 classes which is wrong","No, never",,,
+Which among the following best defines multilevel inheritance?,Classes being derived from other derived classes,A class derived from another derived class,Classes being derived from other derived classes,Continuing single level inheritance,Class which have more than one parent,,,
+"If there are 5 classes, E is derived from D, D from C, C from B and B from A. Which class constructor will be called first if the object of E or D is created?",A,A,B,C,A and B,,,
+"If there are 3 classes. Class C is derived from class B and B is derived from A, Which class destructor will be called at last if object of C is destroyed",A,A,B,C,All together,,,
+Which Class is having highest degree of abstraction in multilevel inheritance of 5 levels?,Class at 1st level,Class at 1st level,Class 2nd last level,Class at 5th level,All with same abstraction,,,
+If all the classes use private inheritance in multilevel inheritance then ______________,Each class can access only non-private members of its parent,It will not be called multilevel inheritance,Each subsequent class can access all members of previous level parent classes,None of the members will be available to any other class,Each class can access only non-private members of its parent,,,
+Multilevel inheritance allows _________________ in the program.,As many levels of inheritance as required,Only 7 levels of inheritance,At least 7 levels of inheritance,At most 16 levels of inheritance,As many levels of inheritance as required,,,
+What is minimum number of levels for a implementing multilevel inheritance,3,1,2,3,4,,,
+In multilevel inheritance one class inherits _______________,Only one class,Only one class,More than one class,At least one class,As many classes as required,,,
+All the classes must have all the members declared private to implement multilevel inheritance,False ,TRUE,False ,,,,,
+Can abstract classes be used in multilevel inheritance?,"Yes, always","Yes, always","Yes, only one abstract class", abstract class doesn’t have constructorsNo ,"No, never",,,
+How many abstract classes can be used in multilevel inheritance?,At least one less than number of levels,At least one less than number of levels,1,2,Cannot be used,,,
+"if all the classes used parameterized constructors and no default constructor then, ___________",)Object of lower level classes must call parent class constructors explicitly,)Object of lower level classes must call parent class constructors explicitly,The object of lower level classes can’t be created,Object of lower level classes must define all the default constructors,"Only object of first class can be created, which is first parent",,,
+"multilevel inheritance, which is the most significant feature of OOP used?",Code reusability,Code reusability,Code readability,Flexibility,Code efficiency,,,
+"class A
+{
+ int a;
+};
+class B
+{
+ int b;
+};
+class C:public A, public B
+{
+ int c;
+};
+class D:public C
+{
+ int d;
+};
+
+",,"a) Yes, class C and class D","Yes, All together it’s multilevel","No, 4 classes are used"," No, multiple inheritance is used with class A, B and C",,,
+Is it compulsory for all the classes in multilevel inheritance to have constructors defined explicitly if only last derived class object is created?,"No, it not necessary","No, it not necessary","Yes, always","Yes, to initialize the members","No, Constructor must not be defined",,,
+ Multiple inheritance is ____________________,When a class is derived from two or more classes,When a class is derived from another class,When a class is derived from other two derived classes,When a class is derived from two or more classes,"When a class is derived from exactly one class
+
+
+
+",,,
+"Which problem arises due to multiple inheritance, if hierarchical inheritance is used previously for its base classes?",Diamond,Diamond,Circle,Triangle,Loop,,,
+How many classes should a program contain to implement the multiple inheritance?,At least 3,At least 3,1,2,Exactly 3,,,
+Which programming language restricts the use of multiple inheritance?,Java,Java,SmallTalk,PHP,C++,,,
+Is it possible to have all the abstract classes as base classes of a derived class from those?,"Yes, only if derived class implements all the methods","Yes, always","Yes, only if derived class implements all the methods","No, because abstract classes doesn’t have constructors","No, never",,,
+"If class A inherits class B and class C as “class A: public class B, public class C {// class body ;}; ”, which class constructor will be called first?",Class C,Class A,Class B,Class C,All together,,,
+Why does diamond problem arise due to multiple inheritance?,Methods with same name creates ambiguity and conflict,Methods inherited from the super class may conflict,Derived class gets overloaded with more than two class methods,Derived class can’t distinguish the owner class of any derived method,Methods with same name creates ambiguity and conflict,,,
+How many base classes can a derived class have which is implementing multiple inheritance?,As many as required,As many as required,1,2,3,,,
+How to overcome diamond problem ?,Using virtual keyword with same name function,Using alias name,Using seperate derived class,Using virtual keyword with same name function,Can’t be done,,,
+". When multiple inheritance is used, which class object should be used in order to access all the available members of parent and derived class ?",Derived class object,Derived class object,Parent class objects,Use Abstract derived class,Derive a class from derived class,,,
+"If all the members of all the base classes are private then,",There won’t be any use of multiple inheritance,There won’t be any use of multiple inheritance,It will make those members public,Derived class can still access them in multiple inheritance,Compile time error,,,
+Is it compulsory to have constructor for all the classes involved in multiple inheritance?,")Yes, only if no abstract class is involved",") Yes, only if no abstract class is involved","Yes, always","No, only classes being used should have a constructor","No, they must not contain constructors",,,
+"If a class contains 2 nested class and is being inherited by another clsss, will there be any multiple inheritance?","No, only single level inheritance is used","No, only single level inheritance is used","No, only multilevel inheritance is used","Yes, because 3 classes are involved","Yes, because more than 1 classes are being derived",,,
+Which members can’t be accessed in derived class in multiple inheritance ?,Private members of base,Protected members of base,Private members of base,Public members of base,All the members of base,,,
+Can the derived class be made abstract if multiple inheritance is used ?,"No, since constructors won’t be there","No, because other classes must be abstract too","No, since constructors won’t be there","Yes, if all the functions are implemented","Yes, if all the methods are predefined",,,
+Which among the following is best to define hierarchical inheritance?,More than one classes being derived from one class,More than 2 classes being derived from single base class,More than one classes being derived from one class,At most 2 classes being derived from single base class, At most 1 class derived from another class,,,
+Do members of base class gets divided among all of its child classes ?,"No, it’s doesn’t get divided","Yes, equally","No, it’s doesn’t get divided","Yes, depending on type of inheritance","No, it may or may not get divided",,,
+Each class can inherit the base class ________________,Independently using any inheritance,Independently using any inheritance,Independently with private inheritance only,With same type of inheritance,With each class using different inheritance only3,,,
+How many classes must be there to implement hierarchical inheritance ?,At least 3,Exactly 3,At least 3,At most 3,At least 1,,,
+Base class _______________,Can be made abstract,Can be made abstract,Can’t be made abstract,Must be abstract,"If made abstract, complie time error",,,
+Which access specifiers should be used so that all the derived classes restrict further inheritance of base class members?,Private,Private,Public,Protected,Any inheritance type can be used,,,
+Which among the following is correct for following code ?,Compile time error,Compile time error,Runs Succesfully,Exception,none,,,
+How many classes can be derived from the base class using hierarchical inheritance?,As many as required,Only 7,Only 3,Upto 127,As many as required,,,
+If one class have derived the base class privately then another class can’t derive the base class publically.,FALSE,TRUE,FALSE,,,,,
+ Which among the following is true ?,Hierarchical inheritance allows inheritance of common features to more than one class,Hierarchical inheritance is subset of multiple inheritance,Hierarchical inheritance is strongest inheritance type,Hierarchical inheritance uses only 2 classes for implementation,Hierarchical inheritance allows inheritance of common features to more than one class,,,
+Hierarchical inheritance can be a subset of _________________,Hybrid inheritance,Multiple inheritance,Single level inheritance,Multilevel inheritance,Hybrid inheritance,,,
+Which type of inheritance is most suitable for inheriting Same syllabus into different colleges with different streams?,Hierarchical,Multiple,Single,Hierarchical,Multilevel,,,
+ Which class constructor is called first when an object of derived class is created?,Base class constructor,Base class constructor,Derived class constructor,Firstly created derived class constructor,Last created derived class constructor,,,
+"All the derived classes can access only few members of base class that other derived classes can’t access at same time, in hierarchical inheritance.",False ,TRUE,False ,,,,,
+Which among the following best defines the hybrid inheritance?,Combination of two or more inheritance types,Combination of two or more inheritance types,Combination of same type of inheritance, Inheritance of more than 7 classes,Inheritance involving all the types of inheritance,,,
+How many types of inheritance should be used for hybrid ?,Atleast 2,1,Amost 2,Atleast 2,Always more than 2,,,
+"If single inheritance is used with class A and B. A is base class. Then class C,D and E where C is base class and D is derived from C, then E is derived from D. Class C is made to inherit from class B. Which is the resultant type ?",Multilevel,Multilevel,Hybrid,Single level,Multiple,,,
+Diamond problem includes ____________________ hybrid inheritance,Hierarchical and Multiple,Hierarchical and Multiple,Hierarchical and Hierarchical,Multiple and Multilevel,none,,,
+"If __________________ inheritance is done continuously, it is similar to tree structure.",Hierarchical,Hierarchical,Multiple,Multilevel,Hierarchical and Multiple,,,
+ Which amongst the following is true for hybrid inheritance?,Constructor calls are usual,Constructor calls are in reverse,Constructor calls are priority based,Constructor of only derived class is called,Constructor calls are usual,,,
+Which type of inheritance must be used so that the resultant is hybrid?,None,Multiple,Hierarchical,Multilevel,None,,,
+The private member’s are made public to all the classes in inheritance.,FALSE,FALSE,TRUE,,,,,
+"If hierarchical inheritance requires to inherit more than one class to single class, which syntax is correct? ( A,B,C are class names )","class A: public B, public C","hierarchical class A: public B, public C","multiple class A: public B, public C","many class A: public B, public C","class A: public B, public C",,,
+What is the maximum number of classes allowed in hybrid inheritance?,As many as required,As many as required,7,127,256,,,
+ What is the minimum number of classes to be there in a program implementing hybrid inheritance?,No limit,2,3,4,No limit,,,
+" If object of lowest level class is created ( last derived class ), _________________ of its parent class constructors are called.",Only parent and parent,Few,All,Base and Derived,Only parent and parent,,,
+"If hybrid inheritance is used, it mostly shows _______________ feature of OOP.",Reusability,Flexibility,Reusability,Efficiency,Code readability,,,
+ The sequence of destructors being called while using hybrid inheritance is ____________,Reverse of constructors being called,Reverse of constructors being called,Reverse of classes being made,Reverse of objects being created,Reverse of code calling objects,,,
+Overloading operators are possible only by using hybrid inheritance,False ,TRUE,False ,,,,,

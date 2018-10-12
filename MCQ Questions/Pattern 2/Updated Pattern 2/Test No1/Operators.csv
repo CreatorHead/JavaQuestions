@@ -1,0 +1,269 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+15 & 29 =?;C. 13.;A. 44.;B. 14.;D. 12.;C. 13.
+Identify the statements that are not correct:;B. Int b = -8, b>>1 = -4.;A. Int a = 13, a>>2 = 3.;C. Int a = 13, a>>>2 = 3.;D. Int b = -8, b>>>1 = -2.;B. Int b = -8, b>>1 = -4.
+"Consider the following code:
+int x, y, z;
+Y = 1;
+Z = 5;
+x = 0 - (++y) + z++;
+After execution of this, what will be the values of x, y and z?";B. x = 3, y = 2, z = 6.;A. x = 4, y = 1, z = 5.;C. x = -7, y = 1, z = 5.;D. x = 4, y = 2, z = 6;B. x = 3, y = 2, z = 6.
+"What will be the result of the expression: 
+a % b 
+when a & b is of type int and their values are a = 10 and b = 6?";D. 4.;A. 1.66.;B. 1.;C. 2.;D. 4.
+The keywords reserved but used in the initial version of JAVA are:;A. union.;B. const.;C. inner.;D. goto.;A. union.
+27 | 8 = ?;B. 27.;A. 8.;C. 19.;D. 35.;B. 27.
+"What will be the result of the expression :
+a % b
+when a and b are of type int and their values are a = -17 and b = -6?";D. 5.;A. -5.;B. -23.;C. 0.;D. 5.
+Choose the operations that can be performed on String objects:;A. + =.;B. -.;C. %.;D. ^.;A. + =.
+(1 | 4) + (4 & 2) = ?(in base ten);B. 5.;A. 1.;C. 2.;D. 8.;B. 5.
+"Given the declarations
+boolean b;
+short x1 = 100, x2 = 200, x3 = 300; 
+Which of the following statement is evaluated to true?";"b = x1 * 2 == x2;";"B. b = x1 + x2 != 3 * x1;";"C. b = (x3 - 2*x2<0) && ((x3 = 400)<2**x2);";"D. b = (x3 - 2*x2>0) || ((x3 = 400) 2*x2);";"b = x1 * 2 == x2;"
+The modulus operator (%) in JAVA can be used only with variables of ______ type.;B. int & double.;A. double & char.;C. int.;D. double.;B. int & double.
+The new operator dynamically allocates ________ for an object and returns a reference to it.;C. memory.;A. classes.;B. variables.;D. none of the above.;C. memory.
+"What will be printed as the output of the following program?
+                                   public class testincr
+                                   {
+                                           Public static void main(String args[])
+                                           {
+                                                 int i = 0;
+                                                 i = i++ + i;
+                                                 System.out.println(""I = "" +i);
+                                           }
+                                     }";(b)   I = 1    ;(a)   I = 0  ;(c)   I = 2  ;(d)   I = 3  ;(b)   I = 1    
+"What is the type and value of the following expression? (Notice the integer division)
+ -4 + 1/2 + 2*-3 + 5.0";(d)   double -5.0;(a)   int -5;(b)   double;(c)   int -4;(d)   double -5.0
+"System.out.println( - -b * a + c *d - -);
+Where a=2, b=3, c=4, d= 5   ";(b)   24;a)   21;(b)   24;c)   28;(d)   26
+"System.out.println(a++); 
+Given a=2";(b)   2;a)   3;(b)   2;(c)   4;(d)   10
+"
+System.out.println (c=c++);
+Given c=4";(b)   4;(a)   2;(b)   4;(c)   5; (d)   8
+Identify, from among the following, the incorrect descriptions related to Java :;(b)    The arithmetic operations *, /, %, + and – have the same level of precedence;(a)     Java Virtual Machine translates byte code into its own system’s machine language and runs the resulting machine code;(b)    The arithmetic operations *, /, %, + and – have the same level of precedence;(c)     Comments do not cause any action to be performed during the program execution;(d)     All variables must be given a type when they are declared
+For what values respectively of the variables  gender  and age would the Java expression gender  == 1 && age >= 65  become true?;(c)   gender = 1, age = 65;(a)   gender = 1, age = 60;(b)   gender = 1, age = 50;(c)   gender = 1, age = 65;  (d)   gender = 0, age = 70
+What will be the result of the expression 13 & 25?;(c) 9;(a)     38;(b) 25;(c) 9;(d) 12
+"The Java expression:
+! ((b != 0) || (c <= 5))
+is equivalent to:";"(b) (b == 0) && (c > 5)
+";"(a)
+(! (b = 0)) && (! (c > 5))
+";(b) (b == 0) && (c > 5);"(c)
+(b != 0) && (c <= 5)
+";"(d)
+! ((b <> 0) && (c <= 5))
+"
+"Use the following declarations and initializations to evaluate the Java expressions:
+int i=3, j=7, k=11;
+j + k % i
+";(a) 9;(a) 9;(b) 0;(c) 7;(d) 12
+"Use the following declarations and initializations to evaluate the Java expressions:
+ Int i=3, j=7, k=11;
+++k –i +i + i++  "; (a) 15.; (a) 15.;(b) 17;(c) 14;     (d) 13
+"Use the following declarations and initializations to evaluate the Java expressions: 
+ Int i=3, j=7, k=11; 
+j * k++ /2"; (c) 38;(a) 38.5;(b) 42 ; (c) 38;(d) 42.0 
+What is the result of the expression 75.22 + “5.2”?;(c)     The string is “75.225.2”;(a)     The double value in 80.42;(b)   The string in “80.42”.;(c)     The string is “75.225.2”;(d)   The string is “75.222.5”
+"What is the printout of the following code?
+double x = 5.5;
+int y = (int)x;
+System.out.println(""x is "" + x + "" and y is "" + y);";"(d)
+x is 5.5 and y is 5.0
+";"(a)
+x is 5.0 and y is 6.0
+";"(b)
+x is 6.0 and y is 6.0
+";"(c)
+x is 6 and y is 6
+";"(d)
+x is 5.5 and y is 5.0
+"
+"Analyze the following code:
+public class Test {
+     int x;
+     { x++; }
+}";"(d)
+When you construct an instance of Test, the value of x becomes 1;
+";"(a)
+The program cannot be compiled, because the statement x++ must be placed inside a method or a constructor
+";"(b)
+You cannot construct an instance of Test, because it does not have a constructor
+";"(c)
+When you construct an instance of Test, the value of x becomes 0;
+";"(d)
+When you construct an instance of Test, the value of x becomes 1;
+"
+Which is  not  a valid operator in Java?;"(a)
+<>  
+";"(a)
+<>  
+";"(b)
+!=
+";"(c)
+=>
+";"(d)
+<=
+"
+"What is the value of result after the following Java statements execute?
+int a, b, c, d;
+a = 4;
+b = 12;
+c = 37;
+d = 51;
+result = d % a * c + a % b + a;";"(a)
+119
+";"(a)
+119
+";"(b)
+   51
+";"(c)
+127
+";"(d)
+   59
+"
+List the following operators in the order that they will be evaluated: -, *, (), %, +, /.   Assume that if two operations have the same precedence, the one listed first will be evaluated first.;"(d)
+(),    *,    /,    %,    -,    +
+";"(a)
+(),    /,    *,    %,    +,    -
+";"(b)
+-,    +,    %,    *,    /,    ()
+";"(c)
+-,    *,    (),    %,    +,    /
+";"(d)
+(),    *,    /,    %,    -,    +
+"
+"What is the output of the following code?
+class Arithmetic {
+           public static void main (string args[]) {
+int x=17, y=5;
+                   System.out.println(“x =” +x);
+                   System.out.println(“y =” +y);
+                   System.out.println(“x+y=” +(x+y));
+                   System.out.println(“x-y=” +(x-y));
+                   System.out.println(“x*y=” +(x*y));
+                   System.out.println(“x/y=” +(x/y));
+                   System.out.println(“x%y=” +(x%y));
+     }
+}";"(b)
+17, 5, 22, 12, 85, 3, 2
+";"(a)
+5, 17, 12, 85, 3, 2
+";"(b)
+17, 5, 22, 12, 85, 3, 2
+";"(c)
+17, 5, 20, 21, 85, 3, 2
+";"(d)
+2, 3, 85, 12, 22, 5, 17
+"
+"What is the output of the following code?
+class SpecialArithmetic {
+       public static void main (string args[]) {
+                  int x=17,a,b;
+                 a=x++;b=++x;
+                 System.out.println(“x=” + x +“a=” +a);
+                   System.out.println(“x=” + x + “b=” +b);
+                   a=x--;b=--x;
+                   System.out.println(“x=” + x + “a=” +a);
+                   System.out.println(“x=” + x + “b=” +b);
+                    }
+}";"(d)
+x=19 a=17
+x=19 b=19
+x=18 a=19
+x=17 b=17
+";"(a)
+x=18 a=17
+x=19 b=19
+x=18 a=19
+x=17 b=17
+";"(b)
+x=19 a=17
+x=18 b=19
+x=18 a=19
+x=17 b=17
+";"(c)
+x=19 a=17
+x=19 b=19
+x=18 a=20
+x=17 b=17
+";"(d)
+x=19 a=17
+x=19 b=19
+x=18 a=19
+x=17 b=17
+"
+"What is the output of the following code?
+class Bitwise {
+   public static void main (string args[]) {
+                       int x=5, y=6;
+                       System.out.println(“x&y=” +(x &y));
+                       System.out.println(“x|y=” +(x|y));
+                       System.out.println(“x^y=” +(x^y));
+                       }
+}";"(b)
+x&y=4
+x|y=7
+x^y=3
+";"(a)
+x&y=5
+x|y=7
+x^y=3
+";"(b)
+x&y=4
+x|y=7
+x^y=3
+";"(c)
+x&y=6
+x|y=7
+x^y=3
+";"(d)
+x&y=4
+x|y=8
+x^y=3
+"
+"What is the output of the following code?
+class Shift {
+             public static void main (string args[ ]) {
+                       int x=7;
+                       System.out.println(“x>>>1=” +(x>>>1));
+              }
+}";"(a)
+x>>>1=3
+";"(a)
+x>>>1=3
+";"(b)
+x>>>1=6
+";"(c)
+x>>>1=4
+";"(d)
+x>>>1=5
+"
+"class Relational{
+                 public static void main (string args[]) {
+                            int x=7, y=11, z=11;
+                            System.out.println(“y<=z =” +(y<=z));
+  }
+}";"(c)
+y<=z = true
+";"(a)
+y<=z = 0
+";"(b)
+y<=z = 1
+";"(c)
+y<=z = true
+";"(d)
+y<=z = false
+"
+Which operator is used for concatenation in java?;"(a)
++.
+";"(a)
++.
+";"(b)
+Dot
+";"(c)
+*
+";"(d)
+%
+"

@@ -1,0 +1,665 @@
+question,correct answer,wrong answer 1,wrong answer 2,wrong answer 3,wrong answer 4,Difficulty level,Section,Important
+"
+public class Run {
+    public static void main(String[] args)
+    {
+        int i = 100; 
+        long l = i; 
+        float f = l; 
+        System.out.println(""Int value ""+i);
+        System.out.println(""Long value ""+l);
+        System.out.println(""Float value ""+f);
+    }
+}
+","Int value 100
+Long value 100
+Float value 100.0
+","Int value 100
+Long value 100
+Float value 100.0
+","Int value 100
+Long value 10
+Float value 100.0
+","Int value 100
+Long value 100
+Float value 101.0
+","Int value 1
+Long value 100
+Float value 100.0
+",,,
+"
+public class Run {
+    public static void main(String[] args)
+    {
+        int i = 11; 
+        float f = i; 
+        System.out.println(""Int value ""+i);
+        System.out.println(""Float value ""+f);
+    }
+}
+","Int value 11
+Float value 11.0","Int value 11
+Float value 10.0","Int value 11
+Float value 11.0","Int value 10
+Float value 11.0","Int value 11
+Float value 11",,,
+"
+public class Run {
+    public static void main(String[] args)
+    {
+        int i = 11; 
+        float f = i; 
+        i=i++;
+        i=i--;
+        System.out.println(""Int value ""+i);
+        System.out.println(""Float value ""+f);
+    }
+}
+","Int value 11
+Float value 11.0
+","Int value 11
+Float value 11.0
+","Int value 1
+Float value 11.0
+","Int value 11
+Float value 11
+","Int value 10
+Float value 11.0
+",,,
+"
+public class Run {
+    public static void main(String[] args)
+    {
+        int i = 11; 
+        float f = i; 
+        long l=f;/* line 7 */
+        i=i++; /* line 8*/
+        i=i--;
+        System.out.println(""Int value ""+i);
+        System.out.println(""Float value ""+f);
+    }
+}
+",compilation error,compilation error,"Int value 11
+Float value 11.0
+","Int value 10
+Float value 11.0
+",None of the above,,,
+"
+public class Run {
+    public static void main(String[] args)
+    {
+        int i = 11; 
+        float f = i; 
+        long l=i;/* line 7 */
+        i=i++; /* line 8*/
+        i=i--;
+        System.out.println(""Int value ""+i);
+        System.out.println(""Float value ""+f);
+        System.out.println(""long value ""+l);
+    }
+}
+","Int value 11
+Float value 11.0
+long value 11
+","Int value 10
+Float value 11.0
+long value 11.0
+","Error at line 7
+",compilation error ,"Int value 11
+Float value 11.0
+long value 11
+",,,
+"public class Run {
+ public static void main(String[] argv)
+   {
+     char ch = 'c';
+     int num = 88;
+     ch = num;
+   }
+ }
+",compilation error,compilation error,88,89,c,,,
+"
+public class Run {
+    public static void main(String[] args)
+    {
+        double d = 100.04; 
+        long l = (long)d;
+        int i = (int)l; 
+        System.out.println(""Double value ""+d);
+        System.out.println(""Long value ""+l); 
+        System.out.println(""Int value ""+i); 
+    } 
+}
+","Double value 100.04
+Long value 100
+Int value 100
+","Double value 101.0
+Long value 100
+Int value 100
+","Double value 100.04
+Long value 101
+Int value 100
+",compilation error ,"Double value 100.04
+Long value 100
+Int value 100
+",,,
+"
+public class Run {
+    public static void main(String[] args)
+    {
+        double d = 1; 
+        long l = (long)d;
+        int i = (int)l;
+        System.out.println(""Double value ""+d);
+        
+    } 
+}
+",Double value 1.0,Double value 1.0,Double value 1,compilation error ,runtime error,,,
+"
+public class Run {
+    public static void main(String args[]) 
+    { 
+        byte b; 
+        int i = 257; 
+        double d = 323.142;
+        b = (byte) i; 
+        System.out.println(""i = b "" + i + "" b = "" + b);
+        b = (byte) d; 
+        System.out.println(""d = "" + d + "" b= "" + b);
+    }
+}
+","i = b 257 b = 1
+d = 323.142 b= 67
+","i = b 2 b = 1
+d = 323.142 b= 67
+","i = b 257 b = 1
+d = 323.142 
+",compilation error ,"i = b 257 b = 1
+d = 323.142 b= 67
+",,,
+"
+public class Run {
+    public static void main(String args[]) 
+    { 
+        byte b; 
+        int i = 257; /*line 6*/
+        double d = 323.142;
+        b = (double) i; /*line 8*/
+        System.out.println(""i = b "" + i + "" b = "" + b);
+       
+    }
+}
+",compilation error,"i = b 257 b = 1
+",compilation error,"i = b 257 
+","i = b 200 b = 1
+",,,
+"
+public class Run {
+    public static void main(String args[]) 
+    { 
+        byte b = 42; 
+        char c = 'a'; 
+        short s = 1024;
+        int i = 50000;
+        float f = 5.67f;
+        double d = .1234;
+        double result = (f * b) + (i / c) - (d * s);
+        System.out.println(""result = "" + result);
+    } 
+}
+","result = 626.7784146484375
+","result = 626.7784146484375
+",result = 626,"result = 600.7784146484375
+","result = 620.77
+",,,
+"
+public class Run {
+ public static void main(String args[]) 
+ { 
+  byte b = 50; 
+
+  b = (byte)(b * 2); 
+  System.out.println(b);
+ }
+}
+
+","100
+","100
+",101,102,101.01,,,
+"Which of these is necessary condition for automatic type conversion in Java?
+a) The destination type is smaller than source type
+b) The destination type is larger than source type
+c) The destination type can be larger or smaller than source type
+d) None of the mentioned
+",The destination type is larger than source type,The destination type is larger than source type,The destination type is smaller than source type,The destination type can be larger or smaller than source type,None of the mentioned,,,
+" What is the prototype of the default constructor of this class?
+public class prototype { }
+",public prototype( ),public prototype(void),public prototype(void),prototype( ),public prototype( ),,,
+". What is the error in this code?
+byte b = 50;
+b = b * 50;
+","* operator has converted b * 50 into int, which can not be converted to byte without casting",". What is the error in this code?
+byte b = 50;
+b = b * 50;
+",b can not contain value 50.,No error in this code,"* operator has converted b * 50 into int, which can not be converted to byte without casting",,,
+" If an expression contains double, int, float, long, then whole expression will promoted into which of these data types?",double,long,int,float,,,,
+What is Truncation is Java?,Floating-point value assigned to an integer type,Integer value assigned to floating type,Floating-point value assigned to an Floating type,Integer value assigned to floating type,,,,
+"
+public class Run {
+ public static void main(String args[]) 
+ {
+  char c1 = 'D';
+  char c2 = 84;
+  c2++;
+  c1++;
+  System.out.println(c1 + "" ""  + c2);
+ } 
+}
+","E U
+","E U
+","D U
+","E D
+",D D,,,
+"
+public class Run {
+ public static void main(String args[]) 
+ {
+  char c1 = 'D';
+  char c2 = 84;
+  c2--;
+  c1++;
+  c2++;
+  System.out.println(c1 + "" ""  + c2);
+ } 
+}
+","E T
+","E T
+","T T
+","E E
+",None of the above,,,
+"
+public class Run {
+ public static void main(String args[]) 
+ {
+  char c1 = 'Y';
+  char c2 = 66;
+  char c3=77;
+
+  c1++;/*line 9*/
+  c3++;/*line 10*/
+  System.out.println(c1-- + "" ""  + c2++,c3);/*line 11*/
+ } 
+}
+",compilation error,Z B,Z Z,Z B,None of the above,,,
+"
+public class Run {
+ public static void main(String args[]) 
+ {
+  double a = 295.04;
+  int  b = 300;
+  byte c = (byte) a;
+  byte d = (byte) b;
+  System.out.println(c + "" ""  + d);
+ } 
+}
+",39 44,39 44,40 44,39 41,39 45,,,
+"class A 
+{
+ final public int calculate(int a, int b) { return 1; } 
+} 
+class B extends A 
+{ 
+ public int calculate(int a, int b) { return 2; } 
+} 
+public class output 
+{
+ public static void main(String args[]) 
+ { 
+  B object = new B(); 
+  System.out.print(""b is "" + b.calculate(0, 1));  
+ } 
+}
+",Compilation Error,Compilation Error,0 1,0 1 1,None of the above,,,
+"
+public class Run {
+ public static void main(String [] args) 
+ {
+  
+  String [][] argument = new String[2][2];
+  int x;
+  argument[0] = args;
+  x = argument[0].length;
+  for (int y = 0; y < x; y++) 
+   
+   System.out.print("" "" + argument[0][y]);              
+ }
+
+}
+",1 2 3,1 2 3,4 5 3,1 2 2,None of the above,,,
+"
+public class Run {
+ public static void main( String[] args ) 
+ {  
+  System.out.println( ""Hello"" + args[0] ); 
+  int i=10;
+  System.out.println( i );
+ } 
+}
+",ArrayIndexOutOfBoundsException:,ArrayIndexOutOfBoundsException:,Hello,10,Hello 10,,,
+What are the types of casting.?,Primitive Type Casting and derived  typecast, derived  typecast,Primitive Type Casting ,Both 1 and 2,None of the above,,,
+What are  data types with no decimal places.?,All of the above,short,byte,int,All of the above,,,
+"
+public class Run {
+ static float methodOne(int i)
+    {
+        long j = i;     
+        return j;      
+    }
+ 
+    public static void main(String[] args)
+    {
+        byte b = 10;
+        short s = b;     
+        double d = methodOne(s);    
+        System.out.println(d);
+    }
+}",10,10,11,11,compilation error,,,
+"
+public class Run {
+  static short methodOne(long l)
+     {
+         int i = (int) l;     
+         return (short)i;      
+     }
+  
+     public static void main(String[] args)
+     {
+         double d = 100.20;
+         float f = (float) d;     
+         byte b = (byte) methodOne((long) f);    
+         System.out.println(b);
+     }
+ }",100,100.2,101,None of the above,compilation error,,,
+"
+public class AA {
+ int i = 10;
+}
+
+public class BB   extends AA{
+ int j = 20;
+}
+
+public class CC extends BB
+{
+    int k = 30;
+}
+
+public class DD extends CC
+{
+    int m = 40; public static void main(String[] args)
+    {
+        DD d = new DD();
+        CC c = d;       
+        BB b = d;      
+        CC c1 = new CC();
+        AA a = c1;    
+        AA a1 = new BB(); 
+        System.out.println(a1.i);
+    }
+}",10,10,11,None of the above,compilation error,,,
+"class Run{
+
+ public static void main(String args[]){
+  int x;
+  x = 10;
+  if(x == 10){
+   int y = 20;
+   System.out.print(""x and y: ""+ x + "" "" + y);
+   y = x*2;
+  }
+  int y = 100;
+  System.out.print(""x and y: "" + x + "" "" + y);
+ }
+}
+",x and y: 10 20x and y: 10 100,x and y: 10 20x and y: 10 100,x and y: 1  20x and y: 10 100,compilation error ,None of the above,,,
+"class Run{
+
+ public static void main(String args[]){
+  int x;
+  x = 10;
+  if(x == 10){
+   int y = 20;
+   System.out.print(""x and y: ""+ x + "" "" + y);
+   y = x*2;
+  }
+  y = 100; /*line 11*/
+  System.out.print(""x and y: "" + x + "" "" + y);
+ }
+}
+",x and y: 10 20x and y: 10 100,x and y: 10 20x and y: 10 100,x and y: 1  20x and y: 10 100,Error at line 11 ,None of the above,,,
+"class Run{
+ public static void main(String args[]){
+  byte b;
+  int i = 258;
+  double d = 325.59;
+
+  b = (byte) i;
+  System.out.print(b);
+
+  i = (int) d;
+  System.out.print(i);
+
+  b = (byte) d;
+  System.out.print(b);
+ }
+}
+",232569,232569,111125,232570,None of the above,,,
+"class Run{
+    public static void main(String args[]) 
+    {
+        byte x;
+        int a = 270;
+        double b = 128.128;
+        x = (byte) a;
+        System.out.println(""a and x "" + a + "" "" + x);
+        a = (int) b;
+        System.out.println(""b and a "" + b + "" "" + a);
+       
+        System.out.println(""b and x "" + b + "" "" + x);
+    }
+}
+","a and x 270 14
+b and a 128.128 128
+b and x 128.128 14
+","a and x 270 14
+b and a 128.128 128
+b and x 128.128 14
+","a and x 170 14
+b and a 128.128 128
+
+",compilation error ,None of the above,,,
+"class Run{
+    public static void main(String args[]) 
+    {
+        byte x;
+        int a = 270;
+        double b = 128.128;
+        x = (byte) a;
+        x = b;/*Line 8*/
+        System.out.println(""a and x "" + a + "" "" + x);
+        a = (int) b;
+        System.out.println(""b and a "" + b + "" "" + a);
+        
+        System.out.println(""b and x "" + b + "" "" + x);/*line 13*/
+    }
+}
+",compilation error,compilation error,"a and x 270 14
+b and a 128.128 128
+b and x 128.128 14
+","a and x 270 14
+b and a 128 128
+b and x 128.128 14
+", None of the above,,,
+"class Run{
+    public static void main(String args[])
+    {
+        long l = 55;
+        int i = 44;
+        short s = 33;
+        byte b    = 22;
+        
+        i = (int) l;
+        s = (short) i;
+        b = (byte) s;
+
+        System.out.println(""l = "" + l);
+        System.out.println(""i = "" + i);
+        System.out.println(""s = "" + s);
+        System.out.println(""b = "" + b);
+    }
+} 
+","l = 55
+i = 55
+s = 55
+b = 55
+","l = 55
+i = 55
+s = 55
+b = 55
+","l = 55
+i = 55
+
+
+","
+s = 55
+b = 55
+","l = 55
+s = 55
+",,,
+"class Run{
+    public static void main(String args[])
+    {
+        long l = 55;
+        int i = 44;
+        short s = 33;
+        byte b    = 22;
+        
+        i = (int) l;
+        s = (int) i;
+        b = (byte) s;
+
+        System.out.println(""l = "" + l);
+        System.out.println(""i = "" + i);
+        System.out.println(""s = "" + s);
+        System.out.println(""b = "" + b);
+    }
+} 
+","compilation error
+","compilation error
+","l = 55
+i = 55
+
+
+","
+s = 55
+b = 55
+","l = 55
+s = 55
+",,,
+"class Run{
+ public static void main(String args[])
+    {
+        int i = 44;
+        float f = 98.42f;
+        double d = 103.67;
+        f = (float) i;
+        d = (double) f;
+        i = (int) d;
+        System.out.println(""i = "" + i);
+        System.out.println(""f = "" + f);
+        System.out.println(""d = "" + d);
+    }
+}
+","i = 44
+f = 44.0
+d = 44.0
+","i = 44
+f = 44.0
+d = 44.0
+","i = 44
+f = 44.0
+d = 44.4
+",compilation error ,None of the above,,,
+"class Run{
+ public static void main(String args[])
+    {
+        int i = 44;
+        float f = 98.42f;
+        double d = 103.67;
+        f = (float) i;
+        d = (double) f;
+        i = (double) d;
+        System.out.println(""i = "" + i);
+        System.out.println(""f = "" + f);
+        System.out.println(""d = "" + d);
+    }
+}
+",compilation error ,"i = 44
+f = 44.0
+d = 44.0
+","i = 44
+f = 44.0
+d = 44.4
+",compilation error ,None of the above,,,
+Which of the following are legal lines of Java code?,None of the above,int w = (int)888.8;, long y = (byte)100;, byte z = (byte)100L;,None of the above,,,
+"class Run{
+ public static void main(String arg[])
+    {
+        int a = 350;
+        byte b;
+        b = (byte) a;
+        System.out.println(""b = "" + b );
+    
+    }
+}
+
+",b = 94,b = 94,b = 95,b = 49,compilation error,,,
+"class Run{
+ public static void main(String arg[])
+    {
+        byte b;
+        int i = 81;
+        double d = 323.142;
+        float f = 72.38f;
+        char c = 'A';
+        
+        c = (char) i;
+        System.out.println(""i = "" + i + "" c = "" + c);
+        
+        i = (int) d; // LINE A
+        System.out.println(""d = "" + d + "" i = "" + i); // LINE B
+        
+        i = (int) f; // LINE C
+        System.out.println(""f = "" + f + "" i = "" + i); // LINE D
+        
+        b = (byte) d;
+        System.out.println(""d = "" + d + "" b = "" + b);
+    
+    }
+}
+","i = 81 c = Q
+d = 323.142 i = 323
+f = 72.38 i = 72
+d = 323.142 b = 67
+","i = 81 c = Q
+d = 323.142 i = 323
+f = 72.38 i = 72
+d = 323.142 b = 67
+","i = 81 c = Q
+d = 323.142 i = 323
+
+d = 323.142 b = 67
+","
+f = 72.38 i = 72
+d = 323.142 b = 67
+",compilation error,,,

@@ -1,0 +1,351 @@
+question,"correct answer,",wrong answer1,wrong answer2,wrong answer3,wrong answer4
+"class JavaExample{
+   static int num;
+   static String mystr;
+   static{
+      num = 97;
+      mystr = ""Static keyword in Java"";
+   }
+   public static void main(String args[])
+   {
+      System.out.println(""Value of num: ""+num);
+      System.out.println(""Value of mystr: ""+mystr);
+   }
+}","Value of num: 97
+Value of mystr: Static keyword in Java","Value of num: 0
+Value of mystr: Static keyword in Java","Value of mystr: Static keyword in Java
+Value of num: 97
+","Value of num: 00
+Value of mystr: Static keyword in Java",none of the above
+"class JavaExample2{
+   static int num;
+   static String mystr;
+   //First Static block
+   static{
+      System.out.println(""Static Block 1"");
+      num = 68;
+      mystr = ""Block1"";
+  }
+  //Second static block
+  static{
+      System.out.println(""Static Block 2"");
+      num = 98;
+      mystr = ""Block2"";
+  }
+  public static void main(String args[])
+  {
+      System.out.println(""Value of num: ""+num);
+      System.out.println(""Value of mystr: ""+mystr);
+   }
+}","Static Block 1
+Static Block 2
+Value of num: 98
+Value of mystr: Block2
+","Static Block 1
+Static Block 1
+Value of num: 98
+Value of mystr: Block1
+","Static Block 1
+Value of num: 98
+Value of mystr: Block2
+Static Block 2
+","Static Block 1
+Value of mystr: Block2
+Static Block 2
+Value of num: 98
+
+",all of the above
+"class JavaExample3{
+  static int var1;
+  static String var2;
+  //This is a Static Method
+  static void disp(){
+      System.out.println(""Var1 is: ""+var1);
+      System.out.println(""Var2 is: ""+var2);
+  }
+  public static void main(String args[])
+  {
+      disp();
+  }
+","Var1 is: 0
+Var2 is: null
+","Var2 is: null
+Var1 is: 0
+
+","Var1 is: 0
+Var2 is: null
+",all of the above,none of the above
+"class JavaExample{
+   
+   static int var1=77;
+   
+   String var2;
+
+   public static void main(String args[])
+   {
+ JavaExample ob1 = new JavaExample();
+ JavaExample ob2 = new JavaExample();
+ 
+ ob1.var1=88;
+ ob1.var2=""I'm Object1"";
+        ob2.var1=99;
+ ob2.var2=""I'm Object2"";
+ System.out.println(""ob1 integer:""+ob1.var1);
+ System.out.println(""ob1 String:""+ob1.var2);
+ System.out.println(""ob2 integer:""+ob2.var1);
+ System.out.println(""ob2 STring:""+ob2.var2);
+   }
+}
+","ob1 integer:99
+ob1 String:I'm Object1
+ob2 integer:99
+ob2 STring:I'm Object2
+","ob2 integer:99
+ob2 String:I'm Object1
+ob2 integer:99
+ob2 STring:I'm Object2
+","ob1 integer:99
+ob1 String:I'm Object1
+ob1 integer:99
+Ob1 STring:I'm Object2
+","ob1 integer:99
+ob1 String:I'm Object1
+ob2 integer:99
+ob2 STring:I'm Object2
+",none of the above
+"class JavaExample{
+   static int i = 10;
+   static String s = ""Beginnersbook"";
+   //This is a static method
+   public static void main(String args[])
+   {
+       System.out.println(""i:""+i);
+       System.out.println(""s:""+s);
+   }
+}","i:10
+s:Beginnersbook
+","I:00
+s:Beginnersbook
+","i:10
+s:Beginnersbook
+","s:Beginnersbook
+i:10
+
+",all of the above
+"class JavaExample{
+  static int i = 100;
+  static String s = ""YMS"";
+
+  static void display()
+  {
+     System.out.println(""i:""+i);
+     System.out.println(""i:""+s);
+  }
+
+  void funcn()
+  {
+      display();
+  }
+  
+  public static void main(String args[])
+  {
+   JavaExample obj = new JavaExample();
+   
+   obj.funcn();
+   
+      display();
+   }
+}
+","i:100
+i:YMS
+i:100
+i:YMS
+","i:100
+i:YMS
+i:YMS
+i:YMS
+","i:100
+I:100
+i:100
+i:100
+","i:100
+i:YMS
+i:100
+i:YMS
+",all of the above
+"class JavaExample{
+   private static String str = ""YMS"";
+
+  
+   static class MyNestedClass{
+  public void disp() {
+
+    
+    System.out.println(str);
+ }
+
+   }
+   public static void main(String args[])
+   {
+
+ JavaExample.MyNestedClass obj = new JavaExample.MyNestedClass();
+ obj.disp();
+   }
+}",YMS,null,str,all of the above,YMS
+"lass StaticDemo
+{
+   public static void copyArg(String str1, String str2)
+   {
+       
+       str2 = str1;
+       System.out.println(""First String arg is: ""+str1);
+       System.out.println(""Second String arg is: ""+str2);
+   }
+   public static void main(String agrs[])
+   {
+      
+      copyArg(""YMS"", ""ABC"");
+   }
+}","First String arg is: YMS
+Second String arg is: YMS
+","First String arg is: YMS
+Second String arg is: YMS
+","Second String arg is: YMS
+First String arg is: YMS
+
+","First String arg is: YMS
+First String arg is: YMS
+
+",all of the above
+"class Languages {
+  public static void main(String[] args) {
+    display();
+  }
+ÿ
+  static void display() {
+    System.out.println(""Java is my favorite programming language."");
+  }
+}",Java is my favorite programming language.,null,Java is my favorite programming language.,java,none of the above
+How can we run a java program without making any object?," method that is declared static can be used
+Independently of a class instance.",JVM makes an object,ÿmethod that is declaredÿstaticÿcan be used independently of a class instance.," method that is declared non
+ Static can be used independently of a class instance.",all of the above
+How can we execute a Java class independently if it doesn't have a static main method?,"no we cant, prior jdk1.6
+We can using static block",yes we can,no mwe cant,"no we cant, prior jdk1.6
+We can using static block",all of the above
+"What are the advantages and disadvantages
+ Of static variables and static methods ?",all of the above,"In order to call the static methods you don't need to create class objects
+. The method is available immediately.","In order to call the static methods you don't need to create
+Class objects. The method is available immediately.","Might possibly give performance advantages because static methods never need a null check and are always candidates for inlining - but the Hotspot JVM is so good at these that this is only worth worrying about in extreme cases.
+",all of the above
+Can we access instance variables within static methods ?,no,yes,maybe,no,all of the above
+Similarity and Difference between static block and static method ?,all of the above,Static Methods can access class variables without using object of the class. It can access non-static methods and non-static variables by using objects. Static methods can be accessed directly in static and non-static methods.,Static block is mostly used for changing the default values of static variables. This block gets executed when the class is loaded in the memory.,none of the above,all of the above
+Which of the following can be marked static ?,"? Methods , Variables , Initialization Blocks and nested Classes.","Methods , Variables and Initialization Blocks.","Methods , Variables , Initialization Blocks and Outer Classes and nested Classes","Methods , Variables , Initialization Blocks and Outer Classes.","Methods , Variables , Initialization Blocks and nested Classes."
+Can we override static methods ? Why ?,Static methods can not be overridden because they are not part of the object's state.,yes we can override static methods,Static methods can not be overridden because they are not part of the object's state.,we can with static blocks,all of the above
+"classÿ Test{
+ÿ ÿ ÿ staticÿ voidÿ display(){
+ÿ ÿ ÿ ÿ ÿ ÿ System.out.println(""""Buggyÿ Bread"""");
+ÿ ÿ ÿ }
+}
+
+classÿ Demo{
+ÿ ÿ ÿ publicÿ staticÿ voidÿ main(String...ÿ args){
+ÿ ÿ ÿ ÿ ÿ ÿ Testÿ tÿ =ÿ null;
+ÿ ÿ ÿ ÿ ÿ ÿ t.display();
+ÿ   ÿ ÿ }
+}",Buggy Bread,null,Buggy Bread,all of the above,none of the above
+Why can't we use this in static context ?,"The keyword this refers to the
+ Instance of the class.no instance in
+Static context",only we can use super,"The keyword this refers to the
+ Instance of the class.","They keyword this refers to the
+ Instance of the class.no instance in
+Staticn context",none of the above
+Which of the following cannot be marked static ?,,"? Constructors , Classes ( Outer ) , Classes ( nested ), Interfaces , Local variables , Inner Class methods and instance variables.","? Constructors , Classes ( Outer ) , Interfaces , Local variables , Class variables , Class Methods , Inner Class methods and instance variables","? Constructors , Classes ( Outer ) , Interfaces , Local variables , Inner Class methods and instance variables.","? Constructors , Classes ( Outer ) , Classes (Nested), Interfaces , Local variables , Inner Class methods and instance variables."
+How can we ensure thread safety in static method ?,all of the above,"theread safety will be in action only when there is an data exchange between objects,so invalid for static methods because they have no instance","A thread cannot access the memory of another thread, but if there is some resource that belongs to all instances and is supposed to be accessed sequentially, then you can synchronize or lock the static method, thus making it a blockingone","Static methods can be called concurrently by multiple threads, unless you specifically do something to thwart that, such as requiring that the caller acquire a lock",all of the above
+Can static method access instance variables ?,"yes,static methods can only use those instance variables that are defined static""",no we cant,yes,"maybe,maybe not","yes,static methods can only use those instance variables that are defined static"""
+Does java allow overriding static methods ?,no we cant,yes,"no, sometimes yes",none of the above,all of the above
+Which of the following can be overridden ,,? final instance methods,? final static methods,? non final instance methods,? non final static methods
+What will happen if static modifier is removed from the signature of the main method?,"Program compiles. But at runtime throws an error ""NoSuchMethodError"". ",Program compiles. And Executes,"Program compiles. But at runtime throws an error ""NoSuchMethodError"". ",doesn?t cpmpile,none of the above
+ When are static and instance methods resolved ? During compile time or Runtime ?,The static fields are resolved at compiletime  instance members at Runtime ,Both at compile time,The static fields are resolved at compiletime  instance members at Runtime ,Both at run time,none of the above
+What could be the problems due to the usage of static methods and elements ?,,,,,
+Is it a good practice to override static methods ?,no,yes ,no ,"maybe,maybe not",none of the above
+Can we mock static methods ?,yes we can,no we cant,yes we can,possible,none of the above
+Canÿconstructors be staticÿin Java?,no,no ,possible,yes,none of the above
+Whyÿabstract methodÿcannot be static in Java?,"we cant override static method, so making it as abstract means no implementaion in sub classes",we can provide implementaion so its possible,"its not possiblwe cant override static method, so making it as abstract means no implementaion in sub classese",all of the above,none of the above
+"public class AbstractTest
+{
+    static void disp()
+    {
+        System.out.println(""disp of static method"");
+    }
+}
+",,,,,
+Can Interface in Java have static methods in it?,all of the above,"With Java 8, interfaces can have static methods."," it  also have concrete instance methods, but not instance fields.",both options are valid,none of the above
+ÿCan abstract class have static variable in it?,yes ,no,possible,yes,none of the above
+"public class MyProgram1
+
+{
+
+static int a;
+
+static int b;
+
+public static void main(String[] args)
+
+{
+
+System.out.pritnln(""A value is:""+a);
+
+System.out.println(""B values is:""+b);
+
+}
+}
+","A value is:0
+B values is:0","A value is:1
+B values is:1","A value is:0
+B values is:0","A value is:00
+B values is:00",none of the above
+"package com.mywork;
+
+public class MyProgram1
+
+
+{
+
+public static void main(String[] arg)
+
+{
+
+staticMethod();
+
+MyProgram1 obj=new MyProgram1();
+
+obj.nonStaticMethod();
+
+}
+
+public static void staticMethod()
+
+{
+
+System.out.println(""Static Method"");
+
+}
+
+public void nonStaticMethod()
+
+{
+
+System.out.println(""Non-Static Method"");
+
+}
+
+}
+","Static Method
+Non-Static Method","
+
+Non-Static Method
+Static Method
+
+","Non-Static Method
+Non-Static Method","Static Method
+Non-Static Method",none of the above

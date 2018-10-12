@@ -1,0 +1,69 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+Which of the following methods are methods of the String class?;D. replace( ).;A. delete( ).;B. append( ).;C. reverse( ).;D. replace( ).
+"If you run the code below, what gets printed out?
+     String s=new String (""Bicycle"");
+     int iBegin=1;  
+     char iEnd=3;
+     System.out.println (s.substring (iBegin, iEnd));";B. ic.;A. Bic.;C. icy.;D. error: no method matching substring(int, char).;B. ic.
+"Given the following declarations
+       String s1=new String(""Hello"") ; 
+       String s2=new String(""there""); 
+       String s3=new String(); 
+Which of the following are legal operations?";"A. s3=s1 + s2;.";"B. s3=s1 – s2;.";C. s3=s1 & s2.;D. s3=s1 && s2.;"A. s3=s1 + s2;."
+Which of the following method is not belonging to the String class?;B. reverse().;A. length().;C. compareTo() .;D. equals().;B. reverse().
+"Given the code 
+String s = new String(""abc""); 
+Which of the following call is not valid?";B. s.replace('a', 'A').;A. s.trim().;C. s.substring (3).;D. s.setCharAt (1,'A').;B. s.replace('a', 'A').
+Which of the function is used to convert String to Number in java program?;C. valueOf() .;A. toNumber ().;B. conString().;D. toString().;C. valueOf() .
+Among these expressions, which is(are) of type String?;(d)   Both (A) and (B) above;"(a)   ""0""";"(b)   ""ab"" + ""cd""";(c)   '0'  ;(d)   Both (A) and (B) above
+"What is the output of the following code:
+class eq
+{
+           public static void main(String args[])
+           {
+                    String s1 = “Hello”;
+                    String s2 = new String(s1);  
+                    System.out.println(s1==s2);
+            }    
+}";(b)   false;(a)   true;(b)   false;(c)   0;(d)   1
+"Given the code
+                           String s1 = “ yes” ;
+                           String s2 = “ yes “ ;
+                           String s3 = new String ( s1);
+Which of the following would equate to  true?";(a)     s1 == s2;(a)     s1 == s2;(b) s1 = s2;(c) s3 == s1;d) s3=s1
+"Consider the following program written in Java to answer this Question:
+class StringEx{
+       public static void main(String args[]) {
+              String s1=""University of ICFAI”;
+              String s2=""hello"";
+              String s3=""HELLO”;
+               System.out.println(s1.substring(10,13));
+             System.out.println(s2.equalsIgnoreCase(s3));
+       }
+}
+What would be the output of the statement indicated in line number 06 when the program is executed?";(a) 0       0;(a) 0       0;(b) null     0;(c) error;(d) 0     null
+Which of the following is  not  a valid String Constant?;"(b)
+‘x’
+";"(a)
+“X”
+";"(b)
+‘x’
+";"(c)
+“Hello”
+";"(d)
+“2002”
+"
+"Consider the following variable declarations.
+int a, b; String str;
+Assume that at some point of the program, the variables a and b contain the values 5 and 7.
+Select from among the following the correct option which assign the variable str with the value “The sum of 5 + 7 = 12”?";"(c)
+str = “The sum of   “+ a +” + “+ b +” =”   + (a + b);
+";"(a)
+str = “The sum of a + b = a + b”;
+";"(b)
+str = “The sum of   “ + a +” + “+ b +” =”   + a + b;
+";"(c)
+str = “The sum of   “+ a +” + “+ b +” =”   + (a + b);
+";"(d)
+str = “The sum of a + b =” + (a + b);
+"

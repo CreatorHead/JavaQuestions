@@ -1,0 +1,32 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+What is an example of polymorphism?;C. method overloading.;A. inner class.;B. anonymous classes.;D. method overriding.;C. method overloading.
+What is polymorphism in Java? .;D. It is when a class has several methods with the same name but different parameter types.;A. It is when a single super class has many subclasses.;B. It is when a single variable is used with several different types of related objects.;C. It is when a program uses several different types of objects, each with its own variable.;D. It is when a class has several methods with the same name but different parameter types.
+The concept of derived classes is involved in _________.;C. polymorphism.;A. encapsulation.;B. information hiding.;D. inheritance.;C. polymorphism.
+Polymorphism is derived from a ___________ word.;A. greek;B. English;C. java;D. Indian;A. greek
+Polymorphism;(d) Refers to the ability of two or more objects belonging to different classes to respond to exactly the same message in different class –specific ways and simplifies code maintenance.;(a)     Is not supported by Java;(b)     Refers to the ability of two or more objects belonging to different classes to respond to       exactly the same message in different class-specific ways;(c)     Simplifies code maintenance;(d) Refers to the ability of two or more objects belonging to different classes to respond to exactly the same message in different class –specific ways and simplifies code maintenance.
+"What will be the result of attempting to compile and run the following program?
+public class Polymorphism
+{
+     public static void main(String[] args)
+     {
+                   A ref1 = new C();
+                   B ref2 = (B) ref1;
+                   System.out.println(ref2.f());
+     }
+}
+class A
+{
+     int f() { return 0; }
+}
+class B extends A
+{
+     int f() { return 1; }
+}
+class C extends B
+{
+     int f() { return 2; }
+}";"(a) The program will compile without error and print 2 when run.
+";(a) The program will compile without error and print 2 when run.;"(b) The program will compile without error, but will throw a ClassCastException when run
+";"(c) The program will compile without error and print 0 when run
+";"(d) The program will compile without error and print 1 when run
+"

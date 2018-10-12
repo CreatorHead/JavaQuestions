@@ -1,0 +1,49 @@
+                  Final Total Question count 1443+411 =1854 question validated and updated to Excel sheet
+
+
+
+*************************************Total Question updatd into excel sheet and validated**********************************
+
+
+Test 1=> 271 question
+
+Test 2=> 100 question
+
+Test 3=> 225 question
+
+Test 4=> 61 question
+
+Test 5=> 79 question
+
+Test 6=> 329 question
+
+Test 7=>  196 question
+
+Test 8=> 182 question
+
+Total 1443 question
+
+
+
+*************************************Total Question by preetham updatd into excel sheet and validated**********************************
+
+
+
+Test 1=> 146 question
+
+Test 2=> 46 question
+
+Test 3=> 61 question
+
+Test 4=> 39 question
+
+Test 5=>  0 question
+
+Test 6=> 33 question
+
+Test 7=>  0 question
+
+Test 8=> 86 question
+
+Total 411 question
+

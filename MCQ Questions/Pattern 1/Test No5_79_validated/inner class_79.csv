@@ -1,0 +1,1477 @@
+question,correct answer,wrong answer 1,wrong answer 2,wrong answer 3,wrong answer 4,Difficulty level,Section,Important
+Which is true about an anonymous inner class?,It can extend exactly one class or implement exactly one interface,It can extend exactly one class and implement exactly one interface.,It can extend exactly one class and can implement multiple interfaces.,It can extend exactly one class or implement exactly one interface,It can implement multiple interfaces regardless of whether it also extends a class.,,,
+"class Boo 
+{
+    Boo(String s) { }
+    Boo() { }
+}
+class Bar extends Boo 
+{
+    Bar() { }
+    Bar(String s) {super(s);}
+    void zoo() 
+    {
+    // insert code here
+    }
+}
+which one create an anonymous inner class from within class Bar?
+",Boo f = new Bar() { };,Boo f = new Boo(24) { };,Boo f = new Bar() { };,Bar f = new Boo(String s) { };,Boo f = new Boo.Bar(String s) { };,,,
+Which is true about a method-local inner class?,It can be marked abstract,It must be marked final.,It can be marked abstract,It can be marked public.,It can be marked static.,,,
+Which statement is true about a static nested class?,It does not have access to nonstatic members of the enclosing class.,It does not have access to nonstatic members of the enclosing class.,You must have a reference to an instance of the enclosing class in order to instantiate it,It's variables and methods must be static.,It must extend the enclosing class.,,,
+Which constructs an anonymous inner class instance?,System.out.println(new Runnable() {public void run() { }});,Runnable r = new Runnable() { };,Runnable r = new Runnable(public void run() { });,Runnable r = new Runnable { public void run(){}};,System.out.println(new Runnable() {public void run() { }});,,,
+"class Foo 
+{
+    class Bar{ }
+}
+class Test 
+{
+    public static void main (String [] args) 
+    {
+        Foo f = new Foo();
+        /* Line 10: Missing statement ? */
+    }
+}
+which statement, inserted at line 10, creates an instance of Bar?
+",Foo.Bar b = f.new Bar();,Foo.Bar b = new Foo.Bar();,Foo.Bar b = f.new Bar();,Bar b = new f.Bar();,Bar b = f.new Bar();,,,
+"public class MyOuter 
+{
+    public static class MyInner 
+    {
+        public static void foo() { }
+    }
+}
+which statement, if placed in a class other than MyOuter or MyInner, instantiates an instance of the nested class?
+",MyOuter.MyInner m = new MyOuter.MyInner();,MyOuter.MyInner m = new MyOuter.MyInner();,MyOuter.MyInner mi = new MyInner();,"MyOuter m = new MyOuter();
+MyOuter.MyInner mi = m.new MyOuter.MyInner();
+",MyInner mi = new MyOuter.MyInner();,,,
+"public class Foo 
+{
+    Foo() 
+    {
+        System.out.print(""foo"");
+    }
+    
+class Bar
+{
+    Bar() 
+    {
+        System.out.print(""bar"");
+    }
+    public void go() 
+    {
+        System.out.print(""hi"");
+    }
+} /* class Bar ends */
+
+    public static void main (String [] args) 
+    {
+        Foo f = new Foo();
+        f.makeBar();
+    }
+    void makeBar() 
+    {
+        (new Bar() {}).go();
+    }
+","It prints ""foobarhi""",Compilation fails.,An error occurs at runtime.,"It prints ""foobarhi""","It prints ""barhi""",,,
+"public class HorseTest 
+{
+    public static void main (String [] args) 
+    {
+        class Horse 
+        {
+            public String name; /* Line 7 */
+            public Horse(String s) 
+            {
+                name = s;
+            }
+        } /* class Horse ends */
+        
+        Object obj = new Horse(""Zippo""); /* Line 13 */
+        Horse h = (Horse) obj; /* Line 14 */
+        System.out.println(h.name);
+    }
+} /* class HorseTest ends */
+","It prints ""Zippo"".",An exception occurs at runtime at line 10,"It prints ""Zippo"".",Compilation fails because of an error on line 7.,Compilation fails because of an error on line 13.,,,
+"public class TestObj 
+{
+    public static void main (String [] args) 
+    {
+        Object o = new Object() /* Line 5 */
+        {
+            public boolean equals(Object obj) 
+            {
+                return true;
+            } 
+        }      /* Line 11 */
+        
+        System.out.println(o.equals(""Fred""));
+    }
+}
+",Compilation fails,Compilation fails,"It prints ""true"".","It prints ""Fred"".",An exception occurs at runtime,,,
+"public abstract class AbstractTest 
+{
+    public int getNum() 
+    {
+        return 45;
+    }
+    public abstract class Bar 
+    {
+        public int getNum() 
+        {
+            return 38;
+        }
+    }
+    public static void main (String [] args) 
+    {
+        AbstractTest t = new AbstractTest() 
+        {
+            public int getNum() 
+            {
+                return 22;
+            }
+        };
+        AbstractTest.Bar f = t.new Bar() 
+        {
+            public int getNum() 
+            {
+                return 57;
+            }
+        };
+        
+        System.out.println(f.getNum() + "" "" + t.getNum());
+    }
+}
+",57 22,45 38,57 22,45 57,An exception occurs at runtime.,,,
+Which is true about an anonymous inner class?,It can extend exactly one class or implement exactly one interface,It can extend exactly one class and implement exactly one interface,It can extend exactly one class and can implement multiple interfaces.,It can extend exactly one class or implement exactly one interface.,It can implement multiple interfaces regardless of whether it also extends a class.,,,
+"public class Foo 
+{
+    Foo() 
+    {
+        System.out.print(""foo"");
+    }
+    
+class Bar
+{
+    Bar() 
+    {
+        System.out.print(""bar"");
+    }
+    public void go() 
+    {
+        System.out.print(""hi"");
+    }
+} /* class Bar ends */
+
+    public static void main (String [] args) 
+    {
+        Foo f = new Foo();
+        f.makeBar();
+    }
+    void makeBar() 
+    {
+        (new Bar() {}).go();
+    }
+}/* class Foo ends */
+","It prints ""foobarhi""",Compilation fails.,An error occurs at runtime.,"It prints ""foobarhi""","It prints ""barhi""",,,
+"What will be the output of the program?
+
+public class HorseTest 
+{
+    public static void main (String [] args) 
+    {
+        class Horse 
+        {
+            public String name; /* Line 7 */
+            public Horse(String s) 
+            {
+                name = s;
+            }
+        } /* class Horse ends */
+        
+        Object obj = new Horse(""Zippo""); /* Line 13 */
+        Horse h = (Horse) obj; /* Line 14 */
+        System.out.println(h.name);
+    }
+} /* class HorseTest ends */","It prints ""Zippo"".","It prints ""Zippo"".",An exception occurs at runtime at line 10.,Compilation fails because of an error on line 7.,Compilation fails because of an error on line 13.,,,
+"What will be the output of the program?
+public class TestObj 
+{
+    public static void main (String [] args) 
+    {
+        Object o = new Object() /* Line 5 */
+        {
+            public boolean equals(Object obj) 
+            {
+                return true;
+            } 
+        }      /* Line 11 */
+        
+        System.out.println(o.equals(""Fred""));
+    }
+}
+",Compilation fails,Compilation fails,"It prints ""true"".","It prints ""Fred"".",An exception occurs at runtime.,,,
+Which statement is true about a static nested class?,It must extend the enclosing class.,It must extend the enclosing class.,You must have a reference to an instance of the enclosing class in order to instantiate it.,It does not have access to nonstatic members of the enclosing class.,It's variables and methods must be static,,,
+"class MyOuterClassDemo {
+   private int x= 1;
+   public void innerInstance()
+   {
+       MyInnerClassDemo inner = new MyInnerClassDemo();
+       inner. seeOuter();
+   }
+   public static void main(String args[]){
+       MyOuterClassDemo obj = new MyOuterClassDemo();
+       obj.innerInstance();
+   }
+  
+   class MyInnerClassDemo {
+       public void seeOuter () {
+          System.out.println(""Outer Value of x is :"" + x);
+       }
+   }     
+} ",Outer Value of x is :1,Outer Value of x is :1,Outer Value of x is :2,compilation fails ,runtime error,,,
+"What is a output?
+class A{
+   
+   
+   static int x = 1;
+}
+class OuterClass {
+   class InnerClass extends A{
+          
+                   static int i = 2;          
+                   static final int j = 3;   }
+}
+",compilation error,compilation error,3,2,runtime error,,,
+"package com.yms;
+
+class OuterClass{
+ 
+    int i=1; 
+    void m(){} 
+ 
+    static int staticI=1; 
+    static void staticM(){} 
+    
+    
+    class InnerClass {
+          public void method() {
+                  System.out.println(""In InnerClass's method"");
+                  i=1; 
+                  m(); 
+                  staticI=1; 
+                  staticM(); 
+                  
+                  System.out.println(""OuterClass reference=""+OuterClass.this);
+                  System.out.println(""InnerClass reference=""+this);
+                  
+             OuterClass.this.i=2;
+             OuterClass.this.m();
+                  
+          }
+    } 
+ 
+}
+  
+
+public class InnerClassTest {
+    public static void main(String[] args) {
+               
+        new OuterClass().new InnerClass().method();
+        
+    }
+        
+}
+ ","In InnerClass's method
+OuterClass reference=com.yms.OuterClass@1a4eb98b
+InnerClass reference=com.yms.OuterClass$InnerClass@2677622b","In InnerClass's method
+OuterClass reference=com.yms.OuterClass@1a4eb98b
+InnerClass reference=com.yms.OuterClass$InnerClass@2677622b","In InnerClass's method
+OuterClass reference=com.yms.OuterClass@1a4eb98b
+",compilation error,none of this ,,,
+"class Outer {
+  
+   class Inner {
+      public void show() {
+           System.out.println(""In a nested class method"");
+      }
+   }
+}
+class Main {
+   public static void main(String[] args) {
+       Outer.Inner in = new Outer().new Inner();
+       in.show();
+   }
+}
+",In a nested class method,In a nested class method,compilation error,runtime error,none of this ,,,
+"class Demo {
+   void show() {
+      System.out.println(""i am in show method of super class"");
+   }
+}
+class Flavor1Demo {
+ 
+  
+   static Demo d = new Demo() {
+       void show() {
+           super.show();
+           System.out.println(""i am in Flavor1Demo class"");
+       }
+   };
+   public static void main(String[] args){
+       d.show();
+   }
+}
+","i am in show method of super class
+i am in Flavor1Demo class","i am in show method of super class
+i am in Flavor1Demo class","i am in show method of super class
+","
+i am in Flavor1Demo class",none of this ,,,
+"class Flavor2Demo {
+ 
+    
+    static Hello h = new Hello() {
+        public void show() {
+            System.out.println(""i am in anonymous class"");
+        }
+    };
+ 
+    public static void main(String[] args) {
+        h.show();
+    }
+}
+ 
+interface Hello {
+    void show();
+}",i am in anonymous class,i am in anonymous class,compilation error,runtime error,none of this ,,,
+"class Outer {
+   void outerMethod() {
+      System.out.println(""inside outerMethod"");
+   }
+   class Inner {
+      public static void main(String[] args){
+         System.out.println(""inside inner class Method"");
+      }
+   }
+}
+
+",compilation error,compilation error,inside inner class Method,inside outerMethod,none of this ,,,
+"class Outer {
+    void outerMethod() {
+        System.out.println(""inside outerMethod"");
+       
+        class Inner {
+            void innerMethod() {
+                System.out.println(""inside innerMethod"");
+                int i=i+1;
+                System.out.println(i);
+            }
+        }
+        Inner y = new Inner();
+        y.innerMethod();
+    }
+}
+class MethodDemo {
+    public static void main(String[] args) {
+        Outer x = new Outer();
+        x.outerMethod();
+    }
+}
+",compilation error,compilation error,3,2,runtime error,,,
+"class Demo {
+   void show() {
+      System.out.println(""i am in show method of super class"");
+   }
+}
+class Flavor1Demo {
+ 
+   
+   static Demo d = new Demo() {
+       void show() {
+           super.show();
+           System.out.println(""i am in Flavor1Demo class"");
+       }
+   };
+   public static void main(String[] args){
+       d.show();
+   }
+}
+","i am in show method of super class
+i am in Flavor1Demo class","i am in show method of super class
+i am in Flavor1Demo class","i am in show method of super class
+","
+i am in Flavor1Demo class",none of this ,,,
+"class Demo {
+   void show() {
+      System.out.println(""i am in show method of super class"");
+   }
+}
+class Flavor1Demo {
+ 
+   
+   static Demo d = new Demo() {
+       void show() {
+           show();
+           System.out.println(""i am in Flavor1Demo class"");
+       }
+   };
+   public static void main(String[] args){
+       d.show();
+   }
+}
+",runtime error,runtime error,"i am in show method of super class
+","
+i am in Flavor1Demo class",none of this ,,,
+"interface Age
+{
+    int x = 21;
+    void getAge();
+}
+class AnonymousDemo
+{
+    public static void main(String[] args) {
+ 
+
+        Age oj1 = new Age() {
+            @Override
+            public void getAge() {
+                
+                System.out.print(""Age is ""+x);
+            }
+        };
+        oj1.getAge();
+    }
+}
+",Age is 21,Age is 21,compilation error,runtime error,none of this ,,,
+"class MyThread 
+{
+    public static void main(String[] args)
+    {
+        Thread t = new Thread()
+        {
+            public void run()
+            {
+                System.out.println(""Child Thread"");
+            }
+        };
+        t.start();
+        System.out.println(""Main Thread"");
+    }
+}
+
+","Main Thread
+Child Thread","Main Thread
+Child Thread",compilation error,"
+Child Thread",runtime error,,,
+"class Outer {
+  String s1 = ""Java"";
+  String s2 = ""2"";
+
+  public static void main(String[] args) { 
+    Outer outer = new Outer();  
+  }
+  Outer() { 
+    Inner inner = new Inner();  
+  }
+  class Inner {
+   String s1 = ""Certification"";
+   String s2 = ""Exam"";
+          
+   Inner() {
+     System.out.println(Outer.this.s1);
+     System.out.println(this.s1);
+     System.out.println(s2);
+   }
+ }
+}
+
+","Java
+Certification
+Exam","Java
+Certification
+Exam","Java
+Certification
+",runtime error,none of this ,,,
+"class YMS {
+  static String s1 = ""YMS""; 
+  static String s2 = ""2"";
+  public static void main(String[] args) { 
+    Inner inner = new Inner();  
+}
+
+ static class Inner {
+  String s1 = ""MVC"";
+  String s2 = "" "";
+
+  Inner() {
+   System.out.println(YMS.s1);
+   System.out.println(this.s1);
+   System.out.println(s2);
+  }
+ }
+}
+","YMS
+MVC
+ ","YMS
+MVC
+ ","YMS
+
+ ",runtime error,none of this ,,,
+"class Outer_Demo {
+   int num;
+   
+      private class Inner_Demo {
+      public void print() {
+         System.out.println(""This is an inner class"");
+      }
+   }
+   
+   void display_Inner() {
+      Inner_Demo inner = new Inner_Demo();
+      inner.print();
+   }
+}
+   
+public class My_class {
+
+   public static void main(String args[]) {
+      Outer_Demo outer = new Outer_Demo();
+      
+            outer.display_Inner();
+   }
+}
+",This is an inner class,This is an inner class,compilation error,runtime error,none of this ,,,
+"class YMS {
+   private int num = 175;  
+   
+   public class Inner_Demo {
+      public int getNum() {
+         System.out.println(""This is the getnum method of the inner class"");
+         return num;
+      }
+   }
+}
+
+public class My_class2 {
+
+   public static void main(String args[]) {
+      YMS outer = new YMS();
+      
+      YMS.Inner_Demo inner = outer.new Inner_Demo();
+      System.out.println(inner.getNum());
+   }
+}
+
+","This is the getnum method of the inner class
+175","This is the getnum method of the inner class
+175","This is the getnum method of the inner class
+",runtime error,none of this ,,,
+"public class A {
+   void my_Method() {
+      int num = 23;
+
+      class B {
+         public void print() {
+            System.out.println(""This is method inner class ""+num);    
+         }   
+      }    
+            B inner = new B();
+      inner.print();
+   }
+   
+   public static void main(String args[]) {
+      A outer = new A();
+      outer.my_Method();        
+   }
+}
+",This is method inner class 23,This is method inner class 23,This is method inner class 22,runtime error,none of this ,,,
+"public class A {
+   void my_Method() {
+      int num = 23;
+
+      class B {
+         public void print() {
+            System.out.println(""This is method inner class ""+num);    
+         }   
+      }    
+            B inner = new B();
+      inner.print();
+       System.out.println(""This is method inner class ""+inner.num);
+   }
+   
+   public static void main(String args[]) {
+      A outer = new A();
+      outer.my_Method();        
+   }
+}
+",Compile Errors ,Compile Errors :,This is method inner class 22,runtime error,none of this ,,,
+"abstract class AnonymousInner {
+   public abstract void mymethod();
+   int a=10;
+}
+
+public class Outer_class {
+
+   public static void main(String args[]) {
+      AnonymousInner inner = new AnonymousInner() {
+         public void mymethod() {
+             System.out.println(a);
+            System.out.println("" anonymous inner class"");
+         }
+      };
+      inner.mymethod(); 
+   }
+}
+","10
+ anonymous inner class","10
+ anonymous inner class", anonymous inner class,error at  line 3,none of this ,,,
+"interface Message {
+   String greet();
+}
+
+public class My_class {
+      public void displayMessage(Message m) {
+      System.out.println(m.greet() +
+         "",  argument"");  
+   }
+
+   public static void main(String args[]) {
+      My_class obj = new My_class();
+
+      obj.displayMessage(new Message() {
+         public String greet() {
+            return ""YMS"";
+         }
+      });
+   }
+}
+","YMS,  argument",  argument,"YMS,  argument",runtime error,none of this ,,,
+"public class NestedStaticExample {
+
+    public static void main(String args[]){
+  
+        StaticNested nested = new StaticNested();
+        nested.name();
+    }
+  
+
+    private static class StaticNested{
+        public void name(){
+            System.out.println(""static nested class example in java"");
+        }
+    }
+}
+",static nested class example in java,static nested class example in java,compilation error,runtime error,none of this ,,,
+"
+public class Static_class {
+
+static class inner()
+{
+void go()
+{
+System.out.println(""Hello"");
+}
+}
+public static void main(String s[])
+{
+Static_class.inner cl=new Static_class.inner();
+cl.go();
+}
+}
+",compilation error,compilation error,Hello,runtime error,none of this ,,,
+"class Test
+{
+ int x=10;
+ static int y=20;
+ public void methodOne()
+ {
+  class Inner
+  {
+   public void methodTwo()
+   {
+    System.out.println(x);
+    System.out.println(y);
+    System.out.println(++y);
+   }
+  }
+  Inner i=new Inner();
+  i.methodTwo();
+ }
+ public static void main(String[] args)
+ {
+  new Test().methodOne();
+ }
+}
+","10
+20
+21","10
+20
+21",compilation error,runtime error,none of this ,,,
+"class Test
+{
+ int x=66;
+ public void methodOne()
+ {
+  int y=20;
+  class Inner
+  {
+   public void methodTwo()
+   {
+    System.out.println(x);
+    System.out.println(y); 
+                 
+   }
+  }
+  Inner i=new Inner();
+  i.methodTwo();
+ }
+ public static void main(String[] args)
+ {
+  new Test().methodOne();
+ }
+}
+","66
+20","66
+20",66,runtime error,none of this ,,,
+"class Test
+{
+ int i=10;
+ static int j=20;
+ public void methodOne()
+ {
+  int k=30;
+  final int l=40;
+  class Inner
+  {
+   public void methodTwo()
+   {
+    System.out.println(i);
+    System.out.println(j); 
+    System.out.println(k);
+    System.out.println(l);
+   }
+  }
+  Inner i=new Inner();
+  i.methodTwo();
+ }
+ public static void main(String[] args)
+ {
+  new Test().methodOne();
+ }
+}
+","10
+20
+30
+40","10
+20
+30
+40","10
+20
+","
+30
+40",30,,,
+"class PopCorn
+{
+ public void taste()
+ {
+  System.out.println(""spicy"");
+ }
+}
+class Test 
+{
+ public static void main(String[] args) 
+ {
+  PopCorn p=new PopCorn()
+  {
+   public void taste()
+   {
+    System.out.println(""salty"");
+   }
+  };
+  p.taste();
+  PopCorn p1=new PopCorn();
+  p1.taste();
+ }
+}","salty
+spicy","salty
+spicy","
+spicy","salty
+",none of this ,,,
+"class PopCorn
+{
+ public void taste()
+ {
+  System.out.println(""spicy"");
+ }
+}
+class Test 
+{
+ public static void main(String[] args) 
+ {
+  PopCorn p=new PopCorn();
+  {
+   public void taste()
+   {
+    System.out.println(""salty"");
+   }
+  };
+  p.taste();
+  PopCorn p1=new PopCorn();
+  p1.taste();
+ }
+}
+
+",Error ,Error,"
+spicy","salty
+",none of this ,,,
+"class Test 
+{
+ int x=10;
+ static int y=20;
+ static class Nested
+ {
+  public void methodOne()
+  {
+   System.out.println(x);
+     
+   System.out.println(y);
+  }
+ }
+}",error at line 8,error at line 8,10 20,20,none of this ,,,
+What are the different types of inner classes?,All of the above,"Static member class
+ Inner class
+","
+ Inner class
+","Static member class
+
+",All of the above,,,
+"public class InnerClass { 
+  static class StaticInner { 
+   static int i = 9; 
+  int no = 6; 
+  private void method() {} 
+  public void method1() {} 
+  static void method2() {} 
+  final void method3() {} 
+  } 
+}
+",runtime error,runtime error,compilation error,6,none of this ,,,
+"public class InnerClass {
+ int i = 9; 
+ public void method1() {
+  final int k = 6; 
+  class MethodLocal { 
+    MethodLocal() { 
+   System.out.println(k  + i); 
+    } 
+  } 
+ } 
+}
+",runtime error,runtime error,9 6,6 9,none of this ,,,
+ Which among the following best describes a nested class?,Class inside a class,Class inside a class,Class inside a function,Class inside a package,Class inside a structure,,,
+Which feature of OOP reduces the use of nested classes?,Inheritance,Encapsulation,Inheritance,Binding,Abstraction,,,
+How many categories are nested classes divided into?,2,2,5,3,4,,,
+Non-static nested classes have access to _____________ from enclosing class.,All the members,All the members,Private members,Protected members,Public members,,,
+ Static nested classes doesn’t have access to _________________ from enclosing class,Any other members,Any other members,Private members,Protected members,Public members,,,
+The nested class can be declared ___________________,"Public, Protected, Private or Package private",Public,Private,Protected," Public, Protected, Private or Package private",,,
+Use of nested class ____________ encapsulation.,Increases,Increases,Decreases,Doesn’t affect,Slightly decreases,,,
+Which among the following is correct advantage/disadvantage of nested classes?,Makes the code efficient and readable,Makes the code efficient and readable, Makes the code more complex,Makes the code unreadable,Makes the code multithreaded,,,
+How to access static nested classes?,OuterClass.StaticNestedClass,OuterClass.StaticNestedClass,OuterClass->StaticNestedClass,OuterClass(StaticNestedClass),OuterClass[StaticNestedClass].,,,
+A nested class can have its own static members.,FALSE,FALSE,TRUE,none of this,may be true/false,,,
+How to create object of the inner class?, OuterClass.InnerClass innerObject = outerObject.new InnerClass();, OuterClass.InnerClass innerObject = outerObject.new InnerClass();,OuterClass.InnerClass innerObject = new InnerClass();, InnerClass innerObject = outerObject.new InnerClass();, OuterClass.InnerClass = outerObject.new InnerClass();,,,
+"What will be the output of the following code?
+
+public class Test
+{
+ public int a=0;
+ class innerClass
+ {
+  public int a=1;
+  void innermethod(int x)
+  {
+   System.out.println(“value of x = ” + x);
+   System.out.println(“value of this.x = ” + this.x);
+   System.out.println(“value of Test.this.x = ” + Test.T=this.x);
+  }
+ }
+} 
+public static void main( String args[] )
+{
+ Test t=new Test();
+ Test.innerClass im=t.new innerClass();
+ im.innermethod(55);
+}","value of x = 55
+value of this.x = 0
+value of Test.this.x = 1","value of x = 55
+value of this.x = 0
+value of Test.this.x = 1","value of x = 1
+value of this.x = 0
+value of Test.this.x = 55","value of x = 55
+value of this.x = 1
+value of Test.this.x = 0","value of x = 0
+value of this.x = 55
+value of Test.this.x = 1",,,
+Instance of inner class can exist only _______________ enclosing class.,Within,Within,Outside, Private to,Public to,,,
+" If a declaration of a member in inner class has the same name as that in the outer class, then ________________ enclosing scope.",Inner declaration shadows outer declaration in,Outer declaration shadows inner declaration in,Inner declaration shadows outer declaration in,Declaration gives compile time error,Declaration gives run time error,,,
+ A static nested class is _____________ class in behavior that is nested in another _________ class.,"Top level, top level","Top level, top level","Top level, low level","Low level, top level","Low level, low level
+",,,
+"class X
+{
+    static int x = 3131;
+     
+    static class Y
+    {
+        static int y = x++;
+         
+        static class Z
+        {
+            static int z = y++;
+        }
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        System.out.println(X.x);
+         
+        System.out.println(X.Y.y);
+         
+        System.out.println(X.Y.Z.z);
+    }
+}
+
+","3131
+3131
+3131","3131
+3131
+3131","3131
+3131
+",runtime error,Compilation fails ,,,
+"class ABC
+{
+    int i = 10101;
+     
+    {
+        i--;
+    }
+     
+    public ABC()
+    {
+        --i;
+    }
+     
+    class XYZ
+    {
+        int i = this.i;
+         
+        {
+            i++;
+        }
+         
+        public XYZ() 
+        {
+            ++i;
+        }
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        ABC abc = new ABC();
+         
+        System.out.println(abc.i);
+         
+        ABC.XYZ xyz = abc.new XYZ();
+         
+        System.out.println(xyz.i);
+         
+        ABC.XYZ xyz1 = new ABC().new XYZ();
+         
+        System.out.println(xyz1.i);
+    }
+}
+","10099
+2
+2","10099
+2
+2","10099
+",runtime error,none of this ,,,
+"class A
+{
+    void methodA1(int i)
+    {
+        System.out.println(i+++i);
+    }
+     
+    void methodA2(int i)
+    {
+        System.out.println(--i-i--);
+    }
+}
+ 
+class B
+{
+    A a = new A()
+    {
+        void methodA1(int i)
+        {
+            System.out.println(++i+i++);
+        }
+         
+        void methodA2(int i)
+        {
+            System.out.println(i---i);
+        }
+    };
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        A a = new A();
+         
+        a.methodA1(10);
+         
+        a.methodA2(10);
+         
+        B b = new B();
+         
+        b.a.methodA1(10);
+         
+        b.a.methodA2(10);
+    }
+}
+
+","21
+0
+22
+1","21
+0
+22
+1","21
+0
+",0 1,none of this ,,,
+"class One
+{
+    {
+        System.out.println(""ONE"");
+    }
+     
+    class Two
+    {
+        {
+            System.out.println(""TWO"");
+        }
+    }
+     
+    static
+    {
+        System.out.println(""THREE"");
+    }
+     
+    static class Three
+    {
+        {
+            System.out.println(""FOUR"");
+        }
+         
+        static
+        {
+            System.out.println(""FIVE"");
+        }
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        One one = new One();
+         
+        One.Two two = one.new Two();
+         
+        One.Three three = new One.Three();
+    }
+}
+","THREE
+ONE
+TWO
+FIVE
+FOUR","THREE
+ONE
+TWO
+FIVE
+FOUR","THREE
+ONE
+TWO
+",runtime error,none of this ,,,
+"abstract class X
+{
+    static String s1 = ""STATIC"";
+     
+    String s2 = ""NON-STATIC"";
+     
+    abstract void methodX(); 
+     
+    static abstract class Y
+    {
+        String s1 = ""NON-STATIC"";
+         
+        static String s2 = ""STATIC"";
+         
+        abstract void methodY();
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        new X() 
+        {    
+            void methodX()
+            {
+                System.out.println(s1+"" ""+s2);
+            }
+        }.methodX();
+         
+        new X.Y() 
+        {    
+            void methodY() 
+            {
+                System.out.println(s1+"" ""+s2);
+            }
+        }.methodY();
+    }
+}
+","STATIC NON-STATIC
+NON-STATIC STATIC","STATIC NON-STATIC
+NON-STATIC STATIC",STATIC NON-STATIC,none of this,runtime error,,,
+"class X
+{
+    int x = 111;
+     
+    static class Y extends X
+    {
+        int y = x + 222;
+    }
+     
+    class Z extends X.Y
+    {
+        int z = y + 333;
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        X.Z z = new X().new Z();
+         
+        System.out.println(z.x);
+         
+        System.out.println(z.y);
+         
+        System.out.println(z.z);
+    }
+}
+
+","111
+333
+666","111
+333
+`",runtime error ,none of this,"111
+
+666",,,
+"class ABC
+{    
+    class XYZ
+    {
+        String s = ""Inner - XYZ"";
+    }
+}
+ 
+class XYZ extends ABC
+{    
+    String s = ""Outer - XYZ"";
+     
+    class ABC extends XYZ
+    {
+         
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        System.out.println(new XYZ().new ABC().s);
+    }
+}
+
+",Inner - XYZ,Inner - XYZ,compilation error,runtime error,none of this ,,,
+"
+class A
+{    
+    int i = 1;
+     
+    class B
+    {
+        int i = 2;
+         
+        class C extends A
+        {
+            void methodC()
+            {
+                System.out.println(i);
+            }
+        }
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        new A().new B().new C().methodC();
+    }
+}
+",1,2,1,runtime error,none of this ,,,
+"class A
+{    
+    {
+        System.out.println(1);
+    }
+     
+    void method()
+    {
+        class B
+        {
+            {
+                System.out.println(2);
+            }
+             
+            class C
+            {
+                {
+                    System.out.println(3);
+                }
+            }
+        }
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        new A().method();
+    }
+}
+",1,1,23,2,none of this ,,,
+"class A
+{    
+    abstract class B
+    {
+        abstract void method();
+    }
+     
+    {
+        new B()
+        {
+             
+            @Override
+            void method()
+            {
+                System.out.println(""BBB"");
+            }
+        }.method();
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        new A();
+    }
+}
+
+",BBB,BBB,compilation error,none of this,runtime error ,,,
+"class X
+{    
+    {
+        class Y
+        {
+            {
+                System.out.println(1);
+            }
+        }
+         
+        new Y();
+    }
+     
+    static
+    {
+        class Z
+        {
+            {
+                System.out.println(2);
+            }
+        }
+         
+        new Z();
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        new X();
+    }
+}
+","2
+1",22,1,3,none of this ,,,
+"class OuterClass
+{
+    static class InnerClassOne
+    {
+        int i = 1221;
+         
+        int getI()
+        {
+            return i = i++ + ++i;
+        }
+    }
+     
+    static class InnerClassTwo extends InnerClassOne
+    {
+        @Override
+        int getI()
+        {
+            return i = i-- + --i;
+        }
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args) 
+    {
+        OuterClass.InnerClassOne one = new OuterClass.InnerClassOne();
+         
+        System.out.println(one.getI());
+         
+        one = new OuterClass.InnerClassTwo();
+         
+        System.out.println(one.getI());
+    }    
+}
+","2444
+2440","2444
+2440","2444
+",runtime error,none of this ,,,
+"class A 
+{
+    interface I
+    {
+        int i = 4444;
+         
+        void show(int i);
+    }
+     
+    class B implements I
+    {    
+        public void show(int i)
+        {
+            System.out.println(this.i);
+        }
+    }
+     
+    void methodA(int i)
+    {
+        new B().show(i);
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        new A().methodA(1111);
+    }
+}
+",4444,4444,444,runtime error,none of this ,,,
+"class A 
+{
+    static
+    {
+        System.out.println(1);
+         
+        class B
+        {
+            {
+                System.out.println(2);
+            }
+        }
+    }
+     
+    {
+        System.out.println(3);
+         
+        class B
+        {
+            {
+                System.out.println(4);
+            }
+        }
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        new A();
+    }
+}
+", 1 3,1 3 ,4 5 ,runtime error,none of this ,,,
+"class A 
+{
+    static
+    {
+        System.out.println(1);
+         
+        class B
+        {
+            {
+                System.out.println(2);
+            }
+        }
+    }
+     
+    {
+        System.out.println(3);
+         
+        class B
+        {
+            {
+                System.out.println(4);
+            }
+        }
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        new A();
+    }
+}
+", 1 3,1 3 ,4 5 ,runtime error,none of this ,,,

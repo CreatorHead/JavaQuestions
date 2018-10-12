@@ -1,0 +1,23 @@
+Question;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+Which of these is necessary condition for automatic type conversion in Java?;b) The destination type is larger than source type.;a) The destination type is smaller than source type.;c) The destination type can be larger or smaller than source type.;d) None of the mentioned;b) The destination type is larger than source type.
+"What is the error in this code?
+  byte b = 50;
+  b = b * 50;";b) * operator has converted b * 50 into int, which can not be converted to byte without casting.;a) b can not store the result 2500, limited by its range.;c) b can not contain value 50.;d) No error in this code;b) * operator has converted b * 50 into int, which can not be converted to byte without casting.
+Which of the following is true in the case of abstract class;a) Abstract constructors cannot be created;b) Abstract classes can not be inherited;c)An abstract class contains only abstract methods.;d) All of the above.;a) Abstract constructors cannot be created
+Which of these keywords are used to define an abstract class?;b) abstract;a) abst;c) Abstract;d) abstract class;b) abstract
+If a class inheriting an abstract class  does not  define all of its function then it will be known as? ;a) abstract;b) A simple class;c) Static class;d) None of the mentioned;a) abstract
+Which of these is not a correct statement?;c) Abstract class can be initiated by new operator.;a) Every class containing abstract method must be declared abstract.;b) Abstract class defines only the structure of  the class  not its implementation.;d) Abstract class can be inherited.;c) Abstract class can be initiated by new operator.
+Which method defined in Integer class can be used to convert a whole number in string type to primitive int type.;c)  parseInt() 	;a) valueOf();b) intValue()	;d)  getInteger();c)  parseInt() 	
+Which of the following are true about interfaces.;b) Variables declared in interfaces are implicitly public, static, and final.;a) Methods declared in interfaces are implicitly private.;c) An interface contains any number of method definitions.;d) The keyword implements indicate that an interface inherits from another.;b) Variables declared in interfaces are implicitly public, static, and final.
+Which of these keywords is used to define  interfaces  in Java?;a)  interface;b) Interface;c) intf	;d) implements;a)  interface
+Which of these can be used to fully abstract a class from its implementation?;c)  Interfaces;a) Objects;b) Packages;d) None of the Mentioned.;c)  Interfaces
+Which of these access specifiers can be used for an  interface?;a) Public;b) Protected;c) private;d) All of the mentioned;a) Public
+Which of these keywords is used by a class to use an  interface  defined previously?;c) implements;a) import;b) Import;d) implements;c) implements
+Which of the following is correct way of implementing an  interface  salary by class manager?;b) class Manager implements salary {};a) class Manager extends salary {};c) class Manager imports salary {} ;d) None of the Mentioned.;b) class Manager implements salary {}
+ Using the keyword interface you can fully abstract a _________.;C. class.;A. method.;B. keyword;D. variables.;C. class.
+ One interface can inherit another by use of the keyword _____.;B. extends.;A. public.;C. method name.;D. class name.;B. extends.
+Which of these access specifiers can be used for an interface?.;A. public.;B. protected.;C. private.;D. All of the mentioned.;A. public.
+Once an interface has been defined, one or more _____ can implement that interface.;A. class.;B. object.;C. methods.;D. keywords.;A. class.
+_______ can be declared inside interface declarations.;A. Variables.;B. Classes.;C. methods.;D. keywords.;A. Variables.
+A method without the body is called ________ method.;C. abstract.;A. view.;B. class.;D. user defined.;C. abstract.
+ A class having an abstract method is to be declared as _______.;B. abstract;A. class.;C. class name.;D. method name.;B. abstract

@@ -1,0 +1,129 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+ Which of the following are true about the Error and Exception classes?;A. Both classes extend Throwable.;B. The Error class is final and the Exception class is not.;C. The Exception class is final and the Error is not.;D. Both classes implement Throwable.;A. Both classes extend Throwable.
+Which of the following statements about the try{} block in Java is false?;C. The try{} block cannot contain loops or branches.;A. Some of the statements in a try{} block will never throw an exception.;B. The try{} block must appear before the catch{} blocks.;D. The statements in a try{} block may throw several types of exception.;C. The try{} block cannot contain loops or branches.
+All exception types are subclasses of the built-in class;(d)   Throwable;(a)   Exception;(b)   RuntimeException;(c)   Error;(d)   Throwable
+In Java, a try block should immediately be followed by one or more ……………….. blocks.;(d)   Catch;(a)   Throw    ;(b)   Run;(c)   Exit ;(d)   Catch
+"What will be the result of attempting to compile and run the following program?
+public class MyClass
+{
+     public static void main(String[] args)
+     {
+                   RuntimeException re = null;
+                   throw re;
+     }
+}";"(d) The program will compile without error and will throw java.lang.NullpointerException when run
+";"(a) The code will fail to compile, since the main() method does not declare that it throws Runtime Exception in its declaration
+";"(b) The program will fail to compile, since it cannot throw re
+";"(c) The program will compile without error and will throw java.lang.RuntimeException when run
+";"(d) The program will compile without error and will throw java.lang.NullpointerException when run
+"
+Which of the following is  true?;"(c) The main() method of a program can declare that it throws checked exceptions
+";"(a) If an exception is uncaught in a method, the method will terminate and normal execution will resume
+";"(b) An overriding method must declare that it throws the same exception classes as the method it overrides
+";"(c) The main() method of a program can declare that it throws checked exceptions
+";"(d) finally blocks are executed if, and only if, an exception gets throws while inside the corresponding try block
+"
+"Suppose the following Java statements:
+char ch = ' ';
+try {
+do {
+ch = (char) System.in.read();
+} while ( ch != 'G');
+} catch(Exception i) {
+System.out.println(ch);
+}
+are executed and applied to the following input which is typed on the keyboard:
+g MnGyZ
+The final value of the variable ch will be:";"(d) 'G'
+";"(a) 'g'
+";"(b) ' '
+";"(c) 'n'
+";"(d) 'G'
+"
+What must A method declare to throw?;"(b)
+Checked exceptions
+";"(a)
+Unchecked exceptions
+";"(b)
+Checked exceptions
+";"(c)
+Error
+";"(d)
+RuntimeException
+"
+"The code causes Java to throw
+int number = Integer.MAX_VALUE + 1;";"(d)
+No exceptions.
+";"(a)
+RuntimeException
+";"(b)
+Exception
+";"(c)
+Error
+";"(d)
+No exceptions.
+"
+"After Analyzing the following code, which statement is appropriate?
+class Test {
+     public static void main(String[] args)
+         throws MyException {
+         System.out.println(""Welcome to Java"");
+     }
+}
+
+class MyException extends Error {
+}";"(a)
+You should not declare a class that extends Error, because Error raises a fatal error that terminates the program
+";"(a)
+You should not declare a class that extends Error, because Error raises a fatal error that terminates the program
+";"(b)
+You cannot declare an exception in the main method
+";"(c)
+You declared an exception in the main method, but you did not throw it
+";"(d)
+The program has a compilation error
+"
+Which of the following exception is caused when a math error such as division by zero occurs?;"(a)
+ArithmaticException
+";"(a)
+ArithmaticException
+";"(b)
+DivisionByZeroException
+";"(c)
+NumberFormatException
+";"(d)
+IOException
+"
+"The following program takes any number of numeric arguments & returns the sum & the average of those arguments. When this program run, is it throws an error? Find which line number is to be modified to give the correct output?
+Line 1)class SumAverage {
+Line 2)public static void main(String args[]) {
+Line 3)int sum = 0;
+Line 4)for (int I = 0; i<args.length; i++) {
+Line 5)Sum += args[i];
+}
+Line 6)System.out.println(“Sum is;” + sum);
+Line 7)System.out.println(“Average is:” +
+Line 8)(float) sum / args.length);
+}
+}";"(c)
+Line 5
+";"(a)
+Line 3
+";"(b)
+Line 4
+";"(c)
+Line 5
+";"(d)
+Line 8
+"
+Select the exception class from among the following which is   part of the java.lang package.;"(d)
+RunTimeException
+";"(a)
+Inputstream exception
+";"(b)
+IOException
+";"(c)
+MalFormedURLException
+";"(d)
+RunTimeException
+"

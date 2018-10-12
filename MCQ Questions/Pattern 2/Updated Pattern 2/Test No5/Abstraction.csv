@@ -1,0 +1,7 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+Given three classes A,B,C, where B is a subclass of A and C is a subclass of B, which one of these Boolean expressions is  true  when an object denoted by reference has actually been instantiated from class B as opposed to from A or C?;"(b) (o instanceof B) && (!(o instanceof C))
+";"(a) (o instanceof B) && (!(o instanceof A))
+";"(b) (o instanceof B) && (!(o instanceof C))
+";"(c) !((o instanceof A) || (o instanceof B))
+";"(d) (o instanceof B)
+"

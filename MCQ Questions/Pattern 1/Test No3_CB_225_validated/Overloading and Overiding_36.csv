@@ -1,0 +1,723 @@
+question,correct answer,wrong answer 1,wrong answer 2,wrong answer 3,wrong answer 4,Difficulty level,Section,Important
+"class A
+{
+     
+}
+ 
+class B extends A
+{
+     
+}
+ 
+class C extends B
+{
+     
+}
+ 
+public class MainClass 
+{
+    static void overloadedMethod(A a)
+    {
+        System.out.println(""ONE"");
+    }
+     
+    static void overloadedMethod(B b)
+    {
+        System.out.println(""TWO"");
+    }
+     
+    static void overloadedMethod(Object obj)
+    {
+System.out.println(""THREE"");
+    }
+     
+    public static void main(String[] args)
+    {
+        C c = new C();
+         
+        overloadedMethod(c);
+    }
+}
+",TWO,TWO,ONE,THREE,none,,,
+"In a class, one method has two overloaded forms. One form is defined as static and another form is defined as non-static. Is that method properly overloaded?",yes,no,yes,,,,,
+"public class MainClass 
+{
+    void method(int ... a)
+    {
+        System.out.println(1);
+    }
+void method(int[] a)
+    {
+        System.out.println(2);
+    }
+}
+",Compilation error,Exception,Compilation error,none,Runs success fully,,,
+Method signature consists of,"Method Name, Return Type and Number Of Arguments","Method Name, Return Type and Number Of Arguments","Method Name, Number Of Arguments, Types Of Arguments and Order Of Arguments","Return Type, Access Modifier and Order Of Arguments",none,,,
+"class A
+{
+ int method(int i, int d)
+    {
+        return i+d;
+    }
+     
+    static int method(int i, double d)
+    {
+        return (int)(i+d);
+    }
+     
+    double method(double i, int d)
+    {
+        return i+d;
+    }
+     
+    static double method(double i, double d)
+    {
+        return i+d;
+    }
+}
+",runs succesfully,compilation error,exception,runs successfully,none,,,
+"class X
+{
+    void method(int a)
+    {
+        System.out.println(""ONE"");
+    }
+     
+    void method(double d)
+    {
+        System.out.println(""TWO"");
+    }
+}
+ 
+class Y extends X
+{
+    @Override
+    void method(double d)
+    {
+        System.out.println(""THREE"");
+    }
+}
+ 
+public class MainClass 
+{    
+    public static void main(String[] args)
+    {
+        new Y().method(100);
+    }
+}
+",ONE,TWO,THREE,ONE,none,,,
+"public class MainClass 
+{
+    double overloadedMethod(double d)
+    {
+        return d *= d;
+    }
+     
+    int overloadedMethod(int i)
+    {
+        return overloadedMethod(i *= i);
+    }
+     
+    float overloadedMethod(float f)
+    {
+        return overloadedMethod(f *= f);
+    }
+     
+    public static void main(String[] args)
+    {
+        MainClass main = new MainClass();
+         
+        System.out.println(main.overloadedMethod(100));
+    }
+}
+
+",StackOverFlowError,exception,StackOverFlowError,runs successfully,none,,,
+Method Overriding shows static polymorphism. True or false?,FALSE,TRUE,FALSE,,,,,
+"class X
+{
+    void calculate(int a, int b)
+    {
+        System.out.println(""Class X"");
+    }
+}
+ 
+class Y extends X
+{
+    @Override
+    void calculate(int a, int b)
+    {
+        System.out.println(""Class Y"");
+    }
+}
+ 
+class Z extends Y
+{
+    @Override
+    void calculate(int a, int b) 
+    {
+        System.out.println(""Class Z"");
+    }
+}
+ 
+public class MainClass 
+{    
+    public static void main(String[] args)
+    {
+        X x = new Y();
+         
+        x.calculate(10, 20);
+         
+        Y y = (Y) x;
+         
+        y.calculate(50, 100);
+        Z z = (Z) y;
+         
+        z.calculate(100, 200);
+    }
+}
+","Class Y
+Class Y
+java.lang.ClassCastException","Class Y
+Class Y
+java.lang.ClassCastException","Class Y
+Class Y
+","Class Y
+Class Y
+Class Z",none,,,
+"class X
+{
+    static void methodOfX()
+    {
+        System.out.println(""Class X"");
+    }
+}
+ 
+class Y extends X
+{
+    @Override
+    static void methodOfX()
+    {
+        System.out.println(""Class X"");
+    }
+}
+",runs succesfully,runs succesfully,exception,compiler error,none,,,
+"class SuperClass
+{
+    Object superClassMethod()
+    {
+        return new Object();
+    }
+}
+",runs succesfully,exception,runs succesfully,none,compiler error,,,
+Can we override protected method as private?,no,yes,no,,,,,
+"class SuperClass
+{
+    void superClassMethod(Number n)
+    {
+        System.out.println(""From Super Class"");
+    }
+}
+ 
+class SubClass extends SuperClass
+{
+    void superClassMethod(Double d)
+    {
+        System.out.println(""From Sub Class"");
+    }
+}
+public class MainClass 
+{    
+    public static void main(String[] args)
+    {
+        SubClass sub = new SubClass();
+         
+        sub.superClassMethod(123321);
+    }
+}
+",From Super Class,From Super Class,From Sub Class,exception,error,,,
+What actually polymorphism means in Java?,Object showing Different behavior during different stages of its life cycle,overloading,overiding,inheritence,Object showing Different behavior during different stages of its life cycle,,,
+Does Java support operator overloading?,no,yes,no,,,,,
+"class A
+{
+    public A(int i)
+    {
+        System.out.println(1);
+    }
+     
+    public A()
+    {
+        this(10);
+         
+        System.out.println(2);
+    }
+     
+    void A()
+    {
+        A(10);
+         
+        System.out.println(3);
+    }
+     
+    void A(int i)
+    {
+        System.out.println(4);
+    }
+}
+ 
+ 
+public class MainClass 
+{    
+    public static void main(String[] args)
+    {
+        new A().A();
+    }
+}
+",1 2 3 4,2,1 2 3 4,erroe,none,,,
+Why method overriding is called late binding or dynamic binding?,Binded during run time,Binded during run time,binded during compilation,cannot be rebinded,none,,,
+"public class MainClass 
+{    
+    static void method(Integer i)
+    {
+        System.out.println(1);
+    }
+     
+    static void method(Double d)
+    {
+        System.out.println(2);
+    }
+     
+    static void method(Number n)
+    {
+        System.out.println(4);
+    }
+     
+    static void method(Object o)
+    {
+        System.out.println(5);
+    }
+     
+    public static void main(String[] args)
+    {
+        method((short)12);
+    }
+}
+",4,4,1,2,3,,,
+How do compiler differentiate overloaded methods from duplicate methods?,Based on parameters passed,Based on parameters passed,using name of method,by the return type,none,,,
+"class A
+{
+     
+}
+ 
+class B extends A
+{
+     
+}
+ 
+class C extends B
+{
+     
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        A a = new A();
+         
+        a = new B();
+         
+        a = new C();
+    }
+}
+
+",runs succesfully,runs succesfully,Compilation error,exception,none,,,
+"class X
+{
+    int method(int i)
+    {
+        return i *= i;
+    }
+}
+class Y extends X
+{
+    double method(double d)
+    {
+        return d /= d;    
+    }
+}
+ 
+class Z extends Y
+{
+    float method(float f)
+    {
+        return f += f;
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        Z z = new Z();
+         
+        System.out.println(z.method(21.12));
+    }
+}
+
+",1,1,0,exception,compiler error,,,
+"What will be the output of the following program?
+class ClassOne
+{
+    void method(String s1)
+    {
+        method(s1, s1+s1);
+    }
+     
+    void method(String s1, String s2)
+    {
+        method(s1, s2, s1+s2);
+    }
+     
+    void method(String s1, String s2, String s3)
+    {
+        System.out.println(s1+s2+s3); 
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        ClassOne one = new ClassOne();
+         
+        one.method(""JAVA"");
+    }
+}
+
+",JAVAJAVAJAVAJAVAJAVAJAVA,JAVAJAVAJAVAJAVAJAVAJAVA,JAVAJAVAJAVAJAVAJAVAJ,JaVAJAVAJAVAJAVAJAVAJAVA,Java,,,
+Constructor overloading is also one form of the polymorphism. Yes or No?,yes,no,yes,,,,,
+"class A
+{
+    public A(int i)
+    {
+        System.out.println(myMethod(i));
+    }
+     
+    int myMethod(int i)
+    {
+        return ++i + --i;
+    }
+}
+ 
+class B extends A
+{
+    public B(int i, int j)
+    {
+        super(i*j);
+         
+        System.out.println(myMethod(i, j));
+    }
+     
+    int myMethod(int i, int j)
+    {
+        return myMethod(i*j);
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        B b = new B(12, 21);
+    }    
+}
+
+","505
+505","505
+505","12
+21","21
+21",none,,,
+"What will be the output of the below program?
+ class A
+{
+    void myMethod(Object o, Double D)
+    {
+        System.out.println(1);
+    }
+     
+    void myMethod(Integer I, Number N)
+    {
+        System.out.println(2);
+    }
+}
+ 
+class B extends A
+{
+    void myMethod(Float F, Double D)
+    {
+        System.out.println(3);
+    }
+     
+    void myMethod(Double D, Integer I)
+    {
+        System.out.println(4);
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        B b = new B();
+         
+        b.myMethod(11.11, 0000);
+         
+        b.myMethod(8778, 3223);
+         
+        b.myMethod(2.3*1.2, 4.1*1.4);
+         
+        b.myMethod((float)23.56, 21.45);
+    }    
+}
+","4
+2
+1
+3","4
+2
+1
+3","4
+2
+1","
+2
+1
+3
+4","1
+2
+3
+4",,,
+"class A
+{
+    void methodOne(Double D)
+    {
+         
+    }
+     
+    int methodTwo(Integer I)
+    {
+        return I;
+    }
+}
+ 
+class B extends A
+{
+    @Override
+    void methodOne(double d)
+    {
+         
+    }
+     
+    @Override
+int methodTwo(Integer I)
+    {
+        return (int)1.1;
+    }
+}
+",runs succesfully,runs succesfully,Compilation error,exception,none,,,
+Can we access super class version of overridden method in the sub class?,yes,no,yes,,,,,
+"class A
+{
+    static void methodOne()
+    {
+        System.out.println(""AAA"");
+    }
+}
+ 
+class B extends A
+{
+    static void methodOne()
+    {
+        System.out.println(""BBB"");
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        A a = new B();
+         
+        a.methodOne();
+    }    
+}
+",AAA,BBB,AAA,AAABBB,none,,,
+"class A
+{
+    void myMethod() throws IOException
+    {
+        System.out.println(""ONE"");
+    }
+     
+    void myMethod() throws NumberFormatException
+    {
+        System.out.println(""TWO"");
+    }
+void myMethod() throws ArrayIndexOutOfBoundsException
+    {
+        System.out.println(""THREE"");
+    }
+}
+
+",Compilation error,compilation error,exception,runs successfully,none,,,
+"class A
+{
+  void myMethod() /* line 3*/
+     {
+         System.out.println(""Super Class"");
+     }
+ }
+  
+ class B extends A
+ {
+     @Override
+     void myMethod() throws SQLException /* line 12*/
+     {
+         System.out.println(""Sub Class"");
+     }
+ }
+
+",error at line 12,error at line 12,error at line 3,runs successfully,none,,,
+"class ABC
+{
+    void methodABC()
+    {
+        new XYZ().methodXYZ();
+    }
+}
+ 
+class XYZ extends ABC
+{
+    void methodXYZ()
+    {
+        methodABC();
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        new ABC().methodABC();
+    }    
+}
+",StackOverFlowError,StackOverFlowError,exception,runs successfully,none,,,
+"class ABC
+{    
+    void methodABC()
+    {
+        System.out.println(111);
+    }
+     
+    void methodABC(int i)
+    {
+        System.out.println(222);
+    }
+}
+ 
+class XYZ extends ABC
+{
+    @Override
+    void methodABC(int i)
+    {
+        System.out.println(333);
+    }
+     
+    @Override
+    void methodABC()
+    {
+        System.out.println(444);
+    }
+}
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        ABC abc = new XYZ();
+         
+        abc.methodABC(10);
+         
+        abc.methodABC();
+    }    
+}
+
+","333
+444","333
+444","444
+333
+111","333
+111
+222
+444
+",none,,,
+"What are the possible access
+ modifiers a protected method 
+can have if it is overridden in the
+ sub class?",Both A and B,protected,private,public,Both A and B,,,
+"class X
+{    
+    void methodOfX()
+    {
+        System.out.println(""Class X"");
+    }
+}
+ 
+class Y extends X
+{
+    @Override
+    protected void methodOfX()
+    {
+        System.out.println(""Class Y"");
+    }
+}
+ 
+class Z extends Y
+{
+    @Override
+    public void methodOfX()
+    {
+        System.out.println(""Class Z"");
+    }
+}
+",runs succesfully,compilation error,runs succesfully,exception,none of the above,,,
+"class ABC
+{    
+    String myMethod(String s)
+{
+        return s+s;
+    }
+}
+ 
+class PQR extends ABC
+{
+    String myMethod(String s, double d)
+    {
+        return myMethod(s+d);
+    }
+}
+ 
+class XYZ extends PQR
+{
+    String myMethod(String s, double d, int i)
+    {
+        return myMethod(s, d+i);
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        XYZ xyz = new XYZ();
+         
+        System.out.println(xyz.myMethod(""JAVA"", 23.23, 111));
+    }    
+}",JAVA134.23JAVA134.23,JAVA134.23JAVA134.23,JAVA23.23111,JAVA 23.23,none of the above,,,

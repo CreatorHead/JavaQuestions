@@ -1,0 +1,273 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+Which of the following classes is used to perform basic console I/O?;A. system.;B. security Manager.;C. math.;D. runtime.;A. system.
+The .dot operator connects the following two entities _____.;A. a class member and a class object;B. a class object and a class;C. a class and a member of that class.;D. a class object and a member of that class.;A. a class member and a class object
+Which of the following statements about abstract methods/classes in JAVA is true?;A. An abstract class cannot be instantiated.;B. Constructors can be abstract..;C. A subclass of an abstract class must defined the abstract methods..;D. Static methods may be declared abstract.;A. An abstract class cannot be instantiated.
+When an instance of a class, or object, is specified as a parameter to a method, ______ to the said object is passed to the method.;A. a reference.;B. formal parameter.;C. references.;D. actual parameter.;A. a reference.
+An array of objects of a particular type, can have_______ type of objects.;A. different.;B. same.;C. mixed;D. none of above;A. different.
+When Java source code is compiled, each individual class is put into its own output file named after the class and using the ______ extension.;D. .class;A. .h.;B. . java.;C. >java.;D. .class
+A class is declared by use of the ________ keyword.;B. class.;A. object.;C. instance.;D. Class;B. class.
+The data or variables, defined within a class are called _______ variables.;C. instance.;A. object.;B. class.;D. schema.;C. instance.
+You would use the ____ operator to create a single instance of a named class.;A. new.;B. dot.;C. equals.;D. <>.;A. new.
+"What will be the result of compiling the following code?
+public class Test{
+         static int age;
+         public static void main (String args []){
+                   age = age +1;
+                   System.out.println(""The age is "" + age);
+         }
+}";B. Compiles and runs printing out The age is 1.;A. Compiles and runs with no output.;C. Compiles but generates a runtime error.;D. Compiles but generates a compile time error.;B. Compiles and runs printing out The age is 1.
+"What will happen when the class below is complied?
+public class Example{
+      char a = 'u000A';
+}";A. Will complete successfully.;B. Will compile successfully but with a warning message.;C. Will not compile - complains on an invalid expression.;D. Will show a warning message.;A. Will complete successfully.
+_____ is used to manage the memory allocation.;A. new.;B. Keyword.;C. const.;D. allow.;A. new.
+The dot operator is used to access the instance ______.;B. variable.;A. object.;C. model.;D. value.;B. variable.
+A non static method can be called only on its ___________.;B. object.;A. variable.;C. method.;D. delay.;B. object.
+______ is a keyword.;A. static.;B. display.;C. view.;D. maintain.;A. static.
+"Consider the following code fragment
+Rectangle r1 = new Rectangle();
+r1.setColor(Color.blue);
+Rectangle r2 = r1;
+r2.setColor(Color.red);
+After the above piece of code is executed, what are the colors of r1 and r2 (in this order)?";"(c)     Color.red
+          Color.red";"(a)     Color.blue
+             Color.red";"(b)     Color.blue
+             Color.blue";"(d)     Color.red
+             Color.blue";"(c)     Color.red
+          Color.red"
+"Consider the following class definition:
+                       public class MyClass
+                       {
+                       private int value;
+                       public void setValue(int i){ /* code */ }
+                       // Other methods...
+                       }
+The method setValue assigns the value of i to the instance field value. What could you write for the implementation of setValue?";(d)   Both (A) and (B) and above;"(a)   value = i;";"(b)   this.value = i;";"(c)   value == i;";(d)   Both (A) and (B) and above
+Which of the following is  TRUE?;(d)  A class has always a constructor (possibly automatically supplied by the java compiler).;(a)      In java, an instance field declared public generates a compilation error.;(b)     int  is the name of a class available in the package java.lang;(c)      Instance variable names may only contain letters and digits.;(d)      A class has always a constructor (possibly automatically supplied by the java compiler).
+"Consider,
+public class MyClass
+{
+        public MyClass(){/*code*/}
+        // more code...
+ }
+To instantiate MyClass, you would write?";"(a)     MyClass mc = new MyClass();";"(a)     MyClass mc = new MyClass();";"(b)     MyClass mc = MyClass();";"(c)     MyClass mc = MyClass;";"(d)     MyClass mc = new MyClass;"
+"You read the following statement in a Java program that compiles and executes.
+                                                                   submarine.dive(depth);
+What can you say for sure?";(b)     dive must be a method.;(a)     depth must be an int;(b)     dive must be a method.;(c)     dive must be the name of an instance field.;(d)     submarine must be the name of a class
+In java, objects are passed as;(c)   Memory address;(a)   Copy of that object;(b)   Method called call by value;(c)   Memory address;(d)   Constructor
+"Consider the following program:
+           class prob1{
+                    int puzzel(int n){
+                          int result;
+                          if (n==1) return 1;
+                          result = puzzel(n-1) * n;
+                          return result;
+                    }
+         }
+    
+         class prob2{
+             public static void main(String args[])
+             {
+                        prob1 f = new prob1();
+                        System.out.println("" puzzel of 6 is = "" + f.puzzel(6));
+                  }
+             }
+Which of the following will be the output of the above program?";(d)   720;(a)   6;(b)   120; (c)   30;(d)   720
+"The blank space in the following sentence has to be correctly filled :
+Members of a class specified as ……………….. are accessible only to methods of that class.";(d)   Private;(a)   Protected;(b)   Final;(c)   Public;(d)   Private
+Which statement is true regarding an object?;(b)     An object is an instance of a class;(a)     An object is what classes instantiated are from;(b)     An object is an instance of a class;(c)     An object is a variable;(d)     An object is a reference to an attribute
+"What is the error in the following class definitions?
+Abstract class xy
+                    {  
+                           abstract sum (int x, int y) {             }
+                    }";(c)     Method is not defined properly;(a)     Class header is not defined properly.;(b)     Constructor is not defined.;(c)     Method is not defined properly;(d)     Method is defined properly
+"What will be the result of attempting to compile the following program?
+             public class MyClass {
+             long var;
+             public void MyClass(long param) { var = param; }      //(1)
+             public static void main(String[] args) {
+                           MyClass a,b;
+                           a = new MyClass();                                   //(2)
+                           b = new MyClass(5);                               //(3)
+                           }
+             }";"(c) A compilation error will occur at (3), since the class does not have a constructor which takes one argument of type int
+";"(a) A compilation error will occur at (1), since constructors cannot specify a return value
+";"(b) A compilation error will occur at (2), since the class does not have a default constructor
+";"(c) A compilation error will occur at (3), since the class does not have a constructor which takes one argument of type int
+";"(d) The program will compile correctly
+"
+"Given the following member declarations, which statement is  true?
+int a;                                                                                                         //(1)
+static int a;                                                                                                               //(2)
+int f() { return a; }                                                                       //(3)
+static int f() { return a; }     //(4)";"(c) The code will compile without error and will print 1 when run
+";"(a) The code will fail to compile, since b is an invalid conditional expression in the
+do-while statement
+";"(b) The code will fail to compile, since the assignment b = !b is not allowed
+";"(c) The code will compile without error and will print 1 when run
+";"(d) The code will compile without error and will print 2 when run
+"
+"Consider the following Java program:
+public class MyClass {
+private int myVlaue = 5;
+public void printMyVlaue() {
+System.out.println(myVlaue);
+}
+public void setMyVlaue(int myVlaue) {
+System.out.println(myVlaue);
+this.myVlaue = myVlaue;
+}
+public static void main(String[] args) {
+MyClass myClass1 = new MyClass();
+myClass1.setMyVlaue(10);
+myClass1.printMyVlaue();
+}
+}
+Which of the following will the output be?";(b)    10       10;(a)    5           10;(b)    10       10;(c) 10       5;(d) 5           5
+"What is  wrong  in the following code?
+class TempClass {
+     int i;
+     public void TempClass(int j) {
+         Int i = j;
+     }
+}
+
+public class C {
+     public static void main(String[] args) {
+         TempClass temp = new TempClass(2);
+     }
+}";"(b)
+The program has a compilation error because TempClass does not have a constructor with an int argument
+";"(a)
+The program has a compilation error because TempClass does not have a default constructor
+";"(b)
+The program has a compilation error because TempClass does not have a constructor with an int argument
+";"(c)
+The program compiles fine, but it does not run because class C is not public
+";"(d)
+The program compiles and runs fine
+"
+"What is the printout of the second println statement in the main method?
+public class Foo {
+     int i;
+     static int s;
+
+     public static void main(String[] args) {
+         Foo f1 = new Foo();
+         System.out.println(""f1.i is "" + f1.i + "" f1.s is "" + f1.s);
+         Foo f2 = new Foo();
+         System.out.println(""f2.i is "" + f2.i + "" f2.s is "" + f2.s);
+         Foo f3 = new Foo();
+         System.out.println(""f3.i is "" + f3.i + "" f3.s is "" + f3.s);
+     }
+
+     public Foo() {
+         i++;
+         s++;
+     }
+}";"(b)
+f2.i is 1 f2.s is 2
+";"(a)
+f2.i is 1 f2.s is 1
+";"(b)
+f2.i is 1 f2.s is 2
+";"(c)
+f2.i is 2 f2.s is 2
+";"(d)
+f2.i is 2 f2.s is 1
+"
+"Analyze the following code and choose the  correct  answer:
+public class Foo {
+     private int x;
+     public static void main(String[] args) {
+         Foo foo = new Foo();
+         System.out.println(foo.x);
+     }
+}";"(c)
+Since x is an instance variable, it cannot be directly used inside a main method. However, it can be accessed through an object such as foo in this code
+";"(a)
+Since x is private, it cannot be accessed from an object foo
+";"(b)
+Since x is defined in the class Foo, it can be accessed by any method inside the class without using an object. You can write the code to access x without creating an object such as foo in this code
+";"(c)
+Since x is an instance variable, it cannot be directly used inside a main method. However, it can be accessed through an object such as foo in this code
+";"(d)
+You cannot create a self-referenced object; that is, foo is created inside the class Foo
+"
+Which of the following is not a valid statement?;"(d)
+Class methods can access instance variables or instance methods directly
+";"(a)
+Instance methods can access instance variables and instance methods directly
+";"(b)
+Instance methods can access class variables and class methods directly
+";"(c)
+Class methods can access class variables and class methods directly
+";"(d)
+Class methods can access instance variables or instance methods directly
+"
+"What is the output of the following code?
+IdentifyMyParts a = new IdentifyMyParts();
+IdentifyMyParts b = new IdentifyMyParts();
+a.y = 5;
+b.y = 6;
+IdentifyMyParts.x = 1;
+b.x = 2;
+System.out.println(""a.y = "" + a.y);
+System.out.println(""b.y = "" + b.y);
+System.out.println(""IdentifyMyParts.x = "" + a.x);
+System.out.println(""b.x = "" + b.x);";"(a)
+a.y = 5
+b.y = 6
+a.x = 2
+b.x = 2
+";"(a)
+a.y = 5
+b.y = 6
+a.x = 2
+b.x = 2
+";"(b)
+a.y = 5
+b.y = 5
+a.x = 2
+b.x = 2
+";"(c)
+a.y = 5
+b.y = 6
+a.x = 3
+b.x = 2
+";"(d)
+a.y = 5
+b.y = 6
+a.x = 2
+b.x = 3
+"
+"Consider the class definition:
+public class MyClass {
+int x; int y;
+void myprint(){
+System.out.println(“x = ” +x);
+System.out.println(“Y = ” +y);
+}
+}
+Which of the following is a correct way to create an object?";"(a)
+MyClass mc=new MyClass();
+";"(a)
+MyClass mc=new MyClass();
+";"(b)
+MyClass mc;
+";"(c)
+MyClass mc=new MyClass(10,20);
+";"(d)
+MyClass mc=MyClass(10,20);
+"
+Which of the following is  not true?;"(b)
+Every time the class is instantiated, a new copy of each of the class variables is created
+";"(a)
+Every time the class is instantiated, a new copy of each of the instance variables is created
+";"(b)
+Every time the class is instantiated, a new copy of each of the class variables is created
+";"(c)
+A class has only one copy of each of its static members, which are shared by all the instances of the class
+";"(d)
+Static members are accessed without an instance of a class
+"

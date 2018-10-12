@@ -1,0 +1,30 @@
+Question;Correct Answer;Wrong answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+Which of the following is a valid declaration of an object of class Box?;"a) Box obj = new Box();";"b) Box obj = new Box;";"c) obj = new Box();";"d) new Box obj;";"a) Box obj = new Box();"
+Name the keyword that makes a variable belong to a class, rather than being defined for each instance of the class. ;a) static;b) final ;c) abstract;d) public;a) static
+_________ is used to initialize objects.;c) constructors;a) Methods;b) arguments;d) new keyword;c) constructors
+What is the return type of Constructors?;d) None of the mentioned;a) int;b) float ;c) void ;d) None of the mentioned
+Which of the following is a method having same name as that of its class?;d) constructor;a) finalize;b) delete;c) class ;d) constructor
+Which of these is used to access member of class before object of that class is created?;c) static;a) public;b) private;d) protected;c) static
+The keyword used to create an object; c) new;a) class;b) this;d) malloc; c) new
+The keyword used to refer the current object;b) this;a) class;c) new;d) malloc;b) this
+The method which is automatically invoked during garbage collection.;c) finalize();a) destructor;b) terminate() ;d) destroy();c) finalize()
+The method sqrt() is defined in the class;c) Math ;a) System;b) Root;d) Arithmetic ;c) Math 
+Which of these classes are used by Byte streams for input operation?;a) InputStream;b) InputOutputStream;c) Reader;d) All of the mentioned;a) InputStream
+Which of these classes is used to read characters and strings in Java from console?;d) InputStreamReader;a) BufferedReader;b) StringReader;c) BufferedStreamReader;d) InputStreamReader
+Which of these class contains the methods print() & println()?;d) PrintStream;a) System;b) System.out;c) BufferedOutputStream;d) PrintStream
+Which of these classes are used by character streams output operations?;b) Writer;a) OutputStream;c) ReadStream;d) InputOutputStream;b) Writer
+Character Stream Classes support input/output operations on _______ characters:;b) 16 bit Unicode;a) 8 bit Unicode;c) 32 bit Unicode;d) 64 bit Unicode;b) 16 bit Unicode
+Java supports input/output of data through the classes included in the _______ package:;d) java.io;a) java.oi;b) java.out;c)   java.in;d) java.io
+Object is an _________ of a class.;A. instance.;B. implement.;C. inheritance.;D. invoke.;A. instance.
+Class is a ______ entity.;A. logical.;B. physical.;C. up normal.;D. collection of.;A. logical.
+Object is a _______ entity.;B. physical.;A. normal.;C. logical.;D. non of the above;B. physical.
+_______ is passed to a method by use of call-by-reference.;B. objects.;A. variables.;C. methods.;D. operators.;B. objects.
+Every method of a ________ is implicitly final.;C. final class.;A. static class.;B. dynamic class.;D. abstract class.;C. final class.
+A ____ class may not have any abstract method.;C. final.;A. abstract.;B. static.;D. public.;C. final.
+__________ is a special member function.;D. constructor.;A. method.;B. class.;C. use defined function.;D. constructor.
+_____ Keyword is always a reference to the object.;B. this.;A. new.;C. invoke.;D. class.;B. this.
+ Variable declared as _________ do not occupy memory on a per instance basis.;B. final.;A. static.;C. abstract.;D. Ccde.;B. final.
+Which of these class holds a collection of static methods and variables?.;D. System.;A. Void .;B. Process.;C. Runtime .;D. System.
+The variable defined in class is called ________ variable.;C. instance.;A. local.;B. minimum.;D. define.;C. instance.
+A special type of method that is used to initialize an object is called________.;A. constructor.;B. destructor.;C. modification.;D. editor.;A. constructor.
+Class is considered ________ of an object and instance.;C. template.;A. min.;B. local.;D. keyword.;C. template.

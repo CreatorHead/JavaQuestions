@@ -1,0 +1,25 @@
+Question;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+Which of these access specifiers must be used for main() method?;b) public;a) private;c) protected;d) None of the mentioned;b) public
+Which class cannot have a subclass in java;c)final class;a) abstract class;b)parent class ;d) None of above;c)final class
+Which is the keyword used to inherit a class to another?;b) extends;a) Inherits;c) implements ;d) import;b) extends
+The use of final keyword with method definition ; Prevents method overriding;a) Supports method overriding;b) implements dynamic method dispatch;d) none of these; Prevents method overriding
+Identify the type of inheritance when two or more subclasses inherit the properties of a super class.;d)  Hierarchical inheritance;a) Multiple inheritance;b)  Single inheritance ;c)  Multilevel inheritance ;d)  Hierarchical inheritance
+The keyword used inside a class to refer to its immediate super class is;a) super;b) parent;c) base ;d)  none of these;a) super
+Which of these is used as default for a member of a class if no access specifier is used for it?;c) public, within its own package;a) private ;b) public;d) protected;c) public, within its own package
+ Which of these keywords is used to refer to member of base class from a sub class?;b) super;a) upper;c) this ;d) None of the mentioned;b) super
+Which of these is correct way of inheriting class A by class B?;c) class B extends A {};a) class B + class A {};b) class B inherits class A {};d) class B extends class A {};c) class B extends A {}
+The keyword used to create a package is;b) package;a) import ;c) classpath;d) public;b) package
+The modifier which specifies that the member can only be accessed in its own class is ;b) private;a) public;c) protected;d) none;b) private
+Which of the following  package  stores all the standard java classes?;a) java.lang;b) java;c) java.util;d) java.packages;a) java.lang
+Which of these is a mechanism for naming and visibility control of a class and its content?;b) Packages;a) Object;c)  Interfaces;d) None of the Mentioned.;b) Packages
+Which of this access specifies can be used for a class so that its objects can be created by a different class in another package?;a) Public;b) Protected;c) No Modifier;d) All of the mentioned;a) Public
+Which of the following is correct way of importing an entire  package  ‘pkg’?;c) import pkg.*;a) import pkg. ;b) Import pkg.;d) Import pkg.*;c) import pkg.*
+Which of the following is incorrect statement about packages?;d) A  package  can be renamed without renaming the directory in which the classes are stored.;a)  Package  defines a namespace in which classes are stored.;b) A  package  can contain other  package  within it.;c) Java uses  file system  directories to store packages.;d) A  package  can be renamed without renaming the directory in which the classes are stored.
+Which of these packages contains all the classes and methods  required for  event handling in Java?;a)  An event  is an object that describes a state change in a source.;b)  An event  is an object that describes a state change in processing.;c)  An event  is an object that describes any change by the user and system.;d)  An event  is a class used for defining object, to create events.;a)  An event  is an object that describes a state change in a source.
+A package is a collection of ______.;B. classes and interfaces.;A. keywords.;C. editing tools.;D. views.;B. classes and interfaces.
+________ is the mechanism that binds together the code and the data.;B. encapsulation.;A. polymorphism.;C. inheritance.;D. together.;B. encapsulation.
+______ must be the first statement executed inside a subclass Constructor.;B. super().;A. final().;C. static().;D. dec().;B. super().
+Methods having same name and differ type signature are called _____methods;D. overloading.;A. overriding.;B. over read.;C. super.;D. overloading.
+Methods having same name, same type signature are called _____ methods.;A. overriding.;B. overloading.;C. overwriting.;D. overreading.;A. overriding.
+Package statement helps to create many classes to have ______ name.;C. same.;A. differ.;B. vanity.;D. punch.;C. same.
+The default package that is implicitly called in a java program is _________.;A. java.Lang.;B. java.System.;C. java. Window.;D. java.Lang.System.;A. java.Lang.

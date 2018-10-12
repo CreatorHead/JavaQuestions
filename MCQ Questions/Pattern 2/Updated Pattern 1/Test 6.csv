@@ -1,0 +1,29 @@
+Question;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+Which of these method of class String is used to extract  a single  character from a String object?;c) charAt();a) CHARAT();b) chatat();d) ChatAt();c) charAt()
+Which of these method of class String is used to obtain length of String object?;d) length();a) get();b) Sizeof();c) lengthof();d) length()
+Which of these keywords is not a part of exception handling?;c) thrown;a) try;b) finally;d) catch;c) thrown
+The code within the ----------- block will always be executed whether or not an;b) finally;a) try..catch;c) throw;d) throws;b) finally
+Which of these keywords must be used to monitor for exceptions?;a) try..catch;b) finally;c) throw;d) throws;a) try..catch
+Which of these keywords is used to manually throw an exception?;c) throw;a) try;b) finally;d) catch;c) throw
+Which of these classes is related to all the exceptions that can be caught by using catch?;b) Exception;a) Error;c) None of these;d) a & b;b) Exception
+Which of these classes is related to all the exceptions that cannot be caught?;a) Error;b) Exception;c) None of these;d) a & b;a) Error
+Which exception is thrown by read() method?;a) IOException;b) InterruptedException;c) SystemException;d) SystemInputException;a) IOException
+Which is the super class of all exception classes;d) Throwable;a) Exception;b) Object;c) Error;d) Throwable
+Which of the following exception is raised when a number is divided by zero;b) ArithmeticException;a) NumberFormatException;c) NullPointerException;d) IllegalArgumentException;b) ArithmeticException
+ A single  try block must be followed by which of these?;c) catch or finally;a) finally;b) catch;d) None of the mentioned;c) catch or finally
+Which of these is used to read a string from the input stream?;d) readLine();a) get();b) getLine();c) read();d) readLine()
+Which exception is thrown by the read () method of Input Stream class?;D. IOException.;A. Exception.;B. ClassNotFoundException.;C. read Exception.;D. IOException.
+ An exception is an __________ condition that arises in a code.;A. abnormal.;B. casual.;C. unfortunate.;D. opposite.;A. abnormal.
+______ is at the top of the exception class hierarchy.;B. throwable.;A. try.;C. exception class.;D. catch.;B. throwable.
+ The String is defined in _______ namespace.;A. java.Lang.;B. java.String.;C. java.Char;D. java.Awt.;A. java.Lang.
+Wrapper class is a wrapper around a _______ data type.;C. primitive.;A. normal.;B. central.;D. concrete.;C. primitive.
+__________ is used for initialize the value to the String object.;B. string literals.;A. character literals.;C. string group literals.;D. group literals.;B. string literals.
+ Which of these class is used to create an object whose character sequence is mutable?.;B. StringBuffer().;A. String().;C. Both of the mentioned.;D. None of the mentioned.;B. StringBuffer().
+String constants are said to be_____ of string class.;A. objects.;B. char.;C. data.;D. variable.;A. objects.
+User defined exception can be created using _________ class.;C. throwable.;A. catch.;B. try.;D. get.;C. throwable.
+Which of these keywords is not a part of exception handling?.;C. thrown.;A. finally.;B. catch.;D. try.;C. thrown.
+Exception that is identified during compile time is called ______ exception.;B. checked.;A. user defined.;C. undefined.;D. defined.;B. checked.
+The capacity if StringBuffer is defined as _________.;D. Length+16.;A. Length+12.;B. Length+13.;C. Length+15.;D. Length+16.
+To compare the contents of two objects ______ method is used.;A. equals.;B. not equals.;C. multiple.;D. delay.;A. equals.
+The capacity if StringBuffer is defined as _________.;D. Length+16.;A. Length+12.;B. Length+13.;C. Length+15.;D. Length+16.
+To compare the contents of two objects ______ method is used.;A. equals.;B. not equals.;C. multiple.;D. delay.;A. equals.

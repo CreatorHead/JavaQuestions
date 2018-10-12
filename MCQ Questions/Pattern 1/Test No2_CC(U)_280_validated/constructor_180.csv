@@ -1,0 +1,673 @@
+question;correct answer;Answer Option 1;Answer Option 2;Answer Option 3;Answer Option 4;Difficulty level;3,wrong;answer;4,Difficulty;level,Section,Important
+"What is true about private constructor?
+";"a) Private constructor ensures only one instance
+ of a class exist at any point of time ";"a) Private constructor ensures only one instance
+ Of a class exist at any point of time
+";"b) Private constructor ensures multiple instances of a 
+Class exist at any point of time";"c) Private constructor eases the
+ Instantiation of a class";d) Private constructor allows creating objects in other classes;;;;;
+What would be the behaviour if this() and super() used in a method?;c) compile time error;a) Runtime error;b) Throws exception;c) compile time error;d) Runs successfully;;;;;
+What is false about constructor?;c) Constructor can be overloaded;a) Constructors cannot be synchronized in Java;b) Java does not provide default copy constructor;c) Constructor can be overloaded;d) “this” and “super” can be used in a constructor;;;;;
+What is true about Class.getInstance()?;"d) Class.getInstance creates 
+Object if class does not have any constructor";a) Class.getInstance calls the constructor;b) Class.getInstance is same as new operator;c) Class.getInstance needs to have matching constructor;d) Class.getInstance creates object if class does not have any constructor;;;;;
+What is true about constructor?;b) It can take any number of parameters;a) It can contain return type;b) It can take any number of parameters;c) It can have any non access modifiers;d) Constructor cannot throw exception;;;;;
+Abstract class cannot have a constructor.;b) False;a) True;b) False;;;;;;;
+What is true about protected constructor?;b) Protected constructor can only be called using super();a) Protected constructor can be called directly;b) Protected constructor can only be called using super();c) Protected constructor can be used outside package;d) protected constructor can be instantiated even if child is in a differnt package;;;;;
+What is not the use of “this” keyword in Java?;d) Passing itself to method of the same class;a) Passing itself to another method;b) Calling another constructor in constructor chaining;c) Referring to the instance variable when local variable has the same name;d) Passing itself to method of the same class;;;;;
+  What would be the behaviour if one parameterized constructor is explicitly defined?;"d) Compilation succeeds but at the time of creating 
+Object using default constructor, it throws compilation error";a) Compilation error;b) Compilation succeeds;c) Runtime error;d) Compilation succeeds but at the time of creating object using default constructor, it throws compilation error;;;;;
+What would be behaviour if constructor has a return type?;a) Compilation error;a) Compilation error;b) Runtime error;c) Compilation and runs successfully;d) Only String return type is allowed;;;;;
+"Predict the output?
+package main;
+class T {
+    int t = 20;
+}
+class Main {
+      public static void main(String args[]) {
+            T t1 = new T();
+            System.out.println(t1.t);
+      }
+}";Ans 20;;;;;;;;;
+"Predict the output of following Java program
+class T {
+    int t = 20;
+    T() {
+        t = 40;
+    }
+}
+class Main {
+      public static void main(String args[]) {
+            T t1 = new T();
+            System.out.println(t1.t);
+      }
+}
+";Ans 40;;;;;;;;;
+Which of the following is/are true about constructors in Java?;c) All the above;A)1,2;A)1,2,4;c) All the above;d) None of the above;;;;;
+Is there any compiler error in the below Java program?;ANS YES;;;;;;;;;
+"class Point {
+    int m_x, m_y;
+      
+    public Point(int x, int y) { m_x = x; m_y = y; }
+    public Point() { this(10, 10); }
+    public int getX() { return m_x; }
+    public int getY() { return m_y; }
+      
+    public static void main(String args[]) {
+        Point p = new Point();
+        System.out.println(p.getX());
+    }
+}";ANS  10;;;;;;;;;
+"final class Complex {
+        private   double re,   im;
+        public Complex(double re, double im) {
+                this.re = re;
+                this.im = im;
+        }
+        Complex(Complex c)
+        {
+            System.out.println(""Copy constructor called"");
+            re = c.re;
+            im = c.im;
+        }                       
+        public String toString() {
+                return ""("" + re + "" + "" + im + ""i)"";
+        }                       
+}
+class Main {
+        public static void main(String[] args) {
+                Complex c1 = new Complex(10, 15);
+                Complex c2 = new Complex(c1);       
+                Complex c3 = c1;   
+                System.out.println(c2);
+        }
+}
+";"ANS 
+Copy constructor called";;;;;;;;;
+"class Test
+{
+        static int a;
+          
+        static
+        {
+                a = 4;
+                System.out.println (""inside static block\n"");
+                System.out.println (""a = "" + a);
+        }
+          
+        Test()
+        {
+                System.out.println (""\ninside constructor\n"");
+                a = 10;
+        }
+          
+        public static void func()
+        {
+                a = a + 1;
+                System.out.println (""a = "" + a);
+        }
+          
+        public static void main(String[] args)
+        {
+  
+                Test obj = new Test();
+                obj.func();
+  
+        }
+}";"inside static block
+a = 4
+inside constructor
+A = 11";;;;;;;;;
+What is the return type of Constructors?;d) none of the mentioned;a) int;b) float;c) void;d) none of the mentioned;;;;;
+Which keyword is used by method to refer to the object that invoked it?;d) this;a) import;b) catch;c) abstract;d) this;;;;;
+Which of the following is a method having same name as that of its class?;d) constructor;a) finalize;b) delete;c) class.getInstance needs to have matching constructor;d) constructor;;;;;
+"Which operator is used by Java run time implementations
+ To free the memory of an object when it is no longer needed?";d) none of the mentioned;a) delete;b) free;c) new;d) none of the mentioned;;;;;
+Which function is used to perform some action when the object is to be destroyed?;a) finalize();a) finalize();b) delete();c) main();d) none of the mentioned;;;;;
+"class box 
+    {
+        int width;
+        int height;
+        int length;
+        int volume;
+        box() 
+        {
+            width = 5;
+            height = 5;
+            length = 6;
+        }
+        void volume() 
+        {
+             volume = width*height*length;
+        } 
+    }    
+    class constructor_output 
+    {
+        public static void main(String args[])
+        {
+            box obj = new box();
+            obj.volume();
+            System.out.println(obj.volume);
+        }
+   }";b) 150;a) 100;b) 150;c) 200;d) 250;;;;;
+"class San
+{
+     San()throws IOException
+     {
+  
+     } 
+  
+}
+class Foundry extends San
+{
+     Foundry()
+     {
+  
+     }
+     public static void main(String[]args)
+     {
+  
+     }
+}";  A)compile time error;  A)compile time error;b) run time error;c) compile and runs fine;d) unreported exception java.io.IOException in default constructor;;;;;
+"class box 
+    {
+        int width;
+        int height;
+        int length;
+        int volume;
+        void finalize() 
+        {
+            volume = width*height*length;
+            System.out.println(volume);
+        }
+        protected void volume() 
+       {
+            volume = width*height*length;
+            System.out.println(volume);
+       } 
+    }    
+    class Output 
+    { 
+        public static void main(String args[])
+        {
+            box obj = new box();
+            obj.width=5;
+            obj.height=5;
+            obj.length=6;
+            obj.volume();
+        } 
+    }";a) 150;a) 150;b) 200;c) Run time error;d) Compilation error;;;;;
+Which of the following statements are incorrect?;c) finalize() method is called when a object goes out of scope and is no longer needed;a) default constructor is called at the time of object declaration;b) Constructor can be parameterized;c) finalize() method is called when a object goes out of scope and is no longer needed;d) finalize() method must be declared protected;;;;;
+"class area 
+    {
+        int width;
+        int length;
+        int area;
+        void area(int width, int length) 
+        {
+            this.width = width;
+            this.length = length;
+        }
+  
+    }    
+    class Output 
+    {
+        public static void main(String args[])
+        {
+            area obj = new area();
+            obj.area(5 , 6);
+            System.out.println(obj.length + "" "" + obj.width);        
+        } 
+    }";c) 6 5;a) 0 0;b) 5 6;c) 6 5;d) 5 5;;;;;
+Which of the following has highest memory requirement?;c) JVM;a) Heap;b) Stack;c) JVM;d) Class;;;;;
+  Where is a new object allotted memory?;a) Young space;a) Young space;b) Old space;c) Young or Old space depending on space availability;d) JVM;;;;;
+"
+Which of the following is a garbage collection technique?";b) Mark and sweep model;a) Cleanup model;b) Mark and sweep model;c) Space management model;d) Sweep model;;;;;
+  What is -Xms and -Xmx while starting jvm?;"a) Initial; Maximum memory";"a) Initial; Maximum memory";"b) Maximum; Initial memory";c) Maximum memory;d) Initial memory;;;;;
+Which exception is thrown when java is out of memory?;OutOfMemoryError;a) MemoryFullException;b) MemoryOutOfBoundsException;OutOfMemoryError;d) MemoryError;;;;;
+How to get prints of shared object memory maps or heap memory maps for a given process?;a) jmap;a) jmap;b) memorymap;c) memorypath;d) jvmmap;;;;;
+What happens to thread when garbage collection kicks off?;c) The thread is paused while garbage collection runs;a) The thread continues its operation;b) Garbage collection cannot happen until the thread is running;c) The thread is paused while garbage collection runs;d) The thread and garbage collection do not interfere with each other;;;;;
+  Which of the below is not a Java Profiler?;a) JVM;a) JVM;b) Jconsole;c) Jprofiler;d) Eclipse Profiler;;;;;
+  Which of the below is not a memory leak solution?;c) Process restart;a) Code changes;b) JVM parameter tuning;c) Process restart;d) GC parameter tuning;;;;;
+Garbage Collection can be controlled by program?;b) False;a) True;b) False;;;;;;;
+What is the return type of Constructors?;none of the above;int;float;void;none of the above;;;;;
+"  Which keyword is used by method to refer
+ To the object that invoked it?";this;import;catch;this;super;;;;;
+"Which of the following is a method having 
+Same name as that of its class?";"constructor
+";finalize;constructor;delete;"class
+";;;;;
+"Which operator is used by Java run time implementations to free the 
+memory of an object when it is no longer needed?";None of these;free;new;delete;None of these;;;;;
+"Which function is used to perform some action when
+ The object is to be destroyed?";finalize();finalize();delete();main();None of these;;;;;
+"class Box {
+                int width;
+                int height;
+                int length;
+                int volume;
+                public Box() {
+                        width = 5;
+                        height = 5;
+                        length = 6;
+                }
+                void volume() {
+                          volume = width*height*length;
+                } 
+        }       
+        class Output {
+                public static void main(String args[])
+                {
+                        Box obj = new Box();
+                        obj.volume();
+                        System.out.println(obj.volume);
+                }
+      }";150;;;;;;;;;
+"class Equality {
+Integer x;
+Integer y;
+boolean isequal() {
+return(x == y);
+} 
+}
+class Output {
+public static void main(String args[])
+{
+Equality obj = new Equality();
+obj.x = 5;
+obj.y = 5;
+System.out.println(obj.isequal());
+    
+} 
+}";TRUE;;;;;;;;;
+"class Box {
+                int width;
+                int height;
+                int length;
+                int volume;
+                void finalize() {
+                        volume = width*height*length;
+                        System.out.println(volume);
+                }
+                protected void volume() {
+                        volume = width*height*length;
+                        System.out.println(volume);
+              } 
+        }       
+        class Output { 
+                public static void main(String args[])
+                {
+                        Box obj = new Box();
+                        obj.volume();
+                } 
+        }";;;;;;;;;;
+Which of the folowing stements are incorrect?;"finalize() method is called when a object goes out of 
+Scope and is no longer needed.";"finalize() method must be 
+Declared protected.
+";"Default constructor is called at the time of declaration
+ Of the object if a constructor has not been defined.";Constructor can be parameterized.;;;;;;
+"class Area {
+                int width;
+                int length;
+                int area;
+                public Area(int width, int length) {
+                        this.width = width;
+                        this.length = length;
+                }
+    
+        }       
+        class Output {
+                public static void main(String args[])
+                {
+                        Area obj = new Area(5 , 6);
+                        System.out.println(obj.length + "" "" + obj.width);               
+                } ";6 5;;;;;;;;;
+What is a  Constructor?;Constructors are used to initialize the object’s state. Like methods, a constructor also contains collection of statements(i.e. instructions) that are executed at time of Object creation.;;;;;;;;;
+Do we have  Copy Constructor in Java?;NO;;;;;;;;;
+"Constructor Chaining  ?
+class Temp
+{
+        // default constructor 1
+        // default constructor will call another constructor
+        // using this keyword from same class
+        Temp()
+        {
+                // calls constructor 2
+                this(5);
+                System.out.println(""The Default constructor"");
+        }
+  
+        // parameterized constructor 2
+        Temp(int x)
+        {
+                // calls constructor 3
+                this(5, 15);
+                System.out.println(x);
+        }
+  
+        // parameterized constructor 3
+        Temp(int x, int y)
+        {
+                System.out.println(x * y);
+        }
+  
+        public static void main(String args[])
+        {
+                // invokes default constructor first
+                new Temp();
+        }
+}";"75
+5
+The Default constructor
+";;;;;;;;;
+Can we call sub class constructor from super class constructor?;NO;;;;;;;;;
+"What happens if you keep a return type for a constructor?
+
+class GfG
+{
+    int GfG()
+    {
+        Return 0;        }
+}";"In this case Java will treat this code as a normal method ,
+ It is not a constructor at all.
+ But compiler gives a warning saying that method has a constructor name.";;;;;;;;;
+"What is No-arg constructor?
+class GfG
+{
+    public GfG()
+    {
+        //No-arg constructor
+    }
+}";"No arg constructors are the same as constructors that take arguments.
+ They are used to be the default way to initialize some object.
+";;;;;;;;;
+Do we have destructors in Java?;NO;;;;;;;;;
+"class T {
+int t = 20;
+}
+class Main {
+public static void main(String args[]) {
+T t1 = new T();
+System.out.println(t1.t);
+}
+}
+";20;;;;;;;;;
+"class Helper
+{
+        private int data;
+        private Helper()
+        {
+                data = 5;
+        }
+}
+public class Test
+{
+        public static void main(String[] args)
+        {
+                Helper help = new Helper();
+                System.out.println(help.data);
+        }"; Compilation error;;;;;;;;;
+"public class Test implements Runnable
+{
+public void run()
+{
+System.out.printf("" Thread's running "");
+}
+
+try
+{
+public Test()
+{
+Thread.sleep(5000);
+}
+} 
+catch (InterruptedException e) 
+{
+e.printStackTrace();
+}
+
+public static void main(String[] args)
+{
+Test obj = new Test();
+Thread thread = new Thread(obj);
+thread.start();
+System.out.printf("" GFG "");
+}
+}";Compilation error;;;;;;;;;
+"class Temp
+{
+        private Temp(int data)
+        {
+                System.out.printf("" Constructor called "");
+        }
+        protected static Temp create(int data)
+        {
+                Temp obj = new Temp(data);
+                return obj;
+        }
+        public void myMethod()
+        {
+                System.out.printf("" Method called "");
+        }
+}
+  
+public class Test
+{
+        public static void main(String[] args)
+        {
+                Temp obj = Temp.create(20);
+                obj.myMethod();
+        }";ANS Constructor called Method called;;;;;;;;;
+"class Test
+{
+public Test()
+{
+System.out.printf(""1"");
+new Test(10);
+System.out.printf(""5"");
+}
+public Test(int temp)
+{
+System.out.printf(""2"");
+new Test(10, 20);
+System.out.printf(""4"");
+}
+public Test(int data, int temp)
+{
+System.out.printf(""3"");
+
+}
+
+public static void main(String[] args)
+{
+Test obj = new Test();
+
+}
+
+}";12345;;;;;;;;;
+"class Base
+{
+        public static String s = "" Super Class "";
+        public Base()
+        {
+                System.out.printf(""1"");
+        }
+}
+public class Derived extends Base
+{
+        public Derived()
+        {
+                System.out.printf(""2"");
+                super();
+        }
+          
+        public static void main(String[] args)
+        {
+                Derived obj = new Derived();
+                System.out.printf(s);
+        }
+}";Super Class 21;;;;;;;;;
+"class employee{
+ private String name;
+ public employee(String name) {
+  this.name=name;  
+ }
+}
+
+public class Constructor1 {
+ public static void main(String[] JavaLatte) {
+  employee e = new employee(""JavaDeveloper"");
+  System.out.println(""Emp Name : ""+e.name);
+ }
+";error: name has private access in employee;;;;;;;;;
+"class person{
+ person(){
+  System.out.println(""Hello constructor!"");
+  return;
+ }
+}
+
+ class Constructor2 {
+ public static void main(String[] JavaLatte) {
+  person p = new person();
+ }
+}";Hello constructor!;;;;;;;;;
+"class Animal{ 
+}
+
+public class Constructor4 {
+ public static void main(String[] JavaLatte) {
+  Animal a = new Animal();
+ }
+}";;;;;;;;;;
+"class manager{
+ String name;
+ public manager(String name) {
+  this.name=name;
+ }
+ void welcomeMessage(){
+  System.out.println(""Welcome to Java-Latte"");
+ }
+}
+
+public class Constructor3 {
+ public static void main(String[] args) {
+  manager m = new manager();  
+ }
+";"error: constructor manager in class manager 
+Cannot be applied to given types;";;;;;;;;;
+"class Overloaded{
+ Overloaded(){
+  System.out.println(""Constructor is initialised"");
+ }
+ protected Overloaded(){
+  System.out.println(""Constructor is initialised"");
+ }";"error: constructor Overloaded() is already
+ Defined in class Overloaded";;;;;;;;;
+"class Rectangle{
+ int len;
+ int width;
+ void Rectangle(int len, int width){
+  this.len=len;
+  this.width=width;
+ }
+}
+public class Constructor5 {
+
+ public static void main(String[] JavaLatte) {
+  Rectangle r = new Rectangle();
+  r.Rectangle(5, 7);
+  System.out.println(r.width+"" ""+r.len);
+ }
+}
+";7 5;;;;;;;;;
+"Can we define a constructor using 
+All four access modifiers: 
+Public,protected, default, and private.";"If a class contains no constructor declarations, then a default constructor that takes no parameters is automatically provided:
+
+if the class is declared public, then the default constructor is implicitly given the access modifier public;
+if the class is declared protected, then the default constructor is implicitly given the access modifier protected;
+if the class is declared private, then the default constructor is implicitly given the access modifier private; otherwise,
+the default constructor has the default access implied by no access modifier.";;;;;;;;;
+"class Square{
+ Square(){
+  System.out.println(""Constructor is initialised"");
+ }
+ {
+  System.out.println(""Square is initialised"");
+ }
+}
+
+class Constructor6 {
+ public static void main(String[] JavaLatte) {
+  new Square();
+ }
+}";"Square is initialised
+Constructor is initialised
+";;;;;;;;;
+"class Square{
+ Square(){
+  System.out.println(""Constructor is initialised"");
+ }
+ {
+  System.out.println(""Square is initialised"");
+ }
+}
+
+ class Constructor7 {
+ public static void main(String[] JavaLatte) {
+  new Square();
+  new Square();
+ }
+}";"Square is initialised
+Constructor is initialised
+Square is initialised
+Constructor is initialised
+";;;;;;;;;
+"class Employe{
+ String name;
+ Employe(){
+  Employe(""JavaLatte"");
+ }
+ Employe(String name){
+  this.name = name;
+ }
+}
+
+ class Constructor8 {
+ public static void main(String[] JavaLatte) {
+  new Employe();
+ }
+}"; error: cannot find symbol;;;;;;;;;
+Constructors can be overloaded  ???.;Just like method overloading, constructors also can be overloaded. Same constructor declared with different parameters in the same class is known as constructor overloading. Compiler differentiates which constructor is to be called depending upon the number of parameters and their sequence of data types.;;;;;;;;;
+Constructors should have any return types  ?;NO;;;;;;;;;
+Default constructor is provided by the compiler if we don't declare any constructor;TRUE;;;;;;;;;
+"A constructor can only have either  this or super
+ statement and that statement 
+Should be the first statement or any where..?";"this(...) will call another constructor in the same class whereas super() will call a super constructor.
+ If there is no super() in a constructor the compiler will add one implicitly.";;;;;;;;;
+"If Constructor has been declared  private,  
+Can Objects of the class instantiated from outside class.?";Classes with private constructors cannot be instantiated outside the class definition as the new keyword invokes the constructor of the class and private members of a class cannot be accessed from the outside. But they can be instantiated inside the class definition itself or if the class is nested inside another class you can access it in the enclosing class;;;;;;;;;
+"If super is not explicitly called,
+ will still  super() is  intrinsically  added  by the compiler.?";"
+subclass implicitly call  default constructor present in super class,We have to call explicitly when we pass parameters to the constructor.";;;;;;;;;
+Is Final variables can be initialized  within constructor.?;YES;;;;;;;;;
+"Default Constructor 
+ Initializes the instance variables to their ____ values.?";DEFAULT;;;;;;;;;
+"What are the common 
+Uses of ""this"" keyword in java ?";"It can be used to refer instance variable of current class
+It can be used to invoke or initiate current class constructor
+It can be passed as an argument in the method call
+It can be passed as argument in the constructor call
+It can be used to return the current class instance
+";;;;;;;;;
+"Can we use both ""this()"" and ""super()"" in a constructor ?";"There is a difference between super() and this().
+
+super()- calls the base class constructor whereas
+this()- calls current class constructor.
+
+Both this() and super() are constructor calls.
+Constructor call must always be the first statement. So we can not have two statements as first statement, hence either we can call super() or we can call this() from the constructor, but not both.";;;;;;;;;
+Why every object constructor automatically call super() in Object before its own constructors?;"default constructor is provided by compiler automatically but it also adds super() for the first statement.If you are creating your own constructor and you don't have either this() or super() as the first statement, compiler will provide super() as the first statement of the constructor.
+
+";;;;;;;;;
+What are constructors and Destructors in Java ?;;;;;;;;;;

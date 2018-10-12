@@ -1,0 +1,25 @@
+Question;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+Runnable is a ;d) Interface;a) Class;b) Method;c) Variable;d) Interface
+Thread priority in Java is represented as?;a) int;b) Float;c) double;d) long;a) int
+Which of these class is used to make a thread?;c) Thread;a) String;b) System;d) Runnable;c) Thread
+Which of these  interface  is implemented to create a Thread?;a) Runnable;b) Connections;c) Set;d) MapConnections;a) Runnable
+Which of these method of Thread class is used to find out the priority given to a thread?;c) getPriority();a) get();b) ThreadPriority();d) getThreadPriority();c) getPriority()
+Which of this method of Thread class is used to change the state of a thread to blocked state?;a) sleep();b) terminate();c) stop();d) block();a) sleep()
+Which method in Thread class is used  to check  weather a thread is still running?;a) isAlive();b) Join();c) isRunning();d) Alive();a) isAlive()
+Which of these methods is used to begin the execution of a thread?;b) start();a) run();c) runThread();d) startThread();b) start()
+Which of these method waits for the thread to treminate?;c) join();a) sleep();b) isAlive();d) stop();c) join()
+The ________ method help in clearing the contents of the buffer:;a) flush();b) clear();c) rub();d) vanish();a) flush()
+The _______ class is used to write bytes to a file:;b) FileOutputStream;a) FileInputStream;c) FileBufferStream;d) FileStringStream;b) FileOutputStream
+The _______ class is used to read characters from the file:;d) FileReader;a) StreamReader;b) CharacterReader;c) InputReader;d) FileReader
+Which of these methods can be used to write console output?;b) println();a) printout();c) write();d) All of the mentioned;b) println()
+Which refers to a channel through which data flow from the source to the destination:;c)  Stream;a) String;b) Character;d) Buffer;c)  Stream
+Java Stream classes can be categorized into two groups:;a)  Byte  and Character Stream Classes;b) Stream and String Classes;c) String and Character Stream Classes;d) Buffer and Character Stream Classes;a)  Byte  and Character Stream Classes
+Byte Stream Classes support input/output operations on _____ ; a) 8 bit ;b) 16 bit;c) 32 bit ;d) 64 bit ; a) 8 bit 
+In java thread to thread communication is called _____.;C. messaging.;A. passing.;B. sending.;D. calling.;C. messaging.
+______ is a small unit of a process.;B. thread.;A. method.;C. applet.;D. stream.;B. thread.
+_______ method is a thread mechanism.;A. synchronize.;B. user defined.;C. keyword.;D. normal.;A. synchronize.
+When several tasks are handled by a single CPU, it is called _________.;A. multitasking.;B. task.;C. simultaneous.;D. taker.;A. multitasking.
+Threads can be created by extending _________ class.;C. thread.;A. new.;B. operator.;D. super thread.;C. thread.
+When a thread is created using new operator, the thread is in _____ state.;A. new.;B. old.;C. horizontal.;D. default.;A. new.
+At any one instance of time _____ threads will be in running state.;D. one.;A. many.;B. two.;C. three.;D. one.
+What is garbage collection in the context of Java?;C. When all references to an object are gone, the memory used by the object is~~~automatically reclaimed.;A. The operating system periodically deletes all of the java files available on the~~~system.;B. Any package imported in a program and not used is automatically deleted.;D. The JVM checks the output of any Java program and deletes anything that~~~doesn't make sense.;C. When all references to an object are gone, the memory used by the object is~~~automatically reclaimed.

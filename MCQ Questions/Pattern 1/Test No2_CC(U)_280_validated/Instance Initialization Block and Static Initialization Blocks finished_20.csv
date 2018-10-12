@@ -1,0 +1,682 @@
+question,correct answer,wrong answer 1,wrong answer 2,wrong answer 3,wrong answer 4,Difficulty level,Section,Important
+"class GfG
+{ 
+        { 
+        System.out.println(""IIB block"");
+    }
+    
+    // Constructor of GfG class
+    GfG()
+    {
+        System.out.println(""Constructor Called"");
+    }
+    public static void main(String[] args)
+    {
+        GfG a = new GfG();
+    }
+}
+","IIB block
+Constructor Called
+","IIB block
+Constructor Called
+","IIB block
+IIB block
+Constructor Called
+","Constructor Called
+IIB block
+Constructor Called
+",none of the above,,,
+"class GfG
+{
+
+    {  
+        System.out.println(""IIB1 block"");
+    }
+     
+    
+    {
+        System.out.println(""IIB2 block"");
+    }
+     
+    
+    GfG()
+    {
+        System.out.println(""Constructor Called"");
+    }
+     
+   
+    {
+        System.out.println(""IIB3 block"");
+    }
+     
+    // main function
+    public static void main(String[] args)
+    {
+        GfG a = new GfG();
+    }
+}
+","IIB1 block
+IIB2 block
+IIB3 block
+Constructor Called
+","IIB1 block
+IIB2 block
+IIB3 block
+IIB3 block
+Constructor Called
+","IIB1 block
+IIB2 block
+IIB3 block
+Constructor Called
+","Constructor Called
+IIB1 block
+IIB2 block
+IIB3 block
+Constructor Called
+",none of the above,,,
+"package com.mywork;
+
+class A
+{
+     int i;
+ 
+     {
+         i = 10;
+     }
+ 
+     A(int j)
+     {
+         i = j;
+     }
+}
+ 
+class MainClass
+{
+     public static void main(String[] args)
+     {
+          A a = new A(50);
+          System.out.println(a.i);
+     }
+}",50,10,50,60,none of the above,,,
+"package com.mywork;
+
+class A
+{
+     int i;
+ 
+     {
+          System.out.println(""First IIB Block"");
+     }
+ 
+     {
+          System.out.println(""Second IIB Block"");
+     }
+ 
+     A(int j)
+     {
+          this();
+          System.out.println(""First Constructor"");
+     }
+ 
+     A()
+     {
+          System.out.println(""Second Constructor"");
+     }
+}
+ 
+class MainClass
+{
+     public static void main(String[] args)
+     {
+          A a = new A(50);
+     }
+}","First IIB Block
+Second IIB Block
+Second Constructor
+First Constructor
+","
+
+Second Constructor
+First Constructor
+First IIB Block
+Second IIB Block
+","
+Second Constructor
+First Constructor
+Second Constructor
+First Constructor","Second Constructor
+First Constructor
+First IIB Block
+Second IIB Block",none of the above,,,
+"package com.mywork;
+
+class Car{
+    int speed;
+    
+    Car(){
+        System.out.println(""speed is ""+speed);
+      }
+ 
+    {
+         speed = 120;
+    }
+     
+    public static void main(String args[]){
+        Car c1=new Car();
+        Car c2=new Car();
+    }    
+}","speed is 120
+speed is 120","speed is 120
+speed is 120","speed is 0
+speed is 0","speed is 000
+speed is 000",none of the above,,,
+"class Car{
+    int speed;
+    
+    Car(){
+        System.out.println(""constructor is invoked"");
+      }
+ 
+    {
+         System.out.println(""instance initializer block invoked"");
+         speed = 120;
+    }
+     
+    public static void main(String args[]){
+        Car c1=new Car();
+        Car c2=new Car();
+    }    
+}
+","instance initializer block invoked
+constructor is invoked
+instance initializer block invoked
+constructor is invoked","constructor is invoked
+instance initializer block invoked
+constructor is invoked
+constructor is invoked
+instance initializer block invoked
+constructor is invoked","instance initializer block invoked
+instance initializer block invoked
+constructor is invoked
+instance initializer block invoked","
+constructor is invoked
+instance initializer block invoked
+constructor is invoked
+instance initializer block invoked","instance initializer block invoked
+constructor is invoked
+instance initializer block invoked
+constructor is invoked",,,
+"package com.mywork;
+
+class Display {
+    int a, b;
+
+    //Anonymous or instance initializer Block
+    {
+        System.out.println(""AnonumousBlock called."");
+        a = 10;
+    }
+
+   //default constructor
+   Display(){
+      System.out.println(""default constructor called."");
+   }
+
+   //one argument constructor
+   Display(int num){
+      System.out.println(""one parameter constructor called."");
+      b = num;
+   }
+
+   //method to display values
+   public void display(){
+          System.out.println(""a = "" + a);
+          System.out.println(""b = "" + b);
+   }
+}
+
+public class AnonymousBlockExample1 {
+     public static void main(String args[]){
+            Display obj1 = new Display();
+            obj1.display();
+
+            Display obj2 = new Display(20);
+            obj2.display();
+     }
+}
+","default constructor called.
+a = 10
+b = 0
+AnonumousBlock called.
+one parameter constructor called.
+a = 10
+b = 20","AnonumousBlock called.
+one parameter constructor called.
+a = 10
+b = 20
+default constructor called.
+a = 10
+b = 0","default constructor called.
+a = 10
+b = 0
+default constructor called.
+a = 10
+b = 0","default constructor called.
+a = 10
+b = 0
+AnonumousBlock called.
+one parameter constructor called.
+default constructor called.
+a = 10
+b = 0
+AnonumousBlock called.
+one parameter constructor called.",none of the above,,,
+"package com.mywork;
+class Display {
+    int a, b, c;
+
+    //First Anonymous or instance initializer Block
+    {
+       System.out.println(""First AnonumousBlock called."");
+       a = 10;
+    }
+
+    //Second Anonymous or instance initializer Block
+    {
+        System.out.println(""Second AnonumousBlock called."");
+        b = 20;
+    }
+
+    //default constructor
+    Display(){
+        System.out.println(""default constructor called."");
+    }
+
+    //one argument constructor
+    Display(int num){
+            System.out.println(""one parameter constructor called."");
+            c = num;
+   }
+
+   //method to display values
+   public void display(){
+          System.out.println(""a = "" + a);
+          System.out.println(""b = "" + b);
+          System.out.println(""c = "" + c);
+   }
+}
+
+public class AnonymousBlockExample1 {
+     public static void main(String args[]){
+            Display obj1 = new Display();
+            obj1.display();
+
+            Display obj2 = new Display(30);
+            obj2.display();
+     }
+}","First AnonumousBlock called.
+Second AnonumousBlock called.
+default constructor called.
+a = 10
+b = 20
+c = 0
+First AnonumousBlock called.
+Second AnonumousBlock called.
+one parameter constructor called.
+a = 10
+b = 20
+c = 30
+","First AnonumousBlock called.
+Second AnonumousBlock called.
+default constructor called.
+a = 10
+b = 20
+c = 0
+First AnonumousBlock called.
+Second AnonumousBlock called.
+default constructor called.
+a = 10
+b = 20
+c = 0","First AnonumousBlock called.
+Second AnonumousBlock called.
+one parameter constructor called.
+a = 10
+b = 20
+c = 30
+First AnonumousBlock called.
+Second AnonumousBlock called.
+one parameter constructor called.
+a = 10
+b = 20
+c = 30","First AnonumousBlock called.
+Second AnonumousBlock called.
+default constructor called.
+a = 10
+b = 20
+c = 0
+First AnonumousBlock called.
+Second AnonumousBlock called.
+one parameter constructor called.
+a = 10
+b = 20
+c = 30",none of the above,,,
+"package com.mywork;
+
+
+class Display {
+    int a, b;
+
+    //static Anonymous or instance initializer Block
+    static {
+            System.out.println(""Static AnonumousBlock called."");
+    }
+
+    //non-static Anonymous or instance initializer Block
+    {
+        System.out.println(""Non-Static AnonumousBlock called."");
+        a = 20;
+    }
+
+    //default constructor
+    Display(){
+        System.out.println(""default constructor called."");
+    }
+
+    //one argument constructor
+    Display(int num){
+       System.out.println(""one parameter constructor called."");
+       b = num;
+    }
+
+    //method to display values
+    public void display(){
+           System.out.println(""a = "" + a);
+           System.out.println(""b = "" + b);
+   }
+}
+
+public class AnonymousBlockExample1 {
+     public static void main(String args[]){
+            Display obj1 = new Display();
+            obj1.display();
+
+            Display obj2 = new Display(30);
+            obj2.display();
+    }
+}
+
+","Static AnonumousBlock called.
+Non-Static AnonumousBlock called.
+default constructor called.
+a = 20
+b = 0
+Non-Static AnonumousBlock called.
+one parameter constructor called.
+a = 20
+b = 30
+","Static AnonumousBlock called.
+Non-Static AnonumousBlock called.
+default constructor called.
+a = 20
+b = 0
+Non-Static AnonumousBlock called.
+one parameter constructor called.
+a = 20
+b = 30
+","a = 20
+b = 0
+Non-Static AnonumousBlock called.
+one parameter constructor called.
+a = 20
+b = 30
+Static AnonumousBlock called.
+Non-Static AnonumousBlock called.
+default constructor called.
+",none of the above,Not an valid question,,,
+"In which order static initializer  block, instance initialize  block, super and constructor are called?
+
+class Show{
+      Show(){
+             System.out.println(""Super class constructor."");
+      }
+}
+ 
+class Display extends Show{
+      //static Anonymous or instance initializer Block
+      static {
+              System.out.println(""Static AnonumousBlock called."");
+      }
+ 
+      //non-static Anonymous or instance initializer Block
+      {
+        System.out.println(""Non-Static AnonumousBlock called."");
+      }
+ 
+      //default constructor
+      Display(){
+           super();
+           System.out.println(""default constructor called."");
+      }
+}
+ 
+public class AnonymousBlockExample4 {
+       public static void main(String args[]){
+               Display obj = new Display();
+       }
+}
+","Static AnonumousBlock called.
+Super class constructor.
+Non-Static AnonumousBlock called.
+default constructor called.","Non-Static AnonumousBlock called.
+default constructor called.
+Non-Static AnonumousBlock called.
+default constructor called.","Non-Static AnonumousBlock called.
+default constructor called.
+Static AnonumousBlock called.
+Super class constructor.","Static AnonumousBlock called.
+Super class constructor.
+Non-Static AnonumousBlock called.
+default constructor called.
+",none of the above,,,
+"class Test { 
+ {
+  System.out.println(""This is instance block"");
+ }
+
+ public static void main(String[] args) {
+  Test t = new Test();// creating object
+  Test t2 = new Test();// creating another object
+ }
+}
+","This is instance block
+This is instance block
+","This is instance block
+
+","This is instance block
+This is instance block
+","This is instance block
+This is instance block
+This is instance block",none of the above,,,
+Why we use instance initializer block?,all  the above,Initializer block contains the code that is always executed whenever an instance is created, IIB is used to declare/initialize the common part of various constructors of a class,"The order of initialization constructors and initializer block doesn?t matter, initializer block is always executed before constructor.",all the above,,,
+"class Test {
+ {
+  System.out.println(""This is First instance block"");
+ }
+
+ {
+  System.out.println(""This is Second instance block"");
+ }
+
+ {
+  System.out.println(""This is Third instance block"");
+ }
+
+ public static void main(String[] args) {
+  Test t = new Test();// creating object
+
+ }
+}
+","This is First instance block
+This is Second instance block
+This is Third instance block
+","This is Third instance block
+This is First instance block
+This is Second instance block
+","This is First instance block
+This is Second instance block
+This is Third instance block
+","This is Third instance block
+This is First instance block
+This is Second instance block
+",none of the above,,,
+"package com.mywork;
+
+
+class A{
+A(){
+System.out.println(""parent class constructor invoked"");
+}
+}
+class B2 extends A{
+B2(){
+super();
+System.out.println(""child class constructor invoked"");
+}
+
+{System.out.println(""instance initializer block is invoked"");}
+
+public static void main(String args[]){
+B2 b=new B2();
+}
+}
+","parent class constructor invoked
+instance initializer block is invoked
+child class constructor invoked","child class constructor invoked
+parent class constructor invoked
+instance initializer block is invoked","parent class constructor invoked
+instance initializer block is invoked
+parent class constructor invoked
+instance initializer block is invoked","parent class constructor invoked
+instance initializer block is invoked
+child class constructor invoked",none of the above,,,
+SIB,,,,,,,,
+"package com.mywork;
+
+
+ class Test11 {
+    static int i;
+    int j;
+     
+    // start of static block 
+    static {
+        i = 10;
+        System.out.println(""static block called "");
+    }
+    // end of static block 
+}
+ 
+class Main {
+    public static void main(String args[]) {
+ 
+        // Although we don't have an object of Test, static block is 
+        // called because i is being accessed in following statement.
+        System.out.println(Test11.i); 
+    }
+}
+
+","static block called 
+10
+
+",10,static block called,"10
+static block called 
+
+",none of the above,,,
+"package com;
+
+class Test {
+    static int i;
+    int j;
+    static {
+        i = 10;
+        System.out.println(""static block called "");
+    }
+    Test(){
+        System.out.println(""Constructor called"");
+    }
+}
+ 
+class Main {
+    public static void main(String args[]) {
+ 
+       // Although we have two objects, static block is executed only once.
+       Test t1 = new Test();
+       Test t2 = new Test();
+    }
+}","static block called 
+Constructor called
+Constructor called
+","static block called 
+Constructor called
+Constructor called
+","Constructor called
+static block called 
+Constructor called
+","Constructor called
+Constructor called
+Constructor called
+",none of the above,,,
+"package com;
+
+import java.util.Scanner;
+
+class Solution{
+ static int B,H;
+ static boolean flag;
+
+ static{
+  Scanner cin=new Scanner(System.in);
+  B=cin.nextInt();
+  H=cin.nextInt();
+  if(B>0&&H>0){
+   flag=true;
+  }else{
+   System.out.println(""java.lang.Exception: Breadth and height must be positive"");
+  }
+ }
+
+ public static void main(String[]args){
+  if(flag){
+   int area=B*H;
+   System.out.println(area);
+  }
+ }
+}",area=B*H;,,,,,,,
+"package com;
+
+import java.util.Scanner;
+
+public class Solution {
+    private static int B;
+    private static int H;
+    private static boolean flag;
+
+    static {
+        Scanner scan = new Scanner(System.in);
+        B = scan.nextInt();
+        H = scan.nextInt();
+        scan.close();
+        if (B <= 0 || H <= 0) {
+            System.out.println(""java.lang.Exception: Breadth and height must be positive"");
+            flag = false;
+        } else {
+            flag = true;
+        }
+    }
+
+    public static void main(String[] args) {
+        if (flag) {
+            int area = B * H;
+            System.out.print(area);
+        }
+    } // end of main
+}",area=B*H;,,,,,,,

@@ -1,0 +1,83 @@
+question,correct answer,wrong answer 1,wrong answer 2,wrong answer 3,wrong answer 4,Difficulty level,Section,Important
+Encapsulation is supported by ___________ class,,,,,,,,
+"The encapsulation is achieved by combining which ones into a class?
+ ","Methods and 
+Attribute",Methods,Attributes,Non of these,,,,
+ Encapsulation is also called as?,,,,,,,,
+Encapsulation is implemented by using__________,,,,,,,,
+ What mechanism is used for encapsulation in Java?,,,,,,,,
+ Difference between Encapsulation and Data Hiding ?,,,,,,,,
+"Which of the following Java feature promotes access 
+protection or Hiding ?",Encapsulation,Abstraction,Composition,Inheritance,,,,
+"class Loan{
+    private int duration; 
+ //private variables examples of encapsulation
+    private String loan;
+    private String borrower;
+    private String salary;
+   
+    //public constructor can break encapsulation
+// instead use factory method
+    private Loan(int duration, String loan, String borrower, String salary){
+        this.duration = duration;
+        this.loan = loan;
+        this.borrower = borrower;
+        this.salary = salary;
+    }
+   
+    //no argument constructor omitted here
+    
+   // create loan can encapsulate loan creation logic
+    public Loan createLoan(String loanType){
+  
+     //processing based on loan type and then returning loan object
+      return loan;
+    }
+   
+}
+
+",,,,,,,,
+"1. public class User {
+2. 
+3. private String cb_name;
+4. private int cb_age;
+5. private int cb_salary;
+6. public String getCb_name() {
+7. return cb_name;
+8. }
+9. public void setCb_name(String cb_name) {
+10. this.cb_name = cb_name;
+11. }
+12. public int getCb_age() {
+13. return cb_age;
+14. }
+15. public void setCb_age(int cb_age) {
+16. this.cb_age = cb_age;
+17. }
+18. public int getCb_salary() {
+19. return cb_salary;
+20. }
+21. public void setCb_salary(int cb_salary) {
+22. this.cb_salary = cb_salary;
+23. }
+24. 
+25. 
+26. 
+27. }
+18. public int getCb_salary() {
+19. return cb_salary;
+20. }
+21. public void setCb_salary(int cb_salary) {
+22. this.cb_salary = cb_salary;
+23. }
+24. 
+25. 
+26. 
+27. }
+
+
+
+
+
+
+",,,,,,,,

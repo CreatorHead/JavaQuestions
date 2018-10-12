@@ -1,0 +1,81 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+An interface contains __________ methods.;C. unimplemented.;A. non-abstract.;B. implemented.;D. abstract.;C. unimplemented.
+"The concept of multiple inheritance is implemented in Java by ____ 
+(i.) extending two or more classes 
+(ii.) extending one class and implementing one or more interfaces 
+(iii.) implementing two or more interfaces 
+(iv.) all of these";D. (ii) & (iii) only;A. (i), (ii), (iii) & (iv);B. (i) only;C. (i) & (iii) only;D. (ii) & (iii) only
+Which of these keywords is used by a class to use an interface defined previously?.;C. implements.;A. import.;B. imports.;D. implement.;C. implements.
+ DataInput is ________________.;A. an interface that defines methods to read primitive data types.;B. an abstract class defined in java.io.;C. a class we can use to read primitive data types.;D. an interface that defines methods to open files.;A. an interface that defines methods to read primitive data types.
+ _________ is a feature that allows one interface to be used for a general class of actions.;C. Polymorphism.;A. Class.;B. Inheritance.;D. Interface.;C. Polymorphism.
+ Which of the following statements correctly describes an interface?;C. It's a type of abstract class.;A. It's a concrete class.;B. It's a superclass.;D. It's a subclass.;C. It's a type of abstract class.
+An interface contains __________ methods.;C. unimplemented.;A. non-abstract.;B. implemented.;D. abstract.;C. unimplemented.
+ Interface methods can be declared with which the following modifiers?;A. public.;B. private.;C. synchronized.;D. native.;A. public.
+The fields in an interface are implicitly specified as,;(d)   both static and final ;(a)   static only  ;(b)   protected  ;(c)   private;(d)   both static and final 
+Which of the following is  not true?;(c)     An interface can implement another interface.;(a)     An interface can extend another interface.;(b)     A class which is implementing an interface must implement all the methods of the interface.;(d)     An interface is a solution for multiple inheritance in java.;(c)     An interface can implement another interface.
+When an overridden method is called from within a subclass, it will always   refer to the version of that method defined by the;(b)     Subclass;(a)     Super class;(b)     Subclass;(c)     Compiler will choose randomly  ;(d)     Interpreter will choose randomly
+"The concept of multiple inheritance is implemented in Java by
+I.         Extending two or more classes.
+II.         Extending one class and implementing one or more interfaces.
+III.       Implementing two or more interfaces.";(c) (II) and (III);(a) Only (II);(b) (I) and (II);(c) (II) and (III);(d)   Only (III).
+Which of these field declarations are legal within the body of an interface?;(b) public static int answer=42;(a) Private final static int answer = 42;(b) public static int answer=42;(c)     final static answer =42;(d) int answer
+Which of the following statements is  true?;"(a) The keyword extends is used to specify that an interface inherits from another interface
+";"(a) The keyword extends is used to specify that an interface inherits from another interface
+";"(b) The keyword extends is used to specify that a class inherits from an interface
+";"(c) The keyword implements is used to specify that an interface inherits from another interface
+";"(d) The keyword implements is used to specify that a class inherits from another class
+"
+"Given the following definitions and reference declarations, which one of the following assignments is legal?
+//Definitions:
+interface I1{}
+interface I2{}
+class C1 implements I1 {}
+class C2 implements I2 {}
+class C3 extends C1 implements I2 {}
+//Reference declarations:
+//. . . .
+     C1 obj1;
+C2 obj2;
+C3 obj3;
+                   //. . . .";"(b) I1 b = obj3;
+";"(a) obj2 = obj1;
+";"(b) I1 b = obj3;";"(c) obj3 = obj2;
+";"(d) I1 a = obj2;
+"
+"Which access specifiers should be implemented in a class for all interface methods?
+I.         Private.
+II.         Public.
+III.       Protected.";"(b)
+Only (II) above
+";"(a)
+Only (I) above
+";"(b)
+Only (II) above
+";"(c)
+Only (III) above
+";"(d)
+Both (I) and (III) above
+"
+"Consider the following code:
+interface A {   int a=5; int b=10;}
+Which of the following is possible for the above?";"(a)
+class B implements A{int x;
+void add(){ x= a+b; }
+}
+";"(a)
+class B implements A{int x;
+void add(){ x= a+b; }
+}
+";"(b)
+class B extends A { int x;
+void add(){ x= a+b; }
+}
+";"(c)
+class B implements A { int x;
+void add(){ a=20; b=10; x= a+b; }
+}
+";"(d)
+class B extends A{ int x;
+void add(){ a=20; b=10; x= a+b; }
+}
+"

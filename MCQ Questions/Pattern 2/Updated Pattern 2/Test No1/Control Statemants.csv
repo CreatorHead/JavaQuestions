@@ -1,0 +1,295 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+Which of the following represent legal flow control statements?;"A. break;";"B. break();";"C. continue(inner);";"D. exit();";"A. break;"
+Which Control Statements allow the program to choose different paths of execution?;C. selection.;A. switch;B. if-else.;D. for.;C. selection.
+What is an infinite loop?;B. A loop that runs forever.;A. A loop that functions infinitely well.;C. A loop that never starts.;D. A loop that will never function.;B. A loop that runs forever.
+"Given the following code fragment:
+int A[];
+int i = 0;
+A = new int A[4];
+while (i < 4){
+     A[i] = 10;
+     i = i + 1;
+}
+What is the value of A[3]?.";C. 10.;A. 0.;B. 3.;D. 9.;C. 10.
+"What is the value of k after the following code fragment?
+int k = 0;
+int n = 12;
+while (k < n){
+      k = k + 1;
+}";C. 12.;A. 0.;B. 11.;D. 10.;C. 12.
+"Consider the following Java program :
+class IfStatement{
+public static void main(String args[])
+             {
+             int a=2, b=3;
+                           if (a==3)
+                           if (b==3)
+                           System.out.println(""==============="");
+                           else
+                           System.out.println(""#################"");
+                           System.out.println(""&&&&&&&&&&&"");
+             }
+}
+Which of the following will the output be?";(c)     &&&&&&&&&&&;(a)     ===============;"(b)     #################
+&&&&&&&&&";(c)     &&&&&&&&&&&;"(d)     ===============
+#################
+&&&&&&&&&&"
+"Consider the following Java program :
+             public class Compute {
+
+                           public static void main (string args [ ])
+                           {
+                                         int result, x ;
+                                         x = 1 ;
+                                         result = 0;
+                                         while (x < = 10) {
+                                                       if (x%2 = = 0) result + = x ;
+                                         + + x ;
+                           }
+                           System.out.println(result) ;
+                           }
+             }
+Which of the following will be the output of the above program?";(b)   30;(a)   55;(b)   30;(c)   25;(d)   35  
+"Given the following code, which statement is  true?
+                 class MyClass
+{
+     public static void main(String[] args)
+     {
+                   int k = 0;
+                   int l = 0;
+                   for (int i=0;i<=3;i++)
+                   {
+                                 k++;
+                                 if (i==2) break;
+                                 l++;
+                   }
+                   System.out.println(k+"", ""+l);
+     }
+}";"(c) The program will print 4, 3 when run if break is replaced by continue
+";"(a) The program will fail to compile
+";"(b) The program will print 3, 3 when run
+";"(c) The program will print 4, 3 when run if break is replaced by continue
+";"(d) The program will fail to compile if break is replaced by return
+"
+"Suppose
+static void nPrint(String message, int n) {
+     while (n > 0) {
+         System.out.print(message);
+         n--;
+     }
+}
+What is the printout of the call Print('a', 4)?";"(a) invalid call.
+";(a) invalid call.;(b) aaaa;"( c) aaa
+";(d) aa
+"Analyze the following code:
+public class Test {
+public static void main(String[] args) {
+   int[] x = new int[5];
+   int i;
+   for (i = 0; i < x.length; i++)
+       x[i] = i;
+   System.out.println(x[i]);
+}
+}";"(c) The program has a runtime error because the last statement in the main method causes ArrayIndexOutOfBoundsException
+";"(a) The program displays 0 1 2 3 4
+";"(b) The program displays 4
+";"(c) The program has a runtime error because the last statement in the main method causes ArrayIndexOutOfBoundsException
+";"(d) The program has syntax error because i is not defined in the last statement in the main method
+"
+"If n were declared to be an int and were assigned a non-negative value, the statement:
+if (n / 10 % 10 == 3) System.out.println(""Bingo!"");
+will display the message if and only if:";"(d) The tens' digit of n is 3
+";"(a) n is divisible (divides evenly) by 3
+";"(b) n is divisible (divides evenly) by 30
+";"(c) The units' digit (also known as the 1's place) of n is 3
+";"(d) The tens' digit of n is 3
+"
+"The Java program:
+public class Practice2 {
+public static void main(String args[]) {
+for(int row = -2; row <= 2; row++) {
+for(int col = -2; col <= 2; col++)
+if( col*col < row*row) System.out.print(""* "");
+else System.out.print("". "");
+System.out.println();
+}
+}
+}
+will produce which one of the following patterns when it is executed?";"(b)
+. * * * .
+. . * . .
+. . . . .
+. . * . .
+. * * * .
+";"(a)
+. . . . .
+. . * . .
+. * * * .
+. . * . .
+. . . . .
+";"(b)
+. * * * .
+. . * . .
+. . . . .
+. . * . .
+. * * * .
+";"(c)
+. . * . .
+. * * * .
+* * * * *
+. * * * .
+. . * . .
+";"(d)
+* * . * *
+* . . . *
+. . . . .
+* . . . *
+* * . * *
+"
+"What will the following program print when it is executed?
+public class Practice11 {
+public static void main(String args[]) {
+int i = 0;
+while (i < 3) {
+if( i++ == 0 ) System.out.print(""Merry"");
+if( i == 1) System.out.print(""Merr"");
+if( ++i == 2) System.out.print(""Mer"");
+else System.out.print(""Oh no!"");
+}
+}
+}";"(b)
+MerryMerrMerOh no!
+";"(a)
+Merry
+Merr
+Mer
+";"(b)
+MerryMerrMerOh no!
+";"(c)
+MerrMerOh no!
+";"(d)
+MerryMerrMerOh no!
+MerrMerOh no!
+MerOh no!
+"
+"Consider the following segment of a Java program:
+int x=1;
+switch(x)
+{
+case 0:System.out.println(x);break;
+case 1:System.out.println(x);break;
+case 2:System.out.println(x);
+default: System.out.println(x);
+}";(b) 1;(a) 0 ;(b) 1;(c) 2;(d) error
+"Consider the following program written in Java:
+class For{
+public static void main(String args[])
+{
+for(int i=0; i<=2; System.out.println(i););
+}
+}
+What would the output of the above program be when the program is executed?";(c)    error;(a)    0;(b)    2;(c)    error;(d)    1
+"Consider the following program written in Java:
+class DoWhile{
+public static void main(String args[])
+{
+int j=0;
+do{
+int k=7;
+System.out.println(k);
+k+=7;
+j++;
+}
+while(j<3);
+}
+}
+What would be the output of the program if it is executed?";"(b)    7
+7
+7";"(a)    7
+8
+9";"(b)    7
+7
+7";"(c)    7
+14
+21";"(d)    7
+15
+22"
+"What is the output for y?
+int y = 0;
+for (int i = 0; i<10; ++i) {
+     y += i;
+}
+System.out.println(y);";"(b)
+45.
+";"(a)
+10
+";"(b)
+45.
+";"(c)
+12
+";"(d)
+13
+"
+"What will be the value of i for the following loop?
+int y = 0;
+for (int i = 0; i<10; ++i) {
+     y += i;
+}";(c) Undefined.;"(a)
+   9
+";"(b)
+10
+";(c) Undefined.;"(d)
+12
+"
+"Examine the following code snippets to identify the legal loop constructs:
+I.         for (int i = 22, int j = 0; i + j > 11; i = i-3, j++)
+{
+... (Other statements)
+}
+II.         int i = 100;
+while(i)
+{
+... (other statements)
+}
+III.       while (int i > 0)
+{
+i--;
+... (other statements)
+}
+IV.     int i = -10, sum = 0;
+do {
+... (other statements)
+}
+while(sum < 5 || i < 0);";"(a)
+Both (I) and (IV) above
+";"(a)
+Both (I) and (IV) above
+";"(b)
+Only (I) above
+";"(c)
+Only (II) above
+";"(d)
+Both (I) and (III) above
+"
+"Consider the following program written in Java.
+class Selection{
+   public static void main(String args[]){ 
+            int x=7;  
+            if(x==2);
+            System.out.println(""Number seven"");
+            System.out.println(""Not seven"");
+    } 
+}
+What would the output of the program be?";"(a)
+Number seven
+Not seven
+";"(a)
+Number seven
+Not seven
+";"(b)
+Error
+";"(c)
+Not seven
+";"(d)
+Number seven
+"

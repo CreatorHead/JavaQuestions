@@ -1,0 +1,21 @@
+Questions;Correct Answer;Wrong Answer 1;Wrong Answer 2;Wrong Answer 3;Wrong Answer 4
+Which of the following is not a wrapper class?;A. String.;B. Integer.;C. Boolean.;D. Character.;A. String.
+Which of the following are true?;D. The Integer class extends the Number class.;A. The Void class extends the Class class.;B. The Float class extends the Double class.;C. The System class extends the Runtime class.;D. The Integer class extends the Number class.
+ Which of the following are not the wrapper classes?;B. Vector.;A. Byte.;C. Integer.;D. Short.;B. Vector.
+All the wrapper classes (Integer, Boolean, Float, Short, Long, Double and Character).;D. are private.;A. are public.;B. are final.;C. are serializable.;D. are private.
+"Which of the following are the wrapper classes?
+I.         Random.
+II.         Byte.
+III.       Integer.
+IV.     Short.
+V.       Double.";"(a)
+(II), (III), (IV) and (V) above
+";"(a)
+(II), (III), (IV) and (V) above
+";"(b)
+(II), (III) and (IV) above
+";"(c)
+(II), (III) and (V) above
+";"(d)
+(III), (IV) and (V) above
+"

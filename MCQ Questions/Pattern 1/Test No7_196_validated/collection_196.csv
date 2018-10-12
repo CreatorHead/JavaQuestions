@@ -1,0 +1,1659 @@
+question,correct answer,wrong answer 1,wrong answer 2,wrong answer 3,wrong answer 4,Difficulty level,Section,Important
+"Which of the following statement describes dynamic resizing as is applies to the  ArrayList class?
+","The object changes size dynamically as new elements are added
+","The object changes size dynamically as new elements are added
+",The size of an ArrayList object is fixed at instantiation.,The size of an ArrayList object can be restated throughout a program,The size of an ArrayList object can be restated throughout a program,,,
+"
+What is the output of this program?
+public class Java1102
+{
+public static void main(String args[])
+{
+ArrayList names = new ArrayList();
+names.add(""Isolde"");
+names.add(""John"");
+names.add(""Greg"");
+names.add(""Maria"");
+names.add(""Heidi"");
+System.out.println(""names contains "" + names);
+}
+}
+","names contains [Isolde, John, Greg, Maria, Heidi]","names contains [Isolde, John, Greg, Maria, Heidi]","names contains [Heidi, Maria, Greg, John, Isolde]","names contains [John, Greg, Maria, Heidi]","names contains [Isolde, John, Greg, Maria]",,,
+" What is the output of this program segment?
+
+ArrayList names = new ArrayList(); names.add(""John"");
+names.add(""Greg"");
+names.add(""Maria"");
+names.add(""Heidi"");
+names.add(2,""Jessica""); System.out.println();
+for (int k = 0; k < names.size(); k++) System.out.print(names.get(k) + "" "");
+",John Greg Jessica Heidi,John Greg Jessica Heidi,John Greg Jessica Heidi,John Jessica Greg Maria Heidi,John Jessica Greg Maria Heidi,,,
+"Consider the following code segment.
+
+ArrayList names = new ArrayList(); names.add(""John"");
+names.add(""Greg"");
+names.add(""Maria"");
+names.add(""Heidi""); names.remove(1); names.remove(2); System.out.println();
+for (int k = 0; k < names.size(); k++) System.out.print(names.get(k) + "" "");
+
+What is printed as a result of executing the code segment?
+",John Maria,John Heidi,Greg Heidi,Greg Maria,John Maria,,,
+" Consider the following code segment.
+
+ArrayList names = new ArrayList(); names.remove(1);
+names.remove(2); names.add(""John"");
+names.add(""Greg"");
+names.add(""Maria"");
+names.add(""Heidi""); System.out.println();
+for (int k = 0; k < names.size(); k++) System.out.print(names.get(k) + "" "");
+
+What is printed as a result of executing the code segment?
+",Error,Greg Maria,Greg Heidi,John Heidi,Error,,,
+"What is the output of this program segment?
+
+ArrayList names = new ArrayList(); names.add(""Isolde""); names.add(""John"");
+names.add(""Greg"");
+names.add(""Maria"");
+names.add(""Heidi""); for (int k =0; k < 5; k++)
+names.add(k,""Jessica""); System.out.println(names);
+","[Jessica, Jessica, Jessica, Jessica, Jessica, Isolde, John, Greg, Maria, Heidi]","[Jessica, Jessica, Jessica, Jessica, Jessica, Isolde, John, Greg, Maria, Heidi]"," [Isolde, John, Greg, Maria, Heidi, Jessica, Jessica, Jessica, Jessica, Jessica] "," [Jessica, Isolde, Jessica, John, Jessica, Greg, Jessica, Maria, Jessica, Heidi]",  Error,,,
+"08. What is the output of this program segment?
+
+ArrayList names = new ArrayList(); names.add(""Isolde""); names.add(""John"");
+names.add(""Greg"");
+names.add(""Maria"");
+names.add(""Heidi""); for (int k =0; k < 5; k++)
+names.add(k,""Jessica""); System.out.println(names);
+","[ Jessica, Jessica, Jessica, Jessica, Jessica]","[Jessica, Isolde, Jessica, John, Jessica, Greg, Jessica, Maria, Jessica, Heidi]","[ Isolde, John, Greg, Maria, Heidi]","[ Jessica, Jessica, Jessica, Jessica, Jessica]",Error,,,
+" What is the output of this program?
+
+public class Java1
+{
+public static void main(String args[ ])
+{
+ArrayList numbers = new ArrayList(); numbers.add(new Integer(11)); numbers.add(new Integer(22)); numbers.add(new Integer(33)); numbers.add(new Integer(44)); numbers.add(new Integer(55)); System.out.println(numbers);
+}
+}
+","[11, 22, 33, 44, 55]","[11, 22, 33, 44, 55]",55,11 22 33 44 55,Error,,,
+"Java provides wrapper classes, which create objects that store primitive data types. Which of the following are Java wrapper classes?","Integer, Double, Boolean","Integer, Double, Boolean","integer, real, logic","Integer, Double, Boolean, String","int, double, boolean, string",,,
+" Which of the following statements correctly uses a wrapper class to store a primitive data type?
+
+",All of the above.,intList.add(new Integer(1000));,doubleList.add(new Double(123.321));,logicList(add(new Boolean(true));,All of the above.,,,
+" What is the output of this program? import java.util.ArrayList; public class Java1112
+{
+public static void main(String args[ ])
+{
+ArrayList numbers = new ArrayList();
+
+int k;
+for (k = 1; k <= 10; k++) numbers.add(new Integer(k));
+
+int sum = 0;
+for (k = 0; k < numbers.size(); k++)
+{
+Integer temp = (Integer) numbers.get(k); sum += temp.intValue();
+}
+
+double average = (double) sum / numbers.size(); System.out.println(average);
+}
+}
+
+",5.5,5.5,10,5,55,,,
+What is known by the declaration ArrayList list = new ArrayList(); ?,All of the above,list is an ArrayList object.,Elements of the list array are objects,The type of information stored by list is unknown.,All of the above,,,
+What is known by the declaration ArrayList<String> list = new ArrayList<String>(); ?,All of the above,list is an ArrayList object.,Elements of the list array are objects,The type of information stored by list is unknown.,All of the above,,,
+"What is guaranteed by a generic declaration like the one shown below?
+
+ArrayList<String> list = new ArrayList<String>();
+",At execution time every element of list will store a String object.,ArrayIndexOutOfBounds error will not happen.,There will not be any compile errors due to wrong data types.,At execution time every element of list will store a String object.,All of the above,,,
+" Consider the following program segment.
+
+ArrayList<Double> reals = new ArrayList<Double>(); list2.add(400.0);
+list2.add(500.0); list2.add(600.0);
+
+Which of the following statements demonstrates the use of generics?
+",Both A & B,Double real = reals.get(0);,double real = (reals.get(0)).doubleValue();,double real = ((Double)reals.get(0)).doubleValue();,Both A & B,,,
+" Consider the following Person class.
+
+class Person
+{
+private String name; private int age;
+
+public Person (String n, int a)
+{
+name = n; age = a;
+}
+}
+
+Which of the following statements correctly declares a generic ArrayList object of Person objects?
+
+",ArrayList<Person> people = new ArrayList<Person>();,ArrayList<Person> people = new Person();,Person people = new ArrayList();,ArrayList people = new ArrayList(Person);,ArrayList<Person> people = new ArrayList<Person>();,,,
+"18. What is the output of the following program segment?
+
+ArrayList<String> people = new ArrayList<String>(); people.add(""Kathy Coleman"");
+people.add(""Tom Terrific""); System.out.println(people);
+","[Kathy Coleman, Tom Terrific]",Kathy Coleman Tom Terrific,Tom Terrific Kathy Coleman,"[Kathy Coleman, Tom Terrific]",Error,,,
+"ArrayList<String> people = new ArrayList<String>(); people.add(""Kathy Coleman"");
+people.add(new Integer(1000)); System.out.println(people);
+What is the output?",Error,Error,Kathy Coleman 1000,"1000
+Kathy Coleman
+","[Kathy Coleman, 1000]",,,
+"Consider the following program segment.
+
+ArrayList<String> names = new ArrayList<String>(); names.add(""Isolde"");
+names.add(""John"");
+names.add(""Greg"");
+names.add(""Maria"");
+
+Which of the following statements display all the elements in the names array?
+",All of the above,System.out.println(names);,for (int index = 0; index < names.size(); index++) System.out.println(names.get(index));,for (String name: names) System.out.println(name);,All of the above,,,
+"Assume the following declaration.
+
+ArrayList<String> list = new ArrayList<String>();
+
+Which of the following statements stores ""Kathy"" in the list array:
+","list.add(""Kathy"");"," for (String item: list)
+item = ""Kathy"";
+"," list[10] = ""Kathy"";","list.add(""Kathy"");",All of the above,,,
+"23. Consider the following program segment.
+
+ArrayList<String> names1 = new ArrayList<String>(); ArrayList<String> names2 = new ArrayList<String>();
+
+names1.add(""Isolde""); names1.add(""John"");
+names1.add(""Greg""); names1.add(""Maria""); names1.add(""Heidi"");
+
+for (String name: names1) names2.add(name);
+
+Which of the following statements describes the correct execution of the program segment?
+",The elements of names1 are copied into names2 in the same order.,The segment cannot execute due to a compile error., The elements of names1 are copied into names2 in reverse order. ,The elements of names1 are copied into names2 in the same order.,The elements of names2 are copied into names1 in the same order.,,,
+" Consider the following program segment.
+
+ArrayList<String> names1 = new ArrayList<String>(); ArrayList<String> names2 = new ArrayList<String>(); names1.add(""Isolde"");
+names1.add(""John"");
+names1.add(""Greg""); names1.add(""Maria""); names1.add(""Heidi"");
+for (String name: names2) names1.add(name);
+System.out.println(names1) ;
+
+What is the output as a result of executing the program segment?
+","[Isolde, John, Greg, Maria, Heidi]","[Isolde, John, Greg, Maria, Heidi, Isolde, John, Greg, Maria, Heidi]","[Isolde, John, Greg, Maria, Heidi]",[ ],The segment cannot execute due to a compile error.,,,
+" Consider the following program segment.
+
+ArrayList<String> names = new ArrayList<String>(); names.add(""Isolde"");
+names.add(""John"");
+names.add(""Greg"");
+names.add(""Maria"");
+names.add(""Heidi"");
+for (String name: names) names.add(name);
+System.out.println(names) ;
+
+What is the output as a result of executing the program segment?
+
+",Program crashes during execution with a runtime exception errors.,"[Isolde, John, Greg, Maria, Heidi]","[Isolde, John, Greg, Maria, Heidi, Isolde, John, Greg, Maria, Heidi]",Compile error message,Program crashes during execution with a runtime exception errors.,,,
+"Consider the following program segment.
+
+int[] list1 = {1,2,3,4,5,6,7,8,9};
+ArrayList<Integer> list2 = new ArrayList<Integer>();
+
+Which of the following code segments copies the elements from list1 into list2 ?
+ 1  for (int k = 0; k < list1.length; k++) list2.add(list1[k]);
+
+2.for (Integer number: list2) list1.add(number);
+
+3.for (int number: list1)
+list2.add(number);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+",I and III only,I and II only,I and III only,III only,II only,,,
+Which of the following declares mammals as a two-dimensional dynamic array?,ArrayList<ArrayList<String>> mammals = new ArrayList<ArrayList<String>>();,ArrayList<ArrayList<String>> mammals = new ArrayList<ArrayList<String>>();,"ArrayList<String,String> mammals = new ArrayList<String,String>();",ArrayList<String><String> mammals = new ArrayList<String><String>();,All of the above,,,
+"Assume that mammals is correctly declared as a two-dimensional dynamic array of String elements.
+
+Which of the following will display every element of the mammals array?
+
+1.  for (ArrayList<String> mammal: mammals)
+{
+for (String animal: mammal) System.out.println(animal);
+}
+
+2.System.out.println(mammals);
+
+3.for (row = 0; row < mammals.size(); row++)
+{
+for (int col = 0; col < mammals.get(row).size(); col++) System.out.println(mammals.get(row).get(col));
+}
+
+","I, II and III", II and III only , I and III only, I and II only,"I, II and III",,,
+,,,,,,,,
+What is the default clone of HashSet?,Shallow clone,Shallow clone,Deep clone,Plain clone,Hollow clone,,,
+Do we have get(Object o) method in HashSet?,FALSE,TRUE,FALSE,none of the above,1,,,
+What does Collections.emptySet() return?,Immutable Set,Mutable Set,The type of Set depends on the parameter passed to the emptySet() method,Null object,Immutable Set,,,
+ What is the initial capacity and load factor of HashSet?,"16, 0.75","32, 1.0","32, 0.75","10, 1.0","16, 0.75",,,
+What is the relation between hashset and hashmap?,HashSet internally implements HashMap,HashSet internally implements HashMap,HashMap internally implements HashSet,HashMap is the interface; HashSet is the concrete class,HashSet is the interface; HashMap is the concrete class,,,
+"What is the output?
+1. public class Test 
+2. {
+3.  public static void main(String[] args) 
+4.         {
+5.   Set s = new HashSet();
+6.   s.add(new Long(10));
+7.   s.add(new Integer(10));
+8.   for(Object object : s)
+9.                 {
+10.       System.out.println(""test - ""+object);
+11.   }
+12.  }
+13. }
+"," Test – 10
+Test – 10
+",Test – 10," Test – 10
+Test – 10
+",Runtime Exception,Compilation Failure,,,
+Set has contains(Object o) method?,TRUE,TRUE,FALSE,1,0,,,
+What is the difference between TreeSet and SortedSet?,SortedSet is an interface; TreeSet is a concrete class,TreeSet is more efficient than SortedSet,SortedSet is more efficient than TreeSet,TreeSet is an interface; SortedSet is a concrete class,SortedSet is an interface; TreeSet is a concrete class,,,
+ What happens if two threads simultaneously modify TreeSet?,ConcurrentModificationException is thrown,ConcurrentModificationException is thrown,Both threads can perform action successfully,FailFastException is thrown,IteratorModificationException is thrown,,,
+What is the unique feature of LinkedHashSet?,It provides a way to store key values with uniqueness,It is not a valid class,It maintains the insertion order and guarantees uniqueness,It provides a way to store key values with uniqueness,The elements in the collection are linked to each other,,,
+Which of these standard collection classes implements a linked list data structure?,LinkedList,LinkedList,AbstractList,HashSet,AbstractSet,,,
+Which of these classes implements Set interface?,HashSet,ArrayList,HashSet,LinkedList,DynamicList,,,
+Which of these method is used to add an element to the start of a LinkedList object?,addFirst(),AddFirst(),first(),add(),addFirst(),,,
+Which of these method of HashSet class is used to add elements to its object?,add(),add(),Add(),addFirst(),insert(),,,
+Which of these methods can be used to delete the last element in a LinkedList object?,removeLast(),remove(),delete(),removeLast(),deleteLast(),,,
+Which of these method is used to change an element in a LinkedList Object?,set(),set(),change(),redo(),add(),,,
+"What is the output?
+1. import java.util.*;
+2.     class Linkedlist 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             LinkedList obj = new LinkedList();
+7.             obj.add(""A"");
+8.             obj.add(""B"");
+9.             obj.add(""C"");
+10.             obj.addFirst(""D"");
+11.             System.out.println(obj);
+12.         }
+13.     }
+","[D, A, B, C].","[D, A, B, C].","[A, B, C].","[D, B, C].","[A, B, C, D].",,,
+"What is the output?
+1. import java.util.*;
+2.     class Linkedlist 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             LinkedList obj = new LinkedList();
+7.             obj.add(""A"");
+8.             obj.add(""B"");
+9.             obj.add(""C"");
+10.             obj.removeFirst();
+11.             System.out.println(obj);
+12.         }
+13.     }
+","[B, C].","[A, B].","[B, C].","[A, B, C, D].","[A, B, C].",,,
+"What is the output?
+
+1.   import java.util.*;
+2.     class Output 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             HashSet obj = new HashSet();
+7.             obj.add(""A"");
+8.             obj.add(""B"");
+9.             obj.add(""C"");
+10.             System.out.println(obj + "" "" + obj.size());
+11.         }
+12.     }
+","[A, B, C] 3","[A, B, C] 3",ABC 3,ABC 2,"[A, B, C] 2",,,
+"What is the output?
+
+1. import java.util.*; 
+2.     class Output 
+3.     {
+4.         public static void main(String args[]) 
+5.         { 
+6.             TreeSet t = new TreeSet();
+7.             t.add(""3"");
+8.             t.add(""9"");
+9.             t.add(""1"");
+10.             t.add(""4"");
+11.             t.add(""8""); 
+12.             System.out.println(t);
+13.         }
+14.     }
+","[1, 3, 4, 8, 9].","[1, 3, 4, 8, 9].","[9, 8, 4, 3, 1].","[3, 4, 1, 8, 9].","a) [1, 3, 5, 8, 9].",,,
+"
+What is the output?
+import java.util.*;
+ 
+class TreeSetDemo
+{
+    public static void main (String[] args)
+    {
+        TreeSet ts1= new TreeSet();
+        ts1.add(""A"");
+        ts1.add(""B"");
+        ts1.add(""C"");
+ 
+         ts1.add(""C"");
+ `
+        
+        System.out.println(ts1);  
+        
+    }
+}
+","[A, B, C]","[A, B, C]","[A, B]",[ C],error,,,
+"
+What is the output?
+import java.util.*;
+ 
+class TreeSetDemo
+{
+    public static void main (String[] args)
+    {
+        TreeSet ts1= new TreeSet();
+        ts1.add(""A"");
+        ts1.add(""B"");
+        ts1.add(""C"");
+ 
+         ts1.add(""C"");
+ 
+        
+        System.out.println(ts1);  
+       ts1.add(2) ;
+         }
+}
+",Runtime Exception,"[A, B, C]",Runtime Exception,[ C],Compilation Failure,,,
+"import java.util.*;
+ 
+class TreeSetDemo
+{
+    public static void main (String[] args)
+    {
+        TreeSet ts2= new TreeSet();
+        ts2.add(""A"");
+        ts2.add(""B"");
+        ts2.add(""C"");
+        ts2.add(null);    }
+}
+",NullPointerException,"[A, B, C]",NullPointerException,[ C],Compilation Failure,,,
+"import java.util.*;
+ 
+class TreeSetDemo
+{
+    public static void  main (String[] args)
+    {
+        ArrayList al = new ArrayList();
+        al.add(""GG"");
+        al.add(""G"");
+        al.add(""P"");
+        al.add(""C"");
+        al.add(""C""); 
+                TreeSet ts4 = new TreeSet(al);
+ 
+                System.out.println(ts4);
+    }
+}
+","[C, G, GG, P]","[C, G, GG, P]","[C, G]","[C, P]",Compilation Failure,,,
+"import java.util.*;
+ 
+class DEMO
+{
+    public static void main (String[] args)
+    {
+ 
+        TreeSet ts5 = new TreeSet();
+ 
+        ts5.add(""GG"");
+        ts5.add(""C"");
+        ts5.add(""P"");
+ 
+        System.out.println(ts5.first()); 
+        System.out.println(ts5.last()); 
+ 
+        System.out.println(ts5.headSet(""O""));
+ 
+        
+        System.out.println(ts5.tailSet(""G""));
+ 
+        
+        System.out.println(ts5.subSet(""C"",""P""));
+ 
+        
+        ts5.clear();
+ 
+                System.out.println(ts5);
+    }
+}
+","C
+P
+[P, GG]
+[GG, P]
+[C, GG]
+[]
+","C
+P
+[P, GG]
+[GG, P]
+[C, GG]
+[]
+","C
+P
+[P, GG]
+[GG, P]
+","C
+P
+[P, GG]
+[GG, P]
+
+[]
+",Compilation Failure,,,
+"import java.util.HashSet;
+import java.util.Iterator;
+
+public class HashSetExample {
+
+  public static void main(String[] args) {
+
+    HashSet<String> hSet = new HashSet<String>();
+    hSet.add(""B"");
+    hSet.add(""A"");
+    hSet.add(""B"");
+    hSet.add(""D"");
+    hSet.add(""C"");
+    hSet.add(""A"");
+    
+    System.out.println(""Size of hSet : "" + hSet.size());
+
+    Iterator<String> itr = hSet.iterator();
+    while (itr.hasNext()) {
+      System.out.println(itr.next());
+    }
+  }
+}
+","Size of hSet : 4
+D
+A
+B
+C
+","Size of hSet : 4
+D
+A
+B
+C
+","Size of hSet : 3
+
+A
+B
+C
+","Size of hSet : 2
+
+B
+C
+",Compilation Failure,,,
+"import java.util.ArrayList;
+import java.util.HashSet;
+
+public class HashSetExample {
+
+  public static void main(String[] args) {
+    
+    ArrayList<String> arrList = new ArrayList<String>();
+    
+    arrList.add(""Y"");
+    arrList.add(""M"");
+    arrList.add(""S"");
+    
+    HashSet<String> hSet = new HashSet<String>(arrList);
+    
+    System.out.println(""hSet : "" + hSet);
+  }
+
+}
+","hSet : [Y,M,S]","hSet : [Y,M,S]",hSet : [],Runtime Exception,Compilation Failure,,,
+"import java.util.LinkedHashSet;
+
+public class HashSetExample {
+  public static void main(String[] args) {
+
+    LinkedHashSet<String> hSet = new LinkedHashSet<String>();
+
+    hSet.add(""Y"");
+    hSet.add(""M"");
+    hSet.add(""S"");
+    hSet.add(""F"");
+    hSet.add(""C"");
+    hSet.add(""H"");
+
+    System.out.println(""Linked hSet : "" + hSet);
+  }
+}
+","Linked hSet : [Y,M,S, F, C, H]","Linked hSet : [Y,M,S, F, C, H]","Linked hSet : [ F, C, H]",Runtime Exception,Compilation Failure,,,
+"import java.util.TreeSet;
+
+public class TreeSetExample {
+  public static void main(String[] args) {
+
+    TreeSet<String> treeSet = new TreeSet<String>();
+
+    treeSet.add(""Y"");
+    treeSet.add(""M"");
+    treeSet.add(""S"");
+    treeSet.add(""F"");
+    
+
+    System.out.println(""Tree Set : "" + treeSet);
+  }
+}
+","Tree Set : [Y,M,S, F]","Tree Set : [Y,M,S, F]",[],Tree Set : [F],Compilation Failure,,,
+"import java.util.*;
+ 
+class Test
+{
+    public static void main(String[]args)
+    {
+        HashSet<String> h = new HashSet<String>();
+ 
+      
+        h.add(""India"");
+        h.add(""Australia"");
+        h.add(""South Africa"");
+        h.add(""India"");
+ 
+                System.out.println(h);
+        System.out.println(""List contains India or not:"" +
+                           h.contains(""India""));
+ 
+               h.remove(""Australia"");
+        System.out.println(""List after removing Australia:""+h);
+ 
+        
+        System.out.println(""Iterating over list:"");
+        Iterator<String> i = h.iterator();
+        while (i.hasNext())
+            System.out.println(i.next());
+    }
+}
+","[Australia, South Africa, India]
+List contains India or not:true
+List after removing Australia:[South Africa, India]
+Iterating over list:
+South Africa
+India
+","
+List after removing Australia:[South Africa, India]
+Iterating over list:
+South Africa
+India
+","[Australia, South Africa, India]
+List contains India or not:true
+List after removing Australia:[South Africa, India]
+Iterating over list:
+South Africa
+India
+",Runtime Exception,Compilation Failure,,,
+"import java.util.Iterator;
+import java.util.PriorityQueue;
+
+public class PriorityQueueExample {
+  public static void main(String[] args) {
+
+    PriorityQueue<String> priQ = new PriorityQueue<String>();
+    priQ.add(""A"");
+    priQ.add(""D"");
+    priQ.add(""R"");
+    priQ.add(""J"");
+    priQ.add(""T"");
+
+    System.out.println(""Iterating the Queue :"");
+    Iterator<String> itr = priQ.iterator();
+    while (itr.hasNext()) {
+      System.out.println(itr.next());
+    }
+
+    priQ.remove();
+    priQ.remove();
+  
+    System.out.println(""After removal : "");
+    itr = priQ.iterator();
+    while (itr.hasNext()) {
+      System.out.println(itr.next());
+    }
+  }
+}
+","Iterating the Queue :
+A
+D
+R
+J
+T
+After removal : 
+J
+T
+R
+","Iterating the Queue :
+A
+D
+R
+J
+T
+After removal : 
+J
+T
+R
+","After removal : 
+J
+T
+R
+",Runtime Exception,Compilation Failure,,,
+"import java.util.LinkedList;
+import java.util.Queue;
+ 
+public class QueueExample
+{
+  public static void main(String[] args)
+  {
+    Queue<Integer> q = new LinkedList<>();
+ 
+    for (int i=0; i<5; i++)
+     q.add(i);
+ 
+    
+    System.out.println(""Elements of queue-""+q);
+ 
+   
+    int removedele = q.remove();
+    System.out.println(""removed element-"" + removedele);
+ 
+    System.out.println(q);
+ 
+    
+    int head = q.peek();
+    System.out.println(""head of queue-"" + head);
+ 
+        int size = q.size();
+    System.out.println(""Size of queue-"" + size);
+  }
+}
+","Elements of queue-[0, 1, 2, 3, 4]
+removed element-0
+[1, 2, 3, 4]
+head of queue-1
+Size of queue-4
+","Elements of queue-[0, 1, 2, 3, 4]
+removed element-0
+[1, 2, 3, 4]
+head of queue-1
+Size of queue-4
+","Elements of queue-[0, 1, 2, 3, 4]
+removed element-0
+[1, 2, 3, 4]
+
+",Runtime Exception,Compilation Failure,,,
+"import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class HashMapExample {
+  public static void main(String[] args) {
+
+  HashMap<String,String> hMap = new HashMap<String,String>();
+
+    hMap.put(""A1"", ""Aman"");
+    hMap.put(""A2"", ""Arun"");
+    hMap.put(""A3"", ""Akash"");
+    hMap.put(""A4"", ""Aniket"");
+    hMap.put(""A5"", ""Anil"");
+
+    Set set = hMap.entrySet();
+    Iterator itr = set.iterator();
+
+    while (itr.hasNext()) {
+      Map.Entry m = (Map.Entry) itr.next();
+      System.out.println(m.getKey() + "" "" + m.getValue());
+    }
+  }
+}
+","A2 Arun
+A1 Aman
+A4 Aniket
+A3 Akash
+A5 Anil
+","A2 Arun
+A1 Aman
+A4 Aniket
+A3 Akash
+A5 Anil
+","A2 Arun
+A1 Aman
+A4 Aniket
+",Runtime Exception,Compilation Failure,,,
+"import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+
+public class TreeMapExample {
+  public static void main(String[] args) {
+
+    TreeMap<Integer, String> tMap = new 
+                        TreeMap<Integer, String>();
+
+    tMap.put(101, ""Aman"");
+    tMap.put(108, ""Arun"");
+    tMap.put(102, ""Akash"");
+    tMap.put(190, ""Aniket"");
+    tMap.put(182, ""Anil"");
+
+    Set set = tMap.entrySet();
+    Iterator itr = set.iterator();
+
+    while (itr.hasNext()) {
+      Map.Entry m = (Map.Entry) itr.next();
+      System.out.println(m.getKey() + "" "" + m.getValue());
+    }
+  }
+}
+","101 Aman
+102 Akash
+108 Arun
+182 Anil
+190 Aniket
+","101 Aman
+102 Akash
+108 Arun
+182 Anil
+190 Aniket
+","101 Aman
+102 Akash
+108 Arun
+
+",Runtime Exception,Compilation Failure,,,
+Which of the following is not a disadvantage to the usage of array?,Accessing elements at specified positions,Fixed size,You know the size of the array prior to allocation,Insertion based on position,Accessing elements at specified positions,,,
+"public class Test
+{
+    public static void main(String args[])
+    {
+        
+        LinkedList<String> object = new LinkedList<String>();
+ 
+        object.add(""A"");
+        object.add(""B"");
+        object.addLast(""C"");
+        object.addFirst(""D"");
+        object.add(2, ""E"");
+        object.add(""F"");
+        object.add(""G"");
+        System.out.println(""Linked list : "" + object);
+ 
+        object.remove(""B"");
+        object.remove(3);
+        object.removeFirst();
+        object.removeLast();
+        System.out.println(""Linked list after deletion: "" + object);
+ 
+                boolean status = object.contains(""E"");
+ 
+        if(status)
+            System.out.println(""List contains the element 'E' "");
+        else
+            System.out.println(""List doesn't contain the element 'E'"");
+ 
+                int size = object.size();
+        System.out.println(""Size of linked list = "" + size);
+ 
+                Object element = object.get(2);
+        System.out.println(""Element returned by get() : "" + element);
+        object.set(2, ""Y"");
+        System.out.println(""Linked list after change : "" + object);
+    }
+}
+","Linked list : [D, A, E, B, C, F, G]
+Linked list after deletion: [A, E, F]
+List contains the element 'E' 
+Size of linked list = 3
+Element returned by get() : F
+Linked list after change : [A, E, Y]
+","Linked list : [D, A, E, B, C, F, G]
+Linked list after deletion: [A, E, F]
+List contains the element 'E' 
+Size of linked list = 3
+Element returned by get() : F
+Linked list after change : [A, E, Y]
+","Linked list : [D, A, E, B, C, F, G]
+Linked list after deletion: [A, E, F]
+List contains the element 'E' 
+Size of linked list = 3
+",Runtime Exception,Compilation Failure,,,
+,,,,,,,,
+Suppose that you would like to create an instance of a new Map that has an iteration order that is the same as the iteration order of an existing instance of a Map. Which concrete implementation of the Map interface should be used for the new instance?,LinkedHashMap,LinkedHashMap,TreeMap,HashMap,The answer depends on the implementation of the existing instance.,,,
+"Which class does not override the equals() and hashCode() methods, inheriting them directly from class Object?",java.lang.Double,java.lang.String,java.lang.Double,java.lang.StringBuffer,java.lang.Character,,,
+"Which collection class allows you to grow or shrink its size and provides indexed access to its elements, but whose methods are not synchronized?",java.util.ArrayList,java.util.HashSet,java.util.LinkedHashSet,java.util.List,java.util.ArrayList,,,
+You need to store elements in a collection that guarantees that no duplicates are stored and all elements can be accessed in natural order. Which interface provides that capability?,java.util.Set,java.util.Map,java.util.Set,java.util.List,java.util.Collection,,,
+Which interface does java.util.Hashtable implement?,Java.util.Map,Java.util.Map,Java.util.List,Java.util.HashTable,Java.util.Collection,,,
+Which interface provides the capability to store objects using a key-value pair?,Java.util.Map,Java.util.Map,Java.util.Set,Java.util.List,Java.util.Collection,,,
+"Which collection class allows you to associate its elements with key values, and allows you to retrieve objects in FIFO (first-in, first-out) sequence?",java.util.LinkedHashMap,java.util.ArrayList,java.util.LinkedHashMap,java.util.HashMap,java.util.TreeMap,,,
+"Which collection class allows you to access its elements by associating a key with an element's value, and provides synchronization?",java.util.Hashtable,java.util.SortedMap,java.util.TreeMap,java.util.TreeSet,java.util.Hashtable,,,
+"class Test
+{
+    public static void main (String[] args)
+    {
+        int arr[] = new int[] {1, 2, 3, 4};
+        Vector<Integer> v = new Vector();
+        Hashtable<Integer, String> h = new Hashtable();
+        v.addElement(1);
+        v.addElement(2);
+        h.put(1,""YMS"");
+        h.put(2,""4YMS"");   
+        
+        System.out.println(arr[0]);
+        System.out.println(v.elementAt(0));
+        System.out.println(h.get(1));
+    
+
+    }
+}
+
+","1
+1
+YMS
+","1
+1
+YMS
+","1
+1
+1
+",runtime error,compile error,,,
+ Which of these packages contain all the collection classes?,java.util,java.lang,java.util,java.net,java.awt,,,
+Which of these classes is not part of Java’s collection framework?,Maps,Maps,Array,Stack,Queue,,,
+Which of these interface is not a part of Java’s collection framework?,SortedList,List,Set,SortedMap,SortedList,,,
+Which of these methods deletes all the elements from invoking collection?,clear(),reset(),delete(),refresh(),clear(),,,
+What is Collection in Java?,A group of objects,A group of objects,A group of classes,A group of interfaces,None of the mentioned,,,
+"1. import java.util.*;
+2.     class Array 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             int array[] = new int [5];
+7.             for (int i = 5; i > 0; i--)
+8.                 array[5-i] = i;
+9.             Arrays.fill(array, 1, 4, 8);
+10.             for (int i = 0; i < 5 ; i++)
+11.                 System.out.print(array[i]);
+12.         }
+13.     }
+",58881,58881,12885,12845,54881,,,
+"1. import java.util.*;
+2.     class vector 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             Vector obj = new Vector(4,2);
+7.             obj.addElement(new Integer(3));
+8.             obj.addElement(new Integer(2));
+9.             obj.addElement(new Integer(5));
+10.             obj.removeAll(obj);
+11.             System.out.println(obj.isEmpty());
+12.         }
+13.     }
+",TRUE,TRUE,FALSE,1,0,,,
+"1. import java.util.*;
+2.     class stack 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             Stack obj = new Stack();
+7.             obj.push(new Integer(3));
+8.             obj.push(new Integer(2));
+9.             obj.pop();
+10.             obj.push(new Integer(5));
+11.           System.out.println(obj);
+12.         }
+13.     }
+
+"," [3, 5]."," [3, 5].","[3, 2].","[3, 2, 5].","[3, 5, 2].",,,
+"1. import java.util.*;
+2.     class hashtable 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             Hashtable obj = new Hashtable();
+7.             obj.put(""A"", new Integer(3));
+8.             obj.put(""B"", new Integer(2));
+9.             obj.put(""C"", new Integer(8));
+10.             obj.remove(new String(""A""));
+11.             System.out.print(obj);
+12.         }
+13.     }
+","[C=8, B=2].","{C=8, B=2}","[C=8, B=2].`"," {A=3, C=8, B=2}","[A=3, C=8, B=2].",,,
+"1. import java.util.*;
+2.     class Bitset 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             BitSet obj = new BitSet(5);
+7.             for (int i = 0; i < 5; ++i)
+8.                 obj.set(i);
+9.             obj.clear(2);
+10.             System.out.print(obj);
+11.         }
+12.     }
+","{0, 1, 3, 4}","{0, 1, 3, 4}","{0, 1, 2, 4}","{0, 1, 2, 3, 4}","{0, 0, 0, 3, 4}",,,
+"1. import java.util.*;
+2.     class Bitset 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             BitSet obj = new BitSet(5);
+7.             for (int i = 0; i < 5; ++i)
+8.                 obj.set(i);
+9.             obj.clear(2);
+10.             System.out.print(obj);
+11.         }
+12.     }
+"," {0, 1, 3, 4}","{0, 1, 3, 4}","{0, 1, 2, 4}","{0, 1, 2, 3, 4}","{0, 0, 0, 3, 4}",,,
+Which of these return type of hasNext() method of an iterator?,Boolean,Integer,Double,Boolean,Collections Object,,,
+ Which of these methods is used to obtain an iterator to the start of collection?,iterator(),start(),begin(),iteratorSet(),iterator(),,,
+Which of these methods can be used to move to next element in a collection?,next(),next(),move(),shuffle(),hasNext(),,,
+Which of these iterators can be used only with List?,ListIterator,Setiterator,ListIterator,Literator,None of the mentioned,,,
+Which of these is a method of ListIterator used to obtain index of previous element?,previousIndex(),previous(),previousIndex(),back(),goBack(),,,
+Which of these exceptions is thrown by remover() method?,IllegalStateException,IOException,SystemException,ObjectNotFoundExeception,IllegalStateException,,,
+"1. import java.util.*;
+2.     class Collection_iterators 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             ListIterator a = list.listIterator();
+7.                 if(a.previousIndex()! = -1)
+8.                     while(a.hasNext())
+9.                  System.out.print(a.next() + "" "");
+10.                 else
+11.                    System.out.print(""EMPTY"");
+12.         }
+13.     }
+
+",EMPTY,0,1,-1,EMPTY,,,
+"1. import java.util.*;
+2.     class Collection_iterators 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             LinkedList list = new LinkedList();
+7.             list.add(new Integer(2));
+8.             list.add(new Integer(8));
+9.             list.add(new Integer(5));
+10.             list.add(new Integer(1));
+11.             Iterator i = list.iterator();
+12.             Collections.reverse(list);
+13.      while(i.hasNext())
+14.          System.out.print(i.next() + "" "");
+15.         }
+16.     }
+",1 5 8 2,2 8 5 1,1 5 8 2,2,2 1 8 5,,,
+"1. import java.util.*;
+2.     class Collection_iterators 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             LinkedList list = new LinkedList();
+7.             list.add(new Integer(2));
+8.             list.add(new Integer(8));
+9.             list.add(new Integer(5));
+10.             list.add(new Integer(1));
+11.             Iterator i = list.iterator();
+12.             Collections.reverse(list);
+13.      Collections.sort(list);
+14.             while(i.hasNext())
+15.          System.out.print(i.next() + "" "");
+16.         }
+17.     }
+",1 2 5 8,1 2 5 8,2 8 5 1,1 5 8 2,2 1 8 5,,,
+"1. import java.util.*;
+2.     class Collection_iterators 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             LinkedList list = new LinkedList();
+7.             list.add(new Integer(2));
+8.             list.add(new Integer(8));
+9.             list.add(new Integer(5));
+10.             list.add(new Integer(1));
+11.             Iterator i = list.iterator();
+12.             Collections.reverse(list);
+13.      Collections.shuffle(list);
+14.             i.next();
+15.             i.remove();
+16.             while(i.hasNext())
+17.          System.out.print(i.next() + "" "");
+18.         }
+19.     }
+",2 1 8,2 8 5,2 1 8,2 5 8,8 5 1,,,
+Which of these standard collection classes implements a linked list data structure?,LinkedList,AbstractList,LinkedList,HashSet,AbstractSet,,,
+Which of these classes implements Set interface?,HashSet,ArrayList,HashSet,LinkedList,DynamicList,,,
+Which of these methods can be used to delete the last element in a LinkedList object?,removeLast(),remove(),delete(),removeLast(),deleteLast(),,,
+Which of these method is used to change an element in a LinkedList Object?,set(),change(),set(),redo(),add(),,,
+"1. import java.util.*;
+2.     class Linkedlist 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             LinkedList obj = new LinkedList();
+7.             obj.add(""A"");
+8.             obj.add(""B"");
+9.             obj.add(""C"");
+10.             obj.addFirst(""D"");
+11.             System.out.println(obj);
+12.         }
+13.     }
+","[D, A, B, C]."," [A, B, C].","[D, B, C].","[A, B, C, D].","[D, A, B, C].",,,
+"1. import java.util.*;
+2.     class Linkedlist 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             LinkedList obj = new LinkedList();
+7.             obj.add(""A"");
+8.             obj.add(""B"");
+9.             obj.add(""C"");
+10.             obj.removeFirst();
+11.             System.out.println(obj);
+12.         }
+13.     }
+","[B, C].","[A, B].","[B, C].","[A, B, C, D]."," [A, B, C].",,,
+"1. import java.util.*; 
+2.     class Output 
+3.     {
+4.         public static void main(String args[]) 
+5.         { 
+6.             TreeSet t = new TreeSet();
+7.             t.add(""3"");
+8.             t.add(""9"");
+9.             t.add(""1"");
+10.             t.add(""4"");
+11.             t.add(""8""); 
+12.             System.out.println(t);
+13.         }
+14.     }
+","[1, 3, 4, 8, 9].","[1, 3, 4, 8, 9].","1, 3, 5, 8, 9].","[3, 4, 1, 8, 9].","[9, 8, 4, 3, 1].",,,
+Which of these object stores association between keys and values?,Map,Hash table,Map,Array,String,,,
+Which of these method is used to remove all keys/values pair from the invoking map?,remove(),delete(),remove(),clear(),removeAll(),,,
+Which of these method Map class is used to obtain an element in the map having specified key?,get(),search(),get(),set(),look(),,,
+Which of these methods can be used to obtain set of all keys in a map?,keySet(),getAll(),getKeys(),keyall(),keySet(),,,
+"1. import java.util.*;
+2.     class Maps 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             HashMap obj = new HashMap();
+7.             obj.put(""A"", new Integer(1));
+8.             obj.put(""B"", new Integer(2));
+9.             obj.put(""C"", new Integer(3));
+10.             System.out.println(obj);
+11.         }
+12.     }
+","{A=1, B=2, C=3}","{A 1, B 1, C 1}","{A, B, C}","{A-1, B-1, C-1}","{A=1, B=2, C=3}",,,
+"1. import java.util.*;
+2.     class Maps 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             HashMap obj = new HashMap();
+7.             obj.put(""A"", new Integer(1));
+8.             obj.put(""B"", new Integer(2));
+9.             obj.put(""C"", new Integer(3));
+10.             System.out.println(obj.keySet());
+11.         }
+12.     }
+"," [A, B, C]."," [A, B, C].","{A, B, C}","{1, 2, 3}"," [1, 2, 3].",,,
+"1. import java.util.*;
+2.     class Maps 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             HashMap obj = new HashMap();
+7.             obj.put(""A"", new Integer(1));
+8.             obj.put(""B"", new Integer(2));
+9.             obj.put(""C"", new Integer(3));
+10.             System.out.println(obj.get(""B""));
+11.         }
+12.     }
+",2,2,3,1,Null,,,
+Which of these class object can be used to form a dynamic array?,ArrayList & Vector,ArrayList & Vector,ArrayList,Map,Vector,,,
+Which of these are legacy classes?,All of the mentioned,Stack,Hashtable,Vector,All of the mentioned,,,
+What is the name of data member of class Vector which is used to store number of elements in the vector?,elementCount,length,elements,elementCount,capacity,,,
+"1. import java.util.*;
+2.     class vector 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             Vector obj = new Vector(4,2);
+7.             obj.addElement(new Integer(3));
+8.             obj.addElement(new Integer(2));
+9.             obj.addElement(new Integer(5));
+10.             System.out.println(obj.elementAt(1));
+11.         }
+12.     }
+`",2,2,0,3,5,,,
+"1. import java.util.*;
+2.     class vector 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             Vector obj = new Vector(4,2);
+7.             obj.addElement(new Integer(3));
+8.             obj.addElement(new Integer(2));
+9.             obj.addElement(new Integer(5));
+10.             System.out.println(obj.capacity());
+11.         }
+12.     }
+",4,2,3,5,4,,,
+Which of these is the interface of legacy is implemented by Hashtable and Dictionary classes?,Map,Enumeration,Map,HashMap,Hashtable,,,
+Which of these is a class which uses String as a key to store the value in object?`,Properties,Array,ArrayList,Dictionary,Properties,,,
+Which of these methods is used to retrieve the elements in properties object at specific location?,getProperty(),getProperty(),ElementAt(),Elementat(),get(),,,
+"1. import java.util.*;
+2.     class hashtable 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             Hashtable obj = new Hashtable();
+7.             obj.put(""A"", new Integer(3));
+8.             obj.put(""B"", new Integer(2));
+9.             obj.put(""C"", new Integer(8));
+10.             System.out.print(obj.contains(new Integer(5)));
+11.         }
+12.     }
+",FALSE,FALSE,TRUE,0,1,,,
+"1. import java.util.*;
+2.     class hashtable 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             Hashtable obj = new Hashtable();
+7.             obj.put(""A"", new Integer(3));
+8.             obj.put(""B"", new Integer(2));
+9.             obj.put(""C"", new Integer(8));
+10.             obj.clear();
+11.             System.out.print(obj.size());
+12.         }
+13.     }
+",0,0,1,2,3,,,
+"1. import java.util.*;
+2.     class hashtable 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             Hashtable obj = new Hashtable();
+7.             obj.put(""A"", new Integer(3));
+8.             obj.put(""B"", new Integer(2));
+9.             obj.put(""C"", new Integer(8));
+10.             obj.remove(new String(""A""));
+11.             System.out.print(obj);
+12.         }
+13.     }
+","{C=8, B=2}","{C=8, B=2}","[C=8, B=2]."," {A=3, C=8, B=2}","[A=3, C=8, B=2].",,,
+"1.   import java.util.*;
+2.     class properties 
+3.     {
+4.         public static void main(String args[]) 
+5.         {
+6.             Properties obj = new Properties();
+7.             obj.put(""AB"", new Integer(3));
+8.             obj.put(""BC"", new Integer(2));
+9.             obj.put(""CD"", new Integer(8));
+10.             System.out.print(obj.keySet());
+11.         }
+12.     }
+","[AB, BC, CD].","[AB, BC, CD].","[3, 2, 8].","{3, 2, 8}","{AB, BC, CD}",,,
+Which of the following is not a disadvantage to the usage of array?, Accessing elements at specified positions,Fixed size,You know the size of the array prior to allocation,Insertion based on position,Accessing elements at specified positions,,,
+"import java.util.*;
+ 
+public class priorityQueue
+{
+    public static void main(String[] args)
+    {
+        PriorityQueue<Integer> queue =
+                            new PriorityQueue<>();
+        queue.add(11);
+        queue.add(10);
+        queue.add(22);
+        queue.add(5);
+        queue.add(12);
+        queue.add(2);
+ 
+        while (queue.isEmpty() == false)
+            System.out.printf(""%d "", queue.remove());
+ 
+        System.out.println(""\n"");
+    }
+}
+",2 5 10 11 12 22,11 10 22 5 12 2,2 12 5 22 10 11,2 5 10 11 12 22,22 12 11 10 5 2,,,
+"import java.util.*;
+
+public class hashSet
+{
+ public static void main(String[] args)
+ {
+  HashSet<String> hashSet = new HashSet<>();
+  hashSet.add(""yms"");
+  hashSet.add(""ABC"");
+  hashSet.add(""YMS"");
+  hashSet.add(""YMSandABC"");
+
+  System.out.println(hashSet);
+
+ }
+}
+","[ABC, YMSandABC, yms, YMS]","[ABC, YMSandABC, yms, YMS]","[ yms, YMS]",runtime error,compile error,,,
+"import java.util.*;
+
+public class Treeset
+{
+ public static void main(String[] args)
+ {
+  TreeSet<String> treeSet = new TreeSet<>();
+
+  treeSet.add(""yms"");
+  treeSet.add(""and"");
+  treeSet.add(""abc"");
+ 
+
+  for (String temp : treeSet)
+   System.out.printf(temp + "" "");
+
+  System.out.println(""\n"");
+ }
+}
+",abc and yms ,abc and yms ,yms,abc ,compile error,,,
+"import java.util.*;
+ 
+public class linkedList
+{
+    public static void main(String[] args)
+    {
+        List<String> list1 = new LinkedList<>();
+        list1.add(""yms"");
+        list1.add(""and"");
+        list1.add(""abc"");
+        list1.add(""YMS"");
+       
+ 
+        List<String> list2 = new LinkedList<>();
+        list2.add(""Y"");
+ 
+        list1.removeAll(list2);
+ 
+        for (String temp : list1)
+            System.out.printf(temp + "" "");
+ 
+        System.out.println();
+    }}
+",yms and abc YMS ,yms and abc YMS ,yms and abc ,runtime error,compile error,,,
+"import java.util.*;
+
+public class stack
+{
+ public static void main(String[] args)
+ {
+  List<String> list = new LinkedList<>();
+  list.add(""yms"");
+  list.add(""abc"");
+  list.add(""xzy"");
+   Iterator<Integer> iter = list.iterator();
+  while (iter.hasNext())
+   System.out.printf(iter.next() + "" "");
+
+  System.out.println();
+ }
+}
+",runtime error,runtime error,yms and abc ,yms abc xyz,abc xyz,,,
+.______class is synchronized,Vector,Vector,set ,map,None of the mentioned,,,
+". Which collection class allows you to access its elements by associating a key with an element's value, and provides synchronization?",java.util.Hashtable,java.util.Hashtable,java.util.vector,all the above,None of the mentioned,,,
+"1. import java.util.*;
+      2. public class Example{
+      3. public static void main(String[] args){
+      4. //insert code here
+      5. set.add(new Integer(2));
+      6. set.add(new Integer(1));
+      7. System.out.println(set);
+      8.}
+      9.}
+Which code, inserted at line 4. guarantees that this program will output[1,2]?
+
+",Set set=new TreeSet();,Set set=new TreeSet();,set s=Tree();,all the above,None of the mentioned,,,
+"import java.util.ArrayList; 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List; 
+import java.util.Set; 
+public class Test
+{
+public static void main(String args[])
+{
+List list=new ArrayList();
+list.add(10); list.add(40); 
+list.add(20); list.add(15); 
+list.add(80); 
+Collections.reverse(list); 
+System.out.println(list);
+}
+}
+","[80,15,20,40,10]","[80,15,20,40,10]","[80,15]",80,runtime error,,,
+"import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+class Employee implements Comparator
+{
+private String name;
+private int age;
+Employee(){}
+Employee(String n,int a)
+{
+name=n;
+age=a;
+}
+public String getEmployeeName()
+{
+return name;
+}
+public int getEmployeeAge()
+{
+return age;
+}
+public int compare(Employee d, Employee d1)
+{
+return d1.age-d.age;
+}
+}
+What is the output of the above program 
+public class Example{
+public static void main(String args[])
+{
+List list=new ArrayList();
+list.add(new Employee(""Anu"",29));
+list.add(new Employee(""Binu"",25));
+list.add(new Employee(""Janu"",22));
+list.add(new Employee(""Renu"",27));
+list.add(new Employee(""Tinu"",23));
+Collections.sort(list,newEmployee());
+for(Employee a:list)
+System.out.println(a.getEmployeeName()+"":"");
+}
+}
+",Anu:Renu:Binu:Tinu:Janu:,Anu:Renu:Binu:Tinu:Janu:,Anu:Renu:Binu,Anu,None of the mentioned,,,
+"import java.util.List;
+public class Test
+{
+public static void main(String args[])
+{
+List myList=new ArrayList();
+for(int i=0;i<10;i++)
+{
+myList.add(""String""+i);
+}
+int count=0;
+Iterator iter=myList.iterator();
+while(iter.hasNext())
+{
+count++;
+if(count%2==0)
+myList.remove(count);
+System.out.println(iter.next()+"""");
+}
+}
+}
+",Exception occurs at runtime because the list is being ready and modified simultaneously,Exception occurs at runtime because the list is being ready and modified simultaneously,1 2 3 4 5 6,1 and 3,compile error,,,
+"What will be the output of the following program?
+import java.util.*;
+public class Test
+{
+public static void main(String args[])
+{
+List arrayList=new ArrayList();
+arrayList.add(1);
+arrayList.add(2);
+arrayList(5);
+for(int i:arrayList)
+{
+if(i==5)
+{
+arrayList.remove(2);
+}
+}
+System.out.println(arrayList);
+}
+}
+Ans: run time exception
+
+20. What is the output of this code?
+public class GetSetViewOfKeysFromHashMapExample
+{
+public static void main(String args[])
+{
+HashMap hMap=new HashMap();
+hMap.put(""1"",""One"");
+hMap.put(""2"",""Two"");
+hMap.put(""3"",""Three"");
+Set st=hMap.keySet();
+Iterator itr=st.iterator();
+while(itr.hasNext())
+System.out.println(itr.next());
+st.remove(""2"");
+boolean blnExists=hMap.containsKey(""2"");
+System.out.println(nlnExists);
+}
+}
+",1 2 3 True,1 2 3 True,1 2 3,TRUE,FALSE,,,
+"What is the output of the following program?
+
+public class Emp
+{
+private int age;
+public Emp(int age)
+{
+super();
+this.age=age;
+}
+public int hashCode()
+{
+return age;
+}
+public boolean equals(Object obj)
+{
+boolean flag=false;
+Emp emp=(Emp)obj;
+if(emp.age==age)
+flag=true;
+return flag;
+}
+}
+public class TestEmp
+{
+public static void main(String args[])
+{
+Emp emp1=new Emp(23);
+Emp emp2=new Emp(24);
+Emp emp3=new Emp(25);
+Emp emp4=new Emp(26);
+Emp emp5=new Emp(27);
+HashSet hs=new HashSet();
+hs.add(emp1);
+hs.add(emp2);
+hs.add(emp3);
+hs.add(emp4);
+hs.add(emp5);
+System.out.println(hs.size());
+System.out.println(hs.contains(new Emp(25)));
+System.out.println(hs.remove(new Emp(24)));
+System.out.println(hs.size());
+}
+}
+",5 true true 4,5 true true 4,5 true true , true true 4,FALSE,,,
+"Which statement is true about set variable in the following program 
+import java.util.*;
+public class TestSet
+{
+enum Example
+{
+ONE,TWO,THREE
+};
+public static void main(String a[]) 
+{
+Collection col1=new ArrayList();
+col1.add(Example.THREE);
+col1.add(Example.THREE);
+col1.add(Example.THREE);
+col1.add(Example.TWO);
+col1.add(Example.ONE);
+Set set=new HashSet(col1);
+}
+}
+",The set variable contains all six elements from col1 collection and the ordering of the elements is NOT preserved,The set variable contains all six elements from col1 collection and the ordering of the elements is NOT preserved,The set variable contains all six elements from col1 collection and the ordering of the elements is  preserved,runtime error,compile error,,,
+"Which interface does java.util.Hashtable implement?
+Ans: java.util.Collection
+
+25. Which of them are the correct syntax for instantiating arrays
+Ans: int[] arr=new int[3]
+
+26. What will be the output of the following program?
+class Gen
+{
+T obj;
+Gen(T o)
+{
+obj=o;
+}
+T get()
+{
+return obj;
+}}
+public class GenericsDemo
+{
+public static void main(String args[])
+{
+Gen i1=new Gen(new Integer(10));
+int i=i1.get();
+System.out.println(i);
+}
+}
+",10,10,11,12,13,,,
+"
+
+What is the output of the following program?
+public class Test
+{
+public static void main(String args[])
+{
+String str1=""Strings are immutable"";
+String str2=""Strings are immutable"";
+String str3=""Integers are not immutable"";
+int result=str1.compareTo(str2);
+if(result==0)
+{
+System.out.println(""It's zero!"");
+}
+result=str2.compareTo(str3);
+if(result<0)
+{
+System.out.print(""It's less than zero"");
+}
+result=str3.compareTo(str1);
+if(result>0)
+{
+System.out.print(""It's greater than zero"");
+}
+}
+}
+",It's zero!,It's zero!,It's greater than zero,It's less than zero,None of the mentioned,,,
+"import java.util.*;
+public class LetterASort
+{
+public static void main(String[] args)
+{
+ArrayList strings=new ArrayList();
+strings.add(""aAaA"");
+strings.add(""AaA"");
+strings.add(""aAa"");
+strings.add(""AAaa"");
+Collections.sort(strings);
+for(String s:strings)
+{
+System.out.print(s+"""");
+}
+}
+}
+What is the result?
+",AAaa AaA aAa aAaA,AAaa AaA aAa aAaA,BBaa AaA bAb aAaA,runtime error,compile error,,,
+,,,,,,,,
+ Which of these is not a interface in the Collections Framework?,Group,Collection ,Group,Set ,List,,,
+Which interface restricts duplicate elements?,Set,Set,List,Map, none of the above,,,
+Which of these collection class has the ability to grow dynamically?,ArrayList,Array,Arrays,ArrayList,none of the above,,,
+The accuracy and efficiency of a HashMap can be guaranteed with:,all of the above,override equals method,override hashCode method,None of these,all of the above,,,
+A HashMap allows the existence of:,All of these,null values,one null key,None of these,All of these,,,
+ What implementation of Iterator can traverse a collection in both directions?,ListIterator,Iterator,ListIterator,SetIterator,MapIterator,,,
+The Comparable interface contains which called?,compareTo,toCompare,compare,compareTo,compareWith,,,
+ What is the default number of Partitions/segments in Concurrent Hash Map?,16,16,12,32,6,,,
+Which is best suited to a multi-threaded environment?,WeakHashMap,WeakHashMap,Hashtable,HashMap,ConcurrentHashMap,,,
+The default capacity of a Vector is:,12,12,11,16,2,,,
+ Which does NOT implement the Collection interface?,None of these,set,List,Map,None of these,,,
+The default capacity of a ArrayList is:,1,16,1,10,12,,,
+ Which provides better performance for the insertion and removal from the middle of the list?,LinkedList,LinkedList,Vector,ArrayList,All of these,,,
+" After resizing, size of ArrayList is increased by :",50%,50%,200%,100%,None of these,,,
+" After resizing, size of Vector is increased by:",None of these,50%,200%,100%,None of these,,,
+Deque and Queue are derived from:,List,AbstractList,Collection,AbstractCollection,List,,,
+   ArrayList implements which of the following?,List,List,RandomAccess,Cloneable,all of the above,,,
+ Which of these allows the storage of many null values?,List,set,List,None of these,All of these,,,
+nextIndex() and previousIndex() are methods of which interface?,NextPreviousIterator,NextPreviousIterator,IndexIterator,Iterator,ListIterator,,,
+Vector extends which of these?,ArrayList,ArrayList,LinkedList,AbstractList,None,,,
+LinkedList implements?,all,Deque,List,None,all,,,
+" In Iterator, nextElement() method of Enumeration has been changed to:",next(),next(),getNext(),returnNext(),name remains same,,,
+"` From Java 5 onwards, which one of these is recommended to replace Hashtable?",ConcurrentHashMap,ConcurrentHashMap,HashMap,ConcurrentHashtable,None,,,
+Which does not allow to store a null value?,TreeSet,TreeSet,LinkedHashSet,HashSet,None,,,
+Which Map class must be preferred in multi-threading environment to maintain natural order of keys?,ConcurrentSkipListMap,ConcurrentSkipListMap,ConcurrentMap,ConcurrentHashMap,All,,,
+Which allows the removal of elements from a collection?,Iterator,Enumeration,Iterator,Both,None,,,
+ The Comparator interface contains the method?,compare(),compare(),compareTo(),compareWith(),none of the above,,,
+Which of these is synchronized?,Hashtable,TreeMap,Hashtable,HashMap,All,,,
+Which is more offers best performance?,HashMap,TreeMap,HashMap,LinkedHashMap,All are equal,,,
+ Which of these class should be preferred to be used as a key in a HashMap?,Any of these,String,Integer,Double,Any of these,,,
+ What should we use when add and remove operations are more frequent than get operations?,LinkedList,ArrayList,LinkedList,Vector,all,,,
+TreeMap ?,All,doesn't allow null key,allow many null values,All,none,,,
+. What should we use get operations are more?,ArrayList,ArrayList,LinkedList,Any,none,,,
+Complexity of ArrayList get method?,O(1),O(1),O(n-1),O(n),none,,,
+Which is sorted by natural order?,TreeSet,LinkedHashSet,TreeSet,HashSet,None,,,
+Which of these maintains insertion order?,List,List,Set,All,none,,,
+Which maintains insertion order?,LinkedHashSet,TreeSet,HashSet,LinkedHashSet,None,,,
+" In Iterator, hasMoreElements() method of Enumeration has been changed to:",hasNext(),hasNext(),hasNextElement(),hasNext(),isNext(),,,
+ TreeSet internally uses which one to store elements?,TreeMap,HashMap,LinkedHashMap,TreeMap,None,,,
+HashSet internally uses?,HashMap,HashMap,LinkedHashMap,TreeMap,None,,,
+An attempt to add null key to a TreeSet will result in:,Runtime - NullPointerException ,Will compile,Runtime - NullPointerException ,Compile time Exception,Error,,,
+ Hashtable allows?,none,one null key,many null values,all,none,,,
+How can you sort given HashMap on basis of values,Implement Comparator interface and override its compare method,Implement Comparator interface and override its compare method,It's not possible,Implement Comparator interface and override its compareTo method,Implement Comparator and Comparable interface,,,
+ What does Collections.sort internally uses when number of elements are less than 7?,Insertion sort,Insertion sort,Merge sort,Quick sort,None,,,
+What does Collections.sort internally uses when number of elements are greater than 7?,Merge sort,Insertion sort,Merge sort,Quick sort,None,,,
+Which of these is synchronized and isn't sorted by natural order?,Vector,EnumSet,LinkedList,ConcurrentSkipListSet,Vector,,,
+ Which interface must be implemented for sorting on basis many criterias,Comparator,Comparator,Comparable,Serializable,None,,,
+Can 2 threads on same ConcurrentHashMap object access it concurrently,different threads can access different segments concurrently,we need to add additional functionality to achieve the same,Its not possible,different threads can access different segments concurrently.,none of the above,,,
+Which of these provides a get(in index) method?,List,List,Set,Map,all,,,
+LinkedHashSet implements?,All,All,Set,Cloneable,Serializable,,,
+ In WeakHashMap?,An entry are automatically removed by garbage collector,An entry are automatically removed by garbage collector,Behaves normally like HashMap,An entry are never removed by garbage collector,None,,,
+" Methods such as reverse, shuffle and sort are available in:",Collections,Collections,Object,Collection,Apache Commons Collections,,,
+Which of these allows duplicate elements?,List,List,Set,ALL,NONE,,,
+"In ConcurrentHashMap - When thread locks one segment for updation it does not block it for retrieval hence some other thread can read the same segment,
+ but it will be able to read the data before locking?",TRUE,FALSE,TRUE,may be true/false,none,,,
+" In ConcurrentHashMap - When thread locks one segment for updation it does not allow any other thread
+ to perform updations in same segment until lock is not released on segment",TRUE,FALSE,TRUE,may be true/false,none,,,

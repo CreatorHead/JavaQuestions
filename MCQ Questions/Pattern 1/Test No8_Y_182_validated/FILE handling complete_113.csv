@@ -1,0 +1,187 @@
+question,correct answer,wrong answer 1,wrong answer 2,wrong answer 3,wrong answer 4
+______method of File class tests whether the file denoted by this abstract pathname is a normal file.,isFile(),File(),.isFile(),isFile(),none of the above
+The Reader/ Writer class hierarchy is______,Character-oriented,Character-oriented,Object-oriented,File-oriented,String-oriented
+ Return type of ensureOpen() method in BufferedWriter class is void,TRUE,FALSE,TRUE,,
+How many parameter min() method takes in BufferedWriter class?,2,4,3,1,2
+"FileReader is meant for reading streams of characters. For reading streams of raw bytes, use ____",FileInputStream,DataInputStream,BufferInputStream,DataInputStream,FileInputStream
+What class should be used to buffer the characters sent to a FileWriter stream?,BufferedWriter,DataBufferWriter,BufferInputWriter,BufferedWriter,none of the above
+Writer class is designed specifically for______characters, Unicode,DataUnicode, Unicode,UTF-8 Unicode,BufferUnicode
+in which Package Reader classes are defined?,java.io,java.util,java.sql,java.io,none of the above
+Which of these is a method to clear all the data present in output buffers?,flush(),clear(),delete(),flush(),flushAll()
+ BufferedInputStream and BufferedOutputStream are the sub classes of_____,FilterInputStream & FilterOutputStream, BufferedInputStream & Buffered OutoutStream,DataInputStream & DataOutputStream,FilterInputStream & FilterOutputStream,BufferdDataInputStream & BufferedDataOutputStream
+Which of these method of InputStream is used to read integer representation of next available byte input?,read(),fetch(),save(),allow(),read()
+Which Exception is thrown by methods of Reader class?,IOException,IOException,ClassNotFoundException,NullPointerException,FileNotFoundException
+When a file is opened for appending where does write() put next text?,At the end of the file,At the begining of the file,At the first line of the file,At the end of the file,none of the above
+Which of these exception is thrown by close() and read() methods?,IOException  ,DataReadException,IOException  ,FileNotFoundException,all the above
+ Reader class is for reading Character streams,TRUE,FALSE,TRUE,none of the above,
+"16. What will be the output of the below code
+
+import java.io.*;
+public class fileinputoutput{
+public static void main(String[] args){
+String obj=""abc"";
+byte b[]=obj.getBytes();
+ByteArrayInputStream obj1=new ByteArrayInputStream(b);
+for(int i=0;i<2;i++){
+int c;
+while((c=obj1.read())!=-1){
+if(i==0){
+System.out.print(Character.toUpperCase((char)c));
+obj2.write(1);
+}
+}
+System.out.print(obj2);
+  }  
+ }
+}",AaBaaCaaa,abc,aabbcc,AaBaaCaaa,none of the above
+ How many parameter write() method takes in BufferedWriter class?,1 or 3,1 or 2,1 or 3,1,1 or 4
+"_____method creates a new, empty file named by this abstract pathname if and only if a file 
+With this name does not yet exist.",createNewFile(),newFile(),File(),createNewFile(),CreateNewFile()
+What class does readLine() belong to?, BufferedReader, BufferedReader,DataReader,BufferDataReader,DataBufferReader
+ Should FileReader be used to read a Java bytecode (*.class) file?,"No---the bytes in bytecode files
+ are not intended to be
+ Interpreted as characters",yes,no,,
+_____method of File class creates the directory named by this Abstract pathname,mkdir(),readdir(),loaddir(),mkdir(),makedir()
+File class implements the interfaces,Comparable,Comparator,Compare,Controlable,Comparable
+What file method creates a new disk directory,mkdir(),makedir(),createdir(),mkdir(),loaddir()
+To set the write permission only for the owner of the file use the ____method of the File class,"setWritable(true,true)","setReadable(true,true)","setWritable(true,true,true)",setReadable(true),"setWritable(true,true)"
+Which operation is usually more reliable: input or output?,Output,input,output,both of the above,
+"_____method creates a new, empty file named by this abstract pathname
+ If and only if a file with this name does not yet exist",createNewFile(),createnewFile(),newFile(),newCreateNew(),createNewFile()
+To set the write permission only for all the users of the file use the_____method of the File class,"setWritable(true,false)","setWrite(true,true)","setWritable(true,false,false)","setWritable(true,false)",all the above
+Which package holds the file class?,java.io,java.fileIO,java.IO,java.io,java.class
+Which of these is used to perform all input and output operations in java?,streams,streamIO,streams,load,fetch
+_____method of File class enables read permission for all the users of the file,"setReadable(true,false)","setRead(true,false)","setReadWrite(true,false)","setReadable(true,true,false)","setReadable(true,false)"
+What method of file is used to test if a file or directory exists?,exists(),find(),load(),exists(),present()
+Which of the following is used in a C-style input loop?,while((line=source.readLine())!=null),while((line=source.read())!=null),while((readline=source.readLine())!=null),while((line=source.readLine())!=null),none of the above
+_____method of File class is used to rename the file,renameTo(File dest),renameFile(File dest),renameToFile(File dest),rename(File dest),renameTo(File dest)
+If deleting a directory using File class delete method the Directory must be empty,TRUE,FALSE,TRUE,,
+_____method of File class enables read permission for only owner of the file,"setReadable(true,true)","setWritable(True,True)","setReadable(true,false)","setReadable(true,true)","setWriteable(true,true)"
+______method of File class returns the time that the file denoted by this abstract pathname was last modified,lastModified(),Modified(),modified(true),lastModified(),lastModified(true)
+______method of File class tests whether the file named by this abstract pathname is a hidden file, isHidden(),Hidden(),hidden(true),hiddenFile(true), isHidden()
+.______method of File class is used to retrieve the Absolute path of the file,getAbsolutePath(),AbsolutePath(),getPath(),getAbsolutePath(),getAbsolutePath(true)
+ Which of these is a method to clear all the data present in output buffers?,flush(),clear(),delete(),deleteAll(),flush()
+BufferedInputStream and BufferedOutputStream are the sub-classes of_______,FilterInputStream and FilterOutputStream, BufferedInputStream & Buffered OutoutStream,DataInputStream & DataOutputStream,FilterInputStream and FilterOutputStream,none of the above
+Which of these method of InputStream is used to read integer representation of next available byte input?,read(),readdir(),readAll(),readwriteAll(),read()
+ Which Exception is thrown by methods of Reader class?,IOException,ClassNotFoundException,NullPointerException,FileNotFoundException,IOException
+When a file is opened for appending where does the write() put new text?,At the end of the file,At the begining of the file,At the firstline of the file, At the end of the file,At the end line of the file
+"_____method creates a new, empty file named by this abstract pathname if and only if a file with this
+ name does not yet exist.",createNewFile(),create(),createNewFile(),newFile(),craeteNew()
+What is the return type of skip() method in BufferedReader class?,long,byte,int,long,skip
+"For characters from the English (Roman) alphabet, how many bytes are used per 
+Character in the program and how many are used on a disk file?",Program: 2 bytes Disk file: 1 byte,Program: 2 bytes Disk file: 1 byte,Program: 2 bytes Disk file: 2 byte,Program: 1 bytes Disk file: 1 byte,Program: 2 bytes Disk file: 4 byte
+"What does the following constructor do: FileWriter fw=new FileWriter(""myfile.txt"");","Any previous myfile.txt in the current directory will be deleted 
+And the new one will be created","Any previous myfile.txt in the current directory will 
+Be retained and the new one will be created","Any previous myfile.txt in the current directory will be
+ Deleted and the new one will be created","Any previous myfile.txt in the current directory will 
+Be deleted and the new one will be created with new name",none of the above
+It is possible to use the File class to list the contents of the current working directory,TRUE,FALSE,TRUE,,
+The decoding layer of InputStream transforms bytes to chars according to an _______standard,encoding,UTF-8,Unicode,encoding,encdec
+What is the return type of min() method in BufferedWriter class?,int,int,double,long,string
+_______method of File class tests whether the file denoted by this abstract pathname is a Directory,"isDirectory()
+","isDirectory(true)
+","isDirectory()
+",isDirectoryFile() ,"isDirectoryTrue()
+"
+Reader class is designed specifically for Unicode characters,TRUE,TRUE,FALSE,,
+Which of these is a type of stream in Java?,Byte stream,input Data stream,output stream,Byte stream,Data Buffer stream
+What is the data type of parameter passed in min() method of BufferedWriter class?,"(int, int)","(int, long)","(int, int)","(int, int,byte)","(int, byte)"
+What is the name of the abstract base class for streams dealing with general purpose input,InputStream,InputOutputStream,OutputStream,DataInputStream,InputStream
+"The …………………… package contains a large number of stream classes that provide
+ Capabilities for processing all types of data.",java.io,java.awt,java.IO,java.net,java.util
+"State whether the following statements about the stream in Java.
+
+i) The two basic streams used are the input and the output streams.
+ii) Filters are used to read data from one stream and write it to another stream.","True,True",TRUE,"true,true",FALSE,"false,false"
+"The InputStream class defines methods for performing input functions such as
+
+i) reading bytes                                       ii) closing streams
+iii) skipping ahead in a stream                  iv) flushing streams","i, ii and iii only","ii, iii and iv only","i, ii and iii only","i, iii and iv only","D) All i, ii, iii and iv"
+"The OutputStreams includes methods that are designed to perform   the following tasks.
+
+i) closing streams                                               ii) flushing streams
+iii) reading bytes                                                 iv) writing bytes","i, ii and iv only","ii, iii and iv only","i, ii and iii only","i, iii and iv only","D) All i, ii, iii and iv"
+Which of the following method(s) not included in InputStream class.,flush( ),available( ),reset( ), flush( ),close( )
+Which of the following methods not included in OutputStream class.,skip( ),Write( ), skip( ), close( ), flush( )
+The class DataInputStream extends …………………….. and implements the interface DataInput.,FilterInputStream,FileInputStream,SequenceInputStream,FilterInputStream,InputStream
+"The method …………………., force writes whenever the data accumulates in the output stream.",flush( ),Write( ),Flush( ),Read( ),Reset( )
+"The DataInputStream and DataOutputStream classes are …………………….. streams 
+That allow the reading and writing of java primitive data types.",filter,file,sequence,object,filter
+ The ……………………… class provides the capacity to read primitive data types from an input stream.,DataInputStream,pushbackInputStream,DataInputStream,BufferedInputStream,PipeInputStream
+"Which of the following is/are the methods of the DataOutputStream class.
+
+i) void writeChar(intV)                                 ii) void writeLong(longV)
+iii) void writeInt(intV)                                  iv) int size( )","i, ii and iii only","ii, iii and iv only","i, ii and iii only","i, ii and iv only","All i, ii, iii and iv"
+ DataInput is,an interface that defines methods to open files,an abstract class defined in java.io,a class we can use to read primitive data types,an interface that defines methods to open files,an interface that defines methods to read primitives data types
+Which exception is thrown by the read( ) method of InputStream class., IOException,Exception,IOException,ReadException,File Not Found Exception
+" The ……………………… method of the BufferedReader class is used for reading lines of text from the console, 
+The file or other input streams.",readLine( ),read( ),read(byte[]b),readLine( ),readByte( )
+……………………. class is used to increase the efficiency of input operations.,BufferedInputStream,DataInputStream,FileInputStream,BufferedInputStream,PipeInputStream
+"State whether the following statements about DataInputStream class are True.
+
+i) readBoolean( ) reads one byte and returns true if that byte is nonzero, false if it is zero.
+ii) readByte( ) reads a byte as an 8-bit signed value.
+iii) readChar( ) reads a unicode character.","True, True, True","True, False, True","False, True, False","True, False, False","True, True, True"
+"The ……………………. class implements the DataInput and DataOutput interfaces for
+ Performing I/O using the primitive data types.",RandomAccessFile,RandomAccessFile,OutputStream Reader,InputStreamReader,DataOutputStream
+"The class ………………………. is a subclass of object class which can be used for breaking up a stream
+ of text from an input text file into meaningful pieces",Stream Tokenizer,Stream Tokenizer,RandomAccessFile,InputStreamReader,DataOutputStream
+"Combining two or more input streams into a single input stream can be 
+Achieved using the ………………. class.",SequenceInputStream,SequenceOutputStream,BufferedInputStream,BufferedOutputStream,SequenceInputStream
+"……………….. streams provide functionally for threads to communicate and exchange data between them
+",Piped,Object,Piped,Pushback, Filtered
+Can data flow through a given stream in both directions?,"    No; a stream has one direction only, input or output.","    No; a stream has one direction only, input or output.",No; streams only work for output.,Yes; only one stream is needed to read and write a file.,Yes; but only one direction at a time.
+What is the name of a stream that connects two running programs?,Piped,Object,Piped,Pushback, Filtered
+Can a stream act as a data source for another stream?,Yes. Some streams can be connected together.,No. Streams must be connected directly to physical devices.,No. Streams do not deal with data.,Yes. Some streams can be connected together.,Yes. An input stream can be connected to an output stream.
+What is a  buffer?,A section of memory used as a staging area for input or output data.,A section of memory used as a staging area for input or output data.,The cable that connects a data source to the bus.,Any stream that deals with character IO.,  A file that contains binary data.
+What is a stream that transforms data in some way called?,  Processing stream.,  Transformer.,  Processing stream.,UTF stream.,Pipe
+"A stream that is intended for general purpose IO, not usually character data, is called...",Byte Stream,Byte Stream,Reader,Writer,Character Stream
+What is the name of the abstract base class for streams dealing with  character input?,  InputStream,OutputStream,Reader,  InputStream,Writer
+"Is the character data used inside a Java program exactly the same format as
+ The character data in a text file written by Java?",Yes. Java uses the same format for characters inside a program and in text files.,"No. Internally Java uses 8-bit character data, but text files always use ASCII.","No. Internally Java programs always use 16-bit  char  data; but text files are written in UTF format, which is different.",Yes. Java uses the same format for characters inside a program and in text files.,Yes. Character data has always used the same format for all computers and all files.
+A stream is a sequence of data.In Java a stream is composed of?,Bytes,Bytes,Bits,Both A & B,None of the above
+"Which stream does Java application uses to read data from a source, it may be a file, an array, 
+Peripheral device or socket?",InputStream,OutputStream,Input/OutputStream,None of the above,InputStream
+"These commonly used methods of 
+   1) public abstract int read()throws IOException 
+2) public int available()throws IOException 
+3) public void close()throws IOException ", InputStream class,OutputStream class, InputStream class,Input/OutputStream class,None of the above
+  Which is used for writing data to a file in file handling?,FileOutputStream,FileInputStream  ,Input/OutputStream,FileOutputStream,all of the above
+"Which is used for reading streams of raw bytes such as image data. 
+For reading streams of characters, consider using FileReader?",FileInputStream  ,FileOutputStream,FileInputStream  ,Both A & B,None of the above
+SequenceInputStream class is used to read data from?,Multiple streams,Single Stream,Multiple streams,Multilevel Streams,None of the above
+"  Which is used an internal buffer, It adds more efficiency than to write 
+Data directly into a stream. So, it makes the performance fast?",BufferedOutputStream,ByteArrayOutputStream,BufferedInputStream,ByteArrayInputStream,BufferedOutputStream
+"which classes does Sun Microsystem has suggested not to use the,
+ if you have to read and write the textual information?",FileInputStream and FileOutputStream,BufferedInputStream and BufferedOutputStream,FileInputStream and FileOutputStream,SequenceInputStream and SequenceOutputStream,Both A & B
+The CharArrayWriter class is not used to write data to multiple files?,FALSE,FALSE,TRUE,,
+Which are the ways to read data from the keyboard?,All Mentioned above,"InputStreamReader,DataInputStream",Console,Scanner,All Mentioned above
+Which class can be used to read data line by line by readLine() method?,BufferedReader,BufferedReader,InputStreamReader,DataInputStream,None of the above
+Which is used to converts the byte-oriented stream into character-oriented stream?,InputStreamReader,Console,Scanner,InputStreamReader,Data inpuit stream Reader
+"  These four methods are commonly used in?
+ Public char[] readPassword(String fmt,Object... args) 
+public String readLine() 
+public String readLine(String fmt,Object... args) 
+public char[] readPassword(",Console class,Scanner Class,InputStreamReader class,Console class,Data inpuit stream 
+"Which class breaks the input into tokens using a delimiter which is whitespace bydefault, 
+It provides many methods to read and parse various primitive values?",Scanner class,Scanner class,console class,Both A & B,None of the above
+"Which class automatically flushes the data so there is no need to call flush() method. 
+Moreover, its methods don't throw IOException?",PrintStream class,Console class,PrintStream class,Scanner Class,FileInputStream class
+the PrintStream class provides methods to?,Write data to another stream,Write data to another stream,read data to another stream,read data to same stream,write data to same stream
+"  Which class is used to uncompress the file in the deflate compression format, 
+It provides facility to the other uncompression filters?",InflaterInputStream class,DeflaterOutputStream class,InflaterInputStream class,Both A & B,None of the above
+The PipedInputStream and PipedOutputStream classes can be used to read and write data simultaneously?,TRUE,TRUE,FALSE,,
+  Which are subclasses of FilterInputStream and FilterOutputStream?,Both C & B,PipedInputStream,DataInputStream,DataOutputStream,Both B & C
+"  To achieve performance, the DataInputStream class comes with some special methods like?",none of the above,WriteDouble(),WriteInt(),WriteBytes(),None of the above
+Which method of DataInputStream class reads a line from the file and returns it as a string ?,readLine(),WriteInt(),readLine(),readInt(),writeDouble()
+"The stream tokenizer class can recognize identifiers, numbers, quoted strings, and various comment styles?",TRUE,TRUE,FALSE,,
+The java.io.StreamTokenizer.nextToken() method parses the next token from the?,input stream of this tokenizer  ,input stream of this tokenizer  ,output stream of this tokenizer,Both A & B,None of the above
+  Breaking a string or stream into meaningful independent words is known as tokenization.,TRUE,TRUE,FALSE,,
+  Which package includes StringTokenizer which tokenizes a string into independent words?,java.util,java.awt,java.applet, java.util,java.lang
+"In which field of StreamTokenizer if the token is a word, this filed contains 
+The word that can be used in programming? ",double nval double nval,double nval double nval,String sval,int ttype,static final int TT_WORD
+StreamTokenization has following programs they are?,Both A & B,Tokenizing text file contents,Printing file contents,Both A & B,None of the above
+"Java application uses an output stream to read data from a source, it may be a file, 
+An array, peripheral device or socket? ",FALSE,FALSE,TRUE,,
+"Both InputStream and OutputStream class is an abstract class. 
+It is the superclass of all classes representing an output stream of bytes.",TRUE,FALSE,TRUE,,
